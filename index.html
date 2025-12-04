@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
+<meta name="generator" content="quarto-1.9.12">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -48,14 +48,15 @@ div.csl-indent {
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-cdaacfc258cb6f151192107f105ac881.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ba1a7c362bbf9d7a08afb3b041eb6c5c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-0a61af393cc41664e89a7addda21b354.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -206,7 +207,6 @@ div.csl-indent {
 <li>Annotation, segmentation, inter-annotator variance.</li>
 <li>Train/test leakage in materials workflows.</li>
 </ul>
-<p><em>(These first three weeks ensure students understand why ML behaves differently on materials data compared to CIFs and DFT databases in the other course.)</em></p>
 </section>
 </section>
 <section id="unit-ii-ml-for-microstructure-vision-representation-weeks-46" class="level3" data-number="1.2.2">
@@ -255,7 +255,6 @@ div.csl-indent {
 <li>ML-guided process maps (AM: laser power vs scan speed; metallurgy: TTT/CCT approximations).</li>
 <li>Physics-informed ML vs naive regression.</li>
 </ul>
-<p><em>(This unit ensures profoundly processing-centered ML content—distinct from genomics’s structure-first world.)</em></p>
 </section>
 </section>
 <section id="unit-iv-ml-for-characterization-signals-weeks-1012" class="level3" data-number="1.2.4">
@@ -280,7 +279,6 @@ div.csl-indent {
 <li>Combining images + spectra + process parameters.</li>
 <li>Early vs late fusion.</li>
 </ul>
-<p><em>(This module draws synergy with your research—students love learning real lab-relevant problems.)</em></p>
 </section>
 </section>
 <section id="unit-v-project-reflection-weeks-1314" class="level3" data-number="1.2.5">
@@ -399,13 +397,14 @@ div.csl-indent {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
