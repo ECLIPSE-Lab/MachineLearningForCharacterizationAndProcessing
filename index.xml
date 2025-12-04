@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE article PUBLIC "-//NLM//DTD JATS (Z39.96) Journal Archiving
+and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
+<article xmlns:mml="http://www.w3.org/1998/Math/MathML" xmlns:xlink="http://www.w3.org/1999/xlink" dtd-version="1.2" article-type="other">
+  <front>
+    <article-meta>
+      <title-group>
+        <article-title>Machine Learning in Materials Processing &amp;
+Characterization</article-title>
+        <subtitle>Course Curriculum and Materials</subtitle>
+      </title-group>
+      <contrib-group>
+        <contrib contrib-type="author" corresp="yes">
+          <name>
+            <surname>Pelz</surname>
+            <given-names>Philipp</given-names>
+          </name>
+          <string-name>Philipp Pelz</string-name>
+          <role>Course Instructor</role>
+          <role>Content Development</role>
+          <xref ref-type="aff" rid="aff-1">a</xref>
+          <xref ref-type="corresp" rid="cor-1">*</xref>
+        </contrib>
+      </contrib-group>
+      <aff id="aff-1">
+        <institution-wrap>
+          <institution>Materials Science and Engineering</institution>
+        </institution-wrap>
+      </aff>
+      <author-notes>
+        <corresp id="cor-1"/>
+      </author-notes>
+      <history/>
+      <abstract>
+        <p>This course provides students with essential skills and practical
+knowledge to harness machine learning techniques for accelerating
+materials discovery and design. Specifically tailored for students
+interested in the new BSc program “KI-Materialtechnologie”/AI for
+materials technology”, it provides hands-on experience with core and
+advanced machine learning methods—including neural networks,
+optimization strategies, and generative modelling—to tackle real-world
+materials science problems. The course focuses on experimental data:
+microstructures, images, spectra, and processing parameters, connecting
+the messy, nonlinear world of processing and characterization signals
+with machine learning tools.</p>
+      </abstract>
+      <kwd-group kwd-group-type="author">
+        <kwd>Machine Learning</kwd>
+        <kwd>Materials Science</kwd>
+        <kwd>Materials Processing</kwd>
+        <kwd>Materials Characterization</kwd>
+        <kwd>Deep Learning</kwd>
+        <kwd>Microstructure Analysis</kwd>
+        <kwd>Process Optimization</kwd>
+      </kwd-group>
+    </article-meta>
+  </front>
+  <body>
+    <sec id="machine-learning-in-materials-processing-characterization">
+      <title>1. Machine Learning in Materials Processing &amp;
+  Characterization</title>
+      <p>
+        <bold>4th Semester – 5 ECTS, 2h lecture + 2h exercises per
+  week</bold>
+      </p>
+      <sec id="synergy-map">
+        <title>1.1 Synergy Map</title>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>This course</bold>: What ML can do with experimental
+        data: microstructures, images, spectra, processing
+        parameters.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Parallel ML intro course</bold>: Teaches generic ML
+        algorithms and image processing foundations (skimage, Fourier,
+        wavelets, SVMs, Bayes classifiers).</p>
+          </list-item>
+          <list-item>
+            <p><bold>“Materials Genomics” course</bold>: Focuses on
+        materials databases, descriptors, crystal graph representations,
+        DFT data, high-throughput workflows, surrogate models.</p>
+          </list-item>
+        </list>
+      </sec>
+      <sec id="week-by-week-curriculum-14-weeks">
+        <title>1.2 Week-by-Week Curriculum (14 weeks)</title>
+        <sec id="unit-i-foundations-from-materials-signals-to-machine-learning-weeks-13">
+          <title>1.2.1 Unit I — Foundations: From Materials Signals to
+      Machine Learning (Weeks 1–3)</title>
+          <sec id="week-1-what-makes-materials-data-special">
+            <title>1.2.1.1 Week 1 – What makes materials data
+        special?</title>
+            <list list-type="bullet">
+              <list-item>
+                <p>Types of data: micrographs, EBSD, EDS, EELS, XRD, process
+            logs, thermal profiles, deformation curves.</p>
+              </list-item>
+              <list-item>
+                <p>PSPP (Processing–Structure–Property–Performance) as a
+            data graph.</p>
+              </list-item>
+              <list-item>
+                <p>Why vision-based ML and time-series ML are central to
+            processing &amp; characterization.</p>
+              </list-item>
+            </list>
+          </sec>
+          <sec id="week-2-image-formation-the-physics-of-data">
+            <title>1.2.1.2 Week 2 – Image formation &amp; the physics of
+        data</title>
+            <list list-type="bullet">
+              <list-item>
+                <p>How characterization creates data: resolution, contrast
+            mechanisms, artifacts.</p>
+              </list-item>
+              <list-item>
+                <p>Fourier optics intuition for students with their ML-intro
+            foundations.</p>
+              </list-item>
+              <list-item>
+                <p>Sampling, aliasing, denoising as model-based priors.</p>
+              </list-item>
+            </list>
+          </sec>
+          <sec id="week-3-experimental-data-quality-ml-readiness">
+            <title>1.2.1.3 Week 3 – Experimental data quality &amp;
+        ML-readiness</title>
+            <list list-type="bullet">
+              <list-item>
+                <p>Annotation, segmentation, inter-annotator variance.</p>
+              </list-item>
+              <list-item>
+                <p>Train/test leakage in materials workflows.</p>
+              </list-item>
+            </list>
+            <p>
+              <italic>(These first three weeks ensure students understand
+        why ML behaves differently on materials data compared to CIFs
+        and DFT databases in the other course.)</italic>
+            </p>
+          </sec>
+        </sec>
+        <sec id="unit-ii-ml-for-microstructure-vision-representation-weeks-46">
+          <title>1.2.2 Unit II — ML for Microstructure: Vision &amp;
+      Representation (Weeks 4–6)</title>
+          <sec id="week-4-classical-microstructure-quantification-its-ml-extension">
+            <title>1.2.2.1 Week 4 – Classical microstructure quantification
+        &amp; its ML extension</title>
+            <list list-type="bullet">
+              <list-item>
+                <p>Grain size, phase fractions, orientation maps, lineal
+            intercepts.</p>
+              </list-item>
+              <list-item>
+                <p>From hand-crafted features → learned representations.</p>
+              </list-item>
+            </list>
+          </sec>
+          <sec id="week-5-convolutional-neural-networks-for-microstructure-classification">
+            <title>1.2.2.2 Week 5 – Convolutional Neural Networks for
+        microstructure classification</title>
+            <list list-type="bullet">
+              <list-item>
+                <p>CNN filters as microstructure interpreters.</p>
+              </list-item>
+              <list-item>
+                <p>Example tasks: grain-boundary segmentation, precipitate
+            detection, melt pool defects.</p>
+              </list-item>
+            </list>
+          </sec>
+          <sec id="week-6-transfer-learning-data-scarcity-in-materials-characterization">
+            <title>1.2.2.3 Week 6 – Transfer learning &amp; data scarcity in
+        materials characterization</title>
+            <list list-type="bullet">
+              <list-item>
+                <p>How to train a model with 200 images instead of 200k.</p>
+              </list-item>
+              <list-item>
+                <p>Representations from ImageNet vs self-supervised
+            pretraining on microstructures.</p>
+              </list-item>
+            </list>
+          </sec>
+        </sec>
+        <sec id="unit-iii-ml-in-processing-time-series-optimization-thermalmechanical-data-weeks-79">
+          <title>1.2.3 Unit III — ML in Processing: Time-Series,
+      Optimization, Thermal/Mechanical Data (Weeks 7–9)</title>
+          <sec id="week-7-process-monitoring-time-series-ml">
+            <title>1.2.3.1 Week 7 – Process monitoring &amp; time-series
+        ML</title>
+            <list list-type="bullet">
+              <list-item>
+                <p>Process logs: temperature cycles, additive manufacturing
+            melt pool monitoring, SPS, rolling, heat treatment.</p>
+              </list-item>
+              <list-item>
+                <p>Hidden Markov models, ARIMA, random forest regressors,
+            RNNs (light introduction).</p>
+              </list-item>
+            </list>
+          </sec>
+          <sec id="week-8-process-structure-regression-uncertainty">
+            <title>1.2.3.2 Week 8 – Process → structure regression &amp;
+        uncertainty</title>
+            <list list-type="bullet">
+              <list-item>
+                <p>Gaussian Processes (synergy with Materials Genomics’
+            surrogate models, but here linked to experimental data).</p>
+              </list-item>
+              <list-item>
+                <p>Uncertainty as a tool for process design.</p>
+              </list-item>
+            </list>
+          </sec>
+          <sec id="week-9-inverse-problems-in-processing">
+            <title>1.2.3.3 Week 9 – Inverse problems in processing</title>
+            <list list-type="bullet">
+              <list-item>
+                <p>ML-guided process maps (AM: laser power vs scan speed;
+            metallurgy: TTT/CCT approximations).</p>
+              </list-item>
+              <list-item>
+                <p>Physics-informed ML vs naive regression.</p>
+              </list-item>
+            </list>
+            <p>
+              <italic>(This unit ensures profoundly processing-centered ML
+        content—distinct from genomics’s structure-first
+        world.)</italic>
+            </p>
+          </sec>
+        </sec>
+        <sec id="unit-iv-ml-for-characterization-signals-weeks-1012">
+          <title>1.2.4 Unit IV — ML for Characterization Signals (Weeks
+      10–12)</title>
+          <sec id="week-10-spectral-data-ml-for-xrd-eels-eds">
+            <title>1.2.4.1 Week 10 – Spectral data: ML for XRD, EELS,
+        EDS</title>
+            <list list-type="bullet">
+              <list-item>
+                <p>Peak detection, denoising, background removal.</p>
+              </list-item>
+              <list-item>
+                <p>Dimensionality reduction (PCA, NMF, ICA).</p>
+              </list-item>
+            </list>
+          </sec>
+          <sec id="week-11-ml-for-microscopy-automation">
+            <title>1.2.4.2 Week 11 – ML for microscopy automation</title>
+            <list list-type="bullet">
+              <list-item>
+                <p>Auto-focusing, drift correction, parameter selection.</p>
+              </list-item>
+              <list-item>
+                <p>Vision-based defect detection in EBSD or TEM.</p>
+              </list-item>
+            </list>
+          </sec>
+          <sec id="week-12-multi-modal-data-fusion">
+            <title>1.2.4.3 Week 12 – Multi-modal data fusion</title>
+            <list list-type="bullet">
+              <list-item>
+                <p>Combining images + spectra + process parameters.</p>
+              </list-item>
+              <list-item>
+                <p>Early vs late fusion.</p>
+              </list-item>
+            </list>
+            <p>
+              <italic>(This module draws synergy with your
+        research—students love learning real lab-relevant
+        problems.)</italic>
+            </p>
+          </sec>
+        </sec>
+        <sec id="unit-v-project-reflection-weeks-1314">
+          <title>1.2.5 Unit V — Project + Reflection (Weeks 13–14)</title>
+          <sec id="week-13-mini-project-workshop">
+            <title>1.2.5.1 Week 13 – Mini-project workshop</title>
+            <p>
+              <bold>Projects could be:</bold>
+            </p>
+            <list list-type="bullet">
+              <list-item>
+                <p>Predict microhardness from heat-treatment +
+            microstructure images.</p>
+              </list-item>
+              <list-item>
+                <p>Segment phases in SEM images.</p>
+              </list-item>
+              <list-item>
+                <p>Detect porosity in AM melt pool images.</p>
+              </list-item>
+              <list-item>
+                <p>Denoise EELS/XRD spectra.</p>
+              </list-item>
+              <list-item>
+                <p>Build a process map using Gaussian Processes.</p>
+              </list-item>
+            </list>
+            <p>
+              <bold>Students must show:</bold>
+            </p>
+            <list list-type="order">
+              <list-item>
+                <p>data prep → 2. model selection → 3. evaluation → 4.
+            uncertainty → 5. interpretation.</p>
+              </list-item>
+            </list>
+          </sec>
+          <sec id="week-14-presentations-critical-evaluation">
+            <title>1.2.5.2 Week 14 – Presentations + critical
+        evaluation</title>
+            <list list-type="bullet">
+              <list-item>
+                <p>Focus on explainability (CAMs, SHAP for simple
+            models).</p>
+              </list-item>
+              <list-item>
+                <p>Reflect on why ML sometimes fails on materials data.</p>
+              </list-item>
+              <list-item>
+                <p>Wrap-up: Where ML is genuinely changing materials
+            characterization.</p>
+              </list-item>
+            </list>
+          </sec>
+        </sec>
+      </sec>
+      <sec id="learning-outcomes">
+        <title>1.3 Learning Outcomes</title>
+        <p>Students completing this course should be able to:</p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Interpret materials characterization and processing data in
+        an ML-ready way.</p>
+          </list-item>
+          <list-item>
+            <p>Build ML pipelines for microstructure classification, process
+        prediction, and spectral analysis.</p>
+          </list-item>
+          <list-item>
+            <p>Understand the physics of image/signal formation well enough
+        to avoid “garbage in → garbage out”.</p>
+          </list-item>
+          <list-item>
+            <p>Evaluate uncertainty and biases in experimental ML
+        models.</p>
+          </list-item>
+          <list-item>
+            <p>Combine processing and characterization data for property
+        prediction.</p>
+          </list-item>
+          <list-item>
+            <p>Critically evaluate claims about ML in materials science.
+        ##</p>
+          </list-item>
+        </list>
+      </sec>
+      <sec id="lab-possibilities">
+        <title>1.4 Lab possibilities:</title>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Lab:</bold> Exploring real microscopy datasets; noise,
+        metadata, units.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Lab:</bold> Fourier &amp; wavelet inspection of
+        SEM/TEM/optical micrographs.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Lab:</bold> Correct vs broken experimental ML
+        pipelines; data-leak horror stories.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Lab:</bold> Using scikit-image to extract features; PCA
+        on microstructure descriptors.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Lab:</bold> Fine-tuning a pretrained model on
+        SEM/optical images.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Lab:</bold> Predicting hardness from heat-treatment
+        curves.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Lab:</bold> GP on process parameters (e.g., cooling
+        rate → microstructure metric).</p>
+          </list-item>
+          <list-item>
+            <p><bold>Lab:</bold> Building process maps using ML surrogate
+        models.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Lab:</bold> NMF decomposition of EELS datasets;
+        automatic phase identification in XRD.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Lab:</bold> Implementing a simple “AI autofocus” or
+        EBSD pattern classifier.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Lab:</bold> Fusing XRD + microstructure representations
+        for property prediction.</p>
+          </list-item>
+        </list>
+      </sec>
+      <sec id="references">
+        <title>References</title>
+      </sec>
+    </sec>
+  </body>
+  <back>
+</back>
+</article>
