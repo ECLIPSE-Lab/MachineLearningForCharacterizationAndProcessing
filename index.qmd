@@ -66,7 +66,7 @@ jupyter: python3
 - Annotation, segmentation, inter-annotator variance.
 - Train/test leakage in materials workflows.
 
-*(These first three weeks ensure students understand why ML behaves differently on materials data compared to CIFs and DFT databases in the other course.)*
+ 
 
 ### Unit II — ML for Microstructure: Vision & Representation (Weeks 4–6)
 
@@ -104,8 +104,7 @@ jupyter: python3
 
 - ML-guided process maps (AM: laser power vs scan speed; metallurgy: TTT/CCT approximations).
 - Physics-informed ML vs naive regression.
-
-*(This unit ensures profoundly processing-centered ML content—distinct from genomics's structure-first world.)*
+ 
 
 ### Unit IV — ML for Characterization Signals (Weeks 10–12)
 
@@ -123,8 +122,7 @@ jupyter: python3
 
 - Combining images + spectra + process parameters.
 - Early vs late fusion.
-
-*(This module draws synergy with your research—students love learning real lab-relevant problems.)*
+ 
 
 ### Unit V — Project + Reflection (Weeks 13–14)
 
