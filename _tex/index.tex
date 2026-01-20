@@ -179,27 +179,21 @@ Analysis, Process Optimization},
 
 
 \begin{abstract}
-This course provides students with essential skills and practical
-knowledge to harness machine learning techniques for accelerating
-materials discovery and design. Specifically tailored for students
-interested in the new BSc program ``KI-Materialtechnologie''/AI for
-materials technology'', it provides hands-on experience with core and
-advanced machine learning methods---including neural networks,
-optimization strategies, and generative modelling---to tackle real-world
-materials science problems. The course focuses on experimental data:
-microstructures, images, spectra, and processing parameters, connecting
-the messy, nonlinear world of processing and characterization signals
-with machine learning tools.
+This course teaches how machine learning can be applied to experimental
+data from materials processing and characterization. The focus lies on
+images, spectra, time-series, and processing parameters, and on
+understanding how physical data formation interacts with learning
+algorithms. Students learn to build robust, uncertainty-aware ML
+pipelines for real experimental workflows, avoiding common pitfalls such
+as data leakage, overfitting, and spurious correlations.
 \end{abstract}
 
 \section*{Plain Language Summary}
-This course teaches how to apply machine learning to materials science
-problems, focusing on experimental data from characterization techniques
-(microscopy, spectroscopy) and processing parameters. Students learn to
-build ML pipelines for microstructure classification, process
-prediction, and spectral analysis, with emphasis on understanding the
-physics of data formation and avoiding common pitfalls in experimental
-ML workflows.
+Students learn how to use machine learning on real materials data such
+as microscopy images, spectra, and processing logs. The course
+emphasizes understanding the physics behind the data, choosing suitable
+ML models, and assessing uncertainty and reliability rather than just
+maximizing accuracy.
 
 
 
@@ -207,30 +201,37 @@ ML workflows.
 \section{Machine Learning in Materials Processing \&
 Characterization}\label{machine-learning-in-materials-processing-characterization}
 
-\textbf{4th Semester -- 5 ECTS, 2h lecture + 2h exercises per week}
+\textbf{4th/5th Semester -- 5 ECTS · 2h lecture + 2h exercises per
+week}\\
+\emph{Coordinated with ``Mathematical Foundations of AI \& ML'' (MFML)\\
+and ``Materials Genomics'' (MG)}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{Synergy Map}\label{synergy-map}
 
 \begin{itemize}
+\tightlist
 \item
-  \textbf{This course}: What ML can do with experimental data:
-  microstructures, images, spectra, processing parameters.
+  \textbf{MFML} provides the mathematical spine: loss functions, neural
+  networks, generalization, uncertainty, Gaussian Processes.
 \item
-  \textbf{Parallel ML intro course}: Teaches generic ML algorithms and
-  image processing foundations (skimage, Fourier, wavelets, SVMs, Bayes
-  classifiers).
+  \textbf{This course (ML-PC)} applies these concepts to
+  \emph{experimental} data: images, spectra, and processing signals.
 \item
-  \textbf{``Materials Genomics'' course}: Focuses on materials
-  databases, descriptors, crystal graph representations, DFT data,
-  high-throughput workflows, surrogate models.
+  \textbf{Materials Genomics} focuses on crystal structures, databases,
+  and discovery.
 \end{itemize}
+
+ML-PC is therefore \textbf{application-driven}, not algorithm-driven.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{Week-by-Week Curriculum (14
 weeks)}\label{week-by-week-curriculum-14-weeks}
 
-\subsubsection{Unit I --- Foundations: From Materials Signals to Machine
-Learning (Weeks
-1--3)}\label{unit-i-foundations-from-materials-signals-to-machine-learning-weeks-13}
+\subsubsection{Unit I --- Experimental Data as a Learning Problem (Weeks
+1--3)}\label{unit-i-experimental-data-as-a-learning-problem-weeks-13}
 
 \paragraph{Week 1 -- What makes materials data
 special?}\label{week-1-what-makes-materials-data-special}
@@ -238,268 +239,331 @@ special?}\label{week-1-what-makes-materials-data-special}
 \begin{itemize}
 \tightlist
 \item
-  Types of data: micrographs, EBSD, EDS, EELS, XRD, process logs,
-  thermal profiles, deformation curves.
+  Types of experimental data: micrographs, EBSD, EDS, EELS, XRD, process
+  logs, thermal histories.
 \item
-  PSPP (Processing--Structure--Property--Performance) as a data graph.
+  PSPP (Processing--Structure--Property--Performance) as a \emph{data
+  dependency graph}.
 \item
-  Why vision-based ML and time-series ML are central to processing \&
-  characterization.
+  Why ML failure modes are common in experimental science.
 \end{itemize}
 
-\paragraph{Week 2 -- Image formation \& the physics of
-data}\label{week-2-image-formation-the-physics-of-data}
+\textbf{Exercise:}\\
+Inspect real microscopy and process datasets; identify sources of bias
+and noise.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\paragraph{Week 2 -- Physics of data
+formation}\label{week-2-physics-of-data-formation}
 
 \begin{itemize}
 \tightlist
 \item
-  How characterization creates data: resolution, contrast mechanisms,
+  Image and signal formation in characterization: resolution, contrast,
   artifacts.
 \item
-  Fourier optics intuition for students with their ML-intro foundations.
+  Sampling, aliasing, noise as \emph{physical priors} (not preprocessing
+  tricks).
 \item
-  Sampling, aliasing, denoising as model-based priors.
+  Relation to MFML refresher on PCA and covariance.
 \end{itemize}
 
-\paragraph{Week 3 -- Experimental data quality \&
-ML-readiness}\label{week-3-experimental-data-quality-ml-readiness}
+\textbf{Exercise:}\\
+Fourier inspection of micrographs; effects of sampling and filtering.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\paragraph{Week 3 -- Data quality, labels, and
+leakage}\label{week-3-data-quality-labels-and-leakage}
 
 \begin{itemize}
 \tightlist
 \item
-  Annotation, segmentation, inter-annotator variance.
+  Annotation uncertainty and inter-annotator variance.
 \item
   Train/test leakage in materials workflows.
+\item
+  Why ``good accuracy'' often means a broken pipeline.
 \end{itemize}
 
-\subsubsection{Unit II --- ML for Microstructure: Vision \&
-Representation (Weeks
-4--6)}\label{unit-ii-ml-for-microstructure-vision-representation-weeks-46}
+\textbf{Exercise:}\\
+Construct a deliberately flawed ML pipeline and diagnose its failure.
 
-\paragraph{Week 4 -- Classical microstructure quantification \& its ML
-extension}\label{week-4-classical-microstructure-quantification-its-ml-extension}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{Unit II --- Representation Learning for Microstructures
+(Weeks
+4--6)}\label{unit-ii-representation-learning-for-microstructures-weeks-46}
+
+\emph{(Aligned with early neural networks in MFML)}
+
+\paragraph{Week 4 -- From classical microstructure metrics to learned
+representations}\label{week-4-from-classical-microstructure-metrics-to-learned-representations}
 
 \begin{itemize}
 \tightlist
 \item
-  Grain size, phase fractions, orientation maps, lineal intercepts.
+  Grain size, phase fractions, orientation maps.
 \item
-  From hand-crafted features → learned representations.
+  Limits of hand-crafted microstructure features.
+\item
+  Transition to learned representations.
 \end{itemize}
 
-\paragraph{Week 5 -- Convolutional Neural Networks for microstructure
-classification}\label{week-5-convolutional-neural-networks-for-microstructure-classification}
+\textbf{Exercise:}\\
+Compare classical features vs simple NN-based features for
+microstructure tasks.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\paragraph{Week 5 -- Neural networks for microstructure
+images}\label{week-5-neural-networks-for-microstructure-images}
 
 \begin{itemize}
 \tightlist
 \item
-  CNN filters as microstructure interpreters.
+  CNN intuition: filters as structure detectors.
 \item
-  Example tasks: grain-boundary segmentation, precipitate detection,
-  melt pool defects.
+  Example tasks: phase segmentation, defect detection, porosity
+  identification.
+\item
+  Overfitting risks with small datasets.
 \end{itemize}
 
-\paragraph{Week 6 -- Transfer learning \& data scarcity in materials
-characterization}\label{week-6-transfer-learning-data-scarcity-in-materials-characterization}
+\textbf{Exercise:}\\
+Train a small CNN on microstructure images; analyze failure cases.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\paragraph{Week 6 -- Data scarcity \& transfer
+learning}\label{week-6-data-scarcity-transfer-learning}
 
 \begin{itemize}
 \tightlist
 \item
-  How to train a model with 200 images instead of 200k.
+  Why materials datasets are small.
 \item
-  Representations from ImageNet vs self-supervised pretraining on
-  microstructures.
+  Transfer learning from natural images vs self-supervised pretraining.
+\item
+  When transfer learning helps---and when it does not.
 \end{itemize}
 
-\subsubsection{Unit III --- ML in Processing: Time-Series, Optimization,
-Thermal/Mechanical Data (Weeks
-7--9)}\label{unit-iii-ml-in-processing-time-series-optimization-thermalmechanical-data-weeks-79}
+\textbf{Exercise:}\\
+Fine-tune a pretrained model; compare against training from scratch.
 
-\paragraph{Week 7 -- Process monitoring \& time-series
-ML}\label{week-7-process-monitoring-time-series-ml}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{Unit III --- Learning from Processing Data (Weeks
+7--9)}\label{unit-iii-learning-from-processing-data-weeks-79}
+
+\paragraph{Week 7 -- Time-series and process
+monitoring}\label{week-7-time-series-and-process-monitoring}
 
 \begin{itemize}
 \tightlist
 \item
-  Process logs: temperature cycles, additive manufacturing melt pool
-  monitoring, SPS, rolling, heat treatment.
+  Processing signals: temperature cycles, AM melt pool signals, SPS,
+  rolling.
 \item
-  Hidden Markov models, ARIMA, random forest regressors, RNNs (light
-  introduction).
+  Regression and sequence models as surrogates.
+\item
+  Relation to MFML concepts of generalization.
 \end{itemize}
 
-\paragraph{Week 8 -- Process → structure regression \&
-uncertainty}\label{week-8-process-structure-regression-uncertainty}
+\textbf{Exercise:}\\
+Predict a process outcome from time-series data using regression or
+simple RNNs.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\paragraph{Week 8 -- Generalization, robustness, and process
+windows}\label{week-8-generalization-robustness-and-process-windows}
 
 \begin{itemize}
 \tightlist
 \item
-  Gaussian Processes (synergy with Materials Genomics' surrogate models,
-  but here linked to experimental data).
+  Sensitivity to noise and parameter drift.
 \item
-  Uncertainty as a tool for process design.
+  Overfitting in process--property models.
+\item
+  Robustness as a design criterion.
 \end{itemize}
 
-\paragraph{Week 9 -- Inverse problems in
-processing}\label{week-9-inverse-problems-in-processing}
+\textbf{Exercise:}\\
+Analyze model robustness under perturbed process conditions.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\paragraph{Week 9 -- Inverse problems and process
+maps}\label{week-9-inverse-problems-and-process-maps}
 
 \begin{itemize}
 \tightlist
 \item
-  ML-guided process maps (AM: laser power vs scan speed; metallurgy:
-  TTT/CCT approximations).
+  Process → structure inverse problems.
 \item
-  Physics-informed ML vs naive regression.
+  ML-guided process maps (e.g.~AM laser power vs scan speed).
+\item
+  Physics-informed vs unconstrained regression.
 \end{itemize}
 
-\subsubsection{Unit IV --- ML for Characterization Signals (Weeks
-10--12)}\label{unit-iv-ml-for-characterization-signals-weeks-1012}
+\textbf{Exercise:}\\
+Construct a simple ML-based process map; compare constrained vs
+unconstrained models.
 
-\paragraph{Week 10 -- Spectral data: ML for XRD, EELS,
-EDS}\label{week-10-spectral-data-ml-for-xrd-eels-eds}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsubsection{Unit IV --- Uncertainty, Surrogates, and Automation
+(Weeks
+10--12)}\label{unit-iv-uncertainty-surrogates-and-automation-weeks-1012}
+
+\paragraph{Week 10 -- ML for characterization
+signals}\label{week-10-ml-for-characterization-signals}
 
 \begin{itemize}
 \tightlist
 \item
-  Peak detection, denoising, background removal.
+  Spectral data: XRD, EELS, EDS.
 \item
-  Dimensionality reduction (PCA, NMF, ICA).
+  Denoising, peak finding, dimensionality reduction.
+\item
+  Using ML without destroying physical meaning.
 \end{itemize}
 
-\paragraph{Week 11 -- ML for microscopy
-automation}\label{week-11-ml-for-microscopy-automation}
+\textbf{Exercise:}\\
+Apply PCA/NMF to spectral datasets; interpret components physically.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\paragraph{Week 11 -- Automation in microscopy and
+characterization}\label{week-11-automation-in-microscopy-and-characterization}
 
 \begin{itemize}
 \tightlist
 \item
-  Auto-focusing, drift correction, parameter selection.
+  Autofocus, drift correction, parameter selection.
 \item
-  Vision-based defect detection in EBSD or TEM.
+  ML as a control component, not just a predictor.
 \end{itemize}
 
-\paragraph{Week 12 -- Multi-modal data
-fusion}\label{week-12-multi-modal-data-fusion}
+\textbf{Exercise:}\\
+Implement a simple ML-assisted autofocus or defect detector.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\paragraph{Week 12 -- Uncertainty-aware regression \& Gaussian
+Processes}\label{week-12-uncertainty-aware-regression-gaussian-processes}
 
 \begin{itemize}
 \tightlist
 \item
-  Combining images + spectra + process parameters.
+  Aleatoric vs epistemic uncertainty in experiments.
 \item
-  Early vs late fusion.
+  Gaussian Processes as uncertainty-aware surrogates.
+\item
+  Exploration vs exploitation in experimental design.
+\item
+  Connection to materials acceleration platforms.
 \end{itemize}
 
-\subsubsection{Unit V --- Project + Reflection (Weeks
-13--14)}\label{unit-v-project-reflection-weeks-1314}
+\textbf{Exercise:}\\
+Compare GP regression and NN ensembles for a process-parameter problem.
 
-\paragraph{Week 13 -- Mini-project
-workshop}\label{week-13-mini-project-workshop}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\textbf{Projects could be:}
+\subsubsection{Unit V --- Physics, Trust, and Synthesis (Weeks
+13--14)}\label{unit-v-physics-trust-and-synthesis-weeks-1314}
+
+\paragraph{Week 13 -- Physics-informed and constrained
+ML}\label{week-13-physics-informed-and-constrained-ml}
 
 \begin{itemize}
 \tightlist
 \item
-  Predict microhardness from heat-treatment + microstructure images.
+  Embedding physical constraints into ML models.
 \item
-  Segment phases in SEM images.
+  Penalty terms, soft constraints, hybrid approaches.
 \item
-  Detect porosity in AM melt pool images.
-\item
-  Denoise EELS/XRD spectra.
-\item
-  Build a process map using Gaussian Processes.
+  Failure modes of unconstrained models.
 \end{itemize}
 
-\textbf{Students must show:}
+\textbf{Exercise:}\\
+Train a constrained model for a processing or characterization task.
 
-\begin{enumerate}
-\def\labelenumi{\arabic{enumi}.}
-\tightlist
-\item
-  data prep → 2. model selection → 3. evaluation → 4. uncertainty → 5.
-  interpretation.
-\end{enumerate}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\paragraph{Week 14 -- Presentations + critical
-evaluation}\label{week-14-presentations-critical-evaluation}
+\paragraph{Week 14 -- Integration, limits, and
+reflection}\label{week-14-integration-limits-and-reflection}
 
 \begin{itemize}
 \tightlist
 \item
-  Focus on explainability (CAMs, SHAP for simple models).
+  Explainability for experimental ML (CAMs, SHAP).
 \item
-  Reflect on why ML sometimes fails on materials data.
+  Why ML fails in real labs.
 \item
-  Wrap-up: Where ML is genuinely changing materials characterization.
+  Where ML genuinely changes materials processing.
 \end{itemize}
+
+\textbf{Exercise:}\\
+Mini-project presentations and critical discussion.
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
 \subsection{Learning Outcomes}\label{learning-outcomes}
 
-Students completing this course should be able to:
+Students completing this course will be able to:
 
 \begin{itemize}
 \tightlist
 \item
-  Interpret materials characterization and processing data in an
-  ML-ready way.
+  Interpret materials processing and characterization data as learning
+  problems.
 \item
-  Build ML pipelines for microstructure classification, process
-  prediction, and spectral analysis.
+  Build ML pipelines for microstructure analysis, process prediction,
+  and spectral data.
 \item
-  Understand the physics of image/signal formation well enough to avoid
-  ``garbage in → garbage out''.
+  Understand the physics of data formation to avoid common ML pitfalls.
 \item
-  Evaluate uncertainty and biases in experimental ML models.
+  Evaluate generalization, robustness, and uncertainty in experimental
+  ML models.
 \item
-  Combine processing and characterization data for property prediction.
+  Apply Gaussian Processes and neural networks as surrogate models.
 \item
-  Critically evaluate claims about ML in materials science. \#\#
+  Integrate physical constraints into ML workflows.
+\item
+  Critically assess claims about ML in materials processing and
+  characterization.
 \end{itemize}
 
-\subsection{Lab possibilities:}\label{lab-possibilities}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Lab Possibilities}\label{lab-possibilities}
 
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Lab:} Exploring real microscopy datasets; noise, metadata,
-  units.
+  Microscopy datasets: noise, metadata, units, and artifacts.
 \item
-  \textbf{Lab:} Fourier \& wavelet inspection of SEM/TEM/optical
-  micrographs.
+  Fourier inspection of SEM/TEM images.
 \item
-  \textbf{Lab:} Correct vs broken experimental ML pipelines; data-leak
-  horror stories.
+  Broken vs correct ML pipelines (data leakage case studies).
 \item
-  \textbf{Lab:} Using scikit-image to extract features; PCA on
-  microstructure descriptors.
+  Feature extraction vs learned representations.
 \item
-  \textbf{Lab:} Fine-tuning a pretrained model on SEM/optical images.
+  Fine-tuning pretrained CNNs on microstructures.
 \item
-  \textbf{Lab:} Predicting hardness from heat-treatment curves.
+  Process--property regression with uncertainty.
 \item
-  \textbf{Lab:} GP on process parameters (e.g., cooling rate →
-  microstructure metric).
+  GP-based process maps.
 \item
-  \textbf{Lab:} Building process maps using ML surrogate models.
+  Spectral decomposition (NMF) of EELS/XRD data.
 \item
-  \textbf{Lab:} NMF decomposition of EELS datasets; automatic phase
-  identification in XRD.
+  ML-assisted autofocus or EBSD pattern classification.
 \item
-  \textbf{Lab:} Implementing a simple ``AI autofocus'' or EBSD pattern
-  classifier.
-\item
-  \textbf{Lab:} Fusing XRD + microstructure representations for property
-  prediction.
+  Multi-modal fusion of images, spectra, and process parameters.
 \end{itemize}
-
-\subsection*{References}\label{references}
-\addcontentsline{toc}{subsection}{References}
-
-\vspace{1em}
-
-\textsubscript{Source:
-\href{https://ECLIPSE-Lab.github.io/MachineLearningForCharacterizationAndProcessing/index.qmd.html}{Article
-Notebook}}
 
 
 
