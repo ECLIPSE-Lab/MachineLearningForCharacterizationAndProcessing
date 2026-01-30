@@ -56,7 +56,7 @@ as data leakage, overfitting, and spurious correlations.</p>
       <title>1. Machine Learning in Materials Processing &amp;
   Characterization</title>
       <p>
-        <bold>4th/5th Semester – 5 ECTS · 2h lecture + 2h exercises per
+        <bold>5th Semester – 5 ECTS · 2h lecture + 2h exercises per
   week</bold>
         <italic>Coordinated with “Mathematical Foundations of AI &amp; ML”
   (MFML)
@@ -83,14 +83,28 @@ as data leakage, overfitting, and spurious correlations.</p>
         <p>ML-PC is therefore <bold>application-driven</bold>, not
     algorithm-driven.</p>
       </sec>
+      <sec id="companion-books">
+        <title>1.2 Companion books</title>
+        <list list-type="bullet">
+          <list-item>
+            <p>Sandfeld
+        (<xref alt="2024" rid="ref-sandfeld2024materials" ref-type="bibr">2024</xref>):
+        Materials Data Science</p>
+          </list-item>
+        </list>
+      </sec>
       <sec id="week-by-week-curriculum-14-weeks">
-        <title>1.2 Week-by-Week Curriculum (14 weeks)</title>
+        <title>1.3 Week-by-Week Curriculum (14 weeks)</title>
         <sec id="unit-i-experimental-data-as-a-learning-problem-weeks-13">
-          <title>1.2.1 Unit I — Experimental Data as a Learning Problem
+          <title>1.3.1 Unit I — Experimental Data as a Learning Problem
       (Weeks 1–3)</title>
           <sec id="week-1-what-makes-materials-data-special">
-            <title>1.2.1.1 Week 1 – What makes materials data
+            <title>1.3.1.1 Week 1 – What makes materials data
         special?</title>
+            <p>
+              <italic>Lecture: Tuesday, 14.04.2026, 14:15-15:45 | Exercise:
+        Thursday, 16.04.2026, 16:15-17:45</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>Types of experimental data: micrographs, EBSD, EDS, EELS,
@@ -110,7 +124,11 @@ as data leakage, overfitting, and spurious correlations.</p>
         of bias and noise.</p>
           </sec>
           <sec id="week-2-physics-of-data-formation">
-            <title>1.2.1.2 Week 2 – Physics of data formation</title>
+            <title>1.3.1.2 Week 2 – Physics of data formation</title>
+            <p>
+              <italic>Lecture: Tuesday, 21.04.2026, 14:15-15:45 | Exercise:
+        Thursday, 23.04.2026, 16:15-17:45</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>Image and signal formation in characterization:
@@ -129,8 +147,12 @@ as data leakage, overfitting, and spurious correlations.</p>
         filtering.</p>
           </sec>
           <sec id="week-3-data-quality-labels-and-leakage">
-            <title>1.2.1.3 Week 3 – Data quality, labels, and
+            <title>1.3.1.3 Week 3 – Data quality, labels, and
         leakage</title>
+            <p>
+              <italic>Lecture: Tuesday, 28.04.2026, 14:15-15:45 | Exercise:
+        Thursday, 30.04.2026, 16:15-17:45</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>Annotation uncertainty and inter-annotator variance.</p>
@@ -148,15 +170,19 @@ as data leakage, overfitting, and spurious correlations.</p>
           </sec>
         </sec>
         <sec id="unit-ii-representation-learning-for-microstructures-weeks-46">
-          <title>1.2.2 Unit II — Representation Learning for Microstructures
+          <title>1.3.2 Unit II — Representation Learning for Microstructures
       (Weeks 4–6)</title>
           <p>
             <italic>(Aligned with early neural networks in
       MFML)</italic>
           </p>
           <sec id="week-4-from-classical-microstructure-metrics-to-learned-representations">
-            <title>1.2.2.1 Week 4 – From classical microstructure metrics to
+            <title>1.3.2.1 Week 4 – From classical microstructure metrics to
         learned representations</title>
+            <p>
+              <italic>Lecture: Tuesday, 05.05.2026, 14:15-15:45 | Exercise:
+        Thursday, 07.05.2026, 16:15-17:45</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>Grain size, phase fractions, orientation maps.</p>
@@ -173,8 +199,13 @@ as data leakage, overfitting, and spurious correlations.</p>
         microstructure tasks.</p>
           </sec>
           <sec id="week-5-neural-networks-for-microstructure-images">
-            <title>1.2.2.2 Week 5 – Neural networks for microstructure
+            <title>1.3.2.2 Week 5 – Neural networks for microstructure
         images</title>
+            <p>
+              <italic>Lecture: Tuesday, 12.05.2026, 14:15-15:45 | Exercise:
+        Thursday, 14.05.2026, 16:15-17:45 (cancelled -
+        Himmelfahrt)</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>CNN intuition: filters as structure detectors.</p>
@@ -192,8 +223,12 @@ as data leakage, overfitting, and spurious correlations.</p>
         cases.</p>
           </sec>
           <sec id="week-6-data-scarcity-transfer-learning">
-            <title>1.2.2.3 Week 6 – Data scarcity &amp; transfer
+            <title>1.3.2.3 Week 6 – Data scarcity &amp; transfer
         learning</title>
+            <p>
+              <italic>Lecture: Tuesday, 19.05.2026, 14:15-15:45 | Exercise:
+        Thursday, 21.05.2026, 16:15-17:45</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>Why materials datasets are small.</p>
@@ -212,11 +247,15 @@ as data leakage, overfitting, and spurious correlations.</p>
           </sec>
         </sec>
         <sec id="unit-iii-learning-from-processing-data-weeks-79">
-          <title>1.2.3 Unit III — Learning from Processing Data (Weeks
+          <title>1.3.3 Unit III — Learning from Processing Data (Weeks
       7–9)</title>
           <sec id="week-7-time-series-and-process-monitoring">
-            <title>1.2.3.1 Week 7 – Time-series and process
+            <title>1.3.3.1 Week 7 – Time-series and process
         monitoring</title>
+            <p>
+              <italic>Lecture: Tuesday, 26.05.2026, 14:15-15:45 | Exercise:
+        Thursday, 28.05.2026, 16:15-17:45</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>Processing signals: temperature cycles, AM melt pool
@@ -234,8 +273,13 @@ as data leakage, overfitting, and spurious correlations.</p>
         or simple RNNs.</p>
           </sec>
           <sec id="week-8-generalization-robustness-and-process-windows">
-            <title>1.2.3.2 Week 8 – Generalization, robustness, and process
+            <title>1.3.3.2 Week 8 – Generalization, robustness, and process
         windows</title>
+            <p>
+              <italic>Lecture: Tuesday, 02.06.2026, 14:15-15:45 | Exercise:
+        Thursday, 04.06.2026, 16:15-17:45 (cancelled -
+        Fronleichnam)</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>Sensitivity to noise and parameter drift.</p>
@@ -251,8 +295,12 @@ as data leakage, overfitting, and spurious correlations.</p>
         Analyze model robustness under perturbed process conditions.</p>
           </sec>
           <sec id="week-9-inverse-problems-and-process-maps">
-            <title>1.2.3.3 Week 9 – Inverse problems and process
+            <title>1.3.3.3 Week 9 – Inverse problems and process
         maps</title>
+            <p>
+              <italic>Lecture: Tuesday, 09.06.2026, 14:15-15:45 | Exercise:
+        Thursday, 11.06.2026, 16:15-17:45</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>Process → structure inverse problems.</p>
@@ -271,10 +319,14 @@ as data leakage, overfitting, and spurious correlations.</p>
           </sec>
         </sec>
         <sec id="unit-iv-uncertainty-surrogates-and-automation-weeks-1012">
-          <title>1.2.4 Unit IV — Uncertainty, Surrogates, and Automation
+          <title>1.3.4 Unit IV — Uncertainty, Surrogates, and Automation
       (Weeks 10–12)</title>
           <sec id="week-10-ml-for-characterization-signals">
-            <title>1.2.4.1 Week 10 – ML for characterization signals</title>
+            <title>1.3.4.1 Week 10 – ML for characterization signals</title>
+            <p>
+              <italic>Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise:
+        Thursday, 18.06.2026, 16:15-17:45</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>Spectral data: XRD, EELS, EDS.</p>
@@ -291,8 +343,12 @@ as data leakage, overfitting, and spurious correlations.</p>
         physically.</p>
           </sec>
           <sec id="week-11-automation-in-microscopy-and-characterization">
-            <title>1.2.4.2 Week 11 – Automation in microscopy and
+            <title>1.3.4.2 Week 11 – Automation in microscopy and
         characterization</title>
+            <p>
+              <italic>Lecture: Tuesday, 23.06.2026, 14:15-15:45 | Exercise:
+        Thursday, 25.06.2026, 16:15-17:45</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>Autofocus, drift correction, parameter selection.</p>
@@ -305,8 +361,12 @@ as data leakage, overfitting, and spurious correlations.</p>
         Implement a simple ML-assisted autofocus or defect detector.</p>
           </sec>
           <sec id="week-12-uncertainty-aware-regression-gaussian-processes">
-            <title>1.2.4.3 Week 12 – Uncertainty-aware regression &amp;
+            <title>1.3.4.3 Week 12 – Uncertainty-aware regression &amp;
         Gaussian Processes</title>
+            <p>
+              <italic>Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise:
+        Thursday, 02.07.2026, 16:15-17:45</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>Aleatoric vs epistemic uncertainty in experiments.</p>
@@ -327,11 +387,15 @@ as data leakage, overfitting, and spurious correlations.</p>
           </sec>
         </sec>
         <sec id="unit-v-physics-trust-and-synthesis-weeks-1314">
-          <title>1.2.5 Unit V — Physics, Trust, and Synthesis (Weeks
+          <title>1.3.5 Unit V — Physics, Trust, and Synthesis (Weeks
       13–14)</title>
           <sec id="week-13-physics-informed-and-constrained-ml">
-            <title>1.2.5.1 Week 13 – Physics-informed and constrained
+            <title>1.3.5.1 Week 13 – Physics-informed and constrained
         ML</title>
+            <p>
+              <italic>Lecture: Tuesday, 07.07.2026, 14:15-15:45 | Exercise:
+        Thursday, 09.07.2026, 16:15-17:45</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>Embedding physical constraints into ML models.</p>
@@ -348,8 +412,12 @@ as data leakage, overfitting, and spurious correlations.</p>
         task.</p>
           </sec>
           <sec id="week-14-integration-limits-and-reflection">
-            <title>1.2.5.2 Week 14 – Integration, limits, and
+            <title>1.3.5.2 Week 14 – Integration, limits, and
         reflection</title>
+            <p>
+              <italic>Lecture: Tuesday, 14.07.2026, 14:15-15:45 | Exercise:
+        Thursday, 16.07.2026, 16:15-17:45</italic>
+            </p>
             <list list-type="bullet">
               <list-item>
                 <p>Explainability for experimental ML (CAMs, SHAP).</p>
@@ -367,7 +435,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </sec>
       </sec>
       <sec id="learning-outcomes">
-        <title>1.3 Learning Outcomes</title>
+        <title>1.4 Learning Outcomes</title>
         <p>Students completing this course will be able to:</p>
         <list list-type="bullet">
           <list-item>
@@ -400,7 +468,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list>
       </sec>
       <sec id="lab-possibilities">
-        <title>1.4 Lab Possibilities</title>
+        <title>1.5 Lab Possibilities</title>
         <list list-type="bullet">
           <list-item>
             <p>Microscopy datasets: noise, metadata, units, and
@@ -440,5 +508,21 @@ as data leakage, overfitting, and spurious correlations.</p>
     </sec>
   </body>
   <back>
-</back>
+    <ref-list>
+      <title/>
+      <ref id="ref-sandfeld2024materials">
+        <element-citation publication-type="book">
+          <person-group person-group-type="author">
+            <name>
+              <surname>Sandfeld</surname>
+              <given-names>Stefan</given-names>
+            </name>
+          </person-group>
+          <source>Materials data science: Introduction to data mining, machine learning, and data-driven predictions for materials science and engineering</source>
+          <publisher-name>Springer Nature</publisher-name>
+          <year iso-8601-date="2024">2024</year>
+        </element-citation>
+      </ref>
+    </ref-list>
+  </back>
 </article>

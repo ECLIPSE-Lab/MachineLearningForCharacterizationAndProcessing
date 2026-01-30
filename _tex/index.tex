@@ -91,6 +91,39 @@
 \makeatother
 
 
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
+  \fi
+  % set entry spacing
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
 
 
@@ -201,8 +234,7 @@ maximizing accuracy.
 \section{Machine Learning in Materials Processing \&
 Characterization}\label{machine-learning-in-materials-processing-characterization}
 
-\textbf{4th/5th Semester -- 5 ECTS · 2h lecture + 2h exercises per
-week}\\
+\textbf{5th Semester -- 5 ECTS · 2h lecture + 2h exercises per week}\\
 \emph{Coordinated with ``Mathematical Foundations of AI \& ML'' (MFML)\\
 and ``Materials Genomics'' (MG)}
 
@@ -227,6 +259,14 @@ ML-PC is therefore \textbf{application-driven}, not algorithm-driven.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
+\subsection{Companion books}\label{companion-books}
+
+\begin{itemize}
+\tightlist
+\item
+  Sandfeld (2024): Materials Data Science
+\end{itemize}
+
 \subsection{Week-by-Week Curriculum (14
 weeks)}\label{week-by-week-curriculum-14-weeks}
 
@@ -235,6 +275,9 @@ weeks)}\label{week-by-week-curriculum-14-weeks}
 
 \paragraph{Week 1 -- What makes materials data
 special?}\label{week-1-what-makes-materials-data-special}
+
+\emph{Lecture: Tuesday, 14.04.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 16.04.2026, 16:15-17:45}
 
 \begin{itemize}
 \tightlist
@@ -257,6 +300,9 @@ and noise.
 \paragraph{Week 2 -- Physics of data
 formation}\label{week-2-physics-of-data-formation}
 
+\emph{Lecture: Tuesday, 21.04.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 23.04.2026, 16:15-17:45}
+
 \begin{itemize}
 \tightlist
 \item
@@ -276,6 +322,9 @@ Fourier inspection of micrographs; effects of sampling and filtering.
 
 \paragraph{Week 3 -- Data quality, labels, and
 leakage}\label{week-3-data-quality-labels-and-leakage}
+
+\emph{Lecture: Tuesday, 28.04.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 30.04.2026, 16:15-17:45}
 
 \begin{itemize}
 \tightlist
@@ -301,6 +350,9 @@ Construct a deliberately flawed ML pipeline and diagnose its failure.
 \paragraph{Week 4 -- From classical microstructure metrics to learned
 representations}\label{week-4-from-classical-microstructure-metrics-to-learned-representations}
 
+\emph{Lecture: Tuesday, 05.05.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 07.05.2026, 16:15-17:45}
+
 \begin{itemize}
 \tightlist
 \item
@@ -320,6 +372,9 @@ microstructure tasks.
 \paragraph{Week 5 -- Neural networks for microstructure
 images}\label{week-5-neural-networks-for-microstructure-images}
 
+\emph{Lecture: Tuesday, 12.05.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 14.05.2026, 16:15-17:45 (cancelled - Himmelfahrt)}
+
 \begin{itemize}
 \tightlist
 \item
@@ -338,6 +393,9 @@ Train a small CNN on microstructure images; analyze failure cases.
 
 \paragraph{Week 6 -- Data scarcity \& transfer
 learning}\label{week-6-data-scarcity-transfer-learning}
+
+\emph{Lecture: Tuesday, 19.05.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 21.05.2026, 16:15-17:45}
 
 \begin{itemize}
 \tightlist
@@ -360,6 +418,9 @@ Fine-tune a pretrained model; compare against training from scratch.
 \paragraph{Week 7 -- Time-series and process
 monitoring}\label{week-7-time-series-and-process-monitoring}
 
+\emph{Lecture: Tuesday, 26.05.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 28.05.2026, 16:15-17:45}
+
 \begin{itemize}
 \tightlist
 \item
@@ -380,6 +441,9 @@ simple RNNs.
 \paragraph{Week 8 -- Generalization, robustness, and process
 windows}\label{week-8-generalization-robustness-and-process-windows}
 
+\emph{Lecture: Tuesday, 02.06.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 04.06.2026, 16:15-17:45 (cancelled - Fronleichnam)}
+
 \begin{itemize}
 \tightlist
 \item
@@ -397,6 +461,9 @@ Analyze model robustness under perturbed process conditions.
 
 \paragraph{Week 9 -- Inverse problems and process
 maps}\label{week-9-inverse-problems-and-process-maps}
+
+\emph{Lecture: Tuesday, 09.06.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 11.06.2026, 16:15-17:45}
 
 \begin{itemize}
 \tightlist
@@ -421,6 +488,9 @@ unconstrained models.
 \paragraph{Week 10 -- ML for characterization
 signals}\label{week-10-ml-for-characterization-signals}
 
+\emph{Lecture: Tuesday, 16.06.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 18.06.2026, 16:15-17:45}
+
 \begin{itemize}
 \tightlist
 \item
@@ -439,6 +509,9 @@ Apply PCA/NMF to spectral datasets; interpret components physically.
 \paragraph{Week 11 -- Automation in microscopy and
 characterization}\label{week-11-automation-in-microscopy-and-characterization}
 
+\emph{Lecture: Tuesday, 23.06.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 25.06.2026, 16:15-17:45}
+
 \begin{itemize}
 \tightlist
 \item
@@ -454,6 +527,9 @@ Implement a simple ML-assisted autofocus or defect detector.
 
 \paragraph{Week 12 -- Uncertainty-aware regression \& Gaussian
 Processes}\label{week-12-uncertainty-aware-regression-gaussian-processes}
+
+\emph{Lecture: Tuesday, 30.06.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 02.07.2026, 16:15-17:45}
 
 \begin{itemize}
 \tightlist
@@ -478,6 +554,9 @@ Compare GP regression and NN ensembles for a process-parameter problem.
 \paragraph{Week 13 -- Physics-informed and constrained
 ML}\label{week-13-physics-informed-and-constrained-ml}
 
+\emph{Lecture: Tuesday, 07.07.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 09.07.2026, 16:15-17:45}
+
 \begin{itemize}
 \tightlist
 \item
@@ -495,6 +574,9 @@ Train a constrained model for a processing or characterization task.
 
 \paragraph{Week 14 -- Integration, limits, and
 reflection}\label{week-14-integration-limits-and-reflection}
+
+\emph{Lecture: Tuesday, 14.07.2026, 14:15-15:45 \textbar{} Exercise:
+Thursday, 16.07.2026, 16:15-17:45}
 
 \begin{itemize}
 \tightlist
@@ -564,6 +646,15 @@ Students completing this course will be able to:
 \item
   Multi-modal fusion of images, spectra, and process parameters.
 \end{itemize}
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-sandfeld2024materials}
+Sandfeld, S. (2024). \emph{Materials data science: Introduction to data
+mining, machine learning, and data-driven predictions for materials
+science and engineering}. Springer Nature.
+
+\end{CSLReferences}
 
 
 
