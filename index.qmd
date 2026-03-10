@@ -43,6 +43,29 @@ execute:
   eval: false
 ---
 
+<<<<<<< Updated upstream
+=======
+
+:::: {.columns}
+
+::: {.column width="50%"}
+[![](images/eclipse_header.png){width=300}](https://pelzlab.science)
+:::
+
+::: {.column width="25%"}
+[![](images/github.jpeg){width=120}](https://github.com/ECLIPSE-Lab/MachineLearningForCharacterizationAndProcessing)
+
+**Github Code**
+:::
+
+::: {.column width="25%"}
+[![](images/studon.jpeg){width=120}](https://www.studon.fau.de/)
+
+**Studon Link**
+:::
+
+::::
+>>>>>>> Stashed changes
 # Machine Learning in Materials Processing & Characterization
 
 **5th Semester – 5 ECTS · 2h lecture + 2h exercises per week**  
