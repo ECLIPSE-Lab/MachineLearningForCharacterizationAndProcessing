@@ -84,6 +84,11 @@ as data leakage, overfitting, and spurious correlations.</p>
 </front>
 
 <body>
+<p><ext-link ext-link-type="uri" xlink:href="https://pelzlab.science"><inline-graphic mimetype="image" mime-subtype="png" xlink:href="images/eclipse_header.png" /></ext-link></p>
+<p><ext-link ext-link-type="uri" xlink:href="https://github.com/ECLIPSE-Lab/MachineLearningForCharacterizationAndProcessing"><inline-graphic mimetype="image" mime-subtype="jpeg" xlink:href="images/github.jpeg" /></ext-link></p>
+<p><bold>Github Code</bold></p>
+<p><ext-link ext-link-type="uri" xlink:href="https://www.studon.fau.de/"><inline-graphic mimetype="image" mime-subtype="jpeg" xlink:href="images/studon.jpeg" /></ext-link></p>
+<p><bold>Studon Link</bold></p>
 <sec id="machine-learning-in-materials-processing-characterization">
   <title>1. Machine Learning in Materials Processing &amp;
   Characterization</title>
