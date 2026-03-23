@@ -8,3 +8,8 @@
 /trackchanges.sty
 
 /.luarc.json
+AGENT_INSTRUCTIONS.md
+.agents/
+.agent/
+_agents/
+_agent/
