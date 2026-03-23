@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+    <meta charset="utf-8">
+    <meta name="generator" content="quarto-1.10.0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+    <meta name="author" content="Philipp Pelz">
+    <meta name="dcterms.date" content="2026-03-23">
+    <meta name="keywords" content="Machine Learning, Materials Science, Materials Processing, Materials Characterization, Deep Learning, Microstructure Analysis, Process Optimization">
+
+    <title>Machine Learning in Materials Processing &amp; Characterization</title>
+    <style>
+      /* Default styles provided by pandoc.
+      ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+      */
+      code{white-space: pre-wrap;}
+      span.smallcaps{font-variant: small-caps;}
+      div.columns{display: flex; gap: min(4vw, 1.5em);}
+      div.column{flex: auto; overflow-x: auto;}
+      div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+      ul.task-list{list-style: none;}
+      ul.task-list li input[type="checkbox"] {
+        width: 0.8em;
+        margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+        vertical-align: middle;
+      }
+      /* CSS for citations */
+      div.csl-bib-body { }
+      div.csl-entry {
+        clear: both;
+      }
+      .hanging-indent div.csl-entry {
+        margin-left:2em;
+        text-indent:-2em;
+      }
+      div.csl-left-margin {
+        min-width:2em;
+        float:left;
+      }
+      div.csl-right-inline {
+        margin-left:2em;
+        padding-left:1em;
+      }
+      div.csl-indent {
+        margin-left: 2em;
+      }    </style>
+
+    <style>
+      body.hypothesis-enabled #quarto-embed-header {
+        padding-right: 36px;
+      }
+
+      #quarto-embed-header {
+        height: 3em;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 1px;
+      }
+
+      #quarto-embed-header h6 {
+        font-size: 1.1em;
+        padding-top: 0.6em;
+        margin-left: 1em;
+        margin-right: 1em;
+        font-weight: 400;
+      }
+
+      #quarto-embed-header a.quarto-back-link,
+      #quarto-embed-header a.quarto-download-embed {
+        font-size: 0.8em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+      }
+
+      .quarto-back-container {
+        padding-left: 0.5em;
+        display: flex;
+      }
+
+      .headroom {
+          will-change: transform;
+          transition: transform 200ms linear;
+      }
+
+      .headroom--pinned {
+          transform: translateY(0%);
+      }
+
+      .headroom--unpinned {
+          transform: translateY(-100%);
+      }      
+    </style>
+
+    <script>
+    window.document.addEventListener("DOMContentLoaded", function () {
+
+      var header = window.document.querySelector("#quarto-embed-header");
+      const titleBannerEl = window.document.querySelector("body > #title-block-header");
+      if (titleBannerEl) {
+        titleBannerEl.style.paddingTop = header.clientHeight + "px";
+      }
+      const contentEl = window.document.getElementById('quarto-content');
+      for (const child of contentEl.children) {
+        child.style.paddingTop = header.clientHeight + "px";
+        child.style.marginTop = "1em";
+      }
+
+      // Use the article root if the `back` call doesn't work. This isn't perfect
+      // but should typically work
+      window.quartoBackToArticle = () => {
+        var currentUrl = window.location.href;
+        window.history.back();
+        setTimeout(() => {
+            // if location was not changed in 100 ms, then there is no history back
+            if(currentUrl === window.location.href){              
+                // redirect to site root
+                window.location.href = "index.html";
+            }
+        }, 100);
+      }
+
+      const headroom = new window.Headroom(header, {
+        tolerance: 5,
+        onPin: function () {
+        },
+        onUnpin: function () {
+        },
+      });
+      headroom.init();
+    });
+    </script>
+
+    
+<script src="site_libs/manuscript-notebook/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-630aa7aed19b34e3f1c420a16f036f79.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-e9547d1f4f0d48d26c67a2519ac5a86e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+     <script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>  
+        <link rel="stylesheet" href="styles.css">
+      <meta name="citation_title" content="Machine Learning in Materials Processing &amp;amp; Characterization">
+<meta name="citation_abstract" content="This course teaches how machine learning can be applied to experimental data
+from materials processing and characterization. The focus lies on images,
+spectra, time-series, and processing parameters, and on understanding how
+physical data formation interacts with learning algorithms. Students learn to
+build robust, uncertainty-aware ML pipelines for real experimental workflows,
+avoiding common pitfalls such as data leakage, overfitting, and spurious
+correlations.
+">
+<meta name="citation_keywords" content="Machine Learning,Materials Science,Materials Processing,Materials Characterization,Deep Learning,Microstructure Analysis,Process Optimization">
+<meta name="citation_author" content="Philipp Pelz">
+<meta name="citation_publication_date" content="2026-03-23">
+<meta name="citation_cover_date" content="2026-03-23">
+<meta name="citation_year" content="2026">
+<meta name="citation_online_date" content="2026-03-23">
+<meta name="citation_language" content="en">
+<meta name="citation_reference" content="citation_title=Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: The example of La Palma (Canary Islands);,citation_author=José Marrero;,citation_author=Alicia García;,citation_author=Manuel Berrocoso;,citation_author=Ángeles Llinares;,citation_author=Antonio Rodríguez-Losada;,citation_author=R. Ortiz;,citation_publication_date=2019-07;,citation_cover_date=2019-07;,citation_year=2019;,citation_doi=10.1186/s13617-019-0085-5;,citation_volume=8;,citation_journal_title=Journal of Applied Volcanology;">
+<meta name="citation_reference" content="citation_title=Materials data science: Introduction to data mining, machine learning, and data-driven predictions for materials science and engineering;,citation_author=Stefan Sandfeld;,citation_publication_date=2024;,citation_cover_date=2024;,citation_year=2024;">
+</head>
+
+  <body class="quarto-notebook quarto-light">
+    <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
+      
+      <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
+      <h6><i class="bi bi-journal-code"></i> Article Notebook</h6>
+
+            <a href="./index.qmd" class="btn btn-primary quarto-download-embed" download="index.qmd">Download Source</a>
+          </div>
+
+     <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Machine Learning in Materials Processing &amp; Characterization</h1>
+            <p class="subtitle lead">Course Curriculum and Materials</p>
+          </div>
+
+    
+    <div class="quarto-title-meta-container">
+      <div class="quarto-title-meta-column-start">
+            <div class="quarto-title-meta-author">
+          <div class="quarto-title-meta-heading">Author</div>
+          <div class="quarto-title-meta-heading">Affiliation</div>
+          
+                <div class="quarto-title-meta-contents">
+            <p class="author">Philipp Pelz </p>
+          </div>
+                <div class="quarto-title-meta-contents">
+                    <p class="affiliation">
+                        Materials Science and Engineering
+                      </p>
+                  </div>
+                    </div>
+        
+        <div class="quarto-title-meta">
+
+                      
+                <div>
+            <div class="quarto-title-meta-heading">Published</div>
+            <div class="quarto-title-meta-contents">
+              <p class="date">March 23, 2026</p>
+            </div>
+          </div>
+          
+                
+              </div>
+      </div>
+      <div class="quarto-title-meta-column-end quarto-other-formats-target">
+      </div>
+    </div>
+
+    <div>
+      <div class="abstract">
+        <div class="block-title">Abstract</div>
+        <p>This course teaches how machine learning can be applied to experimental data from materials processing and characterization. The focus lies on images, spectra, time-series, and processing parameters, and on understanding how physical data formation interacts with learning algorithms. Students learn to build robust, uncertainty-aware ML pipelines for real experimental workflows, avoiding common pitfalls such as data leakage, overfitting, and spurious correlations.</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="keywords">
+        <div class="block-title">Keywords</div>
+        <p>Machine Learning, Materials Science, Materials Processing, Materials Characterization, Deep Learning, Microstructure Analysis, Process Optimization</p>
+      </div>
+    </div>
+
+    <div class="quarto-other-links-text-target">
+    </div>  </div>
+</header><div id="quarto-content" class="page-columns page-rows-contents page-layout-article toc-left">
+<div id="quarto-sidebar-toc-left" class="sidebar toc-left">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#machine-learning-in-materials-processing-characterization" id="toc-machine-learning-in-materials-processing-characterization" class="nav-link active" data-scroll-target="#machine-learning-in-materials-processing-characterization"><span class="header-section-number">1</span> Machine Learning in Materials Processing &amp; Characterization</a>
+  <ul class="collapse">
+  <li><a href="#synergy-map" id="toc-synergy-map" class="nav-link" data-scroll-target="#synergy-map"><span class="header-section-number">1.1</span> Synergy Map</a></li>
+  <li><a href="#companion-books" id="toc-companion-books" class="nav-link" data-scroll-target="#companion-books"><span class="header-section-number">1.2</span> Companion books</a></li>
+  <li><a href="#week-by-week-curriculum-14-weeks" id="toc-week-by-week-curriculum-14-weeks" class="nav-link" data-scroll-target="#week-by-week-curriculum-14-weeks"><span class="header-section-number">1.3</span> Week-by-Week Curriculum (14 weeks)</a>
+  <ul class="collapse">
+  <li><a href="#unit-i-experimental-data-as-a-learning-problem-weeks-13" id="toc-unit-i-experimental-data-as-a-learning-problem-weeks-13" class="nav-link" data-scroll-target="#unit-i-experimental-data-as-a-learning-problem-weeks-13"><span class="header-section-number">1.3.1</span> Unit I — Experimental Data as a Learning Problem (Weeks 1–3)</a></li>
+  <li><a href="#unit-ii-representation-learning-for-microstructures-weeks-46" id="toc-unit-ii-representation-learning-for-microstructures-weeks-46" class="nav-link" data-scroll-target="#unit-ii-representation-learning-for-microstructures-weeks-46"><span class="header-section-number">1.3.2</span> Unit II — Representation Learning for Microstructures (Weeks 4–6)</a></li>
+  <li><a href="#unit-iii-learning-from-processing-data-weeks-79" id="toc-unit-iii-learning-from-processing-data-weeks-79" class="nav-link" data-scroll-target="#unit-iii-learning-from-processing-data-weeks-79"><span class="header-section-number">1.3.3</span> Unit III — Learning from Processing Data (Weeks 7–9)</a></li>
+  <li><a href="#unit-iv-uncertainty-surrogates-and-automation-weeks-1012" id="toc-unit-iv-uncertainty-surrogates-and-automation-weeks-1012" class="nav-link" data-scroll-target="#unit-iv-uncertainty-surrogates-and-automation-weeks-1012"><span class="header-section-number">1.3.4</span> Unit IV — Uncertainty, Surrogates, and Automation (Weeks 10–12)</a></li>
+  <li><a href="#unit-v-physics-trust-and-synthesis-weeks-1314" id="toc-unit-v-physics-trust-and-synthesis-weeks-1314" class="nav-link" data-scroll-target="#unit-v-physics-trust-and-synthesis-weeks-1314"><span class="header-section-number">1.3.5</span> Unit V — Physics, Trust, and Synthesis (Weeks 13–14)</a></li>
+  </ul></li>
+  <li><a href="#learning-outcomes" id="toc-learning-outcomes" class="nav-link" data-scroll-target="#learning-outcomes"><span class="header-section-number">1.4</span> Learning Outcomes</a></li>
+  <li><a href="#lab-possibilities" id="toc-lab-possibilities" class="nav-link" data-scroll-target="#lab-possibilities"><span class="header-section-number">1.5</span> Lab Possibilities</a></li>
+  </ul></li>
+  </ul>
+</nav>
+</div>
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+</div>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      
+
+       <style>
+.course-hero {
+  background: rgba(20, 25, 40, 0.65);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 18px;
+  padding: 1.5rem;
+  margin: 1rem 0 2rem 0;
+  backdrop-filter: blur(10px);
+}
+.course-kicker {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+.course-subtitle {
+  color: #cbd5e1;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.course-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem 1rem;
+  margin: 1rem 0 1.25rem 0;
+}
+.course-meta-item {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+}
+.course-meta-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #94a3b8;
+  margin-bottom: 0.2rem;
+}
+.course-meta-value { color: #f8fafc; }
+.course-actions { margin-top: 1rem; display:flex; gap:0.75rem; flex-wrap:wrap; }
+.course-guide {
+  background: rgba(20, 25, 40, 0.45);
+  border-left: 4px solid #3b82f6;
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  margin: 1.25rem 0 2rem 0;
+}
+@media (max-width: 768px) {
+  .course-meta-grid { grid-template-columns: 1fr; }
+}
+</style>
+<div class="course-hero">
+  <div class="course-kicker">ECLIPSE Lab Teaching</div>
+  <h1>Machine Learning in Materials Processing &amp; Characterization</h1>
+  <p class="course-subtitle">Application-focused course on ML for experimental materials data, from images and spectra to process signals.</p>
+  <div class="course-meta-grid">
+    <div class="course-meta-item"><div class="course-meta-label">Semester</div><div class="course-meta-value">Summer Semester 2026</div></div>
+    <div class="course-meta-item"><div class="course-meta-label">Format</div><div class="course-meta-value">2h lecture + 2h exercises</div></div>
+    <div class="course-meta-item"><div class="course-meta-label">Credits</div><div class="course-meta-value">5 ECTS</div></div>
+    <div class="course-meta-item"><div class="course-meta-label">Audience</div><div class="course-meta-value">Students in Materials Science, data science, and computational engineering</div></div>
+    <div class="course-meta-item" style="grid-column: 1 / -1;"><div class="course-meta-label">Prerequisites</div><div class="course-meta-value">Helpful: Mathematical Foundations of AI &amp; ML or equivalent background</div></div>
+  </div>
+  <div class="course-actions">
+    <a href="https://www.studon.fau.de/" class="btn btn-primary">StudOn</a>
+    <a href="https://github.com/ECLIPSE-Lab/MachineLearningForCharacterizationAndProcessing" class="btn btn-outline-secondary">GitHub / Materials</a>
+    <a href="https://pelzlab.science/teaching.html" class="btn btn-outline-secondary">All Teaching</a>
+  </div>
+</div>
+<div class="course-guide">
+  <strong>How to use this course site.</strong> Use this page as the central hub for syllabus, lecture structure, reading, notebooks, and course materials. Formal announcements and enrollment remain on StudOn; code and openly shared resources live in the linked GitHub repository.
+</div>
+<section id="machine-learning-in-materials-processing-characterization" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Machine Learning in Materials Processing &amp; Characterization</h1>
+<p><strong>5th Semester – 5 ECTS · 2h lecture + 2h exercises per week</strong><br>
+<em>Coordinated with “Mathematical Foundations of AI &amp; ML” (MFML)<br>
+and “Materials Genomics” (MG)</em></p>
+<hr>
+<section id="synergy-map" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="synergy-map"><span class="header-section-number">1.1</span> Synergy Map</h2>
+<ul>
+<li><strong>MFML</strong> provides the mathematical spine: loss functions, neural networks, generalization, uncertainty, Gaussian Processes.</li>
+<li><strong>This course (ML-PC)</strong> applies these concepts to <em>experimental</em> data: images, spectra, and processing signals.</li>
+<li><strong>Materials Genomics</strong> focuses on crystal structures, databases, and discovery.</li>
+</ul>
+<p>ML-PC is therefore <strong>application-driven</strong>, not algorithm-driven.</p>
+<hr>
+</section>
+<section id="companion-books" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="companion-books"><span class="header-section-number">1.2</span> Companion books</h2>
+<ul>
+<li><span class="citation" data-cites="sandfeld2024materials">Sandfeld (<a href="#ref-sandfeld2024materials" role="doc-biblioref">2024</a>)</span>: Materials Data Science</li>
+</ul>
+</section>
+<section id="week-by-week-curriculum-14-weeks" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="week-by-week-curriculum-14-weeks"><span class="header-section-number">1.3</span> Week-by-Week Curriculum (14 weeks)</h2>
+<section id="unit-i-experimental-data-as-a-learning-problem-weeks-13" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="unit-i-experimental-data-as-a-learning-problem-weeks-13"><span class="header-section-number">1.3.1</span> Unit I — Experimental Data as a Learning Problem (Weeks 1–3)</h3>
+<section id="week-1-what-makes-materials-data-special" class="level4" data-number="1.3.1.1">
+<h4 data-number="1.3.1.1" class="anchored" data-anchor-id="week-1-what-makes-materials-data-special"><span class="header-section-number">1.3.1.1</span> Week 1 – What makes materials data special?</h4>
+<p><em>Lecture: Tuesday, 14.04.2026, 14:15-15:45 | Exercise: Thursday, 16.04.2026, 16:15-17:45</em></p>
+<ul>
+<li>Types of experimental data: micrographs, EBSD, EDS, EELS, XRD, process logs, thermal histories.</li>
+<li>PSPP (Processing–Structure–Property–Performance) as a <em>data dependency graph</em>.</li>
+<li>Why ML failure modes are common in experimental science.</li>
+</ul>
+<p><strong>Summary:</strong> This unit introduces the transition from classical physics-based modeling to data-driven discovery in materials science. We explore the unique challenges of experimental materials data, including its multi-modal nature, high acquisition cost, and the fundamental Processing-Structure-Property-Performance (PSPP) relationships. Key concepts include data scales, measurement uncertainty, and the CRISP-DM process adapted for scientific workflows.</p>
+<p><strong>Exercise:</strong><br>
+Inspect real microscopy and process datasets; identify sources of bias and noise.</p>
+<hr>
+</section>
+<section id="week-2-physics-of-data-formation" class="level4" data-number="1.3.1.2">
+<h4 data-number="1.3.1.2" class="anchored" data-anchor-id="week-2-physics-of-data-formation"><span class="header-section-number">1.3.1.2</span> Week 2 – Physics of data formation</h4>
+<p><em>Lecture: Tuesday, 21.04.2026, 14:15-15:45 | Exercise: Thursday, 23.04.2026, 16:15-17:45</em></p>
+<ul>
+<li>Image and signal formation in characterization: resolution, contrast, artifacts.</li>
+<li>Sampling, aliasing, noise as <em>physical priors</em> (not preprocessing tricks).</li>
+<li>Relation to MFML refresher on PCA and covariance.</li>
+</ul>
+<p><strong>Summary:</strong> This unit bridges the gap between the physical process of data acquisition and the mathematical tools used to describe it. We analyze how signals are formed in characterization tools and how physical constraints (resolution, noise, sampling) act as priors for learning. We then introduce Principal Component Analysis (PCA) and Singular Value Decomposition (SVD) as fundamental techniques for discovering low-dimensional structure in high-dimensional experimental datasets.</p>
+<p><strong>Exercise:</strong><br>
+Fourier inspection of micrographs; effects of sampling and filtering.</p>
+<hr>
+</section>
+<section id="week-3-data-quality-labels-and-leakage" class="level4" data-number="1.3.1.3">
+<h4 data-number="1.3.1.3" class="anchored" data-anchor-id="week-3-data-quality-labels-and-leakage"><span class="header-section-number">1.3.1.3</span> Week 3 – Data quality, labels, and leakage</h4>
+<p><em>Lecture: Tuesday, 28.04.2026, 14:15-15:45 | Exercise: Thursday, 30.04.2026, 16:15-17:45</em></p>
+<ul>
+<li>Annotation uncertainty and inter-annotator variance.</li>
+<li>Train/test leakage in materials workflows.</li>
+<li>Why “good accuracy” often means a broken pipeline.</li>
+</ul>
+<p><strong>Summary:</strong> This unit focuses on the most critical and often overlooked part of the ML pipeline: data integrity. We discuss systematic data cleaning and normalization techniques while highlighting the unique challenges of labeling experimental materials data, such as inter-annotator variance. A major focus is on <strong>Data Leakage</strong>, specifically how spatial and physical correlations in materials samples can lead to deceptively high model performance. We introduce robust validation strategies to ensure models generalize to truly unseen data.</p>
+<p><strong>Exercise:</strong><br>
+Construct a deliberately flawed ML pipeline and diagnose its failure.</p>
+<hr>
+</section>
+</section>
+<section id="unit-ii-representation-learning-for-microstructures-weeks-46" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="unit-ii-representation-learning-for-microstructures-weeks-46"><span class="header-section-number">1.3.2</span> Unit II — Representation Learning for Microstructures (Weeks 4–6)</h3>
+<p><em>(Aligned with early neural networks in MFML)</em></p>
+<section id="week-4-from-classical-microstructure-metrics-to-learned-representations" class="level4" data-number="1.3.2.1">
+<h4 data-number="1.3.2.1" class="anchored" data-anchor-id="week-4-from-classical-microstructure-metrics-to-learned-representations"><span class="header-section-number">1.3.2.1</span> Week 4 – From classical microstructure metrics to learned representations</h4>
+<p><em>Lecture: Tuesday, 05.05.2026, 14:15-15:45 | Exercise: Thursday, 07.05.2026, 16:15-17:45</em></p>
+<ul>
+<li>Grain size, phase fractions, orientation maps.</li>
+<li>Limits of hand-crafted microstructure features.</li>
+<li>Transition to learned representations.</li>
+</ul>
+<p><strong>Summary:</strong> This unit marks the transition from classical, hand-crafted microstructure quantification (like grain size and phase fractions) to the modern paradigm of <strong>learned representations</strong>. We first review traditional stereological metrics and their limitations in capturing complex structural nuances. We then introduce the foundational unit of modern ML: the <strong>artificial neuron</strong>. By understanding weights, biases, and non-linear activation functions, we build the framework for Multi-Layer Perceptrons (MLPs) that can automatically learn optimal features from materials data.</p>
+<p><strong>Exercise:</strong><br>
+Compare classical features vs simple NN-based features for microstructure tasks.</p>
+<hr>
+</section>
+<section id="week-5-neural-networks-for-microstructure-images" class="level4" data-number="1.3.2.2">
+<h4 data-number="1.3.2.2" class="anchored" data-anchor-id="week-5-neural-networks-for-microstructure-images"><span class="header-section-number">1.3.2.2</span> Week 5 – Neural networks for microstructure images</h4>
+<p><em>Lecture: Tuesday, 12.05.2026, 14:15-15:45 | Exercise: Thursday, 14.05.2026, 16:15-17:45 (cancelled - Himmelfahrt)</em></p>
+<ul>
+<li>CNN intuition: filters as structure detectors.</li>
+<li>Example tasks: phase segmentation, defect detection, porosity identification.</li>
+<li>Overfitting risks with small datasets.</li>
+</ul>
+<p><strong>Summary:</strong> This unit introduces <strong>Convolutional Neural Networks (CNNs)</strong>, the workhorse of modern computer vision, and applies them to materials characterization. We explore how convolutions allow networks to automatically learn hierarchical structure detectors—from simple edges to complex phase morphologies—while drastically reducing the number of parameters compared to standard MLPs. Through case studies in phase segmentation and defect detection, students learn the intuition behind filters, pooling, and the unique challenges of applying deep learning to high-resolution, noisy experimental micrographs.</p>
+<p><strong>Exercise:</strong><br>
+Train a small CNN on microstructure images; analyze failure cases.</p>
+<hr>
+</section>
+<section id="week-6-data-scarcity-transfer-learning" class="level4" data-number="1.3.2.3">
+<h4 data-number="1.3.2.3" class="anchored" data-anchor-id="week-6-data-scarcity-transfer-learning"><span class="header-section-number">1.3.2.3</span> Week 6 – Data scarcity &amp; transfer learning</h4>
+<p><em>Lecture: Tuesday, 19.05.2026, 14:15-15:45 | Exercise: Thursday, 21.05.2026, 16:15-17:45</em></p>
+<ul>
+<li>Why materials datasets are small.</li>
+<li>Transfer learning from natural images vs self-supervised pretraining.</li>
+<li>When transfer learning helps—and when it does not.</li>
+</ul>
+<p><strong>Summary:</strong> This unit addresses the fundamental bottleneck of materials informatics: <strong>Data Scarcity</strong>. We explore how to build powerful deep learning models when only a few hundred labeled images or signals are available. The core focus is on <strong>Transfer Learning</strong>, where we leverage knowledge from models pretrained on millions of natural images to accelerate learning and improve generalization on materials tasks. We also cover <strong>Data Augmentation</strong> strategies tailored for scientific data and discuss when and why transferring knowledge across different physical domains succeeds or fails.</p>
+<p><strong>Exercise:</strong><br>
+Fine-tune a pretrained model; compare against training from scratch.</p>
+<hr>
+</section>
+</section>
+<section id="unit-iii-learning-from-processing-data-weeks-79" class="level3" data-number="1.3.3">
+<h3 data-number="1.3.3" class="anchored" data-anchor-id="unit-iii-learning-from-processing-data-weeks-79"><span class="header-section-number">1.3.3</span> Unit III — Learning from Processing Data (Weeks 7–9)</h3>
+<section id="week-7-time-series-and-process-monitoring" class="level4" data-number="1.3.3.1">
+<h4 data-number="1.3.3.1" class="anchored" data-anchor-id="week-7-time-series-and-process-monitoring"><span class="header-section-number">1.3.3.1</span> Week 7 – Time-series and process monitoring</h4>
+<p><em>Lecture: Tuesday, 26.05.2026, 14:15-15:45 | Exercise: Thursday, 28.05.2026, 16:15-17:45</em></p>
+<ul>
+<li>Processing signals: temperature cycles, AM melt pool signals, SPS, rolling.</li>
+<li>Regression and sequence models as surrogates.</li>
+<li>Relation to MFML concepts of generalization.</li>
+</ul>
+<p><strong>Summary:</strong> This unit explores the application of machine learning to <strong>Time-Series Data</strong>, specifically for monitoring and predicting materials processing outcomes. We introduce <strong>Recurrent Neural Networks (RNNs)</strong> and their advanced variants like <strong>LSTMs</strong>, which are designed to handle sequential dependencies. We discuss the critical preprocessing steps of signal smoothing and triggering required to handle noisy experimental logs. Through case studies in additive manufacturing and process stability, students learn how to build models that “remember” the processing history to predict future states and detect anomalies in real-time.</p>
+<p><strong>Exercise:</strong><br>
+Predict a process outcome from time-series data using regression or simple RNNs.</p>
+<hr>
+</section>
+<section id="week-8-generalization-robustness-and-process-windows" class="level4" data-number="1.3.3.2">
+<h4 data-number="1.3.3.2" class="anchored" data-anchor-id="week-8-generalization-robustness-and-process-windows"><span class="header-section-number">1.3.3.2</span> Week 8 – Generalization, robustness, and process windows</h4>
+<p><em>Lecture: Tuesday, 02.06.2026, 14:15-15:45 | Exercise: Thursday, 04.06.2026, 16:15-17:45 (cancelled - Fronleichnam)</em></p>
+<ul>
+<li>Sensitivity to noise and parameter drift.</li>
+<li>Overfitting in process–property models.</li>
+<li>Robustness as a design criterion.</li>
+</ul>
+<p><strong>Summary:</strong> This unit shifts the focus from model performance to <strong>Model Reliability</strong>. We explore the Bias-Variance tradeoff and the fundamental challenge of generalization—ensuring that an ML model works on new, unseen data from the factory floor. We introduce robust validation techniques like K-Fold and Stratified Cross-Validation to stabilize performance estimates on small materials datasets. A key focus is on <strong>Process Robustness</strong>, where we use sensitivity analysis to identify “Process Windows”—regions in parameter space where material quality is maximized and insensitive to industrial noise.</p>
+<p><strong>Exercise:</strong><br>
+Analyze model robustness under perturbed process conditions.</p>
+<hr>
+</section>
+<section id="week-9-inverse-problems-and-process-maps" class="level4" data-number="1.3.3.3">
+<h4 data-number="1.3.3.3" class="anchored" data-anchor-id="week-9-inverse-problems-and-process-maps"><span class="header-section-number">1.3.3.3</span> Week 9 – Inverse problems and process maps</h4>
+<p><em>Lecture: Tuesday, 09.06.2026, 14:15-15:45 | Exercise: Thursday, 11.06.2026, 16:15-17:45</em></p>
+<ul>
+<li>Process → structure inverse problems.</li>
+<li>ML-guided process maps (e.g.&nbsp;AM laser power vs scan speed).</li>
+<li>Physics-informed vs unconstrained regression.</li>
+</ul>
+<p><strong>Summary:</strong> This unit explores <strong>Inverse Problems</strong>—the cornerstone of materials design where we seek the processing parameters required to achieve a target microstructure or performance. We contrast these with causal forward problems and discuss why they are often ill-posed and multi-valued. We introduce <strong>Physics-Informed Learning</strong> as a way to solve these challenges by enriching models with physical transformations and constraints. Students learn how to build and interpret <strong>Process Maps</strong> and “Process Corridors,” using machine learning to visualize safe operating regions in complex experimental spaces.</p>
+<p><strong>Exercise:</strong><br>
+Construct a simple ML-based process map; compare constrained vs unconstrained models.</p>
+<hr>
+</section>
+</section>
+<section id="unit-iv-uncertainty-surrogates-and-automation-weeks-1012" class="level3" data-number="1.3.4">
+<h3 data-number="1.3.4" class="anchored" data-anchor-id="unit-iv-uncertainty-surrogates-and-automation-weeks-1012"><span class="header-section-number">1.3.4</span> Unit IV — Uncertainty, Surrogates, and Automation (Weeks 10–12)</h3>
+<section id="week-10-ml-for-characterization-signals" class="level4" data-number="1.3.4.1">
+<h4 data-number="1.3.4.1" class="anchored" data-anchor-id="week-10-ml-for-characterization-signals"><span class="header-section-number">1.3.4.1</span> Week 10 – ML for characterization signals</h4>
+<p><em>Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise: Thursday, 18.06.2026, 16:15-17:45</em></p>
+<ul>
+<li>Spectral data: XRD, EELS, EDS.</li>
+<li>Denoising, peak finding, dimensionality reduction.</li>
+<li>Using ML without destroying physical meaning.</li>
+</ul>
+<p><strong>Summary:</strong> This unit focuses on the processing of high-dimensional <strong>Characterization Signals</strong> (like XRD, EDS, and EELS) using unsupervised learning. We introduce <strong>K-Means Clustering</strong> and <strong>t-SNE</strong> for the automatic identification and visualization of phases in large experimental libraries. We then explore <strong>Autoencoders</strong>—neural networks that learn to compress complex spectra into a low-dimensional “latent space.” This allows for advanced denoising and feature extraction, enabling scientists to handle the massive data volumes produced by modern high-throughput characterization tools without losing physical insight.</p>
+<p><strong>Exercise:</strong><br>
+Apply PCA/NMF to spectral datasets; interpret components physically.</p>
+<hr>
+</section>
+<section id="week-11-automation-in-microscopy-and-characterization" class="level4" data-number="1.3.4.2">
+<h4 data-number="1.3.4.2" class="anchored" data-anchor-id="week-11-automation-in-microscopy-and-characterization"><span class="header-section-number">1.3.4.2</span> Week 11 – Automation in microscopy and characterization</h4>
+<p><em>Lecture: Tuesday, 23.06.2026, 14:15-15:45 | Exercise: Thursday, 25.06.2026, 16:15-17:45</em></p>
+<ul>
+<li>Autofocus, drift correction, parameter selection.</li>
+<li>ML as a control component, not just a predictor.</li>
+</ul>
+<p><strong>Exercise:</strong><br>
+Implement a simple ML-assisted autofocus or defect detector.</p>
+<hr>
+</section>
+<section id="week-12-uncertainty-aware-regression-gaussian-processes" class="level4" data-number="1.3.4.3">
+<h4 data-number="1.3.4.3" class="anchored" data-anchor-id="week-12-uncertainty-aware-regression-gaussian-processes"><span class="header-section-number">1.3.4.3</span> Week 12 – Uncertainty-aware regression &amp; Gaussian Processes</h4>
+<p><em>Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise: Thursday, 02.07.2026, 16:15-17:45</em></p>
+<ul>
+<li>Aleatoric vs epistemic uncertainty in experiments.</li>
+<li>Gaussian Processes as uncertainty-aware surrogates.</li>
+<li>Exploration vs exploitation in experimental design.</li>
+<li>Connection to materials acceleration platforms.</li>
+</ul>
+<p><strong>Exercise:</strong><br>
+Compare GP regression and NN ensembles for a process-parameter problem.</p>
+<hr>
+</section>
+</section>
+<section id="unit-v-physics-trust-and-synthesis-weeks-1314" class="level3" data-number="1.3.5">
+<h3 data-number="1.3.5" class="anchored" data-anchor-id="unit-v-physics-trust-and-synthesis-weeks-1314"><span class="header-section-number">1.3.5</span> Unit V — Physics, Trust, and Synthesis (Weeks 13–14)</h3>
+<section id="week-13-physics-informed-and-constrained-ml" class="level4" data-number="1.3.5.1">
+<h4 data-number="1.3.5.1" class="anchored" data-anchor-id="week-13-physics-informed-and-constrained-ml"><span class="header-section-number">1.3.5.1</span> Week 13 – Physics-informed and constrained ML</h4>
+<p><em>Lecture: Tuesday, 07.07.2026, 14:15-15:45 | Exercise: Thursday, 09.07.2026, 16:15-17:45</em></p>
+<ul>
+<li>Embedding physical constraints into ML models.</li>
+<li>Penalty terms, soft constraints, hybrid approaches.</li>
+<li>Failure modes of unconstrained models.</li>
+</ul>
+<p><strong>Exercise:</strong><br>
+Train a constrained model for a processing or characterization task.</p>
+<hr>
+</section>
+<section id="week-14-integration-limits-and-reflection" class="level4" data-number="1.3.5.2">
+<h4 data-number="1.3.5.2" class="anchored" data-anchor-id="week-14-integration-limits-and-reflection"><span class="header-section-number">1.3.5.2</span> Week 14 – Integration, limits, and reflection</h4>
+<p><em>Lecture: Tuesday, 14.07.2026, 14:15-15:45 | Exercise: Thursday, 16.07.2026, 16:15-17:45</em></p>
+<ul>
+<li>Explainability for experimental ML (CAMs, SHAP).</li>
+<li>Why ML fails in real labs.</li>
+<li>Where ML genuinely changes materials processing.</li>
+</ul>
+<p><strong>Exercise:</strong><br>
+Mini-project presentations and critical discussion.</p>
+<hr>
+</section>
+</section>
+</section>
+<section id="learning-outcomes" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="learning-outcomes"><span class="header-section-number">1.4</span> Learning Outcomes</h2>
+<p>Students completing this course will be able to:</p>
+<ul>
+<li>Interpret materials processing and characterization data as learning problems.</li>
+<li>Build ML pipelines for microstructure analysis, process prediction, and spectral data.</li>
+<li>Understand the physics of data formation to avoid common ML pitfalls.</li>
+<li>Evaluate generalization, robustness, and uncertainty in experimental ML models.</li>
+<li>Apply Gaussian Processes and neural networks as surrogate models.</li>
+<li>Integrate physical constraints into ML workflows.</li>
+<li>Critically assess claims about ML in materials processing and characterization.</li>
+</ul>
+<hr>
+</section>
+<section id="lab-possibilities" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="lab-possibilities"><span class="header-section-number">1.5</span> Lab Possibilities</h2>
+<ul>
+<li>Microscopy datasets: noise, metadata, units, and artifacts.</li>
+<li>Fourier inspection of SEM/TEM images.</li>
+<li>Broken vs correct ML pipelines (data leakage case studies).</li>
+<li>Feature extraction vs learned representations.</li>
+<li>Fine-tuning pretrained CNNs on microstructures.</li>
+<li>Process–property regression with uncertainty.</li>
+<li>GP-based process maps.</li>
+<li>Spectral decomposition (NMF) of EELS/XRD data.</li>
+<li>ML-assisted autofocus or EBSD pattern classification.</li>
+<li>Multi-modal fusion of images, spectra, and process parameters.</li>
+</ul>
+<p><strong>Summary:</strong> This unit explores the cutting edge of <strong>Autonomous Characterization</strong>, where machine learning moves from passive data analysis to active instrument control. We introduce <strong>Multi-Modal Data Fusion</strong> techniques to combine information from diverse sensors like SEM images, EDS spectra, and process logs using Bayesian frameworks. We then discuss <strong>Reinforcement Learning (RL)</strong> as a tool for automating complex laboratory tasks, such as instrument tuning and process optimization. Through case studies in microscopy and industrial processing, students learn how to build integrated pipelines that can autonomously find, characterize, and decide the next steps of an experiment.</p>
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-sandfeld2024materials" class="csl-entry" role="listitem">
+Sandfeld, Stefan. 2024. <em>Materials Data Science: Introduction to Data Mining, Machine Learning, and Data-Driven Predictions for Materials Science and Engineering</em>. Springer Nature.
+</div>
+</div>
+</section>
+</section>
+     </main>
+<!-- /main column -->  <script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>  </div> <!-- /content --> 
+  
+</body></html>
