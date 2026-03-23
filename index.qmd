@@ -123,6 +123,7 @@ execute:
     <a href="https://www.studon.fau.de/" class="btn btn-primary">StudOn</a>
     <a href="https://github.com/ECLIPSE-Lab/MachineLearningForCharacterizationAndProcessing" class="btn btn-outline-secondary">GitHub / Materials</a>
     <a href="https://pelzlab.science/teaching.html" class="btn btn-outline-secondary">All Teaching</a>
+    <a href="https://www.mat.studium.fau.de/studiengaenge/neu-ki-materialtechnologie/" class="btn btn-outline-secondary">KI in Materialtechnologie</a>
   </div>
 </div>
 <div class="course-guide">
