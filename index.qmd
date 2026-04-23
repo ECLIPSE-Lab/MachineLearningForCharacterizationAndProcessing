@@ -164,6 +164,8 @@ ML-PC is therefore **application-driven**, not algorithm-driven.
 
 *Lecture: Tuesday, 14.04.2026, 14:15-15:45 | Exercise: Thursday, 16.04.2026, 16:15-17:45*
 
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit01_intro/01_intro.html)
+
 - Types of experimental data:
   micrographs, EBSD, EDS, EELS, XRD, process logs, thermal histories.
 - PSPP (Processing–Structure–Property–Performance) as a *data dependency graph*.
@@ -181,6 +183,8 @@ Inspect real microscopy and process datasets; identify sources of bias and noise
 #### Week 2 – Physics of data formation
 
 *Lecture: Tuesday, 21.04.2026, 14:15-15:45 | Exercise: Thursday, 23.04.2026, 16:15-17:45*
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit02_physics_of_data/01_intro.html)
 
 - Image and signal formation in characterization:
   resolution, contrast, artifacts.
