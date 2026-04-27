@@ -153,7 +153,7 @@
   window.document.addEventListener("DOMContentLoaded", function (_event) {
     document.body.classList.add('hypothesis-enabled');
   });
-</script>  
+</script>   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script> 
         <link rel="stylesheet" href="styles.css">
       <meta name="citation_title" content="Machine Learning in Materials Processing &amp;amp; Characterization">
 <meta name="citation_abstract" content="This course teaches how machine learning can be applied to experimental data
@@ -401,12 +401,13 @@ Fourier inspection of micrographs; effects of sampling and filtering.</p>
 <section id="week-3-data-quality-labels-and-leakage" class="level4" data-number="1.3.1.3">
 <h4 data-number="1.3.1.3" class="anchored" data-anchor-id="week-3-data-quality-labels-and-leakage"><span class="header-section-number">1.3.1.3</span> Week 3 – Data quality, labels, and leakage</h4>
 <p><em>Lecture: Tuesday, 28.04.2026, 14:15-15:45 | Exercise: Thursday, 30.04.2026, 16:15-17:45</em></p>
+<p><strong>Slides:</strong> <a href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit03_data_quality/01_intro.html">Open</a></p>
 <ul>
 <li>Annotation uncertainty and inter-annotator variance.</li>
 <li>Train/test leakage in materials workflows.</li>
 <li>Why “good accuracy” often means a broken pipeline.</li>
 </ul>
-<p><strong>Summary:</strong> This unit focuses on the most critical and often overlooked part of the ML pipeline: data integrity. We discuss systematic data cleaning and normalization techniques while highlighting the unique challenges of labeling experimental materials data, such as inter-annotator variance. A major focus is on <strong>Data Leakage</strong>, specifically how spatial and physical correlations in materials samples can lead to deceptively high model performance. We introduce robust validation strategies to ensure models generalize to truly unseen data.</p>
+<p><strong>Summary:</strong> This unit covers the often-overlooked half of an ML pipeline: data integrity, validation, and how performance is measured. We start with the measurement chain and systematic <strong>data cleaning</strong> — handling missing values, outliers, and duplicates with a “fix at source” mindset. We then build the <strong>transformation toolbox</strong>: centering, min–max and z-score scaling, physics-aware non-dimensionalisation, log transforms, differentiation, and frequency-domain views (FFT, triggering for time series). On the supervision side we examine <strong>labels and uncertainty</strong> — inter-annotator variance, probabilistic labels, and a Bayesian view of priors, likelihoods, and posteriors — and then formalize the <strong>bias–variance</strong> tradeoff with parsimony and regularization. A major focus is <strong>Data Leakage</strong> in materials workflows (pre-processing, temporal, and group/spatial), tackled with proper holdout, K-fold, LOOCV, and stratified validation. We close with the <strong>error measures</strong> that decide what “good” actually means: MAE/MSE/RMSE and <span class="math inline">\(R^2\)</span> for regression, and confusion matrices, precision/recall, F1/Dice, IoU, and categorical cross-entropy for classification and segmentation.</p>
 <p><strong>Exercise:</strong><br>
 Construct a deliberately flawed ML pipeline and diagnose its failure.</p>
 <hr>

@@ -350,6 +350,9 @@ leakage}\label{week-3-data-quality-labels-and-leakage}
 \emph{Lecture: Tuesday, 28.04.2026, 14:15-15:45 \textbar{} Exercise:
 Thursday, 30.04.2026, 16:15-17:45}
 
+\textbf{Slides:}
+\href{https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit03_data_quality/01_intro.html}{Open}
+
 \begin{itemize}
 \tightlist
 \item
@@ -360,14 +363,25 @@ Thursday, 30.04.2026, 16:15-17:45}
   Why ``good accuracy'' often means a broken pipeline.
 \end{itemize}
 
-\textbf{Summary:} This unit focuses on the most critical and often
-overlooked part of the ML pipeline: data integrity. We discuss
-systematic data cleaning and normalization techniques while highlighting
-the unique challenges of labeling experimental materials data, such as
-inter-annotator variance. A major focus is on \textbf{Data Leakage},
-specifically how spatial and physical correlations in materials samples
-can lead to deceptively high model performance. We introduce robust
-validation strategies to ensure models generalize to truly unseen data.
+\textbf{Summary:} This unit covers the often-overlooked half of an ML
+pipeline: data integrity, validation, and how performance is measured.
+We start with the measurement chain and systematic \textbf{data
+cleaning} --- handling missing values, outliers, and duplicates with a
+``fix at source'' mindset. We then build the \textbf{transformation
+toolbox}: centering, min--max and z-score scaling, physics-aware
+non-dimensionalisation, log transforms, differentiation, and
+frequency-domain views (FFT, triggering for time series). On the
+supervision side we examine \textbf{labels and uncertainty} ---
+inter-annotator variance, probabilistic labels, and a Bayesian view of
+priors, likelihoods, and posteriors --- and then formalize the
+\textbf{bias--variance} tradeoff with parsimony and regularization. A
+major focus is \textbf{Data Leakage} in materials workflows
+(pre-processing, temporal, and group/spatial), tackled with proper
+holdout, K-fold, LOOCV, and stratified validation. We close with the
+\textbf{error measures} that decide what ``good'' actually means:
+MAE/MSE/RMSE and \(R^2\) for regression, and confusion matrices,
+precision/recall, F1/Dice, IoU, and categorical cross-entropy for
+classification and segmentation.
 
 \textbf{Exercise:}\\
 Construct a deliberately flawed ML pipeline and diagnose its failure.

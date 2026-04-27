@@ -198,6 +198,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         leakage</title>
         <p><italic>Lecture: Tuesday, 28.04.2026, 14:15-15:45 | Exercise:
         Thursday, 30.04.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit03_data_quality/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Annotation uncertainty and inter-annotator variance.</p>
@@ -209,16 +211,30 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Why “good accuracy” often means a broken pipeline.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit focuses on the most critical
-        and often overlooked part of the ML pipeline: data integrity. We
-        discuss systematic data cleaning and normalization techniques
-        while highlighting the unique challenges of labeling
-        experimental materials data, such as inter-annotator variance. A
-        major focus is on <bold>Data Leakage</bold>, specifically how
-        spatial and physical correlations in materials samples can lead
-        to deceptively high model performance. We introduce robust
-        validation strategies to ensure models generalize to truly
-        unseen data.</p>
+        <p><bold>Summary:</bold> This unit covers the often-overlooked
+        half of an ML pipeline: data integrity, validation, and how
+        performance is measured. We start with the measurement chain and
+        systematic <bold>data cleaning</bold> — handling missing values,
+        outliers, and duplicates with a “fix at source” mindset. We then
+        build the <bold>transformation toolbox</bold>: centering,
+        min–max and z-score scaling, physics-aware
+        non-dimensionalisation, log transforms, differentiation, and
+        frequency-domain views (FFT, triggering for time series). On the
+        supervision side we examine <bold>labels and uncertainty</bold>
+        — inter-annotator variance, probabilistic labels, and a Bayesian
+        view of priors, likelihoods, and posteriors — and then formalize
+        the <bold>bias–variance</bold> tradeoff with parsimony and
+        regularization. A major focus is <bold>Data Leakage</bold> in
+        materials workflows (pre-processing, temporal, and
+        group/spatial), tackled with proper holdout, K-fold, LOOCV, and
+        stratified validation. We close with the <bold>error
+        measures</bold> that decide what “good” actually means:
+        MAE/MSE/RMSE and <inline-formula><alternatives>
+        <tex-math><![CDATA[R^2]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>R</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
+        for regression, and confusion matrices, precision/recall,
+        F1/Dice, IoU, and categorical cross-entropy for classification
+        and segmentation.</p>
         <p><bold>Exercise:</bold>
         Construct a deliberately flawed ML pipeline and diagnose its
         failure.</p>
@@ -807,6 +823,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         leakage</title>
         <p><italic>Lecture: Tuesday, 28.04.2026, 14:15-15:45 | Exercise:
         Thursday, 30.04.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit03_data_quality/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Annotation uncertainty and inter-annotator variance.</p>
@@ -818,16 +836,30 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Why “good accuracy” often means a broken pipeline.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit focuses on the most critical
-        and often overlooked part of the ML pipeline: data integrity. We
-        discuss systematic data cleaning and normalization techniques
-        while highlighting the unique challenges of labeling
-        experimental materials data, such as inter-annotator variance. A
-        major focus is on <bold>Data Leakage</bold>, specifically how
-        spatial and physical correlations in materials samples can lead
-        to deceptively high model performance. We introduce robust
-        validation strategies to ensure models generalize to truly
-        unseen data.</p>
+        <p><bold>Summary:</bold> This unit covers the often-overlooked
+        half of an ML pipeline: data integrity, validation, and how
+        performance is measured. We start with the measurement chain and
+        systematic <bold>data cleaning</bold> — handling missing values,
+        outliers, and duplicates with a “fix at source” mindset. We then
+        build the <bold>transformation toolbox</bold>: centering,
+        min–max and z-score scaling, physics-aware
+        non-dimensionalisation, log transforms, differentiation, and
+        frequency-domain views (FFT, triggering for time series). On the
+        supervision side we examine <bold>labels and uncertainty</bold>
+        — inter-annotator variance, probabilistic labels, and a Bayesian
+        view of priors, likelihoods, and posteriors — and then formalize
+        the <bold>bias–variance</bold> tradeoff with parsimony and
+        regularization. A major focus is <bold>Data Leakage</bold> in
+        materials workflows (pre-processing, temporal, and
+        group/spatial), tackled with proper holdout, K-fold, LOOCV, and
+        stratified validation. We close with the <bold>error
+        measures</bold> that decide what “good” actually means:
+        MAE/MSE/RMSE and <inline-formula><alternatives>
+        <tex-math><![CDATA[R^2]]></tex-math>
+        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>R</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
+        for regression, and confusion matrices, precision/recall,
+        F1/Dice, IoU, and categorical cross-entropy for classification
+        and segmentation.</p>
         <p><bold>Exercise:</bold>
         Construct a deliberately flawed ML pipeline and diagnose its
         failure.</p>
