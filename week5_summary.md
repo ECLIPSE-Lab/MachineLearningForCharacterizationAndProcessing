@@ -1,4 +1,4 @@
-# Week 5 Summary: Neural networks for microstructure images
+# Week 5 Summary: Unsupervised Learning in Materials
 
 ## Cross-Book Summary
 
@@ -21,34 +21,16 @@
 
 ## 90-Minute Lecture Strategy (50 Slides)
 
-### Part 1: Why CNNs for Materials? (Slides 1-10)
-- The failure of MLPs on image data.
-- The concept of "Spatial Locality" in microstructures.
-- The hierarchy of features: From pixels to phases.
+### Part 1: Applied Clustering (45 mins)
+- *Case Study 1:* Automated phase segmentation in EDS/EDX maps using K-Means and GMMs.
+- *Case Study 2:* Anomaly/defect detection in acoustic or thermal sensor streams during manufacturing.
 
-### Part 2: The Convolutional Layer (Slides 11-25)
-- Mathematical definition of 2D convolution.
-- Filters in action: Edge detection (Sobel), Blurring (Gaussian).
-- Hyperparameters: Stride, Padding, Filter Size.
-- Weight Sharing and why it enables "Deep" learning.
-
-### Part 3: Building a CNN (Slides 26-35)
-- The Non-linear activation (ReLU) revisited.
-- Pooling layers: Summarizing local information.
-- The full stack: Conv -> Pool -> FC.
-
-### Part 4: Case Studies: Microscopy (Slides 36-45)
-- Automated Phase Fraction calculation using CNNs.
-- Defect identification in CT or SEM images.
-- Comparison: Fashion-MNIST (toy data) vs. Real Micrographs (experimental noise).
-
-### Part 5: Challenges & Training (Slides 46-50)
-- Data scarcity: The need for thousands of images.
-- Overfitting: Why CNNs love to "memorize" your training set.
-- Preview: How to handle "Small Data" (Week 6).
+### Part 2: Applied Autoencoders (45 mins)
+- *Case Study 1:* Convolutional Autoencoders (CAEs) to compress high-dimensional microstructures (like 3D X-ray Tomography volumes).
+- *Case Study 2:* Exploring the latent space to automatically discover categories of defects or structural motifs without human supervision.
 
 ---
 
 ## Quarto Website Update (Summary)
-**Summary for ML-PC Week 5:**  
-This unit introduces **Convolutional Neural Networks (CNNs)**, the workhorse of modern computer vision, and applies them to materials characterization. We explore how convolutions allow networks to automatically learn hierarchical structure detectors—from simple edges to complex phase morphologies—while drastically reducing the number of parameters compared to standard MLPs. Through case studies in phase segmentation and defect detection, students learn the intuition behind filters, pooling, and the unique challenges of applying deep learning to high-resolution, noisy experimental micrographs.
+**Summary for ML-PC Week 5:**
+This unit transitions from supervised networks to **Unsupervised Learning** in materials characterization. By applying clustering algorithms (K-Means, GMMs) and Autoencoders, we tackle the "unlabeled data" problem pervasive in materials science. Through case studies in EDS map segmentation, defect detection in sensor streams, and latent space exploration of 3D microstructures, students learn how to autonomously discover structural motifs and reduce dimensionality without requiring manual annotations.
