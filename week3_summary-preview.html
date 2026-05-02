@@ -154,17 +154,17 @@
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#systematic-data-cleaning-neuer-ch-3" id="toc-systematic-data-cleaning-neuer-ch-3" class="nav-link" data-scroll-target="#systematic-data-cleaning-neuer-ch-3">1. Systematic Data Cleaning (Neuer Ch 3)</a></li>
-  <li><a href="#the-annotation-problem-ml-pc-index-field-experience" id="toc-the-annotation-problem-ml-pc-index-field-experience" class="nav-link" data-scroll-target="#the-annotation-problem-ml-pc-index-field-experience">2. The Annotation Problem (ML-PC Index, Field Experience)</a></li>
-  <li><a href="#data-leakage-in-materials-science-ml-pc-index-scientific-literature" id="toc-data-leakage-in-materials-science-ml-pc-index-scientific-literature" class="nav-link" data-scroll-target="#data-leakage-in-materials-science-ml-pc-index-scientific-literature">3. Data Leakage in Materials Science (ML-PC Index, Scientific Literature)</a></li>
+  <li><a href="#systematic-data-cleaning" id="toc-systematic-data-cleaning" class="nav-link" data-scroll-target="#systematic-data-cleaning">1. Systematic Data Cleaning</a></li>
+  <li><a href="#the-annotation-problem" id="toc-the-annotation-problem" class="nav-link" data-scroll-target="#the-annotation-problem">2. The Annotation Problem</a></li>
+  <li><a href="#data-leakage" id="toc-data-leakage" class="nav-link" data-scroll-target="#data-leakage">3. Data Leakage</a></li>
   </ul></li>
-  <li><a href="#minute-lecture-strategy-50-slides" id="toc-minute-lecture-strategy-50-slides" class="nav-link" data-scroll-target="#minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</a>
+  <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-the-quality-crisis-slides-1-10" id="toc-part-1-the-quality-crisis-slides-1-10" class="nav-link" data-scroll-target="#part-1-the-quality-crisis-slides-1-10">Part 1: The Quality Crisis (Slides 1-10)</a></li>
-  <li><a href="#part-2-data-preprocessing-cleaning-slides-11-25" id="toc-part-2-data-preprocessing-cleaning-slides-11-25" class="nav-link" data-scroll-target="#part-2-data-preprocessing-cleaning-slides-11-25">Part 2: Data Preprocessing &amp; Cleaning (Slides 11-25)</a></li>
-  <li><a href="#part-3-labeling-microstructures-signals-slides-26-35" id="toc-part-3-labeling-microstructures-signals-slides-26-35" class="nav-link" data-scroll-target="#part-3-labeling-microstructures-signals-slides-26-35">Part 3: Labeling Microstructures &amp; Signals (Slides 26-35)</a></li>
-  <li><a href="#part-4-data-leakage-the-silent-killer-slides-36-45" id="toc-part-4-data-leakage-the-silent-killer-slides-36-45" class="nav-link" data-scroll-target="#part-4-data-leakage-the-silent-killer-slides-36-45">Part 4: Data Leakage: The Silent Killer (Slides 36-45)</a></li>
-  <li><a href="#part-5-robust-validation-slides-46-50" id="toc-part-5-robust-validation-slides-46-50" class="nav-link" data-scroll-target="#part-5-robust-validation-slides-46-50">Part 5: Robust Validation (Slides 46-50)</a></li>
+  <li><a href="#part-1-quality-crisis" id="toc-part-1-quality-crisis" class="nav-link" data-scroll-target="#part-1-quality-crisis">Part 1: Quality Crisis</a></li>
+  <li><a href="#part-2-preprocessing-cleaning" id="toc-part-2-preprocessing-cleaning" class="nav-link" data-scroll-target="#part-2-preprocessing-cleaning">Part 2: Preprocessing &amp; Cleaning</a></li>
+  <li><a href="#part-3-labeling" id="toc-part-3-labeling" class="nav-link" data-scroll-target="#part-3-labeling">Part 3: Labeling</a></li>
+  <li><a href="#part-4-data-leakage" id="toc-part-4-data-leakage" class="nav-link" data-scroll-target="#part-4-data-leakage">Part 4: Data Leakage</a></li>
+  <li><a href="#part-5-robust-validation" id="toc-part-5-robust-validation" class="nav-link" data-scroll-target="#part-5-robust-validation">Part 5: Robust Validation</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -177,79 +177,76 @@
 <h1>Week 3 Summary: Data quality, labels, and leakage</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="systematic-data-cleaning-neuer-ch-3" class="level3">
-<h3 class="anchored" data-anchor-id="systematic-data-cleaning-neuer-ch-3">1. Systematic Data Cleaning (Neuer Ch 3)</h3>
+<section id="systematic-data-cleaning" class="level3">
+<h3 class="anchored" data-anchor-id="systematic-data-cleaning">1. Systematic Data Cleaning</h3>
 <ul>
-<li><strong>The Cleaning Pipeline:</strong> Handling NaNs, missing data (interpolation), and duplicates.</li>
-<li><strong>The “Fix at Source” Principle:</strong> Digital cleaning is a last resort. Physical improvements to the measurement chain (sensors, environments) are preferred.</li>
-<li><strong>Normalization:</strong> Essential for numerical stability in NNs, but must be done consistently between training and inference to avoid “scaling leakage.”</li>
+<li><strong>Pipeline:</strong> Handle NaNs, missing data, and duplicates.</li>
+<li><strong>Fix at Source:</strong> Prefer physical improvements over digital cleaning.</li>
+<li><strong>Normalization:</strong> Ensure consistent scaling between training and inference.</li>
 </ul>
 </section>
-<section id="the-annotation-problem-ml-pc-index-field-experience" class="level3">
-<h3 class="anchored" data-anchor-id="the-annotation-problem-ml-pc-index-field-experience">2. The Annotation Problem (ML-PC Index, Field Experience)</h3>
+<section id="the-annotation-problem" class="level3">
+<h3 class="anchored" data-anchor-id="the-annotation-problem">2. The Annotation Problem</h3>
 <ul>
-<li><strong>Label Uncertainty:</strong> In materials science, the “ground truth” is often subjective (e.g., manual grain boundary identification).</li>
-<li><strong>Inter-annotator Variance:</strong> Different experts may segment the same micrograph differently. This variance sets an upper bound on meaningful model performance.</li>
+<li><strong>Label Uncertainty:</strong> Ground truth is often subjective.</li>
+<li><strong>Inter-annotator Variance:</strong> Human disagreement sets an upper performance bound.</li>
 </ul>
 </section>
-<section id="data-leakage-in-materials-science-ml-pc-index-scientific-literature" class="level3">
-<h3 class="anchored" data-anchor-id="data-leakage-in-materials-science-ml-pc-index-scientific-literature">3. Data Leakage in Materials Science (ML-PC Index, Scientific Literature)</h3>
+<section id="data-leakage" class="level3">
+<h3 class="anchored" data-anchor-id="data-leakage">3. Data Leakage</h3>
 <ul>
-<li><strong>Spatial Leakage:</strong> High correlation between different regions of the same physical sample. Randomly splitting pixels or patches into train/test results in over-optimistic performance. <strong>Solution:</strong> Split by sample or batch.</li>
-<li><strong>Temporal Leakage:</strong> Using future process data to predict past outcomes in a time-series. <strong>Solution:</strong> Use “sliding window” or “walk-forward” validation.</li>
-<li><strong>Information Leakage:</strong> Including features that are indirectly derived from the target variable.</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="minute-lecture-strategy-50-slides" class="level2">
-<h2 class="anchored" data-anchor-id="minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</h2>
-<section id="part-1-the-quality-crisis-slides-1-10" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-the-quality-crisis-slides-1-10">Part 1: The Quality Crisis (Slides 1-10)</h3>
-<ul>
-<li>“Garbage In, Garbage Out”: Case studies of ML failure due to bad data.</li>
-<li>The cost of data acquisition vs.&nbsp;the cost of bad labels.</li>
+<li><strong>Spatial Leakage:</strong> Split by sample, not randomly, to avoid physical correlation.</li>
+<li><strong>Temporal Leakage:</strong> Use sliding windows for time-series data.</li>
+<li><strong>Information Leakage:</strong> Exclude features derived from targets.</li>
 </ul>
 </section>
-<section id="part-2-data-preprocessing-cleaning-slides-11-25" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-data-preprocessing-cleaning-slides-11-25">Part 2: Data Preprocessing &amp; Cleaning (Slides 11-25)</h3>
+</section>
+<section id="minute-lecture-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
+<section id="part-1-quality-crisis" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-quality-crisis">Part 1: Quality Crisis</h3>
 <ul>
-<li>Systematic cleaning (Neuer Ch 3).</li>
-<li>Imputation strategies: Linear interpolation vs.&nbsp;Physics-based constraints.</li>
-<li>Normalization and Scaling: Min-Max, Z-score, and Robust scalers.</li>
+<li>“Garbage In, Garbage Out”.</li>
+<li>Cost of acquisition vs.&nbsp;bad labels.</li>
 </ul>
 </section>
-<section id="part-3-labeling-microstructures-signals-slides-26-35" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-labeling-microstructures-signals-slides-26-35">Part 3: Labeling Microstructures &amp; Signals (Slides 26-35)</h3>
+<section id="part-2-preprocessing-cleaning" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-preprocessing-cleaning">Part 2: Preprocessing &amp; Cleaning</h3>
 <ul>
-<li>The human element: Manual annotation and its pitfalls.</li>
-<li>Quantification of label uncertainty.</li>
-<li>Crowdsourcing vs.&nbsp;Expert consensus in materials science.</li>
+<li>Systematic cleaning.</li>
+<li>Imputation strategies.</li>
+<li>Scalers (Min-Max, Z-score).</li>
 </ul>
 </section>
-<section id="part-4-data-leakage-the-silent-killer-slides-36-45" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-data-leakage-the-silent-killer-slides-36-45">Part 4: Data Leakage: The Silent Killer (Slides 36-45)</h3>
+<section id="part-3-labeling" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-labeling">Part 3: Labeling</h3>
 <ul>
-<li>Definition: Information from the test set influencing the training.</li>
-<li>Spatial Correlation: The “Same Sample” trap.</li>
-<li>Feature Leakage: The importance of independent variables.</li>
-<li>How to detect leakage: The “Too good to be true” heuristic.</li>
+<li>Manual annotation pitfalls.</li>
+<li>Quantifying label uncertainty.</li>
+<li>Crowdsourcing vs.&nbsp;Experts.</li>
 </ul>
 </section>
-<section id="part-5-robust-validation-slides-46-50" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-robust-validation-slides-46-50">Part 5: Robust Validation (Slides 46-50)</h3>
+<section id="part-4-data-leakage" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-data-leakage">Part 4: Data Leakage</h3>
+<ul>
+<li>Test data influencing training.</li>
+<li>Spatial and Feature leakage.</li>
+<li>“Too good to be true” heuristic.</li>
+</ul>
+</section>
+<section id="part-5-robust-validation" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-robust-validation">Part 5: Robust Validation</h3>
 <ul>
 <li>Grouped K-Fold validation.</li>
 <li>Nested Cross-Validation.</li>
-<li>Summary: A checklist for a “Correct” materials ML pipeline.</li>
+<li>ML pipeline checklist.</li>
 </ul>
-<hr>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
 <p><strong>Summary for ML-PC Week 3:</strong><br>
-This unit focuses on the most critical and often overlooked part of the ML pipeline: data integrity. We discuss systematic data cleaning and normalization techniques while highlighting the unique challenges of labeling experimental materials data, such as inter-annotator variance. A major focus is on <strong>Data Leakage</strong>, specifically how spatial and physical correlations in materials samples can lead to deceptively high model performance. We introduce robust validation strategies to ensure models generalize to truly unseen data.</p>
+- Emphasizes data integrity, cleaning, and normalization. - Highlights materials annotation challenges like inter-annotator variance. - Details Data Leakage risks from physical/spatial correlations. - Introduces robust validation to ensure true generalization.</p>
 </section>
 </section>
      </main>

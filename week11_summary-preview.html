@@ -154,17 +154,17 @@
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#multi-modal-data-fusion-murphy-ch-11-neuer-ch-2" id="toc-multi-modal-data-fusion-murphy-ch-11-neuer-ch-2" class="nav-link" data-scroll-target="#multi-modal-data-fusion-murphy-ch-11-neuer-ch-2">1. Multi-Modal Data Fusion (Murphy Ch 11, Neuer Ch 2)</a></li>
-  <li><a href="#reinforcement-learning-for-control-mcclarren-ch-9" id="toc-reinforcement-learning-for-control-mcclarren-ch-9" class="nav-link" data-scroll-target="#reinforcement-learning-for-control-mcclarren-ch-9">2. Reinforcement Learning for Control (McClarren Ch 9)</a></li>
-  <li><a href="#computer-vision-in-the-lab-ml-pc-index" id="toc-computer-vision-in-the-lab-ml-pc-index" class="nav-link" data-scroll-target="#computer-vision-in-the-lab-ml-pc-index">3. Computer Vision in the Lab (ML-PC Index)</a></li>
+  <li><a href="#multi-modal-data-fusion" id="toc-multi-modal-data-fusion" class="nav-link" data-scroll-target="#multi-modal-data-fusion">1. Multi-Modal Data Fusion</a></li>
+  <li><a href="#reinforcement-learning-for-control" id="toc-reinforcement-learning-for-control" class="nav-link" data-scroll-target="#reinforcement-learning-for-control">2. Reinforcement Learning for Control</a></li>
+  <li><a href="#computer-vision-in-the-lab" id="toc-computer-vision-in-the-lab" class="nav-link" data-scroll-target="#computer-vision-in-the-lab">3. Computer Vision in the Lab</a></li>
   </ul></li>
-  <li><a href="#minute-lecture-strategy-50-slides" id="toc-minute-lecture-strategy-50-slides" class="nav-link" data-scroll-target="#minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</a>
+  <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-toward-the-self-driving-lab-slides-1-10" id="toc-part-1-toward-the-self-driving-lab-slides-1-10" class="nav-link" data-scroll-target="#part-1-toward-the-self-driving-lab-slides-1-10">Part 1: Toward the Self-Driving Lab (Slides 1-10)</a></li>
-  <li><a href="#part-2-ml-assisted-instrument-tuning-slides-11-20" id="toc-part-2-ml-assisted-instrument-tuning-slides-11-20" class="nav-link" data-scroll-target="#part-2-ml-assisted-instrument-tuning-slides-11-20">Part 2: ML-Assisted Instrument Tuning (Slides 11-20)</a></li>
-  <li><a href="#part-3-fusing-multi-modal-data-slides-21-35" id="toc-part-3-fusing-multi-modal-data-slides-21-35" class="nav-link" data-scroll-target="#part-3-fusing-multi-modal-data-slides-21-35">Part 3: Fusing Multi-Modal Data (Slides 21-35)</a></li>
-  <li><a href="#part-4-reinforcement-learning-for-lab-control-slides-36-45" id="toc-part-4-reinforcement-learning-for-lab-control-slides-36-45" class="nav-link" data-scroll-target="#part-4-reinforcement-learning-for-lab-control-slides-36-45">Part 4: Reinforcement Learning for Lab Control (Slides 36-45)</a></li>
-  <li><a href="#part-5-summary-the-integrated-pipeline-slides-46-50" id="toc-part-5-summary-the-integrated-pipeline-slides-46-50" class="nav-link" data-scroll-target="#part-5-summary-the-integrated-pipeline-slides-46-50">Part 5: Summary: The Integrated Pipeline (Slides 46-50)</a></li>
+  <li><a href="#part-1-toward-the-self-driving-lab" id="toc-part-1-toward-the-self-driving-lab" class="nav-link" data-scroll-target="#part-1-toward-the-self-driving-lab">Part 1: Toward the Self-Driving Lab</a></li>
+  <li><a href="#part-2-ml-assisted-instrument-tuning" id="toc-part-2-ml-assisted-instrument-tuning" class="nav-link" data-scroll-target="#part-2-ml-assisted-instrument-tuning">Part 2: ML-Assisted Instrument Tuning</a></li>
+  <li><a href="#part-3-fusing-multi-modal-data" id="toc-part-3-fusing-multi-modal-data" class="nav-link" data-scroll-target="#part-3-fusing-multi-modal-data">Part 3: Fusing Multi-Modal Data</a></li>
+  <li><a href="#part-4-rl-for-lab-control" id="toc-part-4-rl-for-lab-control" class="nav-link" data-scroll-target="#part-4-rl-for-lab-control">Part 4: RL for Lab Control</a></li>
+  <li><a href="#part-5-the-integrated-pipeline" id="toc-part-5-the-integrated-pipeline" class="nav-link" data-scroll-target="#part-5-the-integrated-pipeline">Part 5: The Integrated Pipeline</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -177,80 +177,73 @@
 <h1>Week 11 Summary: Automation in microscopy and characterization</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="multi-modal-data-fusion-murphy-ch-11-neuer-ch-2" class="level3">
-<h3 class="anchored" data-anchor-id="multi-modal-data-fusion-murphy-ch-11-neuer-ch-2">1. Multi-Modal Data Fusion (Murphy Ch 11, Neuer Ch 2)</h3>
+<section id="multi-modal-data-fusion" class="level3">
+<h3 class="anchored" data-anchor-id="multi-modal-data-fusion">1. Multi-Modal Data Fusion</h3>
 <ul>
-<li><strong>Beyond a Single Sensor:</strong> In modern characterization, we often collect images (SEM), chemistry (EDS), and orientations (EBSD) simultaneously. Fusing these data streams provides a more complete physical picture than any single modality.</li>
-<li><strong>Bayesian Sensor Fusion:</strong> A mathematical framework for combining uncertain measurements. If two sensors (e.g., two thermocouples) provide conflicting information, the Bayesian posterior weights them by their respective precisions (inverse variances), allowing for robust state estimation (Murphy Ch 4.6.4).</li>
-<li><strong>Latent Fusion:</strong> Using autoencoders or PCA to find a shared low-dimensional embedding where different data types (images and spectra) can be compared and combined (Murphy Ch 19).</li>
+<li><strong>Beyond Single Sensors:</strong> Fuse images (SEM), chemistry (EDS), and orientations (EBSD) for a complete physical picture.</li>
+<li><strong>Bayesian Sensor Fusion:</strong> Combines uncertain measurements using precision-weighted posteriors.</li>
+<li><strong>Latent Fusion:</strong> Autoencoders/PCA find shared embeddings to combine diverse data types.</li>
 </ul>
 </section>
-<section id="reinforcement-learning-for-control-mcclarren-ch-9" class="level3">
-<h3 class="anchored" data-anchor-id="reinforcement-learning-for-control-mcclarren-ch-9">2. Reinforcement Learning for Control (McClarren Ch 9)</h3>
+<section id="reinforcement-learning-for-control" class="level3">
+<h3 class="anchored" data-anchor-id="reinforcement-learning-for-control">2. Reinforcement Learning for Control</h3>
 <ul>
-<li><strong>The Autonomous Agent:</strong> In RL, an agent learns to interact with an environment (e.g., a microscope or a furnace) to maximize a reward.</li>
-<li><strong>The RL Loop:</strong> State (current image), Action (adjusting focus/stigmation), and Reward (image sharpness/SNR).</li>
-<li><strong>Policy Gradients:</strong> A method for training deep neural networks to make a sequence of decisions that lead to an optimal scientific outcome (McClarren Ch 9.1).</li>
-<li><strong>Case Study (McClarren):</strong> Using RL to control the complex cooling cycles of glass, demonstrating the transition from monitoring to active control.</li>
+<li><strong>Autonomous Agent:</strong> Learns to interact with environments (e.g., microscopes) to maximize rewards.</li>
+<li><strong>RL Loop:</strong> State (image), Action (adjust focus), Reward (sharpness/SNR).</li>
+<li><strong>Policy Gradients:</strong> Train NNs for optimal scientific decision-making.</li>
 </ul>
 </section>
-<section id="computer-vision-in-the-lab-ml-pc-index" class="level3">
-<h3 class="anchored" data-anchor-id="computer-vision-in-the-lab-ml-pc-index">3. Computer Vision in the Lab (ML-PC Index)</h3>
+<section id="computer-vision-in-the-lab" class="level3">
+<h3 class="anchored" data-anchor-id="computer-vision-in-the-lab">3. Computer Vision in the Lab</h3>
 <ul>
-<li><strong>Automated Workflows:</strong> Using CNNs for real-time region-of-interest (ROI) detection, automated autofocus, and high-speed classification of diffraction patterns (e.g., EBSD Kikuchi bands).</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="minute-lecture-strategy-50-slides" class="level2">
-<h2 class="anchored" data-anchor-id="minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</h2>
-<section id="part-1-toward-the-self-driving-lab-slides-1-10" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-toward-the-self-driving-lab-slides-1-10">Part 1: Toward the Self-Driving Lab (Slides 1-10)</h3>
-<ul>
-<li>The bottleneck of human-operated characterization.</li>
-<li>The concept of “Autonomous Characterization”: Scan, Analyze, Decide, Repeat.</li>
-<li>Overview of the automation stack.</li>
+<li><strong>Automated Workflows:</strong> CNNs for real-time ROI detection, autofocus, and pattern classification.</li>
 </ul>
 </section>
-<section id="part-2-ml-assisted-instrument-tuning-slides-11-20" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-ml-assisted-instrument-tuning-slides-11-20">Part 2: ML-Assisted Instrument Tuning (Slides 11-20)</h3>
+</section>
+<section id="minute-lecture-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
+<section id="part-1-toward-the-self-driving-lab" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-toward-the-self-driving-lab">Part 1: Toward the Self-Driving Lab</h3>
 <ul>
-<li>Computer Vision for Autofocus and Beam Alignment.</li>
-<li>Real-time feedback loops: Turning pixels into control signals.</li>
-<li>Case Study: Automated EBSD mapping.</li>
+<li>The automation stack.</li>
+<li>Autonomous Characterization: Scan, Analyze, Decide, Repeat.</li>
 </ul>
 </section>
-<section id="part-3-fusing-multi-modal-data-slides-21-35" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-fusing-multi-modal-data-slides-21-35">Part 3: Fusing Multi-Modal Data (Slides 21-35)</h3>
+<section id="part-2-ml-assisted-instrument-tuning" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-ml-assisted-instrument-tuning">Part 2: ML-Assisted Instrument Tuning</h3>
 <ul>
-<li>Why fuse? Structure vs.&nbsp;Chemistry vs.&nbsp;Properties.</li>
-<li>Bayesian Fusion: Handling sensor noise and conflicts (Murphy Ch 11.4).</li>
-<li>Multi-head NNs for multi-modal classification.</li>
-<li>Case Study: Combining XRD and EDS for phase identification.</li>
+<li>Autofocus and Beam Alignment.</li>
+<li>Real-time feedback loops.</li>
 </ul>
 </section>
-<section id="part-4-reinforcement-learning-for-lab-control-slides-36-45" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-reinforcement-learning-for-lab-control-slides-36-45">Part 4: Reinforcement Learning for Lab Control (Slides 36-45)</h3>
+<section id="part-3-fusing-multi-modal-data" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-fusing-multi-modal-data">Part 3: Fusing Multi-Modal Data</h3>
 <ul>
-<li>Introduction to the RL Framework (McClarren Ch 9).</li>
-<li>Defining Reward Functions for scientific experiments.</li>
-<li>Case Study: Closing the loop in industrial glass processing.</li>
+<li>Bayesian Fusion for sensor noise.</li>
+<li>Multi-head NNs.</li>
+<li>Combining XRD and EDS.</li>
 </ul>
 </section>
-<section id="part-5-summary-the-integrated-pipeline-slides-46-50" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-summary-the-integrated-pipeline-slides-46-50">Part 5: Summary: The Integrated Pipeline (Slides 46-50)</h3>
+<section id="part-4-rl-for-lab-control" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-rl-for-lab-control">Part 4: RL for Lab Control</h3>
 <ul>
-<li>The shift from “Post-mortem” analysis to “On-the-fly” discovery.</li>
-<li>Challenges: Latency, safety, and physical limits of automation.</li>
-<li>Summary: The vision of autonomous materials characterization.</li>
+<li>RL Framework overview.</li>
+<li>Reward Functions for science.</li>
+<li>Industrial glass processing control.</li>
 </ul>
-<hr>
+</section>
+<section id="part-5-the-integrated-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-the-integrated-pipeline">Part 5: The Integrated Pipeline</h3>
+<ul>
+<li>“On-the-fly” discovery.</li>
+<li>Automation challenges: Latency and safety.</li>
+</ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
 <p><strong>Summary for ML-PC Week 11:</strong><br>
-This unit explores the cutting edge of <strong>Autonomous Characterization</strong>, where machine learning moves from passive data analysis to active instrument control. We introduce <strong>Multi-Modal Data Fusion</strong> techniques to combine information from diverse sensors like SEM images, EDS spectra, and process logs using Bayesian frameworks. We then discuss <strong>Reinforcement Learning (RL)</strong> as a tool for automating complex laboratory tasks, such as instrument tuning and process optimization. Through case studies in microscopy and industrial processing, students learn how to build integrated pipelines that can autonomously find, characterize, and decide the next steps of an experiment.</p>
+- Explores Autonomous Characterization and active instrument control. - Introduces Multi-Modal Data Fusion (Bayesian and Latent). - Uses Reinforcement Learning (RL) for laboratory task automation. - Details building integrated pipelines for “on-the-fly” scientific discovery.</p>
 </section>
 </section>
      </main>

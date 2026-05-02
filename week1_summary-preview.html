@@ -154,17 +154,17 @@
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#the-concept-of-data-based-modeling-neuer-sandfeld-mcclarren" id="toc-the-concept-of-data-based-modeling-neuer-sandfeld-mcclarren" class="nav-link" data-scroll-target="#the-concept-of-data-based-modeling-neuer-sandfeld-mcclarren">1. The Concept of Data-Based Modeling (Neuer, Sandfeld, McClarren)</a></li>
-  <li><a href="#foundations-of-data-neuer-bishop" id="toc-foundations-of-data-neuer-bishop" class="nav-link" data-scroll-target="#foundations-of-data-neuer-bishop">2. Foundations of Data (Neuer, Bishop)</a></li>
-  <li><a href="#materials-science-specifics-ml-pc-index-sandfeld" id="toc-materials-science-specifics-ml-pc-index-sandfeld" class="nav-link" data-scroll-target="#materials-science-specifics-ml-pc-index-sandfeld">3. Materials Science Specifics (ML-PC index, Sandfeld)</a></li>
+  <li><a href="#the-concept-of-data-based-modeling" id="toc-the-concept-of-data-based-modeling" class="nav-link" data-scroll-target="#the-concept-of-data-based-modeling">1. The Concept of Data-Based Modeling</a></li>
+  <li><a href="#foundations-of-data" id="toc-foundations-of-data" class="nav-link" data-scroll-target="#foundations-of-data">2. Foundations of Data</a></li>
+  <li><a href="#materials-science-specifics" id="toc-materials-science-specifics" class="nav-link" data-scroll-target="#materials-science-specifics">3. Materials Science Specifics</a></li>
   </ul></li>
-  <li><a href="#minute-lecture-strategy-50-slides" id="toc-minute-lecture-strategy-50-slides" class="nav-link" data-scroll-target="#minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</a>
+  <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-introduction-philosophy-slides-1-10" id="toc-part-1-introduction-philosophy-slides-1-10" class="nav-link" data-scroll-target="#part-1-introduction-philosophy-slides-1-10">Part 1: Introduction &amp; Philosophy (Slides 1-10)</a></li>
-  <li><a href="#part-2-models-in-engineering-slides-11-20" id="toc-part-2-models-in-engineering-slides-11-20" class="nav-link" data-scroll-target="#part-2-models-in-engineering-slides-11-20">Part 2: Models in Engineering (Slides 11-20)</a></li>
-  <li><a href="#part-3-what-makes-materials-data-special-slides-21-35" id="toc-part-3-what-makes-materials-data-special-slides-21-35" class="nav-link" data-scroll-target="#part-3-what-makes-materials-data-special-slides-21-35">Part 3: What Makes Materials Data Special? (Slides 21-35)</a></li>
-  <li><a href="#part-4-data-foundations-quality-slides-36-45" id="toc-part-4-data-foundations-quality-slides-36-45" class="nav-link" data-scroll-target="#part-4-data-foundations-quality-slides-36-45">Part 4: Data Foundations &amp; Quality (Slides 36-45)</a></li>
-  <li><a href="#part-5-the-crisp-dm-workflow-for-labs-slides-46-50" id="toc-part-5-the-crisp-dm-workflow-for-labs-slides-46-50" class="nav-link" data-scroll-target="#part-5-the-crisp-dm-workflow-for-labs-slides-46-50">Part 5: The CRISP-DM Workflow for Labs (Slides 46-50)</a></li>
+  <li><a href="#part-1-introduction-philosophy" id="toc-part-1-introduction-philosophy" class="nav-link" data-scroll-target="#part-1-introduction-philosophy">Part 1: Introduction &amp; Philosophy</a></li>
+  <li><a href="#part-2-models-in-engineering" id="toc-part-2-models-in-engineering" class="nav-link" data-scroll-target="#part-2-models-in-engineering">Part 2: Models in Engineering</a></li>
+  <li><a href="#part-3-special-materials-data" id="toc-part-3-special-materials-data" class="nav-link" data-scroll-target="#part-3-special-materials-data">Part 3: Special Materials Data</a></li>
+  <li><a href="#part-4-data-quality" id="toc-part-4-data-quality" class="nav-link" data-scroll-target="#part-4-data-quality">Part 4: Data Quality</a></li>
+  <li><a href="#part-5-crisp-dm-for-labs" id="toc-part-5-crisp-dm-for-labs" class="nav-link" data-scroll-target="#part-5-crisp-dm-for-labs">Part 5: CRISP-DM for Labs</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -177,81 +177,79 @@
 <h1>Week 1 Summary: What makes materials data special?</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="the-concept-of-data-based-modeling-neuer-sandfeld-mcclarren" class="level3">
-<h3 class="anchored" data-anchor-id="the-concept-of-data-based-modeling-neuer-sandfeld-mcclarren">1. The Concept of Data-Based Modeling (Neuer, Sandfeld, McClarren)</h3>
+<section id="the-concept-of-data-based-modeling" class="level3">
+<h3 class="anchored" data-anchor-id="the-concept-of-data-based-modeling">1. The Concept of Data-Based Modeling</h3>
 <ul>
-<li><strong>Data-based vs.&nbsp;First-Principle Models:</strong> In engineering, we traditionally rely on first-principle models (bottom-up, derived from axioms like Newton’s laws). Machine Learning introduces data-based modeling (top-down), where the model is extracted from observed process data.</li>
-<li><strong>Traceability (White, Grey, Black Boxes):</strong> First-principle models are “White-Box” (fully explainable). ML models are often labeled “Black-Box,” though techniques for “Grey-Box” (hybrid) and explainability are emerging to build scientific trust.</li>
-<li><strong>Overfitting:</strong> A historical perspective (Sandfeld) shows that even Aristotle’s 56-sphere model of the heavens was a form of overfitting—being too complex for the task at hand.</li>
+<li><strong>Data-based vs.&nbsp;First-Principle:</strong> Top-down ML vs.&nbsp;bottom-up physics.</li>
+<li><strong>Traceability:</strong> White (explainable), Grey (hybrid), and Black-Box (opaque) models.</li>
+<li><strong>Overfitting:</strong> Excess complexity fails to generalize.</li>
 </ul>
 </section>
-<section id="foundations-of-data-neuer-bishop" class="level3">
-<h3 class="anchored" data-anchor-id="foundations-of-data-neuer-bishop">2. Foundations of Data (Neuer, Bishop)</h3>
+<section id="foundations-of-data" class="level3">
+<h3 class="anchored" data-anchor-id="foundations-of-data">2. Foundations of Data</h3>
 <ul>
-<li><strong>Data Types:</strong> Nominal (names/categories), Ordinal (ordered), Cardinal (numeric), and Binary.</li>
-<li><strong>Scales:</strong> Nominal, Ordinal, Interval (e.g., Celsius), and Ratio (e.g., Kelvin with absolute zero). Understanding the scale is critical for correct normalization and interpretation.</li>
-<li><strong>Units and Uncertainty:</strong> Experimental data is meaningless without units and an estimation of measurement uncertainty.</li>
+<li><strong>Types:</strong> Nominal, Ordinal, Cardinal, Binary.</li>
+<li><strong>Scales:</strong> Nominal, Ordinal, Interval, Ratio.</li>
+<li><strong>Uncertainty:</strong> Units and measurement error are essential.</li>
 </ul>
 </section>
-<section id="materials-science-specifics-ml-pc-index-sandfeld" class="level3">
-<h3 class="anchored" data-anchor-id="materials-science-specifics-ml-pc-index-sandfeld">3. Materials Science Specifics (ML-PC index, Sandfeld)</h3>
+<section id="materials-science-specifics" class="level3">
+<h3 class="anchored" data-anchor-id="materials-science-specifics">3. Materials Science Specifics</h3>
 <ul>
-<li><strong>The PSPP Paradigm:</strong> Processing–Structure–Property–Performance forms a dependency graph. Materials data is inherently multi-scale and multi-modal (images, spectra, logs).</li>
-<li><strong>Experimental Noise:</strong> Unlike “clean” toy datasets, materials data contains physical noise, sampling artifacts (aliasing), and biases from instrument resolution.</li>
-<li><strong>Data Scarcity:</strong> Obtaining high-quality materials data is slow and expensive, making standard “big data” approaches often inapplicable.</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="minute-lecture-strategy-50-slides" class="level2">
-<h2 class="anchored" data-anchor-id="minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</h2>
-<section id="part-1-introduction-philosophy-slides-1-10" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-introduction-philosophy-slides-1-10">Part 1: Introduction &amp; Philosophy (Slides 1-10)</h3>
-<ul>
-<li>Course goals and the AI 4 Materials program.</li>
-<li>The “Hype Cycle” vs.&nbsp;Reality in scientific AI.</li>
-<li>Why now? The convergence of high-throughput experiments, simulation, and ML.</li>
+<li><strong>PSPP Paradigm:</strong> Processing-Structure-Property-Performance dependency.</li>
+<li><strong>Noise:</strong> Physical noise, aliasing, and instrument bias.</li>
+<li><strong>Scarcity:</strong> High-quality data is expensive and rare.</li>
 </ul>
 </section>
-<section id="part-2-models-in-engineering-slides-11-20" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-models-in-engineering-slides-11-20">Part 2: Models in Engineering (Slides 11-20)</h3>
+</section>
+<section id="minute-lecture-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
+<section id="part-1-introduction-philosophy" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-introduction-philosophy">Part 1: Introduction &amp; Philosophy</h3>
 <ul>
-<li>Defining a “Model”: Prediction vs.&nbsp;Explanation.</li>
-<li>First-Principles (physics-based) vs.&nbsp;Data-Driven approaches.</li>
-<li>The Black-Box stigma and the move toward White-Box ML.</li>
+<li>AI 4 Materials goals.</li>
+<li>Hype vs.&nbsp;Reality.</li>
+<li>Convergence of high-throughput, simulation, and ML.</li>
 </ul>
 </section>
-<section id="part-3-what-makes-materials-data-special-slides-21-35" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-what-makes-materials-data-special-slides-21-35">Part 3: What Makes Materials Data Special? (Slides 21-35)</h3>
+<section id="part-2-models-in-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-models-in-engineering">Part 2: Models in Engineering</h3>
 <ul>
-<li>The PSPP Chain as a data graph.</li>
-<li>Types of data: Micrographs (pixels), EBSD (orientations), EDS (spectra), Process logs (time-series).</li>
-<li>The “Small Data” problem in Materials Science.</li>
-<li>Physical Priors: How physics limits the possible data space.</li>
+<li>Prediction vs.&nbsp;Explanation.</li>
+<li>Physics-based vs.&nbsp;Data-driven.</li>
+<li>Moving toward White-Box ML.</li>
 </ul>
 </section>
-<section id="part-4-data-foundations-quality-slides-36-45" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-data-foundations-quality-slides-36-45">Part 4: Data Foundations &amp; Quality (Slides 36-45)</h3>
+<section id="part-3-special-materials-data" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-special-materials-data">Part 3: Special Materials Data</h3>
 <ul>
-<li>Categorizing data: Nominal, Ordinal, Cardinal.</li>
-<li>The critical role of Metadata and Units.</li>
-<li>Measurement uncertainty and its propagation into ML models.</li>
+<li>PSPP graph.</li>
+<li>Multi-modal data types.</li>
+<li>Small Data challenges.</li>
+<li>Physical Priors.</li>
 </ul>
 </section>
-<section id="part-5-the-crisp-dm-workflow-for-labs-slides-46-50" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-the-crisp-dm-workflow-for-labs-slides-46-50">Part 5: The CRISP-DM Workflow for Labs (Slides 46-50)</h3>
+<section id="part-4-data-quality" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-data-quality">Part 4: Data Quality</h3>
 <ul>
-<li>Adapting the industrial standard to the materials lab.</li>
-<li>From “Scientific Understanding” to “Deployment” in production.</li>
-<li>Correlation != Causality (The Ice Cream and Crime rate example).</li>
+<li>Categorizing data.</li>
+<li>Metadata and Units.</li>
+<li>Error propagation.</li>
 </ul>
-<hr>
+</section>
+<section id="part-5-crisp-dm-for-labs" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-crisp-dm-for-labs">Part 5: CRISP-DM for Labs</h3>
+<ul>
+<li>Adapting industrial standards.</li>
+<li>Deployment.</li>
+<li>Correlation != Causality.</li>
+</ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
 <p><strong>Summary for ML-PC Week 1:</strong><br>
-This unit introduces the transition from classical physics-based modeling to data-driven discovery in materials science. We explore the unique challenges of experimental materials data, including its multi-modal nature, high acquisition cost, and the fundamental Processing-Structure-Property-Performance (PSPP) relationships. Key concepts include data scales, measurement uncertainty, and the CRISP-DM process adapted for scientific workflows.</p>
+- Transitions from physics-based to data-driven modeling. - Highlights multi-modal, scarce materials data. - Covers PSPP relationships, data scales, and uncertainty. - Adapts CRISP-DM for scientific workflows.</p>
 </section>
 </section>
      </main>

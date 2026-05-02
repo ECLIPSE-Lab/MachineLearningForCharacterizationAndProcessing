@@ -154,14 +154,14 @@
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#the-need-for-convolutions-mcclarren-ch-6" id="toc-the-need-for-convolutions-mcclarren-ch-6" class="nav-link" data-scroll-target="#the-need-for-convolutions-mcclarren-ch-6">1. The Need for Convolutions (McClarren Ch 6)</a></li>
-  <li><a href="#cnn-mechanics-mcclarren-ch-6-sandfeld-ch-17" id="toc-cnn-mechanics-mcclarren-ch-6-sandfeld-ch-17" class="nav-link" data-scroll-target="#cnn-mechanics-mcclarren-ch-6-sandfeld-ch-17">2. CNN Mechanics (McClarren Ch 6, Sandfeld Ch 17)</a></li>
-  <li><a href="#application-to-microstructures-ml-pc-index" id="toc-application-to-microstructures-ml-pc-index" class="nav-link" data-scroll-target="#application-to-microstructures-ml-pc-index">3. Application to Microstructures (ML-PC Index)</a></li>
+  <li><a href="#the-need-for-convolutions" id="toc-the-need-for-convolutions" class="nav-link" data-scroll-target="#the-need-for-convolutions">1. The Need for Convolutions</a></li>
+  <li><a href="#cnn-mechanics" id="toc-cnn-mechanics" class="nav-link" data-scroll-target="#cnn-mechanics">2. CNN Mechanics</a></li>
+  <li><a href="#application-to-microstructures" id="toc-application-to-microstructures" class="nav-link" data-scroll-target="#application-to-microstructures">3. Application to Microstructures</a></li>
   </ul></li>
-  <li><a href="#minute-lecture-strategy-50-slides" id="toc-minute-lecture-strategy-50-slides" class="nav-link" data-scroll-target="#minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</a>
+  <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-applied-clustering-45-mins" id="toc-part-1-applied-clustering-45-mins" class="nav-link" data-scroll-target="#part-1-applied-clustering-45-mins">Part 1: Applied Clustering (45 mins)</a></li>
-  <li><a href="#part-2-applied-autoencoders-45-mins" id="toc-part-2-applied-autoencoders-45-mins" class="nav-link" data-scroll-target="#part-2-applied-autoencoders-45-mins">Part 2: Applied Autoencoders (45 mins)</a></li>
+  <li><a href="#part-1-applied-clustering" id="toc-part-1-applied-clustering" class="nav-link" data-scroll-target="#part-1-applied-clustering">Part 1: Applied Clustering</a></li>
+  <li><a href="#part-2-applied-autoencoders" id="toc-part-2-applied-autoencoders" class="nav-link" data-scroll-target="#part-2-applied-autoencoders">Part 2: Applied Autoencoders</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -174,53 +174,51 @@
 <h1>Week 5 Summary: Unsupervised Learning in Materials</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="the-need-for-convolutions-mcclarren-ch-6" class="level3">
-<h3 class="anchored" data-anchor-id="the-need-for-convolutions-mcclarren-ch-6">1. The Need for Convolutions (McClarren Ch 6)</h3>
+<section id="the-need-for-convolutions" class="level3">
+<h3 class="anchored" data-anchor-id="the-need-for-convolutions">1. The Need for Convolutions</h3>
 <ul>
-<li><strong>The Parameter Explosion:</strong> A standard Multi-Layer Perceptron (MLP) treating every pixel as an independent input requires a massive number of weights, making it prone to overfitting and computationally expensive.</li>
-<li><strong>Exploiting Structure:</strong> Images have spatial correlation (neighboring pixels are related). Convolutions take advantage of this by applying the same small “filter” across the entire image (Weight Sharing).</li>
-<li><strong>Shift Invariance:</strong> A crack or a pore should be recognized regardless of where it appears in the micrograph.</li>
+<li><strong>Parameter Explosion:</strong> MLPs require too many weights for images.</li>
+<li><strong>Exploiting Structure:</strong> Convolutions use shared filters for spatial correlation.</li>
+<li><strong>Shift Invariance:</strong> Detects features anywhere in the micrograph.</li>
 </ul>
 </section>
-<section id="cnn-mechanics-mcclarren-ch-6-sandfeld-ch-17" class="level3">
-<h3 class="anchored" data-anchor-id="cnn-mechanics-mcclarren-ch-6-sandfeld-ch-17">2. CNN Mechanics (McClarren Ch 6, Sandfeld Ch 17)</h3>
+<section id="cnn-mechanics" class="level3">
+<h3 class="anchored" data-anchor-id="cnn-mechanics">2. CNN Mechanics</h3>
 <ul>
-<li><strong>Convolutional Layers:</strong> These act as feature detectors. Early layers might detect simple edges, while deeper layers detect complex morphologies (e.g., dendrites, lath martensite).</li>
-<li><strong>Activation &amp; Pooling:</strong> Non-linear activations (ReLU) allow the network to learn complex patterns. Pooling layers (Max/Avg) downsample the feature maps, providing spatial robustness and reducing computation.</li>
-<li><strong>The Perception Analogy:</strong> Modern CNNs are distant descendants of the Rosenblatt Perceptron, which was originally inspired by the Cadmium Sulfide photo-cells used to “perceive” simple pixel grids (Sandfeld Ch 17.2).</li>
+<li><strong>Convolutional Layers:</strong> Hierarchical feature detectors.</li>
+<li><strong>Activation &amp; Pooling:</strong> Non-linearity and spatial downsampling.</li>
+<li><strong>Perception Analogy:</strong> Inspired by early photo-cell grids.</li>
 </ul>
 </section>
-<section id="application-to-microstructures-ml-pc-index" class="level3">
-<h3 class="anchored" data-anchor-id="application-to-microstructures-ml-pc-index">3. Application to Microstructures (ML-PC Index)</h3>
+<section id="application-to-microstructures" class="level3">
+<h3 class="anchored" data-anchor-id="application-to-microstructures">3. Application to Microstructures</h3>
 <ul>
-<li><strong>Segmentation:</strong> Assigning a class (e.g., α-phase, β-phase) to every pixel.</li>
-<li><strong>Object Detection:</strong> Finding and bounding specific features (e.g., precipitates, micro-cracks).</li>
-<li><strong>Classification:</strong> Categorizing an entire micrograph (e.g., “Good” vs.&nbsp;“Defective” process outcome).</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="minute-lecture-strategy-50-slides" class="level2">
-<h2 class="anchored" data-anchor-id="minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</h2>
-<section id="part-1-applied-clustering-45-mins" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-applied-clustering-45-mins">Part 1: Applied Clustering (45 mins)</h3>
-<ul>
-<li><em>Case Study 1:</em> Automated phase segmentation in EDS/EDX maps using K-Means and GMMs.</li>
-<li><em>Case Study 2:</em> Anomaly/defect detection in acoustic or thermal sensor streams during manufacturing.</li>
+<li><strong>Segmentation:</strong> Pixel-wise classification.</li>
+<li><strong>Object Detection:</strong> Bounding specific features.</li>
+<li><strong>Classification:</strong> Categorizing whole micrographs.</li>
 </ul>
 </section>
-<section id="part-2-applied-autoencoders-45-mins" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-applied-autoencoders-45-mins">Part 2: Applied Autoencoders (45 mins)</h3>
+</section>
+<section id="minute-lecture-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
+<section id="part-1-applied-clustering" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-applied-clustering">Part 1: Applied Clustering</h3>
 <ul>
-<li><em>Case Study 1:</em> Convolutional Autoencoders (CAEs) to compress high-dimensional microstructures (like 3D X-ray Tomography volumes).</li>
-<li><em>Case Study 2:</em> Exploring the latent space to automatically discover categories of defects or structural motifs without human supervision.</li>
+<li>Phase segmentation with K-Means/GMMs.</li>
+<li>Defect detection in sensor streams.</li>
 </ul>
-<hr>
+</section>
+<section id="part-2-applied-autoencoders" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-applied-autoencoders">Part 2: Applied Autoencoders</h3>
+<ul>
+<li>CAE compression of 3D Tomography.</li>
+<li>Latent space defect discovery.</li>
+</ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
-<p><strong>Summary for ML-PC Week 5:</strong> This unit transitions from supervised networks to <strong>Unsupervised Learning</strong> in materials characterization. By applying clustering algorithms (K-Means, GMMs) and Autoencoders, we tackle the “unlabeled data” problem pervasive in materials science. Through case studies in EDS map segmentation, defect detection in sensor streams, and latent space exploration of 3D microstructures, students learn how to autonomously discover structural motifs and reduce dimensionality without requiring manual annotations.</p>
+<p><strong>Summary for ML-PC Week 5:</strong> - Shifts to Unsupervised Learning for unlabeled materials data. - Covers clustering (K-Means, GMMs) and Autoencoders. - Applies techniques to EDS segmentation and sensor anomaly detection. - Explores 3D microstructure latent spaces for automated motif discovery.</p>
 </section>
 </section>
      </main>

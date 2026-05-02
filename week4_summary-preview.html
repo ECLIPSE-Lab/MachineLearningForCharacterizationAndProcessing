@@ -154,16 +154,16 @@
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#classical-microstructure-metrics-sandfeld-domain-knowledge" id="toc-classical-microstructure-metrics-sandfeld-domain-knowledge" class="nav-link" data-scroll-target="#classical-microstructure-metrics-sandfeld-domain-knowledge">1. Classical Microstructure Metrics (Sandfeld, Domain Knowledge)</a></li>
-  <li><a href="#the-foundation-of-learned-representations-neuer-ch-4.5-mcclarren-ch-8-bishop-ch-5" id="toc-the-foundation-of-learned-representations-neuer-ch-4.5-mcclarren-ch-8-bishop-ch-5" class="nav-link" data-scroll-target="#the-foundation-of-learned-representations-neuer-ch-4.5-mcclarren-ch-8-bishop-ch-5">2. The Foundation of Learned Representations (Neuer Ch 4.5, McClarren Ch 8, Bishop Ch 5)</a></li>
+  <li><a href="#classical-microstructure-metrics" id="toc-classical-microstructure-metrics" class="nav-link" data-scroll-target="#classical-microstructure-metrics">1. Classical Microstructure Metrics</a></li>
+  <li><a href="#learned-representations" id="toc-learned-representations" class="nav-link" data-scroll-target="#learned-representations">2. Learned Representations</a></li>
   </ul></li>
-  <li><a href="#minute-lecture-strategy-50-slides" id="toc-minute-lecture-strategy-50-slides" class="nav-link" data-scroll-target="#minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</a>
+  <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-the-classical-approach-slides-1-15" id="toc-part-1-the-classical-approach-slides-1-15" class="nav-link" data-scroll-target="#part-1-the-classical-approach-slides-1-15">Part 1: The Classical Approach (Slides 1-15)</a></li>
-  <li><a href="#part-2-feature-engineering-vs.-feature-learning-slides-16-25" id="toc-part-2-feature-engineering-vs.-feature-learning-slides-16-25" class="nav-link" data-scroll-target="#part-2-feature-engineering-vs.-feature-learning-slides-16-25">Part 2: Feature Engineering vs.&nbsp;Feature Learning (Slides 16-25)</a></li>
-  <li><a href="#part-3-the-building-blocks-of-ml-slides-26-40" id="toc-part-3-the-building-blocks-of-ml-slides-26-40" class="nav-link" data-scroll-target="#part-3-the-building-blocks-of-ml-slides-26-40">Part 3: The Building Blocks of ML (Slides 26-40)</a></li>
-  <li><a href="#part-4-multi-layer-perceptrons-mlp-slides-41-45" id="toc-part-4-multi-layer-perceptrons-mlp-slides-41-45" class="nav-link" data-scroll-target="#part-4-multi-layer-perceptrons-mlp-slides-41-45">Part 4: Multi-Layer Perceptrons (MLP) (Slides 41-45)</a></li>
-  <li><a href="#part-5-outlook-learning-from-microstructures-slides-46-50" id="toc-part-5-outlook-learning-from-microstructures-slides-46-50" class="nav-link" data-scroll-target="#part-5-outlook-learning-from-microstructures-slides-46-50">Part 5: Outlook: Learning from Microstructures (Slides 46-50)</a></li>
+  <li><a href="#part-1-classical-approach" id="toc-part-1-classical-approach" class="nav-link" data-scroll-target="#part-1-classical-approach">Part 1: Classical Approach</a></li>
+  <li><a href="#part-2-feature-engineering-vs.-learning" id="toc-part-2-feature-engineering-vs.-learning" class="nav-link" data-scroll-target="#part-2-feature-engineering-vs.-learning">Part 2: Feature Engineering vs.&nbsp;Learning</a></li>
+  <li><a href="#part-3-building-blocks-of-ml" id="toc-part-3-building-blocks-of-ml" class="nav-link" data-scroll-target="#part-3-building-blocks-of-ml">Part 3: Building Blocks of ML</a></li>
+  <li><a href="#part-4-multi-layer-perceptrons" id="toc-part-4-multi-layer-perceptrons" class="nav-link" data-scroll-target="#part-4-multi-layer-perceptrons">Part 4: Multi-Layer Perceptrons</a></li>
+  <li><a href="#part-5-outlook" id="toc-part-5-outlook" class="nav-link" data-scroll-target="#part-5-outlook">Part 5: Outlook</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -176,73 +176,71 @@
 <h1>Week 4 Summary: From classical microstructure metrics to learned representations</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="classical-microstructure-metrics-sandfeld-domain-knowledge" class="level3">
-<h3 class="anchored" data-anchor-id="classical-microstructure-metrics-sandfeld-domain-knowledge">1. Classical Microstructure Metrics (Sandfeld, Domain Knowledge)</h3>
+<section id="classical-microstructure-metrics" class="level3">
+<h3 class="anchored" data-anchor-id="classical-microstructure-metrics">1. Classical Microstructure Metrics</h3>
 <ul>
-<li><strong>Stereology:</strong> The traditional method of quantifying 3D structure from 2D sections (e.g., grain size, phase fractions).</li>
-<li><strong>Hand-crafted Descriptors:</strong> Features like aspect ratio, tortuosity, and circularity. These are physically interpretable but biased by human intuition.</li>
-<li><strong>The Information Bottleneck:</strong> By reducing a complex micrograph to a few scalar metrics (like “average grain size”), we may discard the very information responsible for rare failure events or subtle property changes.</li>
+<li><strong>Stereology:</strong> Quantifying 3D structure from 2D sections.</li>
+<li><strong>Hand-crafted Descriptors:</strong> Intuitive but biased (e.g., aspect ratio).</li>
+<li><strong>Information Bottleneck:</strong> Scalar metrics discard crucial subtle details.</li>
 </ul>
 </section>
-<section id="the-foundation-of-learned-representations-neuer-ch-4.5-mcclarren-ch-8-bishop-ch-5" class="level3">
-<h3 class="anchored" data-anchor-id="the-foundation-of-learned-representations-neuer-ch-4.5-mcclarren-ch-8-bishop-ch-5">2. The Foundation of Learned Representations (Neuer Ch 4.5, McClarren Ch 8, Bishop Ch 5)</h3>
+<section id="learned-representations" class="level3">
+<h3 class="anchored" data-anchor-id="learned-representations">2. Learned Representations</h3>
 <ul>
-<li><strong>The Artificial Neuron:</strong> A mathematical unit that performs a weighted sum of inputs ($ = w_i x_i + b $) followed by a non-linear activation function.</li>
-<li><strong>Activation Functions:</strong> ReLU, Sigmoid, and Tanh introduce the non-linearity required to approximate complex structure-property mappings. ReLU is the current standard for deep learning (Sandfeld Ch 18).</li>
-<li><strong>Universal Approximation:</strong> A network with even one hidden layer can approximate any continuous function, allowing it to “learn” a representation of the data that is optimal for a given task.</li>
-<li><strong>MLP Topology:</strong> Multi-Layer Perceptrons stack these neurons to create increasingly abstract representations of the input data.</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="minute-lecture-strategy-50-slides" class="level2">
-<h2 class="anchored" data-anchor-id="minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</h2>
-<section id="part-1-the-classical-approach-slides-1-15" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-the-classical-approach-slides-1-15">Part 1: The Classical Approach (Slides 1-15)</h3>
-<ul>
-<li>How we currently describe materials: Grain size, phase fractions, orientation maps.</li>
-<li>Quantitative Metallography: Methods and standards.</li>
-<li>Successes and failures of hand-crafted features.</li>
+<li><strong>Artificial Neuron:</strong> Weighted sum plus non-linear activation.</li>
+<li><strong>Activations:</strong> ReLU enables deep learning; Sigmoid/Tanh provide non-linearity.</li>
+<li><strong>Universal Approximation:</strong> One hidden layer can approximate any continuous function.</li>
+<li><strong>MLP Topology:</strong> Stacked layers build abstract representations.</li>
 </ul>
 </section>
-<section id="part-2-feature-engineering-vs.-feature-learning-slides-16-25" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-feature-engineering-vs.-feature-learning-slides-16-25">Part 2: Feature Engineering vs.&nbsp;Feature Learning (Slides 16-25)</h3>
+</section>
+<section id="minute-lecture-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
+<section id="part-1-classical-approach" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-classical-approach">Part 1: Classical Approach</h3>
 <ul>
-<li>The concept of a “Representation.”</li>
-<li>Why “expert” features might be incomplete.</li>
-<li>The shift from “calculating metrics” to “learning embeddings.”</li>
+<li>Standard metrics: Grain size, phase fractions.</li>
+<li>Quantitative Metallography.</li>
+<li>Limitations of hand-crafted features.</li>
 </ul>
 </section>
-<section id="part-3-the-building-blocks-of-ml-slides-26-40" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-the-building-blocks-of-ml-slides-26-40">Part 3: The Building Blocks of ML (Slides 26-40)</h3>
+<section id="part-2-feature-engineering-vs.-learning" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-feature-engineering-vs.-learning">Part 2: Feature Engineering vs.&nbsp;Learning</h3>
 <ul>
-<li>The Mathematical Neuron (Neuer Ch 4.5.1).</li>
-<li>Weights and Biases: The “knobs” of the model.</li>
-<li>Activation Functions: Why we need non-linearity (ReLU, Sigmoid).</li>
-<li>Forward propagation: From input data to prediction.</li>
+<li>Concept of Representation.</li>
+<li>Incomplete expert features.</li>
+<li>Shift to learned embeddings.</li>
 </ul>
 </section>
-<section id="part-4-multi-layer-perceptrons-mlp-slides-41-45" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-multi-layer-perceptrons-mlp-slides-41-45">Part 4: Multi-Layer Perceptrons (MLP) (Slides 41-45)</h3>
+<section id="part-3-building-blocks-of-ml" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-building-blocks-of-ml">Part 3: Building Blocks of ML</h3>
 <ul>
-<li>Stacking layers to build abstraction.</li>
-<li>The concept of “Hidden” layers.</li>
-<li>Neural networks as universal function approximators.</li>
+<li>Mathematical Neuron.</li>
+<li>Weights and Biases.</li>
+<li>Non-linear activations.</li>
+<li>Forward propagation.</li>
 </ul>
 </section>
-<section id="part-5-outlook-learning-from-microstructures-slides-46-50" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-outlook-learning-from-microstructures-slides-46-50">Part 5: Outlook: Learning from Microstructures (Slides 46-50)</h3>
+<section id="part-4-multi-layer-perceptrons" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-multi-layer-perceptrons">Part 4: Multi-Layer Perceptrons</h3>
 <ul>
-<li>Preview of Week 5: Moving from vectors to images (CNNs).</li>
-<li>Discussion: Can we trust a “Learned” metric more than an ASTM grain size?</li>
+<li>Stacking layers for abstraction.</li>
+<li>Hidden layers.</li>
+<li>Universal approximators.</li>
 </ul>
-<hr>
+</section>
+<section id="part-5-outlook" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-outlook">Part 5: Outlook</h3>
+<ul>
+<li>Moving to images (CNNs).</li>
+<li>Trusting learned vs.&nbsp;classical metrics.</li>
+</ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
 <p><strong>Summary for ML-PC Week 4:</strong><br>
-This unit marks the transition from classical, hand-crafted microstructure quantification (like grain size and phase fractions) to the modern paradigm of <strong>learned representations</strong>. We first review traditional stereological metrics and their limitations in capturing complex structural nuances. We then introduce the foundational unit of modern ML: the <strong>artificial neuron</strong>. By understanding weights, biases, and non-linear activation functions, we build the framework for Multi-Layer Perceptrons (MLPs) that can automatically learn optimal features from materials data.</p>
+- Transitions from classical stereology to learned representations. - Reviews limits of hand-crafted microstructure metrics. - Introduces the artificial neuron, weights, and activations. - Builds the framework for Multi-Layer Perceptrons (MLPs) to automate feature extraction.</p>
 </section>
 </section>
      </main>

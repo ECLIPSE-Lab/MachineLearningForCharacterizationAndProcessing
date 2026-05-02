@@ -154,17 +154,17 @@
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#forward-vs.-inverse-problems-bishop-ch-5-neuer-ch-6" id="toc-forward-vs.-inverse-problems-bishop-ch-5-neuer-ch-6" class="nav-link" data-scroll-target="#forward-vs.-inverse-problems-bishop-ch-5-neuer-ch-6">1. Forward vs.&nbsp;Inverse Problems (Bishop Ch 5, Neuer Ch 6)</a></li>
-  <li><a href="#physics-informed-enrichment-neuer-ch-6" id="toc-physics-informed-enrichment-neuer-ch-6" class="nav-link" data-scroll-target="#physics-informed-enrichment-neuer-ch-6">2. Physics-Informed Enrichment (Neuer Ch 6)</a></li>
-  <li><a href="#process-maps-and-corridors-neuer-ch-6.4-ml-pc-index" id="toc-process-maps-and-corridors-neuer-ch-6.4-ml-pc-index" class="nav-link" data-scroll-target="#process-maps-and-corridors-neuer-ch-6.4-ml-pc-index">3. Process Maps and Corridors (Neuer Ch 6.4, ML-PC Index)</a></li>
+  <li><a href="#forward-vs.-inverse-problems" id="toc-forward-vs.-inverse-problems" class="nav-link" data-scroll-target="#forward-vs.-inverse-problems">1. Forward vs.&nbsp;Inverse Problems</a></li>
+  <li><a href="#physics-informed-enrichment" id="toc-physics-informed-enrichment" class="nav-link" data-scroll-target="#physics-informed-enrichment">2. Physics-Informed Enrichment</a></li>
+  <li><a href="#process-maps-and-corridors" id="toc-process-maps-and-corridors" class="nav-link" data-scroll-target="#process-maps-and-corridors">3. Process Maps and Corridors</a></li>
   </ul></li>
-  <li><a href="#minute-lecture-strategy-50-slides" id="toc-minute-lecture-strategy-50-slides" class="nav-link" data-scroll-target="#minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</a>
+  <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-the-material-scientists-dilemma-slides-1-10" id="toc-part-1-the-material-scientists-dilemma-slides-1-10" class="nav-link" data-scroll-target="#part-1-the-material-scientists-dilemma-slides-1-10">Part 1: The Material Scientist’s Dilemma (Slides 1-10)</a></li>
-  <li><a href="#part-2-physics-informed-ml-slides-11-20" id="toc-part-2-physics-informed-ml-slides-11-20" class="nav-link" data-scroll-target="#part-2-physics-informed-ml-slides-11-20">Part 2: Physics-Informed ML (Slides 11-20)</a></li>
-  <li><a href="#part-3-solving-the-inverse-slides-21-35" id="toc-part-3-solving-the-inverse-slides-21-35" class="nav-link" data-scroll-target="#part-3-solving-the-inverse-slides-21-35">Part 3: Solving the Inverse (Slides 21-35)</a></li>
-  <li><a href="#part-4-building-process-maps-slides-36-45" id="toc-part-4-building-process-maps-slides-36-45" class="nav-link" data-scroll-target="#part-4-building-process-maps-slides-36-45">Part 4: Building Process Maps (Slides 36-45)</a></li>
-  <li><a href="#part-5-summary-ml-for-material-design-slides-46-50" id="toc-part-5-summary-ml-for-material-design-slides-46-50" class="nav-link" data-scroll-target="#part-5-summary-ml-for-material-design-slides-46-50">Part 5: Summary: ML for Material Design (Slides 46-50)</a></li>
+  <li><a href="#part-1-material-scientists-dilemma" id="toc-part-1-material-scientists-dilemma" class="nav-link" data-scroll-target="#part-1-material-scientists-dilemma">Part 1: Material Scientist’s Dilemma</a></li>
+  <li><a href="#part-2-physics-informed-ml" id="toc-part-2-physics-informed-ml" class="nav-link" data-scroll-target="#part-2-physics-informed-ml">Part 2: Physics-Informed ML</a></li>
+  <li><a href="#part-3-solving-the-inverse" id="toc-part-3-solving-the-inverse" class="nav-link" data-scroll-target="#part-3-solving-the-inverse">Part 3: Solving the Inverse</a></li>
+  <li><a href="#part-4-building-process-maps" id="toc-part-4-building-process-maps" class="nav-link" data-scroll-target="#part-4-building-process-maps">Part 4: Building Process Maps</a></li>
+  <li><a href="#part-5-ml-for-material-design" id="toc-part-5-ml-for-material-design" class="nav-link" data-scroll-target="#part-5-ml-for-material-design">Part 5: ML for Material Design</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -177,78 +177,76 @@
 <h1>Week 9 Summary: Inverse problems and process maps</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="forward-vs.-inverse-problems-bishop-ch-5-neuer-ch-6" class="level3">
-<h3 class="anchored" data-anchor-id="forward-vs.-inverse-problems-bishop-ch-5-neuer-ch-6">1. Forward vs.&nbsp;Inverse Problems (Bishop Ch 5, Neuer Ch 6)</h3>
+<section id="forward-vs.-inverse-problems" class="level3">
+<h3 class="anchored" data-anchor-id="forward-vs.-inverse-problems">1. Forward vs.&nbsp;Inverse Problems</h3>
 <ul>
-<li><strong>The Causality Gap:</strong> Forward problems (Process → Structure) usually have a unique solution driven by causality. Inverse problems (Structure → Process) are often “ill-posed” or multi-valued, meaning different processing paths can lead to identical microstructures (Bishop Ch 5.18).</li>
-<li><strong>Non-Gaussianity:</strong> Standard least-squares regression assumes a Gaussian distribution of targets. In inverse problems, the distribution can be multimodal, requiring more advanced techniques like Mixture Density Networks (Bishop Ch 5.19).</li>
+<li><strong>Causality Gap:</strong> Forward problems are unique; inverse are ill-posed/multi-valued.</li>
+<li><strong>Non-Gaussianity:</strong> Inverse problems require Mixture Density Networks due to multimodality.</li>
 </ul>
 </section>
-<section id="physics-informed-enrichment-neuer-ch-6" class="level3">
-<h3 class="anchored" data-anchor-id="physics-informed-enrichment-neuer-ch-6">2. Physics-Informed Enrichment (Neuer Ch 6)</h3>
+<section id="physics-informed-enrichment" class="level3">
+<h3 class="anchored" data-anchor-id="physics-informed-enrichment">2. Physics-Informed Enrichment</h3>
 <ul>
-<li><strong>The “Expert in the Loop” Principle:</strong> Why hide physical laws from the algorithm? By providing physical transformations (e.g., Fourier Transform for oscillating signals or dimensionless numbers), we reduce the training effort and make the model more interpretable.</li>
-<li><strong>Enrichment:</strong> Adding transformed features alongside raw data creates a “Physics-Informed Neural Network” (PINN) that leverages both data and laws (Neuer Ch 6.1).</li>
+<li><strong>Expert in the Loop:</strong> Add physical transformations (e.g., FFT) to reduce training effort.</li>
+<li><strong>Enrichment:</strong> Combine raw data with physics features (PINNs).</li>
 </ul>
 </section>
-<section id="process-maps-and-corridors-neuer-ch-6.4-ml-pc-index" class="level3">
-<h3 class="anchored" data-anchor-id="process-maps-and-corridors-neuer-ch-6.4-ml-pc-index">3. Process Maps and Corridors (Neuer Ch 6.4, ML-PC Index)</h3>
+<section id="process-maps-and-corridors" class="level3">
+<h3 class="anchored" data-anchor-id="process-maps-and-corridors">3. Process Maps and Corridors</h3>
 <ul>
-<li><strong>Process Corridors:</strong> Identifying the stable regions in parameter space where the desired material properties are consistently achieved.</li>
-<li><strong>ML-Guided Mapping:</strong> Using surrogates to interpolate between sparse experimental points, allowing for the rapid visualization of complex process maps (e.g., AM laser power vs.&nbsp;scan speed).</li>
-<li><strong>Prescriptive ML:</strong> Shifting from “What will happen?” to “What must I do to achieve this property?”</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="minute-lecture-strategy-50-slides" class="level2">
-<h2 class="anchored" data-anchor-id="minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</h2>
-<section id="part-1-the-material-scientists-dilemma-slides-1-10" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-the-material-scientists-dilemma-slides-1-10">Part 1: The Material Scientist’s Dilemma (Slides 1-10)</h3>
-<ul>
-<li>Why the inverse problem is the “Real” problem in R&amp;D.</li>
-<li>Structure-to-Process: The difficulty of many-to-one mappings.</li>
-<li>The Concept of “Uniqueness” in physical systems.</li>
+<li><strong>Process Corridors:</strong> Identifying stable parameter regions.</li>
+<li><strong>ML-Guided Mapping:</strong> Interpolating sparse experimental points via surrogates.</li>
+<li><strong>Prescriptive ML:</strong> Answering “What must I do?” instead of “What will happen?”.</li>
 </ul>
 </section>
-<section id="part-2-physics-informed-ml-slides-11-20" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-physics-informed-ml-slides-11-20">Part 2: Physics-Informed ML (Slides 11-20)</h3>
+</section>
+<section id="minute-lecture-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
+<section id="part-1-material-scientists-dilemma" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-material-scientists-dilemma">Part 1: Material Scientist’s Dilemma</h3>
 <ul>
-<li>White-Box vs.&nbsp;Black-Box vs.&nbsp;Grey-Box (Neuer Ch 6).</li>
-<li>Feature Enrichment: Helping the network “see” the physics (e.g., FFT).</li>
-<li>Embedding constraints in the Loss Function.</li>
+<li>Inverse problem complexities.</li>
+<li>Many-to-one mappings.</li>
+<li>Uniqueness in systems.</li>
 </ul>
 </section>
-<section id="part-3-solving-the-inverse-slides-21-35" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-solving-the-inverse-slides-21-35">Part 3: Solving the Inverse (Slides 21-35)</h3>
+<section id="part-2-physics-informed-ml" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-physics-informed-ml">Part 2: Physics-Informed ML</h3>
 <ul>
-<li>The failure of standard regression on inverse tasks (Bishop Ch 5.19).</li>
-<li>Approaches to ill-posed problems: Regularization, Bayesian Inference, and Mixture Models.</li>
-<li>Case Study: Determining heat treatment parameters from grain size distributions.</li>
+<li>White vs.&nbsp;Grey vs.&nbsp;Black Box.</li>
+<li>Feature Enrichment.</li>
+<li>Loss function constraints.</li>
 </ul>
 </section>
-<section id="part-4-building-process-maps-slides-36-45" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-building-process-maps-slides-36-45">Part 4: Building Process Maps (Slides 36-45)</h3>
+<section id="part-3-solving-the-inverse" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-solving-the-inverse">Part 3: Solving the Inverse</h3>
 <ul>
-<li>From experimental points to continuous maps.</li>
-<li>Visualizing Process Windows and “Safe” Corridors.</li>
-<li>Case Study: High-throughput mapping of laser-material interactions.</li>
+<li>Regression failure on inverse tasks.</li>
+<li>Regularization and Mixture Models.</li>
+<li>Heat treatment parameter case study.</li>
 </ul>
 </section>
-<section id="part-5-summary-ml-for-material-design-slides-46-50" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-summary-ml-for-material-design-slides-46-50">Part 5: Summary: ML for Material Design (Slides 46-50)</h3>
+<section id="part-4-building-process-maps" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-building-process-maps">Part 4: Building Process Maps</h3>
 <ul>
-<li>Designing new processing routes with ML surrogates.</li>
-<li>The role of simulation in training inverse models.</li>
-<li>Reflection: Can ML truly replace human intuition in the lab?</li>
+<li>Continuous maps from points.</li>
+<li>Visualizing Safe Corridors.</li>
+<li>Laser-material interactions mapping.</li>
 </ul>
-<hr>
+</section>
+<section id="part-5-ml-for-material-design" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-ml-for-material-design">Part 5: ML for Material Design</h3>
+<ul>
+<li>Prescribing processing routes.</li>
+<li>Simulation-aided training.</li>
+<li>AI vs.&nbsp;human intuition.</li>
+</ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
 <p><strong>Summary for ML-PC Week 9:</strong><br>
-This unit explores <strong>Inverse Problems</strong>—the cornerstone of materials design where we seek the processing parameters required to achieve a target microstructure or performance. We contrast these with causal forward problems and discuss why they are often ill-posed and multi-valued. We introduce <strong>Physics-Informed Learning</strong> as a way to solve these challenges by enriching models with physical transformations and constraints. Students learn how to build and interpret <strong>Process Maps</strong> and “Process Corridors,” using machine learning to visualize safe operating regions in complex experimental spaces.</p>
+- Explores Inverse Problems for materials design. - Contrasts multi-valued inverse tasks with causal forward problems. - Introduces Physics-Informed Learning and feature enrichment. - Demonstrates building Process Maps and Safe Corridors.</p>
 </section>
 </section>
      </main>

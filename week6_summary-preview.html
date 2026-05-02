@@ -154,17 +154,17 @@
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#the-small-data-challenge-sandfeld-ch-11-neuer-ch-4" id="toc-the-small-data-challenge-sandfeld-ch-11-neuer-ch-4" class="nav-link" data-scroll-target="#the-small-data-challenge-sandfeld-ch-11-neuer-ch-4">1. The Small Data Challenge (Sandfeld Ch 11, Neuer Ch 4)</a></li>
-  <li><a href="#transfer-learning-mcclarren-ch-6-sandfeld-ch-19" id="toc-transfer-learning-mcclarren-ch-6-sandfeld-ch-19" class="nav-link" data-scroll-target="#transfer-learning-mcclarren-ch-6-sandfeld-ch-19">2. Transfer Learning (McClarren Ch 6, Sandfeld Ch 19)</a></li>
+  <li><a href="#the-small-data-challenge" id="toc-the-small-data-challenge" class="nav-link" data-scroll-target="#the-small-data-challenge">1. The Small Data Challenge</a></li>
+  <li><a href="#transfer-learning" id="toc-transfer-learning" class="nav-link" data-scroll-target="#transfer-learning">2. Transfer Learning</a></li>
   <li><a href="#data-augmentation" id="toc-data-augmentation" class="nav-link" data-scroll-target="#data-augmentation">3. Data Augmentation</a></li>
   </ul></li>
-  <li><a href="#minute-lecture-strategy-50-slides" id="toc-minute-lecture-strategy-50-slides" class="nav-link" data-scroll-target="#minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</a>
+  <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-the-curse-of-small-data-slides-1-10" id="toc-part-1-the-curse-of-small-data-slides-1-10" class="nav-link" data-scroll-target="#part-1-the-curse-of-small-data-slides-1-10">Part 1: The Curse of Small Data (Slides 1-10)</a></li>
-  <li><a href="#part-2-fighting-scarcity-with-augmentation-slides-11-20" id="toc-part-2-fighting-scarcity-with-augmentation-slides-11-20" class="nav-link" data-scroll-target="#part-2-fighting-scarcity-with-augmentation-slides-11-20">Part 2: Fighting Scarcity with Augmentation (Slides 11-20)</a></li>
-  <li><a href="#part-3-transfer-learning-mechanics-slides-21-35" id="toc-part-3-transfer-learning-mechanics-slides-21-35" class="nav-link" data-scroll-target="#part-3-transfer-learning-mechanics-slides-21-35">Part 3: Transfer Learning Mechanics (Slides 21-35)</a></li>
-  <li><a href="#part-4-domain-shift-in-science-slides-36-45" id="toc-part-4-domain-shift-in-science-slides-36-45" class="nav-link" data-scroll-target="#part-4-domain-shift-in-science-slides-36-45">Part 4: Domain Shift in Science (Slides 36-45)</a></li>
-  <li><a href="#part-5-summary-best-practices-slides-46-50" id="toc-part-5-summary-best-practices-slides-46-50" class="nav-link" data-scroll-target="#part-5-summary-best-practices-slides-46-50">Part 5: Summary &amp; Best Practices (Slides 46-50)</a></li>
+  <li><a href="#part-1-curse-of-small-data" id="toc-part-1-curse-of-small-data" class="nav-link" data-scroll-target="#part-1-curse-of-small-data">Part 1: Curse of Small Data</a></li>
+  <li><a href="#part-2-augmentation" id="toc-part-2-augmentation" class="nav-link" data-scroll-target="#part-2-augmentation">Part 2: Augmentation</a></li>
+  <li><a href="#part-3-transfer-learning-mechanics" id="toc-part-3-transfer-learning-mechanics" class="nav-link" data-scroll-target="#part-3-transfer-learning-mechanics">Part 3: Transfer Learning Mechanics</a></li>
+  <li><a href="#part-4-domain-shift-in-science" id="toc-part-4-domain-shift-in-science" class="nav-link" data-scroll-target="#part-4-domain-shift-in-science">Part 4: Domain Shift in Science</a></li>
+  <li><a href="#part-5-summary-best-practices" id="toc-part-5-summary-best-practices" class="nav-link" data-scroll-target="#part-5-summary-best-practices">Part 5: Summary &amp; Best Practices</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -177,83 +177,75 @@
 <h1>Week 6 Summary: Data scarcity &amp; transfer learning</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="the-small-data-challenge-sandfeld-ch-11-neuer-ch-4" class="level3">
-<h3 class="anchored" data-anchor-id="the-small-data-challenge-sandfeld-ch-11-neuer-ch-4">1. The Small Data Challenge (Sandfeld Ch 11, Neuer Ch 4)</h3>
+<section id="the-small-data-challenge" class="level3">
+<h3 class="anchored" data-anchor-id="the-small-data-challenge">1. The Small Data Challenge</h3>
 <ul>
-<li><strong>Experimental Cost:</strong> Unlike internet-scale data, scientific datasets are expensive. A model with millions of parameters (like a CNN) will easily “memorize” a small materials dataset rather than learning the underlying physics.</li>
-<li><strong>Generalization:</strong> To avoid overfitting, we must use techniques like early stopping, dropout, and robust train/val/test splitting (Neuer Ch 4.2.1).</li>
+<li><strong>Cost:</strong> Scientific data is expensive; deep networks easily overfit small datasets.</li>
+<li><strong>Generalization:</strong> Requires early stopping, dropout, and robust splits to avoid overfitting.</li>
 </ul>
 </section>
-<section id="transfer-learning-mcclarren-ch-6-sandfeld-ch-19" class="level3">
-<h3 class="anchored" data-anchor-id="transfer-learning-mcclarren-ch-6-sandfeld-ch-19">2. Transfer Learning (McClarren Ch 6, Sandfeld Ch 19)</h3>
+<section id="transfer-learning" class="level3">
+<h3 class="anchored" data-anchor-id="transfer-learning">2. Transfer Learning</h3>
 <ul>
-<li><strong>Leveraging Pretrained Models:</strong> Instead of training from scratch, we start with a model (e.g., ResNet, EfficientNet) trained on massive datasets like ImageNet.</li>
-<li><strong>Feature Reuse:</strong> The “early” layers of a CNN learn universal visual primitives (edges, blobs, textures) that are surprisingly effective for micrographs, even if the model was originally trained on natural objects like dogs or cars.</li>
-<li><strong>Fine-Tuning Strategies:</strong>
-<ul>
-<li><strong>Feature Extraction:</strong> Freeze the backbone and train only the final classification head.</li>
-<li><strong>Fine-Tuning:</strong> Unfreeze the last few convolutional blocks and train with a very low learning rate.</li>
-</ul></li>
-<li><strong>Case Study (McClarren):</strong> Transferring EfficientNet features to detect volcanoes on Venus—a scientific task with limited labeled data.</li>
+<li><strong>Pretrained Models:</strong> Start with models trained on massive datasets (e.g., ImageNet).</li>
+<li><strong>Feature Reuse:</strong> Early layers learn universal visual primitives useful for micrographs.</li>
+<li><strong>Fine-Tuning:</strong> Freeze backbone and train the head, or unfreeze late layers with a low learning rate.</li>
 </ul>
 </section>
 <section id="data-augmentation" class="level3">
 <h3 class="anchored" data-anchor-id="data-augmentation">3. Data Augmentation</h3>
 <ul>
-<li><strong>Artificial Scarcity Relief:</strong> Increasing the effective dataset size by applying transformations: rotation, flipping, cropping, and color jittering.</li>
-<li><strong>Physics-Preserving Augmentation:</strong> In materials science, rotations and flips often preserve the underlying physical meaning (unless there is a macro-scale gradient or oriented growth), unlike in natural images where “upside-down” objects are rare.</li>
+<li><strong>Artificial Relief:</strong> Expand data via rotation, flipping, cropping, etc.</li>
+<li><strong>Physics-Preserving:</strong> Materials rotations/flips preserve physical meaning.</li>
 </ul>
-<hr>
 </section>
 </section>
-<section id="minute-lecture-strategy-50-slides" class="level2">
-<h2 class="anchored" data-anchor-id="minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</h2>
-<section id="part-1-the-curse-of-small-data-slides-1-10" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-the-curse-of-small-data-slides-1-10">Part 1: The Curse of Small Data (Slides 1-10)</h3>
+<section id="minute-lecture-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
+<section id="part-1-curse-of-small-data" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-curse-of-small-data">Part 1: Curse of Small Data</h3>
 <ul>
-<li>Why materials data is “Small, Expensive, and Messy.”</li>
-<li>The risk of overfitting: When your model learns the specific scratches on a sample instead of the phase boundaries.</li>
+<li>Small, Expensive, Messy data.</li>
+<li>Overfitting risks.</li>
 </ul>
 </section>
-<section id="part-2-fighting-scarcity-with-augmentation-slides-11-20" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-fighting-scarcity-with-augmentation-slides-11-20">Part 2: Fighting Scarcity with Augmentation (Slides 11-20)</h3>
+<section id="part-2-augmentation" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-augmentation">Part 2: Augmentation</h3>
 <ul>
-<li>Traditional Augmentation: Flips, Rotations, Zooms.</li>
-<li>Advanced Augmentation: Mixup, Cutmix.</li>
-<li>Domain-specific Augmentation: Adding simulated noise or artifacts.</li>
+<li>Traditional: Flips, Rotations.</li>
+<li>Advanced: Mixup, Cutmix.</li>
+<li>Domain-specific: Simulated noise.</li>
 </ul>
 </section>
-<section id="part-3-transfer-learning-mechanics-slides-21-35" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-transfer-learning-mechanics-slides-21-35">Part 3: Transfer Learning Mechanics (Slides 21-35)</h3>
+<section id="part-3-transfer-learning-mechanics" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-transfer-learning-mechanics">Part 3: Transfer Learning Mechanics</h3>
 <ul>
-<li>The concept of “Feature Hierarchies.”</li>
-<li>Pretrained Models: An overview of available backbones.</li>
-<li>How to implement Transfer Learning: Freezing, Unfreezing, and Learning Rates.</li>
-<li>Case Study: ImageNet to SEM images.</li>
+<li>Feature Hierarchies.</li>
+<li>Available backbones.</li>
+<li>Fine-tuning strategies.</li>
 </ul>
 </section>
-<section id="part-4-domain-shift-in-science-slides-36-45" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-domain-shift-in-science-slides-36-45">Part 4: Domain Shift in Science (Slides 36-45)</h3>
+<section id="part-4-domain-shift-in-science" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-domain-shift-in-science">Part 4: Domain Shift in Science</h3>
 <ul>
-<li>Does ImageNet pretraining always help? (Comparing natural vs.&nbsp;scientific domains).</li>
-<li>Cross-Material Transfer: Training on Steel and fine-tuning on Aluminum.</li>
-<li>Synthetic-to-Real Transfer: Pretraining on simulations (Phase Field, FEM).</li>
+<li>Natural vs.&nbsp;scientific domains.</li>
+<li>Cross-Material Transfer.</li>
+<li>Synthetic-to-Real Transfer.</li>
 </ul>
 </section>
-<section id="part-5-summary-best-practices-slides-46-50" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-summary-best-practices-slides-46-50">Part 5: Summary &amp; Best Practices (Slides 46-50)</h3>
+<section id="part-5-summary-best-practices" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-summary-best-practices">Part 5: Summary &amp; Best Practices</h3>
 <ul>
-<li>Selecting the right backbone.</li>
-<li>Validation strategies for small data.</li>
-<li>Discussion: Is “Learning to Learn” the future of Materials Science?</li>
+<li>Backbone selection.</li>
+<li>Small data validation.</li>
+<li>“Learning to Learn”.</li>
 </ul>
-<hr>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
 <p><strong>Summary for ML-PC Week 6:</strong><br>
-This unit addresses the fundamental bottleneck of materials informatics: <strong>Data Scarcity</strong>. We explore how to build powerful deep learning models when only a few hundred labeled images or signals are available. The core focus is on <strong>Transfer Learning</strong>, where we leverage knowledge from models pretrained on millions of natural images to accelerate learning and improve generalization on materials tasks. We also cover <strong>Data Augmentation</strong> strategies tailored for scientific data and discuss when and why transferring knowledge across different physical domains succeeds or fails.</p>
+- Addresses Data Scarcity in materials informatics. - Explores Transfer Learning to leverage pretrained models. - Discusses scientific Data Augmentation strategies. - Evaluates cross-domain knowledge transfer limits.</p>
 </section>
 </section>
      </main>

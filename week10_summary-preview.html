@@ -154,17 +154,17 @@
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#clustering-spectral-data-neuer-ch-5-mcclarren-ch-4" id="toc-clustering-spectral-data-neuer-ch-5-mcclarren-ch-4" class="nav-link" data-scroll-target="#clustering-spectral-data-neuer-ch-5-mcclarren-ch-4">1. Clustering Spectral Data (Neuer Ch 5, McClarren Ch 4)</a></li>
-  <li><a href="#autoencoders-for-signal-processing-mcclarren-ch-8" id="toc-autoencoders-for-signal-processing-mcclarren-ch-8" class="nav-link" data-scroll-target="#autoencoders-for-signal-processing-mcclarren-ch-8">2. Autoencoders for Signal Processing (McClarren Ch 8)</a></li>
+  <li><a href="#clustering-spectral-data" id="toc-clustering-spectral-data" class="nav-link" data-scroll-target="#clustering-spectral-data">1. Clustering Spectral Data</a></li>
+  <li><a href="#autoencoders-for-signal-processing" id="toc-autoencoders-for-signal-processing" class="nav-link" data-scroll-target="#autoencoders-for-signal-processing">2. Autoencoders for Signal Processing</a></li>
   <li><a href="#scientific-integrity-in-ml" id="toc-scientific-integrity-in-ml" class="nav-link" data-scroll-target="#scientific-integrity-in-ml">3. Scientific Integrity in ML</a></li>
   </ul></li>
-  <li><a href="#minute-lecture-strategy-50-slides" id="toc-minute-lecture-strategy-50-slides" class="nav-link" data-scroll-target="#minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</a>
+  <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-high-dimensional-signals-slides-1-10" id="toc-part-1-high-dimensional-signals-slides-1-10" class="nav-link" data-scroll-target="#part-1-high-dimensional-signals-slides-1-10">Part 1: High-Dimensional Signals (Slides 1-10)</a></li>
-  <li><a href="#part-2-discovering-structure-with-clustering-slides-11-20" id="toc-part-2-discovering-structure-with-clustering-slides-11-20" class="nav-link" data-scroll-target="#part-2-discovering-structure-with-clustering-slides-11-20">Part 2: Discovering Structure with Clustering (Slides 11-20)</a></li>
-  <li><a href="#part-3-visualizing-the-unseen-slides-21-30" id="toc-part-3-visualizing-the-unseen-slides-21-30" class="nav-link" data-scroll-target="#part-3-visualizing-the-unseen-slides-21-30">Part 3: Visualizing the Unseen (Slides 21-30)</a></li>
-  <li><a href="#part-4-autoencoders-denoising-slides-31-45" id="toc-part-4-autoencoders-denoising-slides-31-45" class="nav-link" data-scroll-target="#part-4-autoencoders-denoising-slides-31-45">Part 4: Autoencoders &amp; Denoising (Slides 31-45)</a></li>
-  <li><a href="#part-5-from-data-to-discovery-slides-46-50" id="toc-part-5-from-data-to-discovery-slides-46-50" class="nav-link" data-scroll-target="#part-5-from-data-to-discovery-slides-46-50">Part 5: From Data to Discovery (Slides 46-50)</a></li>
+  <li><a href="#part-1-high-dimensional-signals" id="toc-part-1-high-dimensional-signals" class="nav-link" data-scroll-target="#part-1-high-dimensional-signals">Part 1: High-Dimensional Signals</a></li>
+  <li><a href="#part-2-clustering-structure" id="toc-part-2-clustering-structure" class="nav-link" data-scroll-target="#part-2-clustering-structure">Part 2: Clustering Structure</a></li>
+  <li><a href="#part-3-visualizing-the-unseen" id="toc-part-3-visualizing-the-unseen" class="nav-link" data-scroll-target="#part-3-visualizing-the-unseen">Part 3: Visualizing the Unseen</a></li>
+  <li><a href="#part-4-autoencoders-denoising" id="toc-part-4-autoencoders-denoising" class="nav-link" data-scroll-target="#part-4-autoencoders-denoising">Part 4: Autoencoders &amp; Denoising</a></li>
+  <li><a href="#part-5-data-to-discovery" id="toc-part-5-data-to-discovery" class="nav-link" data-scroll-target="#part-5-data-to-discovery">Part 5: Data to Discovery</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -177,79 +177,76 @@
 <h1>Week 10 Summary: ML for characterization signals</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="clustering-spectral-data-neuer-ch-5-mcclarren-ch-4" class="level3">
-<h3 class="anchored" data-anchor-id="clustering-spectral-data-neuer-ch-5-mcclarren-ch-4">1. Clustering Spectral Data (Neuer Ch 5, McClarren Ch 4)</h3>
+<section id="clustering-spectral-data" class="level3">
+<h3 class="anchored" data-anchor-id="clustering-spectral-data">1. Clustering Spectral Data</h3>
 <ul>
-<li><strong>K-Means Clustering:</strong> A fundamental tool for grouping similar signals (e.g., XRD or EDS spectra). By minimizing the variance within clusters, we can automatically identify distinct phases or chemical environments in a dataset (Neuer Ch 5.3).</li>
-<li><strong>Mini-Batch K-Means:</strong> Essential for high-throughput characterization where millions of spectra are collected in a single mapping session.</li>
-<li><strong>Visualization with t-SNE:</strong> High-dimensional spectra (e.g., 2048 channels) are impossible to visualize directly. t-SNE projects these into 2D while preserving “neighborhood” relationships, making it easy to spot outliers or transitional states (Neuer Ch 5.4).</li>
+<li><strong>K-Means:</strong> Groups similar spectra (XRD/EDS) to identify distinct phases.</li>
+<li><strong>Mini-Batch K-Means:</strong> Speeds up high-throughput characterization.</li>
+<li><strong>t-SNE:</strong> Projects high-dimensional spectra to 2D to reveal outliers/relationships.</li>
 </ul>
 </section>
-<section id="autoencoders-for-signal-processing-mcclarren-ch-8" class="level3">
-<h3 class="anchored" data-anchor-id="autoencoders-for-signal-processing-mcclarren-ch-8">2. Autoencoders for Signal Processing (McClarren Ch 8)</h3>
+<section id="autoencoders-for-signal-processing" class="level3">
+<h3 class="anchored" data-anchor-id="autoencoders-for-signal-processing">2. Autoencoders for Signal Processing</h3>
 <ul>
-<li><strong>Latent Representations:</strong> An autoencoder learns to compress a spectrum into a few “latent variables” that capture the essential physical information (peak positions, intensities).</li>
-<li><strong>Denoising:</strong> By training an autoencoder to reconstruct a clean signal from a noisy input, we can effectively remove experimental fluctuations without the blurring associated with traditional filters (McClarren Ch 8.3.2).</li>
-<li><strong>Non-linear Compression:</strong> Unlike PCA, autoencoders can capture non-linear relationships in spectral data, enabling much higher compression ratios for massive characterization libraries (McClarren Ch 8.2).</li>
+<li><strong>Latent Representations:</strong> Compresses spectra to essential physical information.</li>
+<li><strong>Denoising:</strong> Reconstructs clean signals from noisy inputs without blurring.</li>
+<li><strong>Non-linear Compression:</strong> Outperforms PCA for complex spectral libraries.</li>
 </ul>
 </section>
 <section id="scientific-integrity-in-ml" class="level3">
 <h3 class="anchored" data-anchor-id="scientific-integrity-in-ml">3. Scientific Integrity in ML</h3>
 <ul>
-<li><strong>Peak Preservation:</strong> The goal of ML in characterization is to assist the scientist, not replace the physics. Models must be validated to ensure they do not “invent” peaks or smooth away critical structural information.</li>
+<li><strong>Peak Preservation:</strong> ML must assist, not invent or smooth away real physics.</li>
 </ul>
-<hr>
 </section>
 </section>
-<section id="minute-lecture-strategy-50-slides" class="level2">
-<h2 class="anchored" data-anchor-id="minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</h2>
-<section id="part-1-high-dimensional-signals-slides-1-10" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-high-dimensional-signals-slides-1-10">Part 1: High-Dimensional Signals (Slides 1-10)</h3>
+<section id="minute-lecture-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
+<section id="part-1-high-dimensional-signals" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-high-dimensional-signals">Part 1: High-Dimensional Signals</h3>
 <ul>
-<li>The digital footprint of materials: XRD, EDS, EELS, and Raman.</li>
-<li>Why manual peak-picking fails in high-throughput experiments.</li>
-<li>The “Vector” representation of a spectrum.</li>
+<li>Digital footprint: XRD, EDS, EELS, Raman.</li>
+<li>Manual vs.&nbsp;automated peak-picking.</li>
+<li>Vector spectrum representation.</li>
 </ul>
 </section>
-<section id="part-2-discovering-structure-with-clustering-slides-11-20" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-discovering-structure-with-clustering-slides-11-20">Part 2: Discovering Structure with Clustering (Slides 11-20)</h3>
+<section id="part-2-clustering-structure" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-clustering-structure">Part 2: Clustering Structure</h3>
 <ul>
-<li>K-Means: Geometry and Algorithm.</li>
-<li>The “Elbow Method”: Deciding how many phases are in your sample.</li>
-<li>Case Study: Mapping a ternary alloy system with K-Means.</li>
+<li>K-Means algorithm.</li>
+<li>Elbow Method for phase counting.</li>
+<li>Ternary alloy mapping.</li>
 </ul>
 </section>
-<section id="part-3-visualizing-the-unseen-slides-21-30" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-visualizing-the-unseen-slides-21-30">Part 3: Visualizing the Unseen (Slides 21-30)</h3>
+<section id="part-3-visualizing-the-unseen" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-visualizing-the-unseen">Part 3: Visualizing the Unseen</h3>
 <ul>
-<li>t-SNE: The intuition of “Stochastic Proximity.”</li>
-<li>Finding “Hidden” relationships in spectral libraries.</li>
-<li>Pitfalls: Why t-SNE distances can be misleading.</li>
+<li>t-SNE Stochastic Proximity.</li>
+<li>Hidden relationships.</li>
+<li>t-SNE distance pitfalls.</li>
 </ul>
 </section>
-<section id="part-4-autoencoders-denoising-slides-31-45" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-autoencoders-denoising-slides-31-45">Part 4: Autoencoders &amp; Denoising (Slides 31-45)</h3>
+<section id="part-4-autoencoders-denoising" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-autoencoders-denoising">Part 4: Autoencoders &amp; Denoising</h3>
 <ul>
-<li>The Hourglass Architecture: Encoder, Bottleneck, Decoder.</li>
-<li>Applications: Compressing leaf spectra (McClarren Ch 8.2).</li>
-<li>Denoising characterization signals: Improving SNR with Deep Learning.</li>
-<li>Feature extraction: Using the bottleneck as a physical descriptor.</li>
+<li>Encoder-Bottleneck-Decoder.</li>
+<li>Denoising characterization signals.</li>
+<li>Bottlenecks as physical descriptors.</li>
 </ul>
 </section>
-<section id="part-5-from-data-to-discovery-slides-46-50" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-from-data-to-discovery-slides-46-50">Part 5: From Data to Discovery (Slides 46-50)</h3>
+<section id="part-5-data-to-discovery" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-data-to-discovery">Part 5: Data to Discovery</h3>
 <ul>
-<li>Real-time spectral analysis during experiments.</li>
-<li>Ensuring physical consistency in ML outputs.</li>
-<li>Summary: The automated characterization pipeline.</li>
+<li>Real-time spectral analysis.</li>
+<li>Physical consistency in ML.</li>
+<li>Automated pipelines.</li>
 </ul>
-<hr>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
 <p><strong>Summary for ML-PC Week 10:</strong><br>
-This unit focuses on the processing of high-dimensional <strong>Characterization Signals</strong> (like XRD, EDS, and EELS) using unsupervised learning. We introduce <strong>K-Means Clustering</strong> and <strong>t-SNE</strong> for the automatic identification and visualization of phases in large experimental libraries. We then explore <strong>Autoencoders</strong>—neural networks that learn to compress complex spectra into a low-dimensional “latent space.” This allows for advanced denoising and feature extraction, enabling scientists to handle the massive data volumes produced by modern high-throughput characterization tools without losing physical insight.</p>
+- Processes high-dimensional Characterization Signals (XRD, EDS). - Employs K-Means and t-SNE for automated phase identification. - Uses Autoencoders for latent space compression and denoising. - Enhances high-throughput data analysis while preserving physics.</p>
 </section>
 </section>
      </main>

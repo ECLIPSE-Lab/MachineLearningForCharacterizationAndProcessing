@@ -154,17 +154,17 @@
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#explainability-opening-the-black-box-neuer-ch-7" id="toc-explainability-opening-the-black-box-neuer-ch-7" class="nav-link" data-scroll-target="#explainability-opening-the-black-box-neuer-ch-7">1. Explainability: Opening the Black Box (Neuer Ch 7)</a></li>
-  <li><a href="#causality-and-semantics-neuer-ch-7.1-7.3" id="toc-causality-and-semantics-neuer-ch-7.1-7.3" class="nav-link" data-scroll-target="#causality-and-semantics-neuer-ch-7.1-7.3">2. Causality and Semantics (Neuer Ch 7.1, 7.3)</a></li>
-  <li><a href="#the-limits-of-ai-in-materials-science-sandfeld-ch-1-mcclarren" id="toc-the-limits-of-ai-in-materials-science-sandfeld-ch-1-mcclarren" class="nav-link" data-scroll-target="#the-limits-of-ai-in-materials-science-sandfeld-ch-1-mcclarren">3. The Limits of AI in Materials Science (Sandfeld Ch 1, McClarren)</a></li>
+  <li><a href="#explainability-opening-the-black-box" id="toc-explainability-opening-the-black-box" class="nav-link" data-scroll-target="#explainability-opening-the-black-box">1. Explainability: Opening the Black Box</a></li>
+  <li><a href="#causality-and-semantics" id="toc-causality-and-semantics" class="nav-link" data-scroll-target="#causality-and-semantics">2. Causality and Semantics</a></li>
+  <li><a href="#limits-of-ai-in-materials-science" id="toc-limits-of-ai-in-materials-science" class="nav-link" data-scroll-target="#limits-of-ai-in-materials-science">3. Limits of AI in Materials Science</a></li>
   </ul></li>
-  <li><a href="#minute-lecture-strategy-50-slides" id="toc-minute-lecture-strategy-50-slides" class="nav-link" data-scroll-target="#minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</a>
+  <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-course-synthesis-slides-1-10" id="toc-part-1-course-synthesis-slides-1-10" class="nav-link" data-scroll-target="#part-1-course-synthesis-slides-1-10">Part 1: Course Synthesis (Slides 1-10)</a></li>
-  <li><a href="#part-2-explainable-ml-slides-11-20" id="toc-part-2-explainable-ml-slides-11-20" class="nav-link" data-scroll-target="#part-2-explainable-ml-slides-11-20">Part 2: Explainable ML (Slides 11-20)</a></li>
-  <li><a href="#part-3-causality-process-insight-slides-21-30" id="toc-part-3-causality-process-insight-slides-21-30" class="nav-link" data-scroll-target="#part-3-causality-process-insight-slides-21-30">Part 3: Causality &amp; Process Insight (Slides 21-30)</a></li>
-  <li><a href="#part-4-ethics-and-limits-slides-31-45" id="toc-part-4-ethics-and-limits-slides-31-45" class="nav-link" data-scroll-target="#part-4-ethics-and-limits-slides-31-45">Part 4: Ethics and Limits (Slides 31-45)</a></li>
-  <li><a href="#part-5-final-outlook-the-ai-4-materials-era-slides-46-50" id="toc-part-5-final-outlook-the-ai-4-materials-era-slides-46-50" class="nav-link" data-scroll-target="#part-5-final-outlook-the-ai-4-materials-era-slides-46-50">Part 5: Final Outlook: The AI 4 Materials Era (Slides 46-50)</a></li>
+  <li><a href="#part-1-course-synthesis" id="toc-part-1-course-synthesis" class="nav-link" data-scroll-target="#part-1-course-synthesis">Part 1: Course Synthesis</a></li>
+  <li><a href="#part-2-explainable-ml" id="toc-part-2-explainable-ml" class="nav-link" data-scroll-target="#part-2-explainable-ml">Part 2: Explainable ML</a></li>
+  <li><a href="#part-3-causality-semantics" id="toc-part-3-causality-semantics" class="nav-link" data-scroll-target="#part-3-causality-semantics">Part 3: Causality &amp; Semantics</a></li>
+  <li><a href="#part-4-ethics-and-limits" id="toc-part-4-ethics-and-limits" class="nav-link" data-scroll-target="#part-4-ethics-and-limits">Part 4: Ethics and Limits</a></li>
+  <li><a href="#part-5-final-outlook" id="toc-part-5-final-outlook" class="nav-link" data-scroll-target="#part-5-final-outlook">Part 5: Final Outlook</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -177,77 +177,75 @@
 <h1>Week 14 Summary: Integration, limits, and reflection</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="explainability-opening-the-black-box-neuer-ch-7" class="level3">
-<h3 class="anchored" data-anchor-id="explainability-opening-the-black-box-neuer-ch-7">1. Explainability: Opening the Black Box (Neuer Ch 7)</h3>
+<section id="explainability-opening-the-black-box" class="level3">
+<h3 class="anchored" data-anchor-id="explainability-opening-the-black-box">1. Explainability: Opening the Black Box</h3>
 <ul>
-<li><strong>Beyond Prediction:</strong> In engineering, knowing “what” will happen is often less important than knowing “why.” Explainability builds the trust necessary for industrial deployment.</li>
-<li><strong>Sensitivity Analysis:</strong> A local explanation method where we perturb the input variables ( + $) and observe the change in output. This reveals which process parameters are the primary drivers of material performance (Neuer Ch 7.2).</li>
-<li><strong>Levels of Explanation:</strong> Explainability must be tailored to the audience, from the management level (KPIs) to the process expert (physical consistency) and the data scientist (feature importance).</li>
+<li><strong>Beyond Prediction:</strong> “Why” builds industrial trust over just “what”.</li>
+<li><strong>Sensitivity Analysis:</strong> Perturb inputs to find primary process drivers.</li>
+<li><strong>Levels of Explanation:</strong> Tailor explanations for managers, experts, and data scientists.</li>
 </ul>
 </section>
-<section id="causality-and-semantics-neuer-ch-7.1-7.3" class="level3">
-<h3 class="anchored" data-anchor-id="causality-and-semantics-neuer-ch-7.1-7.3">2. Causality and Semantics (Neuer Ch 7.1, 7.3)</h3>
+<section id="causality-and-semantics" class="level3">
+<h3 class="anchored" data-anchor-id="causality-and-semantics">2. Causality and Semantics</h3>
 <ul>
-<li><strong>Causal process chains:</strong> Understanding that an anomaly discovered at the end of a process chain (e.g., final inspection) was likely caused by an event early in the chain. ML models should ideally move from <strong>detection</strong> (after the fact) to <strong>prediction</strong> (early warning) to allow for corrective action (Neuer Ch 7.3.3).</li>
-<li><strong>Ontologies:</strong> Digitizing the “meaning” of materials data. By mapping raw variables to semantic concepts (e.g., “Rolling Force” is a type of “Mechanical Stress”), we allow algorithms to leverage human-like reasoning.</li>
+<li><strong>Causal Process Chains:</strong> Shift from anomaly detection to early prediction.</li>
+<li><strong>Ontologies:</strong> Digitize semantic meaning (e.g., mapping variables to physical concepts) to enable algorithmic reasoning.</li>
 </ul>
 </section>
-<section id="the-limits-of-ai-in-materials-science-sandfeld-ch-1-mcclarren" class="level3">
-<h3 class="anchored" data-anchor-id="the-limits-of-ai-in-materials-science-sandfeld-ch-1-mcclarren">3. The Limits of AI in Materials Science (Sandfeld Ch 1, McClarren)</h3>
+<section id="limits-of-ai-in-materials-science" class="level3">
+<h3 class="anchored" data-anchor-id="limits-of-ai-in-materials-science">3. Limits of AI in Materials Science</h3>
 <ul>
-<li><strong>Data Bias:</strong> Models are only as good as the history they have seen. If a database only contains “successful” experiments, the AI will be blind to failure modes.</li>
-<li><strong>AI Hallucinations:</strong> Large models can produce patterns that look physically plausible but violate fundamental laws. The materials scientist remains the ultimate filter for scientific truth.</li>
-<li><strong>The Role of the Expert:</strong> AI is a powerful assistant that automates the tedious (peak picking, segmentation) and explores the vast (high-dimensional process maps), but the “Scientific Question” and the “Final Interpretation” remain human tasks.</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="minute-lecture-strategy-50-slides" class="level2">
-<h2 class="anchored" data-anchor-id="minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</h2>
-<section id="part-1-course-synthesis-slides-1-10" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-course-synthesis-slides-1-10">Part 1: Course Synthesis (Slides 1-10)</h3>
-<ul>
-<li>Recap: From signal formation (Week 2) to physics-informed models (Week 13).</li>
-<li>The big picture: The AI-driven materials lifecycle.</li>
+<li><strong>Data Bias:</strong> Models trained only on “successes” cannot predict failures.</li>
+<li><strong>AI Hallucinations:</strong> Large models may generate physically impossible patterns.</li>
+<li><strong>Expert’s Role:</strong> AI automates analysis, but human experts define questions and interpret final truths.</li>
 </ul>
 </section>
-<section id="part-2-explainable-ml-slides-11-20" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-explainable-ml-slides-11-20">Part 2: Explainable ML (Slides 11-20)</h3>
+</section>
+<section id="minute-lecture-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
+<section id="part-1-course-synthesis" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-course-synthesis">Part 1: Course Synthesis</h3>
 <ul>
-<li>The “Black Box” problem in high-stakes engineering.</li>
-<li>Sensitivity analysis: Using perturbation theory to probe the model (Neuer Ch 7.2).</li>
-<li>Feature importance: SHAP and LIME intuition.</li>
+<li>Recap: Signal formation to PINNs.</li>
+<li>AI-driven materials lifecycle.</li>
 </ul>
 </section>
-<section id="part-3-causality-process-insight-slides-21-30" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-causality-process-insight-slides-21-30">Part 3: Causality &amp; Process Insight (Slides 21-30)</h3>
+<section id="part-2-explainable-ml" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-explainable-ml">Part 2: Explainable ML</h3>
 <ul>
-<li>Thinking in causal graphs: Cause → Mechanism → Effect.</li>
-<li>Detection vs.&nbsp;Prediction: The value of time in industrial ML (Neuer Ch 7.3.3).</li>
-<li>Introduction to Materials Ontologies: Digitizing expert knowledge.</li>
+<li>The Black Box problem.</li>
+<li>Sensitivity analysis (Perturbation theory).</li>
+<li>Feature importance (SHAP/LIME).</li>
 </ul>
 </section>
-<section id="part-4-ethics-and-limits-slides-31-45" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-ethics-and-limits-slides-31-45">Part 4: Ethics and Limits (Slides 31-45)</h3>
+<section id="part-3-causality-semantics" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-causality-semantics">Part 3: Causality &amp; Semantics</h3>
 <ul>
-<li>Bias in materials data: Representation and “Success” bias.</li>
-<li>The danger of data-driven over-extrapolation.</li>
-<li>Environmental and ethical cost of “Big AI” vs.&nbsp;the efficiency of PINNs.</li>
+<li>Causal graphs (Cause → Mechanism → Effect).</li>
+<li>Detection vs.&nbsp;Prediction.</li>
+<li>Materials Ontologies.</li>
 </ul>
 </section>
-<section id="part-5-final-outlook-the-ai-4-materials-era-slides-46-50" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-final-outlook-the-ai-4-materials-era-slides-46-50">Part 5: Final Outlook: The AI 4 Materials Era (Slides 46-50)</h3>
+<section id="part-4-ethics-and-limits" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-ethics-and-limits">Part 4: Ethics and Limits</h3>
 <ul>
-<li>Self-driving labs and the future of the materials scientist.</li>
-<li>Conclusion: AI as a tool for a more sustainable and efficient world.</li>
+<li>Representation and “Success” bias.</li>
+<li>Dangers of over-extrapolation.</li>
+<li>Environmental cost vs.&nbsp;PINN efficiency.</li>
 </ul>
-<hr>
+</section>
+<section id="part-5-final-outlook" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-final-outlook">Part 5: Final Outlook</h3>
+<ul>
+<li>Self-driving labs.</li>
+<li>Sustainable AI-driven discovery.</li>
+</ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
 <p><strong>Summary for ML-PC Week 14:</strong><br>
-This final unit provides a comprehensive reflection on the role of machine learning in materials characterization and processing. We introduce the concepts of <strong>Explainability</strong> and <strong>Sensitivity Analysis</strong>, demonstrating how to look inside “black-box” models to understand the physical drivers of their predictions. We discuss <strong>Causality</strong> in the process chain and the use of <strong>Ontologies</strong> to digitize scientific meaning. Finally, we critically assess the <strong>Limits and Ethics</strong> of AI, focusing on data bias, the risk of physical hallucinations, and the evolving partnership between the human expert and the autonomous algorithm in the future of materials discovery.</p>
+- Reflects on Explainability and Sensitivity Analysis to open black-box models. - Discusses Causality in process chains and Ontologies for semantic reasoning. - Critically assesses Data Bias and physical AI hallucinations. - Examines the evolving partnership between autonomous algorithms and human experts.</p>
 </section>
 </section>
      </main>

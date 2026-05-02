@@ -154,17 +154,17 @@
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#the-value-of-knowing-what-you-dont-know-neuer-ch-6-murphy-ch-15" id="toc-the-value-of-knowing-what-you-dont-know-neuer-ch-6-murphy-ch-15" class="nav-link" data-scroll-target="#the-value-of-knowing-what-you-dont-know-neuer-ch-6-murphy-ch-15">1. The Value of “Knowing what you don’t know” (Neuer Ch 6, Murphy Ch 15)</a></li>
-  <li><a href="#gaussian-processes-gps-murphy-ch-15-bishop-ch-6" id="toc-gaussian-processes-gps-murphy-ch-15-bishop-ch-6" class="nav-link" data-scroll-target="#gaussian-processes-gps-murphy-ch-15-bishop-ch-6">2. Gaussian Processes (GPs) (Murphy Ch 15, Bishop Ch 6)</a></li>
-  <li><a href="#gp-based-process-maps-ml-pc-index" id="toc-gp-based-process-maps-ml-pc-index" class="nav-link" data-scroll-target="#gp-based-process-maps-ml-pc-index">3. GP-Based Process Maps (ML-PC Index)</a></li>
+  <li><a href="#knowing-what-you-dont-know" id="toc-knowing-what-you-dont-know" class="nav-link" data-scroll-target="#knowing-what-you-dont-know">1. Knowing what you don’t know</a></li>
+  <li><a href="#gaussian-processes-gps" id="toc-gaussian-processes-gps" class="nav-link" data-scroll-target="#gaussian-processes-gps">2. Gaussian Processes (GPs)</a></li>
+  <li><a href="#gp-based-process-maps" id="toc-gp-based-process-maps" class="nav-link" data-scroll-target="#gp-based-process-maps">3. GP-Based Process Maps</a></li>
   </ul></li>
-  <li><a href="#minute-lecture-strategy-50-slides" id="toc-minute-lecture-strategy-50-slides" class="nav-link" data-scroll-target="#minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</a>
+  <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-uncertainty-in-science-slides-1-10" id="toc-part-1-uncertainty-in-science-slides-1-10" class="nav-link" data-scroll-target="#part-1-uncertainty-in-science-slides-1-10">Part 1: Uncertainty in Science (Slides 1-10)</a></li>
-  <li><a href="#part-2-gaussian-process-fundamentals-slides-11-25" id="toc-part-2-gaussian-process-fundamentals-slides-11-25" class="nav-link" data-scroll-target="#part-2-gaussian-process-fundamentals-slides-11-25">Part 2: Gaussian Process Fundamentals (Slides 11-25)</a></li>
-  <li><a href="#part-3-gp-case-studies-slides-26-40" id="toc-part-3-gp-case-studies-slides-26-40" class="nav-link" data-scroll-target="#part-3-gp-case-studies-slides-26-40">Part 3: GP Case Studies (Slides 26-40)</a></li>
-  <li><a href="#part-4-advanced-probabilistic-ml-slides-41-45" id="toc-part-4-advanced-probabilistic-ml-slides-41-45" class="nav-link" data-scroll-target="#part-4-advanced-probabilistic-ml-slides-41-45">Part 4: Advanced Probabilistic ML (Slides 41-45)</a></li>
-  <li><a href="#part-5-summary-decision-making-under-uncertainty-slides-46-50" id="toc-part-5-summary-decision-making-under-uncertainty-slides-46-50" class="nav-link" data-scroll-target="#part-5-summary-decision-making-under-uncertainty-slides-46-50">Part 5: Summary: Decision Making Under Uncertainty (Slides 46-50)</a></li>
+  <li><a href="#part-1-uncertainty-in-science" id="toc-part-1-uncertainty-in-science" class="nav-link" data-scroll-target="#part-1-uncertainty-in-science">Part 1: Uncertainty in Science</a></li>
+  <li><a href="#part-2-gp-fundamentals" id="toc-part-2-gp-fundamentals" class="nav-link" data-scroll-target="#part-2-gp-fundamentals">Part 2: GP Fundamentals</a></li>
+  <li><a href="#part-3-gp-case-studies" id="toc-part-3-gp-case-studies" class="nav-link" data-scroll-target="#part-3-gp-case-studies">Part 3: GP Case Studies</a></li>
+  <li><a href="#part-4-advanced-probabilistic-ml" id="toc-part-4-advanced-probabilistic-ml" class="nav-link" data-scroll-target="#part-4-advanced-probabilistic-ml">Part 4: Advanced Probabilistic ML</a></li>
+  <li><a href="#part-5-decision-making" id="toc-part-5-decision-making" class="nav-link" data-scroll-target="#part-5-decision-making">Part 5: Decision Making</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -177,81 +177,73 @@
 <h1>Week 12 Summary: Uncertainty-aware regression &amp; Gaussian Processes</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="the-value-of-knowing-what-you-dont-know-neuer-ch-6-murphy-ch-15" class="level3">
-<h3 class="anchored" data-anchor-id="the-value-of-knowing-what-you-dont-know-neuer-ch-6-murphy-ch-15">1. The Value of “Knowing what you don’t know” (Neuer Ch 6, Murphy Ch 15)</h3>
+<section id="knowing-what-you-dont-know" class="level3">
+<h3 class="anchored" data-anchor-id="knowing-what-you-dont-know">1. Knowing what you don’t know</h3>
 <ul>
-<li><strong>Epistemic vs.&nbsp;Aleatoric Uncertainty:</strong>
-<ul>
-<li><strong>Aleatoric:</strong> The inherent randomness in the physical process (e.g., sensor noise).</li>
-<li><strong>Epistemic:</strong> The model’s ignorance due to lack of training data in a specific region of the parameter space.</li>
-</ul></li>
-<li><strong>Danger of Overconfidence:</strong> Standard neural networks often provide “point estimates” that can be wildly overconfident when extrapolating into unknown physical regimes.</li>
+<li><strong>Aleatoric vs.&nbsp;Epistemic:</strong> Inherent physical noise vs.&nbsp;model ignorance.</li>
+<li><strong>Overconfidence Danger:</strong> Point estimates fail safely in unknown regimes; uncertainty metrics are crucial.</li>
 </ul>
 </section>
-<section id="gaussian-processes-gps-murphy-ch-15-bishop-ch-6" class="level3">
-<h3 class="anchored" data-anchor-id="gaussian-processes-gps-murphy-ch-15-bishop-ch-6">2. Gaussian Processes (GPs) (Murphy Ch 15, Bishop Ch 6)</h3>
+<section id="gaussian-processes-gps" class="level3">
+<h3 class="anchored" data-anchor-id="gaussian-processes-gps">2. Gaussian Processes (GPs)</h3>
 <ul>
-<li><strong>Distribution over Functions:</strong> A GP defines a prior over an infinite space of functions. After seeing data, it provides a posterior distribution, yielding both a mean prediction and a variance (uncertainty).</li>
-<li><strong>Kernels as Physical Priors:</strong> The kernel function (e.g., Radial Basis Function or Matérn) encodes our assumptions about the smoothness and length scales of the physical phenomenon (Bishop Ch 6.4).</li>
-<li><strong>Non-Parametric Nature:</strong> Unlike NNs, GPs don’t have a fixed number of parameters; they scale with the number of training points, making them ideal for “small but high-quality” materials datasets.</li>
+<li><strong>Distribution over Functions:</strong> GP yields posterior mean and variance (uncertainty).</li>
+<li><strong>Kernels as Physical Priors:</strong> Encodes assumptions about data smoothness/scale.</li>
+<li><strong>Non-Parametric Nature:</strong> Scales with data size, ideal for small, high-quality materials datasets.</li>
 </ul>
 </section>
-<section id="gp-based-process-maps-ml-pc-index" class="level3">
-<h3 class="anchored" data-anchor-id="gp-based-process-maps-ml-pc-index">3. GP-Based Process Maps (ML-PC Index)</h3>
+<section id="gp-based-process-maps" class="level3">
+<h3 class="anchored" data-anchor-id="gp-based-process-maps">3. GP-Based Process Maps</h3>
 <ul>
-<li><strong>Confidence Ribbons:</strong> Visualizing the uncertainty allows engineers to see where a process map is reliable and where more experiments are needed.</li>
-<li><strong>Kriging:</strong> GP regression is closely related to Kriging, a method long used in geostatistics and now widely applied to interpolate materials property surfaces.</li>
-</ul>
-<hr>
-</section>
-</section>
-<section id="minute-lecture-strategy-50-slides" class="level2">
-<h2 class="anchored" data-anchor-id="minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</h2>
-<section id="part-1-uncertainty-in-science-slides-1-10" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-uncertainty-in-science-slides-1-10">Part 1: Uncertainty in Science (Slides 1-10)</h3>
-<ul>
-<li>Why a single number is never enough.</li>
-<li>Risk management in materials processing: The cost of being wrong.</li>
-<li>Visualizing distributions: Histograms, error bars, and density plots.</li>
+<li><strong>Confidence Ribbons:</strong> Visualize reliability to guide further experiments.</li>
+<li><strong>Kriging:</strong> Interpolates materials property surfaces using GP regression.</li>
 </ul>
 </section>
-<section id="part-2-gaussian-process-fundamentals-slides-11-25" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-gaussian-process-fundamentals-slides-11-25">Part 2: Gaussian Process Fundamentals (Slides 11-25)</h3>
+</section>
+<section id="minute-lecture-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
+<section id="part-1-uncertainty-in-science" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-uncertainty-in-science">Part 1: Uncertainty in Science</h3>
 <ul>
-<li>The Bayesian viewpoint: Function space vs.&nbsp;Parameter space.</li>
-<li>Kernels: How do we define “Similarity” between two material states?</li>
-<li>The GP Math: Conditional Gaussians and Matrix Inversion.</li>
-<li>Interpreting the Variance: Where does the “Shaded region” come from?</li>
+<li>Risk management in materials processing.</li>
+<li>Visualizing distributions and error bars.</li>
 </ul>
 </section>
-<section id="part-3-gp-case-studies-slides-26-40" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-gp-case-studies-slides-26-40">Part 3: GP Case Studies (Slides 26-40)</h3>
+<section id="part-2-gp-fundamentals" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-gp-fundamentals">Part 2: GP Fundamentals</h3>
 <ul>
-<li>Case Study: Predicting tensile strength across a temperature-strain rate space.</li>
-<li>GP for Experimental Design: Identifying the “Gaps” in a database.</li>
-<li>Multi-Task GPs: Sharing information between related properties (e.g., Hardness and Yield Strength).</li>
+<li>Function vs.&nbsp;Parameter space.</li>
+<li>Kernels and “Similarity”.</li>
+<li>Conditional Gaussians and Variance.</li>
 </ul>
 </section>
-<section id="part-4-advanced-probabilistic-ml-slides-41-45" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-advanced-probabilistic-ml-slides-41-45">Part 4: Advanced Probabilistic ML (Slides 41-45)</h3>
+<section id="part-3-gp-case-studies" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-gp-case-studies">Part 3: GP Case Studies</h3>
 <ul>
-<li>Mixture Density Networks (MDNs): Handling multi-modal uncertainties (Neuer Ch 6.4).</li>
-<li>Dropout as a Bayesian approximation in deep NNs.</li>
+<li>Predicting tensile strength across parameters.</li>
+<li>GP for Experimental Design.</li>
+<li>Multi-Task GPs.</li>
 </ul>
 </section>
-<section id="part-5-summary-decision-making-under-uncertainty-slides-46-50" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-summary-decision-making-under-uncertainty-slides-46-50">Part 5: Summary: Decision Making Under Uncertainty (Slides 46-50)</h3>
+<section id="part-4-advanced-probabilistic-ml" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-advanced-probabilistic-ml">Part 4: Advanced Probabilistic ML</h3>
 <ul>
-<li>Using confidence intervals to define “Safe” process windows.</li>
-<li>Summary: Building models that scientists can trust.</li>
+<li>Mixture Density Networks (MDNs).</li>
+<li>Dropout as Bayesian approximation.</li>
 </ul>
-<hr>
+</section>
+<section id="part-5-decision-making" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-decision-making">Part 5: Decision Making</h3>
+<ul>
+<li>Safe process windows via confidence intervals.</li>
+<li>Building trustworthy models.</li>
+</ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
 <p><strong>Summary for ML-PC Week 12:</strong><br>
-This unit introduces <strong>Probabilistic Machine Learning</strong>, focusing on the quantification of uncertainty in materials models. We explore why point estimates can be dangerous in engineering and introduce <strong>Gaussian Processes (GPs)</strong> as a powerful tool for uncertainty-aware regression. Students learn how kernels encode physical assumptions about data smoothness and how the resulting predictive distributions can be used to build robust process maps. We also discuss the difference between aleatoric (noise) and epistemic (ignorance) uncertainty and how to use confidence intervals to drive scientific decision-making.</p>
+- Introduces Probabilistic Machine Learning for uncertainty quantification. - Differentiates aleatoric (noise) from epistemic (ignorance) uncertainty. - Uses Gaussian Processes (GPs) for uncertainty-aware regression. - Applies confidence intervals to map robust process windows.</p>
 </section>
 </section>
      </main>
