@@ -661,7 +661,7 @@ as data leakage, overfitting, and spurious correlations.</p>
 </ref-list>
 </back>
 
-<sub-article article-type="notebook" id="nb-46-nb-article">
+<sub-article article-type="notebook" id="nb-52-nb-article">
 <front-stub>
 <title-group>
 <article-title>Machine Learning in Materials Processing &amp;
@@ -3115,9 +3115,8 @@ as data leakage, overfitting, and spurious correlations.</p>
 </front-stub>
 
 <body>
-<sec id="week-5-summary-neural-networks-for-microstructure-images-nb-11">
-  <title>Week 5 Summary: Neural networks for microstructure
-  images</title>
+<sec id="week-5-summary-unsupervised-learning-in-materials-nb-11">
+  <title>Week 5 Summary: Unsupervised Learning in Materials</title>
   <sec id="cross-book-summary-nb-11">
     <title>Cross-Book Summary</title>
     <sec id="the-need-for-convolutions-mcclarren-ch-6-nb-11">
@@ -3186,96 +3185,46 @@ as data leakage, overfitting, and spurious correlations.</p>
   </sec>
   <sec id="minute-lecture-strategy-50-slides-nb-11">
     <title>90-Minute Lecture Strategy (50 Slides)</title>
-    <sec id="part-1-why-cnns-for-materials-slides-1-10-nb-11">
-      <title>Part 1: Why CNNs for Materials? (Slides 1-10)</title>
+    <sec id="part-1-applied-clustering-45-mins-nb-11">
+      <title>Part 1: Applied Clustering (45 mins)</title>
       <list list-type="bullet">
         <list-item>
-          <p>The failure of MLPs on image data.</p>
+          <p><italic>Case Study 1:</italic> Automated phase segmentation
+          in EDS/EDX maps using K-Means and GMMs.</p>
         </list-item>
         <list-item>
-          <p>The concept of “Spatial Locality” in microstructures.</p>
-        </list-item>
-        <list-item>
-          <p>The hierarchy of features: From pixels to phases.</p>
+          <p><italic>Case Study 2:</italic> Anomaly/defect detection in
+          acoustic or thermal sensor streams during manufacturing.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-the-convolutional-layer-slides-11-25-nb-11">
-      <title>Part 2: The Convolutional Layer (Slides 11-25)</title>
+    <sec id="part-2-applied-autoencoders-45-mins-nb-11">
+      <title>Part 2: Applied Autoencoders (45 mins)</title>
       <list list-type="bullet">
         <list-item>
-          <p>Mathematical definition of 2D convolution.</p>
+          <p><italic>Case Study 1:</italic> Convolutional Autoencoders
+          (CAEs) to compress high-dimensional microstructures (like 3D
+          X-ray Tomography volumes).</p>
         </list-item>
         <list-item>
-          <p>Filters in action: Edge detection (Sobel), Blurring
-          (Gaussian).</p>
-        </list-item>
-        <list-item>
-          <p>Hyperparameters: Stride, Padding, Filter Size.</p>
-        </list-item>
-        <list-item>
-          <p>Weight Sharing and why it enables “Deep” learning.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-3-building-a-cnn-slides-26-35-nb-11">
-      <title>Part 3: Building a CNN (Slides 26-35)</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>The Non-linear activation (ReLU) revisited.</p>
-        </list-item>
-        <list-item>
-          <p>Pooling layers: Summarizing local information.</p>
-        </list-item>
-        <list-item>
-          <p>The full stack: Conv -&gt; Pool -&gt; FC.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-4-case-studies-microscopy-slides-36-45-nb-11">
-      <title>Part 4: Case Studies: Microscopy (Slides 36-45)</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Automated Phase Fraction calculation using CNNs.</p>
-        </list-item>
-        <list-item>
-          <p>Defect identification in CT or SEM images.</p>
-        </list-item>
-        <list-item>
-          <p>Comparison: Fashion-MNIST (toy data) vs. Real Micrographs
-          (experimental noise).</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-5-challenges-training-slides-46-50-nb-11">
-      <title>Part 5: Challenges &amp; Training (Slides 46-50)</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Data scarcity: The need for thousands of images.</p>
-        </list-item>
-        <list-item>
-          <p>Overfitting: Why CNNs love to “memorize” your training
-          set.</p>
-        </list-item>
-        <list-item>
-          <p>Preview: How to handle “Small Data” (Week 6).</p>
+          <p><italic>Case Study 2:</italic> Exploring the latent space
+          to automatically discover categories of defects or structural
+          motifs without human supervision.</p>
         </list-item>
       </list>
     </sec>
   </sec>
   <sec id="quarto-website-update-summary-nb-11">
     <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 5:</bold>
-    This unit introduces <bold>Convolutional Neural Networks
-    (CNNs)</bold>, the workhorse of modern computer vision, and applies
-    them to materials characterization. We explore how convolutions
-    allow networks to automatically learn hierarchical structure
-    detectors—from simple edges to complex phase morphologies—while
-    drastically reducing the number of parameters compared to standard
-    MLPs. Through case studies in phase segmentation and defect
-    detection, students learn the intuition behind filters, pooling, and
-    the unique challenges of applying deep learning to high-resolution,
-    noisy experimental micrographs.</p>
+    <p><bold>Summary for ML-PC Week 5:</bold> This unit transitions from
+    supervised networks to <bold>Unsupervised Learning</bold> in
+    materials characterization. By applying clustering algorithms
+    (K-Means, GMMs) and Autoencoders, we tackle the “unlabeled data”
+    problem pervasive in materials science. Through case studies in EDS
+    map segmentation, defect detection in sensor streams, and latent
+    space exploration of 3D microstructures, students learn how to
+    autonomously discover structural motifs and reduce dimensionality
+    without requiring manual annotations.</p>
   </sec>
 </sec>
 </body>
@@ -3475,12 +3424,278 @@ as data leakage, overfitting, and spurious correlations.</p>
 </front-stub>
 
 <body>
-<sec id="week-4-summary-from-classical-microstructure-metrics-to-learned-representations-nb-13">
+<sec id="unit-04-microstructure-representations-suggested-slide-deck-outline-nb-13">
+  <title>Unit 04: Microstructure Representations (Suggested Slide Deck
+  Outline)</title>
+  <p>This document contains a suggested 50-slide structure for the
+  <monospace>unit04_microstructure_representations</monospace> lecture,
+  focusing on state-of-the-art applications of Convolutional Neural
+  Networks (CNNs) in materials science.</p>
+  <sec id="part-1-introduction-the-representation-problem-slides-112-nb-13">
+    <title>Part 1: Introduction &amp; The Representation Problem (Slides
+    1–12)</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Slides 1-3: Introduction &amp; Recap</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Title, learning objectives.</p>
+          </list-item>
+          <list-item>
+            <p>Brief recap: You know how CNNs work mathematically (from
+            the previous course). Now, how do we use them to represent
+            <italic>materials</italic>?</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Slides 4-7: The Limits of Traditional
+        Representations</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Classical descriptors: <inline-formula><alternatives>
+            <tex-math><![CDATA[n]]></tex-math>
+            <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>n</mml:mi></mml:math></alternatives></inline-formula>-point
+            correlation functions, chord lengths, grain size
+            distributions.</p>
+          </list-item>
+          <list-item>
+            <p>The problem: They are computationally heavy for 3D, often
+            lose topological context, and struggle with morphologically
+            complex phases (e.g., bainite vs. martensite).</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Slides 8-12: CNNs as Feature Extractors</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Concept: How the convolution filters inherently capture
+            local textures and global topology.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Concrete Example:</bold> <bold>Convolutional
+            Autoencoders (CAEs)</bold>. Show how high-dimensional
+            micrographs can be compressed into a low-dimensional “latent
+            space” vector, which serves as a highly efficient,
+            data-driven microstructure representation.</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="part-2-application-1-advanced-semantic-segmentation-slides-1322-nb-13">
+    <title>Part 2: Application 1 – Advanced Semantic Segmentation
+    (Slides 13–22)</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Slides 13-15: Beyond Basic Thresholding</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Why Otsu’s method and manual thresholding fail on noisy,
+            low-contrast microscopy (SEM, EBSD).</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Slides 16-19: U-Net Architecture in
+        Materials</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Introduce the U-Net topology (Encoder-Decoder with skip
+            connections) and why it excels with the limited datasets
+            typical in materials science.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Slides 20-22: Concrete Examples</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><italic>Example 1:</italic> <bold>Phase Segmentation in
+            X-ray Micrographs.</bold> Highlighting works (like
+            Galvez-Hernandez &amp; Kratz, 2023) that use U-Net variants
+            to rapidly segment composite materials, outperforming
+            traditional algorithms.</p>
+          </list-item>
+          <list-item>
+            <p><italic>Example 2:</italic> <bold>Al-Si Alloy
+            Analysis.</bold> Using CNNs to automate microstructural
+            measurements where phases share similar greyscale values but
+            differ in texture.</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="part-3-application-2-structure-property-linkages-slides-2332-nb-13">
+    <title>Part 3: Application 2 – Structure-Property Linkages (Slides
+    23–32)</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Slides 23-25: The Surrogate Modeling
+        Paradigm</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>The bottleneck of physics-based simulations (e.g., Finite
+            Element Analysis, Phase-Field).</p>
+          </list-item>
+          <list-item>
+            <p>Concept: Training a CNN to replace the physics solver by
+            directly mapping the image to a property.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Slides 26-29: Predicting Scalar Properties</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Concrete Example:</bold> <italic>A. Cecen et
+            al. (Acta Materialia, 2018).</italic> Using 3D CNNs to
+            predict the effective elastic properties of high-contrast
+            composites. The CNN outperforms 2-point spatial correlations
+            because it captures complex, non-linear spatial
+            patterns.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Slides 30-32: Predicting Complex Behaviors</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Concrete Example:</bold> <italic>C. Yang et
+            al. (Materials &amp; Design, 2020).</italic> Going beyond a
+            single value (like Young’s Modulus) to predict the
+            <bold>entire stress-strain curve</bold> of a composite
+            directly from its microstructure, capturing plastic
+            deformation and failure.</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="part-4-application-3-in-situ-monitoring-additive-manufacturing-slides-3340-nb-13">
+    <title>Part 4: Application 3 – In-Situ Monitoring &amp; Additive
+    Manufacturing (Slides 33–40)</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Slides 33-35: The Challenge of Additive Manufacturing
+        (AM)</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Extreme cooling rates lead to complex, unpredictable
+            microstructures and defects (porosity, lack-of-fusion).</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Slides 36-40: Real-Time Melt Pool Monitoring</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Concrete Example 1: Classification for
+            Control.</bold> <italic>Yang et al. (2019/2022)</italic>
+            developed a CNN to classify melt pool images in real-time
+            (0.34 ms per image) with 91% accuracy, enabling closed-loop
+            control to adjust laser power on the fly.</p>
+          </list-item>
+          <list-item>
+            <p><bold>Concrete Example 2: Porosity Prediction.</bold>
+            <italic>Ho et al. (2022)</italic> utilized
+            Residual-recurrent CNNs to analyze the temporal evolution of
+            the melt pool and predict internal porosity in thin-wall
+            structures before the part is even finished.</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="part-5-application-4-generative-microstructures-slides-4148-nb-13">
+    <title>Part 5: Application 4 – Generative Microstructures (Slides
+    41–48)</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Slides 41-43: Introduction to Generative Adversarial
+        Networks (GANs)</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>How a Generator and Discriminator compete to create
+            synthetic, yet statistically realistic, micrographs.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Slides 44-46: Computational Screening &amp; Inverse
+        Design</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Concrete Example:</bold> Generating massive
+            libraries of synthetic microstructures (e.g., solid oxide
+            fuel cell electrodes by <italic>Hsu et al., 2020</italic>).
+            These GAN-generated structures capture complex topology
+            better than traditional stochastic methods and are used to
+            screen for optimal transport properties.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Slides 47-48: 3D Reconstruction from 2D</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Concrete Example:</bold> Architectures like
+            <bold>SliceGAN</bold>, which take a single 2D representative
+            SEM slice and generate a full, statistically equivalent 3D
+            volume, providing a cheap alternative to expensive X-ray
+            computed tomography (XCT).</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="part-6-summary-outlook-slides-4950-nb-13">
+    <title>Part 6: Summary &amp; Outlook (Slides 49–50)</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Slide 49: Summary</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>CNNs are not just classifiers; they are powerful tools
+            for dimensionality reduction, surrogate modeling, process
+            control, and generative design.</p>
+          </list-item>
+        </list>
+      </list-item>
+      <list-item>
+        <p><bold>Slide 50: Future Outlook &amp; Questions</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Open challenges (data scarcity, physics-informed neural
+            networks).</p>
+          </list-item>
+        </list>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-42-nb-14">
+<front-stub>
+</front-stub>
+
+<body>
+<sec id="week-4-summary-from-classical-microstructure-metrics-to-learned-representations-nb-14">
   <title>Week 4 Summary: From classical microstructure metrics to
   learned representations</title>
-  <sec id="cross-book-summary-nb-13">
+  <sec id="cross-book-summary-nb-14">
     <title>Cross-Book Summary</title>
-    <sec id="classical-microstructure-metrics-sandfeld-domain-knowledge-nb-13">
+    <sec id="classical-microstructure-metrics-sandfeld-domain-knowledge-nb-14">
       <title>1. Classical Microstructure Metrics (Sandfeld, Domain
       Knowledge)</title>
       <list list-type="bullet">
@@ -3502,7 +3717,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="the-foundation-of-learned-representations-neuer-ch-4.5-mcclarren-ch-8-bishop-ch-5-nb-13">
+    <sec id="the-foundation-of-learned-representations-neuer-ch-4.5-mcclarren-ch-8-bishop-ch-5-nb-14">
       <title>2. The Foundation of Learned Representations (Neuer Ch 4.5,
       McClarren Ch 8, Bishop Ch 5)</title>
       <list list-type="bullet">
@@ -3531,9 +3746,9 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list>
     </sec>
   </sec>
-  <sec id="minute-lecture-strategy-50-slides-nb-13">
+  <sec id="minute-lecture-strategy-50-slides-nb-14">
     <title>90-Minute Lecture Strategy (50 Slides)</title>
-    <sec id="part-1-the-classical-approach-slides-1-15-nb-13">
+    <sec id="part-1-the-classical-approach-slides-1-15-nb-14">
       <title>Part 1: The Classical Approach (Slides 1-15)</title>
       <list list-type="bullet">
         <list-item>
@@ -3548,7 +3763,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-feature-engineering-vs.-feature-learning-slides-16-25-nb-13">
+    <sec id="part-2-feature-engineering-vs.-feature-learning-slides-16-25-nb-14">
       <title>Part 2: Feature Engineering vs. Feature Learning (Slides
       16-25)</title>
       <list list-type="bullet">
@@ -3564,7 +3779,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-3-the-building-blocks-of-ml-slides-26-40-nb-13">
+    <sec id="part-3-the-building-blocks-of-ml-slides-26-40-nb-14">
       <title>Part 3: The Building Blocks of ML (Slides 26-40)</title>
       <list list-type="bullet">
         <list-item>
@@ -3582,7 +3797,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-4-multi-layer-perceptrons-mlp-slides-41-45-nb-13">
+    <sec id="part-4-multi-layer-perceptrons-mlp-slides-41-45-nb-14">
       <title>Part 4: Multi-Layer Perceptrons (MLP) (Slides
       41-45)</title>
       <list list-type="bullet">
@@ -3597,7 +3812,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-5-outlook-learning-from-microstructures-slides-46-50-nb-13">
+    <sec id="part-5-outlook-learning-from-microstructures-slides-46-50-nb-14">
       <title>Part 5: Outlook: Learning from Microstructures (Slides
       46-50)</title>
       <list list-type="bullet">
@@ -3612,7 +3827,7 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list>
     </sec>
   </sec>
-  <sec id="quarto-website-update-summary-nb-13">
+  <sec id="quarto-website-update-summary-nb-14">
     <title>Quarto Website Update (Summary)</title>
     <p><bold>Summary for ML-PC Week 4:</bold>
     This unit marks the transition from classical, hand-crafted
@@ -3636,16 +3851,73 @@ as data leakage, overfitting, and spurious correlations.</p>
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-42-nb-14">
+<sub-article article-type="notebook" id="nb-45-nb-15">
 <front-stub>
 </front-stub>
 
 <body>
-<sec id="week-10-summary-ml-for-characterization-signals-nb-14">
+<sec id="lecture-plan-unsupervised-learning-in-materials-ml-pc-unit-05-nb-15">
+  <title>Lecture Plan: Unsupervised Learning in Materials (ML-PC Unit
+  05)</title>
+  <sec id="overview-nb-15">
+    <title>Overview</title>
+    <p>This lecture applies the unsupervised methods learned in the
+    mathematical foundations course directly to materials
+    characterization, focusing on the “unlabeled data” problem in
+    materials science.</p>
+  </sec>
+  <sec id="part-1-applied-clustering-45-mins-nb-15">
+    <title>Part 1: Applied Clustering (45 mins)</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Case Study 1:</bold> Automated phase segmentation in
+        EDS/EDX maps using K-Means and GMMs. Grouping pixels into
+        distinct chemical phases without manual labels.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Case Study 2:</bold> Anomaly and defect detection in
+        acoustic or thermal sensor streams during manufacturing
+        processes.</p>
+      </list-item>
+    </list>
+  </sec>
+  <sec id="part-2-applied-autoencoders-45-mins-nb-15">
+    <title>Part 2: Applied Autoencoders (45 mins)</title>
+    <list list-type="bullet">
+      <list-item>
+        <p><bold>Case Study 1:</bold> Compressing high-dimensional
+        microstructures. Using Convolutional Autoencoders (CAEs) to
+        create a low-dimensional “materials latent space” from 3D X-ray
+        Tomography volumes.</p>
+      </list-item>
+      <list-item>
+        <p><bold>Case Study 2:</bold> Exploring the latent space.
+        Clustering encoded latent vectors to automatically discover
+        categories of defects or structural motifs without human
+        supervision.</p>
+      </list-item>
+    </list>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-48-nb-16">
+<front-stub>
+</front-stub>
+
+<body>
+<sec id="week-10-summary-ml-for-characterization-signals-nb-16">
   <title>Week 10 Summary: ML for characterization signals</title>
-  <sec id="cross-book-summary-nb-14">
+  <sec id="cross-book-summary-nb-16">
     <title>Cross-Book Summary</title>
-    <sec id="clustering-spectral-data-neuer-ch-5-mcclarren-ch-4-nb-14">
+    <sec id="clustering-spectral-data-neuer-ch-5-mcclarren-ch-4-nb-16">
       <title>1. Clustering Spectral Data (Neuer Ch 5, McClarren Ch
       4)</title>
       <list list-type="bullet">
@@ -3670,7 +3942,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="autoencoders-for-signal-processing-mcclarren-ch-8-nb-14">
+    <sec id="autoencoders-for-signal-processing-mcclarren-ch-8-nb-16">
       <title>2. Autoencoders for Signal Processing (McClarren Ch
       8)</title>
       <list list-type="bullet">
@@ -3695,7 +3967,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="scientific-integrity-in-ml-nb-14">
+    <sec id="scientific-integrity-in-ml-nb-16">
       <title>3. Scientific Integrity in ML</title>
       <list list-type="bullet">
         <list-item>
@@ -3708,9 +3980,9 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list>
     </sec>
   </sec>
-  <sec id="minute-lecture-strategy-50-slides-nb-14">
+  <sec id="minute-lecture-strategy-50-slides-nb-16">
     <title>90-Minute Lecture Strategy (50 Slides)</title>
-    <sec id="part-1-high-dimensional-signals-slides-1-10-nb-14">
+    <sec id="part-1-high-dimensional-signals-slides-1-10-nb-16">
       <title>Part 1: High-Dimensional Signals (Slides 1-10)</title>
       <list list-type="bullet">
         <list-item>
@@ -3726,7 +3998,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-discovering-structure-with-clustering-slides-11-20-nb-14">
+    <sec id="part-2-discovering-structure-with-clustering-slides-11-20-nb-16">
       <title>Part 2: Discovering Structure with Clustering (Slides
       11-20)</title>
       <list list-type="bullet">
@@ -3743,7 +4015,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-3-visualizing-the-unseen-slides-21-30-nb-14">
+    <sec id="part-3-visualizing-the-unseen-slides-21-30-nb-16">
       <title>Part 3: Visualizing the Unseen (Slides 21-30)</title>
       <list list-type="bullet">
         <list-item>
@@ -3757,7 +4029,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-4-autoencoders-denoising-slides-31-45-nb-14">
+    <sec id="part-4-autoencoders-denoising-slides-31-45-nb-16">
       <title>Part 4: Autoencoders &amp; Denoising (Slides 31-45)</title>
       <list list-type="bullet">
         <list-item>
@@ -3778,7 +4050,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-5-from-data-to-discovery-slides-46-50-nb-14">
+    <sec id="part-5-from-data-to-discovery-slides-46-50-nb-16">
       <title>Part 5: From Data to Discovery (Slides 46-50)</title>
       <list list-type="bullet">
         <list-item>
@@ -3793,7 +4065,7 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list>
     </sec>
   </sec>
-  <sec id="quarto-website-update-summary-nb-14">
+  <sec id="quarto-website-update-summary-nb-16">
     <title>Quarto Website Update (Summary)</title>
     <p><bold>Summary for ML-PC Week 10:</bold>
     This unit focuses on the processing of high-dimensional

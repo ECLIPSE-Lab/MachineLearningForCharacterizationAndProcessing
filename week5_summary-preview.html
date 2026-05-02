@@ -139,7 +139,7 @@
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Week 5 Summary: Neural networks for microstructure images</h6>
+      <h6><i class="bi bi-journal-code"></i> Week 5 Summary: Unsupervised Learning in Materials</h6>
 
             <a href="./week5_summary.md" class="btn btn-primary quarto-download-embed" download="week5_summary.md">Download Notebook</a>
           </div>
@@ -150,7 +150,7 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#week-5-summary-neural-networks-for-microstructure-images" id="toc-week-5-summary-neural-networks-for-microstructure-images" class="nav-link active" data-scroll-target="#week-5-summary-neural-networks-for-microstructure-images">Week 5 Summary: Neural networks for microstructure images</a>
+  <li><a href="#week-5-summary-unsupervised-learning-in-materials" id="toc-week-5-summary-unsupervised-learning-in-materials" class="nav-link active" data-scroll-target="#week-5-summary-unsupervised-learning-in-materials">Week 5 Summary: Unsupervised Learning in Materials</a>
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
@@ -160,11 +160,8 @@
   </ul></li>
   <li><a href="#minute-lecture-strategy-50-slides" id="toc-minute-lecture-strategy-50-slides" class="nav-link" data-scroll-target="#minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</a>
   <ul class="collapse">
-  <li><a href="#part-1-why-cnns-for-materials-slides-1-10" id="toc-part-1-why-cnns-for-materials-slides-1-10" class="nav-link" data-scroll-target="#part-1-why-cnns-for-materials-slides-1-10">Part 1: Why CNNs for Materials? (Slides 1-10)</a></li>
-  <li><a href="#part-2-the-convolutional-layer-slides-11-25" id="toc-part-2-the-convolutional-layer-slides-11-25" class="nav-link" data-scroll-target="#part-2-the-convolutional-layer-slides-11-25">Part 2: The Convolutional Layer (Slides 11-25)</a></li>
-  <li><a href="#part-3-building-a-cnn-slides-26-35" id="toc-part-3-building-a-cnn-slides-26-35" class="nav-link" data-scroll-target="#part-3-building-a-cnn-slides-26-35">Part 3: Building a CNN (Slides 26-35)</a></li>
-  <li><a href="#part-4-case-studies-microscopy-slides-36-45" id="toc-part-4-case-studies-microscopy-slides-36-45" class="nav-link" data-scroll-target="#part-4-case-studies-microscopy-slides-36-45">Part 4: Case Studies: Microscopy (Slides 36-45)</a></li>
-  <li><a href="#part-5-challenges-training-slides-46-50" id="toc-part-5-challenges-training-slides-46-50" class="nav-link" data-scroll-target="#part-5-challenges-training-slides-46-50">Part 5: Challenges &amp; Training (Slides 46-50)</a></li>
+  <li><a href="#part-1-applied-clustering-45-mins" id="toc-part-1-applied-clustering-45-mins" class="nav-link" data-scroll-target="#part-1-applied-clustering-45-mins">Part 1: Applied Clustering (45 mins)</a></li>
+  <li><a href="#part-2-applied-autoencoders-45-mins" id="toc-part-2-applied-autoencoders-45-mins" class="nav-link" data-scroll-target="#part-2-applied-autoencoders-45-mins">Part 2: Applied Autoencoders (45 mins)</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -173,8 +170,8 @@
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
-<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-5-summary-neural-networks-for-microstructure-images" class="level1">
-<h1>Week 5 Summary: Neural networks for microstructure images</h1>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-5-summary-unsupervised-learning-in-materials" class="level1">
+<h1>Week 5 Summary: Unsupervised Learning in Materials</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
 <section id="the-need-for-convolutions-mcclarren-ch-6" class="level3">
@@ -205,53 +202,25 @@
 </section>
 <section id="minute-lecture-strategy-50-slides" class="level2">
 <h2 class="anchored" data-anchor-id="minute-lecture-strategy-50-slides">90-Minute Lecture Strategy (50 Slides)</h2>
-<section id="part-1-why-cnns-for-materials-slides-1-10" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-why-cnns-for-materials-slides-1-10">Part 1: Why CNNs for Materials? (Slides 1-10)</h3>
+<section id="part-1-applied-clustering-45-mins" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-applied-clustering-45-mins">Part 1: Applied Clustering (45 mins)</h3>
 <ul>
-<li>The failure of MLPs on image data.</li>
-<li>The concept of “Spatial Locality” in microstructures.</li>
-<li>The hierarchy of features: From pixels to phases.</li>
+<li><em>Case Study 1:</em> Automated phase segmentation in EDS/EDX maps using K-Means and GMMs.</li>
+<li><em>Case Study 2:</em> Anomaly/defect detection in acoustic or thermal sensor streams during manufacturing.</li>
 </ul>
 </section>
-<section id="part-2-the-convolutional-layer-slides-11-25" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-the-convolutional-layer-slides-11-25">Part 2: The Convolutional Layer (Slides 11-25)</h3>
+<section id="part-2-applied-autoencoders-45-mins" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-applied-autoencoders-45-mins">Part 2: Applied Autoencoders (45 mins)</h3>
 <ul>
-<li>Mathematical definition of 2D convolution.</li>
-<li>Filters in action: Edge detection (Sobel), Blurring (Gaussian).</li>
-<li>Hyperparameters: Stride, Padding, Filter Size.</li>
-<li>Weight Sharing and why it enables “Deep” learning.</li>
-</ul>
-</section>
-<section id="part-3-building-a-cnn-slides-26-35" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-building-a-cnn-slides-26-35">Part 3: Building a CNN (Slides 26-35)</h3>
-<ul>
-<li>The Non-linear activation (ReLU) revisited.</li>
-<li>Pooling layers: Summarizing local information.</li>
-<li>The full stack: Conv -&gt; Pool -&gt; FC.</li>
-</ul>
-</section>
-<section id="part-4-case-studies-microscopy-slides-36-45" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-case-studies-microscopy-slides-36-45">Part 4: Case Studies: Microscopy (Slides 36-45)</h3>
-<ul>
-<li>Automated Phase Fraction calculation using CNNs.</li>
-<li>Defect identification in CT or SEM images.</li>
-<li>Comparison: Fashion-MNIST (toy data) vs.&nbsp;Real Micrographs (experimental noise).</li>
-</ul>
-</section>
-<section id="part-5-challenges-training-slides-46-50" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-challenges-training-slides-46-50">Part 5: Challenges &amp; Training (Slides 46-50)</h3>
-<ul>
-<li>Data scarcity: The need for thousands of images.</li>
-<li>Overfitting: Why CNNs love to “memorize” your training set.</li>
-<li>Preview: How to handle “Small Data” (Week 6).</li>
+<li><em>Case Study 1:</em> Convolutional Autoencoders (CAEs) to compress high-dimensional microstructures (like 3D X-ray Tomography volumes).</li>
+<li><em>Case Study 2:</em> Exploring the latent space to automatically discover categories of defects or structural motifs without human supervision.</li>
 </ul>
 <hr>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
-<p><strong>Summary for ML-PC Week 5:</strong><br>
-This unit introduces <strong>Convolutional Neural Networks (CNNs)</strong>, the workhorse of modern computer vision, and applies them to materials characterization. We explore how convolutions allow networks to automatically learn hierarchical structure detectors—from simple edges to complex phase morphologies—while drastically reducing the number of parameters compared to standard MLPs. Through case studies in phase segmentation and defect detection, students learn the intuition behind filters, pooling, and the unique challenges of applying deep learning to high-resolution, noisy experimental micrographs.</p>
+<p><strong>Summary for ML-PC Week 5:</strong> This unit transitions from supervised networks to <strong>Unsupervised Learning</strong> in materials characterization. By applying clustering algorithms (K-Means, GMMs) and Autoencoders, we tackle the “unlabeled data” problem pervasive in materials science. Through case studies in EDS map segmentation, defect detection in sensor streams, and latent space exploration of 3D microstructures, students learn how to autonomously discover structural motifs and reduce dimensionality without requiring manual annotations.</p>
 </section>
 </section>
      </main>
