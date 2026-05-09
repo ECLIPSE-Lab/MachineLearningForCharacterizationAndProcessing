@@ -295,13 +295,23 @@ Thursday, 16.04.2026, 16:15-17:45}
   Why ML failure modes are common in experimental science.
 \end{itemize}
 
-\textbf{Summary:} This unit introduces the transition from classical
-physics-based modeling to data-driven discovery in materials science. We
-explore the unique challenges of experimental materials data, including
-its multi-modal nature, high acquisition cost, and the fundamental
-Processing-Structure-Property-Performance (PSPP) relationships. Key
-concepts include data scales, measurement uncertainty, and the CRISP-DM
-process adapted for scientific workflows.
+\textbf{Summary:}
+
+\begin{itemize}
+\tightlist
+\item
+  Transition from physics-based to data-driven modeling
+\item
+  Experimental data challenges: multi-modal, high acquisition cost,
+  sparse
+\item
+  \textbf{PSPP} (Processing → Structure → Property → Performance) as a
+  data dependency graph
+\item
+  Data scales and measurement uncertainty
+\item
+  \textbf{CRISP-DM} workflow adapted for scientific labs
+\end{itemize}
 
 \textbf{Exercise:}\\
 Inspect real microscopy and process datasets; identify sources of bias
@@ -330,14 +340,18 @@ Thursday, 23.04.2026, 16:15-17:45}
   Relation to MFML refresher on PCA and covariance.
 \end{itemize}
 
-\textbf{Summary:} This unit bridges the gap between the physical process
-of data acquisition and the mathematical tools used to describe it. We
-analyze how signals are formed in characterization tools and how
-physical constraints (resolution, noise, sampling) act as priors for
-learning. We then introduce Principal Component Analysis (PCA) and
-Singular Value Decomposition (SVD) as fundamental techniques for
-discovering low-dimensional structure in high-dimensional experimental
-datasets.
+\textbf{Summary:}
+
+\begin{itemize}
+\tightlist
+\item
+  Physical signal formation as a learning prior
+\item
+  Resolution, noise, sampling as physical (not algorithmic) constraints
+\item
+  \textbf{PCA} and \textbf{SVD} for low-dimensional structure in
+  high-dimensional data
+\end{itemize}
 
 \textbf{Exercise:}\\
 Fourier inspection of micrographs; effects of sampling and filtering.
@@ -363,25 +377,38 @@ Thursday, 30.04.2026, 16:15-17:45}
   Why ``good accuracy'' often means a broken pipeline.
 \end{itemize}
 
-\textbf{Summary:} This unit covers the often-overlooked half of an ML
-pipeline: data integrity, validation, and how performance is measured.
-We start with the measurement chain and systematic \textbf{data
-cleaning} --- handling missing values, outliers, and duplicates with a
-``fix at source'' mindset. We then build the \textbf{transformation
-toolbox}: centering, min--max and z-score scaling, physics-aware
-non-dimensionalisation, log transforms, differentiation, and
-frequency-domain views (FFT, triggering for time series). On the
-supervision side we examine \textbf{labels and uncertainty} ---
-inter-annotator variance, probabilistic labels, and a Bayesian view of
-priors, likelihoods, and posteriors --- and then formalize the
-\textbf{bias--variance} tradeoff with parsimony and regularization. A
-major focus is \textbf{Data Leakage} in materials workflows
-(pre-processing, temporal, and group/spatial), tackled with proper
-holdout, K-fold, LOOCV, and stratified validation. We close with the
-\textbf{error measures} that decide what ``good'' actually means:
-MAE/MSE/RMSE and \(R^2\) for regression, and confusion matrices,
-precision/recall, F1/Dice, IoU, and categorical cross-entropy for
-classification and segmentation.
+\textbf{Summary:}
+
+\begin{itemize}
+\tightlist
+\item
+  Measurement chain → \textbf{data cleaning}: missing values, outliers,
+  duplicates (``fix at source'')
+\item
+  \textbf{Transformation toolbox}: centering, min--max / z-score
+  scaling, non-dimensionalization, log, differentiation, FFT, triggering
+\item
+  \textbf{Labels and uncertainty}: inter-annotator variance,
+  probabilistic labels, Bayesian view (priors, likelihoods, posteriors)
+\item
+  \textbf{Bias--variance} tradeoff with parsimony and regularization
+\item
+  \textbf{Data leakage} in materials workflows: pre-processing,
+  temporal, group/spatial
+\item
+  \textbf{Validation}: holdout, K-fold, LOOCV, stratified
+\item
+  \textbf{Error measures}:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Regression: MAE, MSE, RMSE, \(R^2\)
+  \item
+    Classification / segmentation: confusion matrix, precision/recall,
+    F1/Dice, IoU, categorical cross-entropy
+  \end{itemize}
+\end{itemize}
 
 \textbf{Exercise:}\\
 Construct a deliberately flawed ML pipeline and diagnose its failure.
@@ -410,15 +437,21 @@ Thursday, 07.05.2026, 16:15-17:45}
   Transition to learned representations.
 \end{itemize}
 
-\textbf{Summary:} This unit marks the transition from classical,
-hand-crafted microstructure quantification (like grain size and phase
-fractions) to the modern paradigm of \textbf{learned representations}.
-We first review traditional stereological metrics and their limitations
-in capturing complex structural nuances. We then introduce the
-foundational unit of modern ML: the \textbf{artificial neuron}. By
-understanding weights, biases, and non-linear activation functions, we
-build the framework for Multi-Layer Perceptrons (MLPs) that can
-automatically learn optimal features from materials data.
+\textbf{Summary:}
+
+\begin{itemize}
+\tightlist
+\item
+  Classical stereological metrics (grain size, phase fractions) and
+  their limits
+\item
+  Transition to \textbf{learned representations}
+\item
+  The \textbf{artificial neuron}: weights, biases, non-linear
+  activations
+\item
+  \textbf{Multi-Layer Perceptrons (MLPs)} as automatic feature learners
+\end{itemize}
 
 \textbf{Exercise:}\\
 Compare classical features vs simple NN-based features for
@@ -443,15 +476,23 @@ Thursday, 14.05.2026, 16:15-17:45 (cancelled - Himmelfahrt)}
   Overfitting risks with small datasets.
 \end{itemize}
 
-\textbf{Summary:} This unit introduces \textbf{Convolutional Neural
-Networks (CNNs)}, the workhorse of modern computer vision, and applies
-them to materials characterization. We explore how convolutions allow
-networks to automatically learn hierarchical structure detectors---from
-simple edges to complex phase morphologies---while drastically reducing
-the number of parameters compared to standard MLPs. Through case studies
-in phase segmentation and defect detection, students learn the intuition
-behind filters, pooling, and the unique challenges of applying deep
-learning to high-resolution, noisy experimental micrographs.
+\textbf{Summary:}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Convolutional Neural Networks (CNNs)} for materials
+  characterization
+\item
+  Hierarchical structure detectors: edges → textures → phase
+  morphologies
+\item
+  Filters and pooling; parameter efficiency vs.~MLPs
+\item
+  Case studies: phase segmentation, defect detection
+\item
+  Practical challenges: high-resolution, noisy micrographs
+\end{itemize}
 
 \textbf{Exercise:}\\
 Train a small CNN on microstructure images; analyze failure cases.
@@ -474,15 +515,21 @@ Thursday, 21.05.2026, 16:15-17:45}
   When transfer learning helps---and when it does not.
 \end{itemize}
 
-\textbf{Summary:} This unit addresses the fundamental bottleneck of
-materials informatics: \textbf{Data Scarcity}. We explore how to build
-powerful deep learning models when only a few hundred labeled images or
-signals are available. The core focus is on \textbf{Transfer Learning},
-where we leverage knowledge from models pretrained on millions of
-natural images to accelerate learning and improve generalization on
-materials tasks. We also cover \textbf{Data Augmentation} strategies
-tailored for scientific data and discuss when and why transferring
-knowledge across different physical domains succeeds or fails.
+\textbf{Summary:}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Data scarcity} as the materials informatics bottleneck
+\item
+  \textbf{Transfer learning} from natural-image pretrained models
+\item
+  Self-supervised pretraining as an alternative
+\item
+  \textbf{Data augmentation} tailored to scientific data
+\item
+  When cross-domain transfer succeeds vs.~fails
+\end{itemize}
 
 \textbf{Exercise:}\\
 Fine-tune a pretrained model; compare against training from scratch.
@@ -509,16 +556,21 @@ Thursday, 28.05.2026, 16:15-17:45}
   Relation to MFML concepts of generalization.
 \end{itemize}
 
-\textbf{Summary:} This unit explores the application of machine learning
-to \textbf{Time-Series Data}, specifically for monitoring and predicting
-materials processing outcomes. We introduce \textbf{Recurrent Neural
-Networks (RNNs)} and their advanced variants like \textbf{LSTMs}, which
-are designed to handle sequential dependencies. We discuss the critical
-preprocessing steps of signal smoothing and triggering required to
-handle noisy experimental logs. Through case studies in additive
-manufacturing and process stability, students learn how to build models
-that ``remember'' the processing history to predict future states and
-detect anomalies in real-time.
+\textbf{Summary:}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Time-series ML} for process monitoring and prediction
+\item
+  \textbf{RNNs} and \textbf{LSTMs} for sequential dependencies
+\item
+  Preprocessing: signal smoothing, triggering on noisy logs
+\item
+  Case studies: additive manufacturing, process stability
+\item
+  Real-time anomaly detection from processing history
+\end{itemize}
 
 \textbf{Exercise:}\\
 Predict a process outcome from time-series data using regression or
@@ -542,15 +594,23 @@ Thursday, 04.06.2026, 16:15-17:45 (cancelled - Fronleichnam)}
   Robustness as a design criterion.
 \end{itemize}
 
-\textbf{Summary:} This unit shifts the focus from model performance to
-\textbf{Model Reliability}. We explore the Bias-Variance tradeoff and
-the fundamental challenge of generalization---ensuring that an ML model
-works on new, unseen data from the factory floor. We introduce robust
-validation techniques like K-Fold and Stratified Cross-Validation to
-stabilize performance estimates on small materials datasets. A key focus
-is on \textbf{Process Robustness}, where we use sensitivity analysis to
-identify ``Process Windows''---regions in parameter space where material
-quality is maximized and insensitive to industrial noise.
+\textbf{Summary:}
+
+\begin{itemize}
+\tightlist
+\item
+  Shift from raw performance to \textbf{model reliability}
+\item
+  Bias--variance tradeoff and generalization to factory-floor data
+\item
+  Robust validation: K-fold and stratified cross-validation on small
+  datasets
+\item
+  \textbf{Process robustness} via sensitivity analysis
+\item
+  \textbf{Process windows}: parameter regions insensitive to industrial
+  noise
+\end{itemize}
 
 \textbf{Exercise:}\\
 Analyze model robustness under perturbed process conditions.
@@ -573,16 +633,22 @@ Thursday, 11.06.2026, 16:15-17:45}
   Physics-informed vs unconstrained regression.
 \end{itemize}
 
-\textbf{Summary:} This unit explores \textbf{Inverse Problems}---the
-cornerstone of materials design where we seek the processing parameters
-required to achieve a target microstructure or performance. We contrast
-these with causal forward problems and discuss why they are often
-ill-posed and multi-valued. We introduce \textbf{Physics-Informed
-Learning} as a way to solve these challenges by enriching models with
-physical transformations and constraints. Students learn how to build
-and interpret \textbf{Process Maps} and ``Process Corridors,'' using
-machine learning to visualize safe operating regions in complex
-experimental spaces.
+\textbf{Summary:}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Inverse problems}: target microstructure / performance →
+  processing parameters
+\item
+  Forward (causal) vs.~inverse (often ill-posed, multi-valued)
+\item
+  \textbf{Physics-informed learning}: physical transformations and
+  constraints
+\item
+  \textbf{Process maps} and \textbf{process corridors} for safe
+  operating regions
+\end{itemize}
 
 \textbf{Exercise:}\\
 Construct a simple ML-based process map; compare constrained vs
@@ -610,16 +676,22 @@ Thursday, 18.06.2026, 16:15-17:45}
   Using ML without destroying physical meaning.
 \end{itemize}
 
-\textbf{Summary:} This unit focuses on the processing of
-high-dimensional \textbf{Characterization Signals} (like XRD, EDS, and
-EELS) using unsupervised learning. We introduce \textbf{K-Means
-Clustering} and \textbf{t-SNE} for the automatic identification and
-visualization of phases in large experimental libraries. We then explore
-\textbf{Autoencoders}---neural networks that learn to compress complex
-spectra into a low-dimensional ``latent space.'' This allows for
-advanced denoising and feature extraction, enabling scientists to handle
-the massive data volumes produced by modern high-throughput
-characterization tools without losing physical insight.
+\textbf{Summary:}
+
+\begin{itemize}
+\tightlist
+\item
+  Unsupervised ML on high-dimensional spectra (XRD, EDS, EELS)
+\item
+  \textbf{K-Means} and \textbf{t-SNE} for phase identification and
+  visualization
+\item
+  \textbf{Autoencoders}: compressing spectra into a low-dimensional
+  latent space
+\item
+  Denoising and feature extraction at high throughput without losing
+  physics
+\end{itemize}
 
 \textbf{Exercise:}\\
 Apply PCA/NMF to spectral datasets; interpret components physically.
@@ -640,8 +712,26 @@ Thursday, 25.06.2026, 16:15-17:45}
   ML as a control component, not just a predictor.
 \end{itemize}
 
-\textbf{Exercise:}\\
-Implement a simple ML-assisted autofocus or defect detector.
+\textbf{Summary:}
+
+\begin{itemize}
+\tightlist
+\item
+  \textbf{Autonomous characterization}: ML moves from passive analysis
+  to active instrument control
+\item
+  \textbf{Multi-modal data fusion} (SEM + EDS + process logs) via
+  Bayesian frameworks
+\item
+  \textbf{Reinforcement learning} for instrument tuning and process
+  optimization
+\item
+  Pipelines that autonomously find → characterize → decide the next
+  experiment
+\end{itemize}
+
+\textbf{Exercise:} Implement a simple ML-assisted autofocus or defect
+detector.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
@@ -766,18 +856,6 @@ Students completing this course will be able to:
 \item
   Multi-modal fusion of images, spectra, and process parameters.
 \end{itemize}
-
-\textbf{Summary:} This unit explores the cutting edge of
-\textbf{Autonomous Characterization}, where machine learning moves from
-passive data analysis to active instrument control. We introduce
-\textbf{Multi-Modal Data Fusion} techniques to combine information from
-diverse sensors like SEM images, EDS spectra, and process logs using
-Bayesian frameworks. We then discuss \textbf{Reinforcement Learning
-(RL)} as a tool for automating complex laboratory tasks, such as
-instrument tuning and process optimization. Through case studies in
-microscopy and industrial processing, students learn how to build
-integrated pipelines that can autonomously find, characterize, and
-decide the next steps of an experiment.
 
 \protect\phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}

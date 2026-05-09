@@ -149,14 +149,27 @@ as data leakage, overfitting, and spurious correlations.</p>
             science.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit introduces the transition
-        from classical physics-based modeling to data-driven discovery
-        in materials science. We explore the unique challenges of
-        experimental materials data, including its multi-modal nature,
-        high acquisition cost, and the fundamental
-        Processing-Structure-Property-Performance (PSPP) relationships.
-        Key concepts include data scales, measurement uncertainty, and
-        the CRISP-DM process adapted for scientific workflows.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Transition from physics-based to data-driven modeling</p>
+          </list-item>
+          <list-item>
+            <p>Experimental data challenges: multi-modal, high
+            acquisition cost, sparse</p>
+          </list-item>
+          <list-item>
+            <p><bold>PSPP</bold> (Processing → Structure → Property →
+            Performance) as a data dependency graph</p>
+          </list-item>
+          <list-item>
+            <p>Data scales and measurement uncertainty</p>
+          </list-item>
+          <list-item>
+            <p><bold>CRISP-DM</bold> workflow adapted for scientific
+            labs</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Inspect real microscopy and process datasets; identify sources
         of bias and noise.</p>
@@ -180,15 +193,20 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Relation to MFML refresher on PCA and covariance.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit bridges the gap between the
-        physical process of data acquisition and the mathematical tools
-        used to describe it. We analyze how signals are formed in
-        characterization tools and how physical constraints (resolution,
-        noise, sampling) act as priors for learning. We then introduce
-        Principal Component Analysis (PCA) and Singular Value
-        Decomposition (SVD) as fundamental techniques for discovering
-        low-dimensional structure in high-dimensional experimental
-        datasets.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Physical signal formation as a learning prior</p>
+          </list-item>
+          <list-item>
+            <p>Resolution, noise, sampling as physical (not algorithmic)
+            constraints</p>
+          </list-item>
+          <list-item>
+            <p><bold>PCA</bold> and <bold>SVD</bold> for low-dimensional
+            structure in high-dimensional data</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Fourier inspection of micrographs; effects of sampling and
         filtering.</p>
@@ -211,30 +229,51 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Why “good accuracy” often means a broken pipeline.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit covers the often-overlooked
-        half of an ML pipeline: data integrity, validation, and how
-        performance is measured. We start with the measurement chain and
-        systematic <bold>data cleaning</bold> — handling missing values,
-        outliers, and duplicates with a “fix at source” mindset. We then
-        build the <bold>transformation toolbox</bold>: centering,
-        min–max and z-score scaling, physics-aware
-        non-dimensionalisation, log transforms, differentiation, and
-        frequency-domain views (FFT, triggering for time series). On the
-        supervision side we examine <bold>labels and uncertainty</bold>
-        — inter-annotator variance, probabilistic labels, and a Bayesian
-        view of priors, likelihoods, and posteriors — and then formalize
-        the <bold>bias–variance</bold> tradeoff with parsimony and
-        regularization. A major focus is <bold>Data Leakage</bold> in
-        materials workflows (pre-processing, temporal, and
-        group/spatial), tackled with proper holdout, K-fold, LOOCV, and
-        stratified validation. We close with the <bold>error
-        measures</bold> that decide what “good” actually means:
-        MAE/MSE/RMSE and <inline-formula><alternatives>
-        <tex-math><![CDATA[R^2]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>R</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
-        for regression, and confusion matrices, precision/recall,
-        F1/Dice, IoU, and categorical cross-entropy for classification
-        and segmentation.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Measurement chain → <bold>data cleaning</bold>: missing
+            values, outliers, duplicates (“fix at source”)</p>
+          </list-item>
+          <list-item>
+            <p><bold>Transformation toolbox</bold>: centering, min–max /
+            z-score scaling, non-dimensionalization, log,
+            differentiation, FFT, triggering</p>
+          </list-item>
+          <list-item>
+            <p><bold>Labels and uncertainty</bold>: inter-annotator
+            variance, probabilistic labels, Bayesian view (priors,
+            likelihoods, posteriors)</p>
+          </list-item>
+          <list-item>
+            <p><bold>Bias–variance</bold> tradeoff with parsimony and
+            regularization</p>
+          </list-item>
+          <list-item>
+            <p><bold>Data leakage</bold> in materials workflows:
+            pre-processing, temporal, group/spatial</p>
+          </list-item>
+          <list-item>
+            <p><bold>Validation</bold>: holdout, K-fold, LOOCV,
+            stratified</p>
+          </list-item>
+          <list-item>
+            <p><bold>Error measures</bold>:</p>
+            <list list-type="bullet">
+              <list-item>
+                <p>Regression: MAE, MSE, RMSE,
+                <inline-formula><alternatives>
+                <tex-math><![CDATA[R^2]]></tex-math>
+                <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>R</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula></p>
+              </list-item>
+              <list-item>
+                <p>Classification / segmentation: confusion matrix,
+                precision/recall, F1/Dice, IoU, categorical
+                cross-entropy</p>
+              </list-item>
+            </list>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Construct a deliberately flawed ML pipeline and diagnose its
         failure.</p>
@@ -261,17 +300,24 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Transition to learned representations.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit marks the transition from
-        classical, hand-crafted microstructure quantification (like
-        grain size and phase fractions) to the modern paradigm of
-        <bold>learned representations</bold>. We first review
-        traditional stereological metrics and their limitations in
-        capturing complex structural nuances. We then introduce the
-        foundational unit of modern ML: the <bold>artificial
-        neuron</bold>. By understanding weights, biases, and non-linear
-        activation functions, we build the framework for Multi-Layer
-        Perceptrons (MLPs) that can automatically learn optimal features
-        from materials data.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Classical stereological metrics (grain size, phase
+            fractions) and their limits</p>
+          </list-item>
+          <list-item>
+            <p>Transition to <bold>learned representations</bold></p>
+          </list-item>
+          <list-item>
+            <p>The <bold>artificial neuron</bold>: weights, biases,
+            non-linear activations</p>
+          </list-item>
+          <list-item>
+            <p><bold>Multi-Layer Perceptrons (MLPs)</bold> as automatic
+            feature learners</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Compare classical features vs simple NN-based features for
         microstructure tasks.</p>
@@ -294,17 +340,27 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Overfitting risks with small datasets.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit introduces
-        <bold>Convolutional Neural Networks (CNNs)</bold>, the workhorse
-        of modern computer vision, and applies them to materials
-        characterization. We explore how convolutions allow networks to
-        automatically learn hierarchical structure detectors—from simple
-        edges to complex phase morphologies—while drastically reducing
-        the number of parameters compared to standard MLPs. Through case
-        studies in phase segmentation and defect detection, students
-        learn the intuition behind filters, pooling, and the unique
-        challenges of applying deep learning to high-resolution, noisy
-        experimental micrographs.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Convolutional Neural Networks (CNNs)</bold> for
+            materials characterization</p>
+          </list-item>
+          <list-item>
+            <p>Hierarchical structure detectors: edges → textures →
+            phase morphologies</p>
+          </list-item>
+          <list-item>
+            <p>Filters and pooling; parameter efficiency vs. MLPs</p>
+          </list-item>
+          <list-item>
+            <p>Case studies: phase segmentation, defect detection</p>
+          </list-item>
+          <list-item>
+            <p>Practical challenges: high-resolution, noisy
+            micrographs</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Train a small CNN on microstructure images; analyze failure
         cases.</p>
@@ -326,17 +382,27 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>When transfer learning helps—and when it does not.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit addresses the fundamental
-        bottleneck of materials informatics: <bold>Data Scarcity</bold>.
-        We explore how to build powerful deep learning models when only
-        a few hundred labeled images or signals are available. The core
-        focus is on <bold>Transfer Learning</bold>, where we leverage
-        knowledge from models pretrained on millions of natural images
-        to accelerate learning and improve generalization on materials
-        tasks. We also cover <bold>Data Augmentation</bold> strategies
-        tailored for scientific data and discuss when and why
-        transferring knowledge across different physical domains
-        succeeds or fails.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Data scarcity</bold> as the materials informatics
+            bottleneck</p>
+          </list-item>
+          <list-item>
+            <p><bold>Transfer learning</bold> from natural-image
+            pretrained models</p>
+          </list-item>
+          <list-item>
+            <p>Self-supervised pretraining as an alternative</p>
+          </list-item>
+          <list-item>
+            <p><bold>Data augmentation</bold> tailored to scientific
+            data</p>
+          </list-item>
+          <list-item>
+            <p>When cross-domain transfer succeeds vs. fails</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Fine-tune a pretrained model; compare against training from
         scratch.</p>
@@ -362,17 +428,28 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Relation to MFML concepts of generalization.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit explores the application of
-        machine learning to <bold>Time-Series Data</bold>, specifically
-        for monitoring and predicting materials processing outcomes. We
-        introduce <bold>Recurrent Neural Networks (RNNs)</bold> and
-        their advanced variants like <bold>LSTMs</bold>, which are
-        designed to handle sequential dependencies. We discuss the
-        critical preprocessing steps of signal smoothing and triggering
-        required to handle noisy experimental logs. Through case studies
-        in additive manufacturing and process stability, students learn
-        how to build models that “remember” the processing history to
-        predict future states and detect anomalies in real-time.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Time-series ML</bold> for process monitoring and
+            prediction</p>
+          </list-item>
+          <list-item>
+            <p><bold>RNNs</bold> and <bold>LSTMs</bold> for sequential
+            dependencies</p>
+          </list-item>
+          <list-item>
+            <p>Preprocessing: signal smoothing, triggering on noisy
+            logs</p>
+          </list-item>
+          <list-item>
+            <p>Case studies: additive manufacturing, process
+            stability</p>
+          </list-item>
+          <list-item>
+            <p>Real-time anomaly detection from processing history</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Predict a process outcome from time-series data using regression
         or simple RNNs.</p>
@@ -394,17 +471,29 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Robustness as a design criterion.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit shifts the focus from model
-        performance to <bold>Model Reliability</bold>. We explore the
-        Bias-Variance tradeoff and the fundamental challenge of
-        generalization—ensuring that an ML model works on new, unseen
-        data from the factory floor. We introduce robust validation
-        techniques like K-Fold and Stratified Cross-Validation to
-        stabilize performance estimates on small materials datasets. A
-        key focus is on <bold>Process Robustness</bold>, where we use
-        sensitivity analysis to identify “Process Windows”—regions in
-        parameter space where material quality is maximized and
-        insensitive to industrial noise.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Shift from raw performance to <bold>model
+            reliability</bold></p>
+          </list-item>
+          <list-item>
+            <p>Bias–variance tradeoff and generalization to
+            factory-floor data</p>
+          </list-item>
+          <list-item>
+            <p>Robust validation: K-fold and stratified cross-validation
+            on small datasets</p>
+          </list-item>
+          <list-item>
+            <p><bold>Process robustness</bold> via sensitivity
+            analysis</p>
+          </list-item>
+          <list-item>
+            <p><bold>Process windows</bold>: parameter regions
+            insensitive to industrial noise</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Analyze model robustness under perturbed process conditions.</p>
       </sec>
@@ -425,17 +514,25 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Physics-informed vs unconstrained regression.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit explores <bold>Inverse
-        Problems</bold>—the cornerstone of materials design where we
-        seek the processing parameters required to achieve a target
-        microstructure or performance. We contrast these with causal
-        forward problems and discuss why they are often ill-posed and
-        multi-valued. We introduce <bold>Physics-Informed
-        Learning</bold> as a way to solve these challenges by enriching
-        models with physical transformations and constraints. Students
-        learn how to build and interpret <bold>Process Maps</bold> and
-        “Process Corridors,” using machine learning to visualize safe
-        operating regions in complex experimental spaces.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Inverse problems</bold>: target microstructure /
+            performance → processing parameters</p>
+          </list-item>
+          <list-item>
+            <p>Forward (causal) vs. inverse (often ill-posed,
+            multi-valued)</p>
+          </list-item>
+          <list-item>
+            <p><bold>Physics-informed learning</bold>: physical
+            transformations and constraints</p>
+          </list-item>
+          <list-item>
+            <p><bold>Process maps</bold> and <bold>process
+            corridors</bold> for safe operating regions</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Construct a simple ML-based process map; compare constrained vs
         unconstrained models.</p>
@@ -459,18 +556,25 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Using ML without destroying physical meaning.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit focuses on the processing of
-        high-dimensional <bold>Characterization Signals</bold> (like
-        XRD, EDS, and EELS) using unsupervised learning. We introduce
-        <bold>K-Means Clustering</bold> and <bold>t-SNE</bold> for the
-        automatic identification and visualization of phases in large
-        experimental libraries. We then explore
-        <bold>Autoencoders</bold>—neural networks that learn to compress
-        complex spectra into a low-dimensional “latent space.” This
-        allows for advanced denoising and feature extraction, enabling
-        scientists to handle the massive data volumes produced by modern
-        high-throughput characterization tools without losing physical
-        insight.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Unsupervised ML on high-dimensional spectra (XRD, EDS,
+            EELS)</p>
+          </list-item>
+          <list-item>
+            <p><bold>K-Means</bold> and <bold>t-SNE</bold> for phase
+            identification and visualization</p>
+          </list-item>
+          <list-item>
+            <p><bold>Autoencoders</bold>: compressing spectra into a
+            low-dimensional latent space</p>
+          </list-item>
+          <list-item>
+            <p>Denoising and feature extraction at high throughput
+            without losing physics</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Apply PCA/NMF to spectral datasets; interpret components
         physically.</p>
@@ -488,8 +592,27 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>ML as a control component, not just a predictor.</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Implement a simple ML-assisted autofocus or defect detector.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Autonomous characterization</bold>: ML moves from
+            passive analysis to active instrument control</p>
+          </list-item>
+          <list-item>
+            <p><bold>Multi-modal data fusion</bold> (SEM + EDS + process
+            logs) via Bayesian frameworks</p>
+          </list-item>
+          <list-item>
+            <p><bold>Reinforcement learning</bold> for instrument tuning
+            and process optimization</p>
+          </list-item>
+          <list-item>
+            <p>Pipelines that autonomously find → characterize → decide
+            the next experiment</p>
+          </list-item>
+        </list>
+        <p><bold>Exercise:</bold> Implement a simple ML-assisted
+        autofocus or defect detector.</p>
       </sec>
       <sec id="week-12-uncertainty-aware-regression-gaussian-processes">
         <title>1.3.4.3 Week 12 – Uncertainty-aware regression &amp;
@@ -629,18 +752,6 @@ as data leakage, overfitting, and spurious correlations.</p>
         parameters.</p>
       </list-item>
     </list>
-    <p><bold>Summary:</bold> This unit explores the cutting edge of
-    <bold>Autonomous Characterization</bold>, where machine learning
-    moves from passive data analysis to active instrument control. We
-    introduce <bold>Multi-Modal Data Fusion</bold> techniques to combine
-    information from diverse sensors like SEM images, EDS spectra, and
-    process logs using Bayesian frameworks. We then discuss
-    <bold>Reinforcement Learning (RL)</bold> as a tool for automating
-    complex laboratory tasks, such as instrument tuning and process
-    optimization. Through case studies in microscopy and industrial
-    processing, students learn how to build integrated pipelines that
-    can autonomously find, characterize, and decide the next steps of an
-    experiment.</p>
   </sec>
 </sec>
 </body>
@@ -774,14 +885,27 @@ as data leakage, overfitting, and spurious correlations.</p>
             science.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit introduces the transition
-        from classical physics-based modeling to data-driven discovery
-        in materials science. We explore the unique challenges of
-        experimental materials data, including its multi-modal nature,
-        high acquisition cost, and the fundamental
-        Processing-Structure-Property-Performance (PSPP) relationships.
-        Key concepts include data scales, measurement uncertainty, and
-        the CRISP-DM process adapted for scientific workflows.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Transition from physics-based to data-driven modeling</p>
+          </list-item>
+          <list-item>
+            <p>Experimental data challenges: multi-modal, high
+            acquisition cost, sparse</p>
+          </list-item>
+          <list-item>
+            <p><bold>PSPP</bold> (Processing → Structure → Property →
+            Performance) as a data dependency graph</p>
+          </list-item>
+          <list-item>
+            <p>Data scales and measurement uncertainty</p>
+          </list-item>
+          <list-item>
+            <p><bold>CRISP-DM</bold> workflow adapted for scientific
+            labs</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Inspect real microscopy and process datasets; identify sources
         of bias and noise.</p>
@@ -805,15 +929,20 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Relation to MFML refresher on PCA and covariance.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit bridges the gap between the
-        physical process of data acquisition and the mathematical tools
-        used to describe it. We analyze how signals are formed in
-        characterization tools and how physical constraints (resolution,
-        noise, sampling) act as priors for learning. We then introduce
-        Principal Component Analysis (PCA) and Singular Value
-        Decomposition (SVD) as fundamental techniques for discovering
-        low-dimensional structure in high-dimensional experimental
-        datasets.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Physical signal formation as a learning prior</p>
+          </list-item>
+          <list-item>
+            <p>Resolution, noise, sampling as physical (not algorithmic)
+            constraints</p>
+          </list-item>
+          <list-item>
+            <p><bold>PCA</bold> and <bold>SVD</bold> for low-dimensional
+            structure in high-dimensional data</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Fourier inspection of micrographs; effects of sampling and
         filtering.</p>
@@ -836,30 +965,51 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Why “good accuracy” often means a broken pipeline.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit covers the often-overlooked
-        half of an ML pipeline: data integrity, validation, and how
-        performance is measured. We start with the measurement chain and
-        systematic <bold>data cleaning</bold> — handling missing values,
-        outliers, and duplicates with a “fix at source” mindset. We then
-        build the <bold>transformation toolbox</bold>: centering,
-        min–max and z-score scaling, physics-aware
-        non-dimensionalisation, log transforms, differentiation, and
-        frequency-domain views (FFT, triggering for time series). On the
-        supervision side we examine <bold>labels and uncertainty</bold>
-        — inter-annotator variance, probabilistic labels, and a Bayesian
-        view of priors, likelihoods, and posteriors — and then formalize
-        the <bold>bias–variance</bold> tradeoff with parsimony and
-        regularization. A major focus is <bold>Data Leakage</bold> in
-        materials workflows (pre-processing, temporal, and
-        group/spatial), tackled with proper holdout, K-fold, LOOCV, and
-        stratified validation. We close with the <bold>error
-        measures</bold> that decide what “good” actually means:
-        MAE/MSE/RMSE and <inline-formula><alternatives>
-        <tex-math><![CDATA[R^2]]></tex-math>
-        <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>R</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula>
-        for regression, and confusion matrices, precision/recall,
-        F1/Dice, IoU, and categorical cross-entropy for classification
-        and segmentation.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Measurement chain → <bold>data cleaning</bold>: missing
+            values, outliers, duplicates (“fix at source”)</p>
+          </list-item>
+          <list-item>
+            <p><bold>Transformation toolbox</bold>: centering, min–max /
+            z-score scaling, non-dimensionalization, log,
+            differentiation, FFT, triggering</p>
+          </list-item>
+          <list-item>
+            <p><bold>Labels and uncertainty</bold>: inter-annotator
+            variance, probabilistic labels, Bayesian view (priors,
+            likelihoods, posteriors)</p>
+          </list-item>
+          <list-item>
+            <p><bold>Bias–variance</bold> tradeoff with parsimony and
+            regularization</p>
+          </list-item>
+          <list-item>
+            <p><bold>Data leakage</bold> in materials workflows:
+            pre-processing, temporal, group/spatial</p>
+          </list-item>
+          <list-item>
+            <p><bold>Validation</bold>: holdout, K-fold, LOOCV,
+            stratified</p>
+          </list-item>
+          <list-item>
+            <p><bold>Error measures</bold>:</p>
+            <list list-type="bullet">
+              <list-item>
+                <p>Regression: MAE, MSE, RMSE,
+                <inline-formula><alternatives>
+                <tex-math><![CDATA[R^2]]></tex-math>
+                <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:msup><mml:mi>R</mml:mi><mml:mn>2</mml:mn></mml:msup></mml:math></alternatives></inline-formula></p>
+              </list-item>
+              <list-item>
+                <p>Classification / segmentation: confusion matrix,
+                precision/recall, F1/Dice, IoU, categorical
+                cross-entropy</p>
+              </list-item>
+            </list>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Construct a deliberately flawed ML pipeline and diagnose its
         failure.</p>
@@ -886,17 +1036,24 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Transition to learned representations.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit marks the transition from
-        classical, hand-crafted microstructure quantification (like
-        grain size and phase fractions) to the modern paradigm of
-        <bold>learned representations</bold>. We first review
-        traditional stereological metrics and their limitations in
-        capturing complex structural nuances. We then introduce the
-        foundational unit of modern ML: the <bold>artificial
-        neuron</bold>. By understanding weights, biases, and non-linear
-        activation functions, we build the framework for Multi-Layer
-        Perceptrons (MLPs) that can automatically learn optimal features
-        from materials data.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Classical stereological metrics (grain size, phase
+            fractions) and their limits</p>
+          </list-item>
+          <list-item>
+            <p>Transition to <bold>learned representations</bold></p>
+          </list-item>
+          <list-item>
+            <p>The <bold>artificial neuron</bold>: weights, biases,
+            non-linear activations</p>
+          </list-item>
+          <list-item>
+            <p><bold>Multi-Layer Perceptrons (MLPs)</bold> as automatic
+            feature learners</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Compare classical features vs simple NN-based features for
         microstructure tasks.</p>
@@ -919,17 +1076,27 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Overfitting risks with small datasets.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit introduces
-        <bold>Convolutional Neural Networks (CNNs)</bold>, the workhorse
-        of modern computer vision, and applies them to materials
-        characterization. We explore how convolutions allow networks to
-        automatically learn hierarchical structure detectors—from simple
-        edges to complex phase morphologies—while drastically reducing
-        the number of parameters compared to standard MLPs. Through case
-        studies in phase segmentation and defect detection, students
-        learn the intuition behind filters, pooling, and the unique
-        challenges of applying deep learning to high-resolution, noisy
-        experimental micrographs.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Convolutional Neural Networks (CNNs)</bold> for
+            materials characterization</p>
+          </list-item>
+          <list-item>
+            <p>Hierarchical structure detectors: edges → textures →
+            phase morphologies</p>
+          </list-item>
+          <list-item>
+            <p>Filters and pooling; parameter efficiency vs. MLPs</p>
+          </list-item>
+          <list-item>
+            <p>Case studies: phase segmentation, defect detection</p>
+          </list-item>
+          <list-item>
+            <p>Practical challenges: high-resolution, noisy
+            micrographs</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Train a small CNN on microstructure images; analyze failure
         cases.</p>
@@ -951,17 +1118,27 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>When transfer learning helps—and when it does not.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit addresses the fundamental
-        bottleneck of materials informatics: <bold>Data Scarcity</bold>.
-        We explore how to build powerful deep learning models when only
-        a few hundred labeled images or signals are available. The core
-        focus is on <bold>Transfer Learning</bold>, where we leverage
-        knowledge from models pretrained on millions of natural images
-        to accelerate learning and improve generalization on materials
-        tasks. We also cover <bold>Data Augmentation</bold> strategies
-        tailored for scientific data and discuss when and why
-        transferring knowledge across different physical domains
-        succeeds or fails.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Data scarcity</bold> as the materials informatics
+            bottleneck</p>
+          </list-item>
+          <list-item>
+            <p><bold>Transfer learning</bold> from natural-image
+            pretrained models</p>
+          </list-item>
+          <list-item>
+            <p>Self-supervised pretraining as an alternative</p>
+          </list-item>
+          <list-item>
+            <p><bold>Data augmentation</bold> tailored to scientific
+            data</p>
+          </list-item>
+          <list-item>
+            <p>When cross-domain transfer succeeds vs. fails</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Fine-tune a pretrained model; compare against training from
         scratch.</p>
@@ -987,17 +1164,28 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Relation to MFML concepts of generalization.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit explores the application of
-        machine learning to <bold>Time-Series Data</bold>, specifically
-        for monitoring and predicting materials processing outcomes. We
-        introduce <bold>Recurrent Neural Networks (RNNs)</bold> and
-        their advanced variants like <bold>LSTMs</bold>, which are
-        designed to handle sequential dependencies. We discuss the
-        critical preprocessing steps of signal smoothing and triggering
-        required to handle noisy experimental logs. Through case studies
-        in additive manufacturing and process stability, students learn
-        how to build models that “remember” the processing history to
-        predict future states and detect anomalies in real-time.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Time-series ML</bold> for process monitoring and
+            prediction</p>
+          </list-item>
+          <list-item>
+            <p><bold>RNNs</bold> and <bold>LSTMs</bold> for sequential
+            dependencies</p>
+          </list-item>
+          <list-item>
+            <p>Preprocessing: signal smoothing, triggering on noisy
+            logs</p>
+          </list-item>
+          <list-item>
+            <p>Case studies: additive manufacturing, process
+            stability</p>
+          </list-item>
+          <list-item>
+            <p>Real-time anomaly detection from processing history</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Predict a process outcome from time-series data using regression
         or simple RNNs.</p>
@@ -1019,17 +1207,29 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Robustness as a design criterion.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit shifts the focus from model
-        performance to <bold>Model Reliability</bold>. We explore the
-        Bias-Variance tradeoff and the fundamental challenge of
-        generalization—ensuring that an ML model works on new, unseen
-        data from the factory floor. We introduce robust validation
-        techniques like K-Fold and Stratified Cross-Validation to
-        stabilize performance estimates on small materials datasets. A
-        key focus is on <bold>Process Robustness</bold>, where we use
-        sensitivity analysis to identify “Process Windows”—regions in
-        parameter space where material quality is maximized and
-        insensitive to industrial noise.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Shift from raw performance to <bold>model
+            reliability</bold></p>
+          </list-item>
+          <list-item>
+            <p>Bias–variance tradeoff and generalization to
+            factory-floor data</p>
+          </list-item>
+          <list-item>
+            <p>Robust validation: K-fold and stratified cross-validation
+            on small datasets</p>
+          </list-item>
+          <list-item>
+            <p><bold>Process robustness</bold> via sensitivity
+            analysis</p>
+          </list-item>
+          <list-item>
+            <p><bold>Process windows</bold>: parameter regions
+            insensitive to industrial noise</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Analyze model robustness under perturbed process conditions.</p>
       </sec>
@@ -1050,17 +1250,25 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Physics-informed vs unconstrained regression.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit explores <bold>Inverse
-        Problems</bold>—the cornerstone of materials design where we
-        seek the processing parameters required to achieve a target
-        microstructure or performance. We contrast these with causal
-        forward problems and discuss why they are often ill-posed and
-        multi-valued. We introduce <bold>Physics-Informed
-        Learning</bold> as a way to solve these challenges by enriching
-        models with physical transformations and constraints. Students
-        learn how to build and interpret <bold>Process Maps</bold> and
-        “Process Corridors,” using machine learning to visualize safe
-        operating regions in complex experimental spaces.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Inverse problems</bold>: target microstructure /
+            performance → processing parameters</p>
+          </list-item>
+          <list-item>
+            <p>Forward (causal) vs. inverse (often ill-posed,
+            multi-valued)</p>
+          </list-item>
+          <list-item>
+            <p><bold>Physics-informed learning</bold>: physical
+            transformations and constraints</p>
+          </list-item>
+          <list-item>
+            <p><bold>Process maps</bold> and <bold>process
+            corridors</bold> for safe operating regions</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Construct a simple ML-based process map; compare constrained vs
         unconstrained models.</p>
@@ -1084,18 +1292,25 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Using ML without destroying physical meaning.</p>
           </list-item>
         </list>
-        <p><bold>Summary:</bold> This unit focuses on the processing of
-        high-dimensional <bold>Characterization Signals</bold> (like
-        XRD, EDS, and EELS) using unsupervised learning. We introduce
-        <bold>K-Means Clustering</bold> and <bold>t-SNE</bold> for the
-        automatic identification and visualization of phases in large
-        experimental libraries. We then explore
-        <bold>Autoencoders</bold>—neural networks that learn to compress
-        complex spectra into a low-dimensional “latent space.” This
-        allows for advanced denoising and feature extraction, enabling
-        scientists to handle the massive data volumes produced by modern
-        high-throughput characterization tools without losing physical
-        insight.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Unsupervised ML on high-dimensional spectra (XRD, EDS,
+            EELS)</p>
+          </list-item>
+          <list-item>
+            <p><bold>K-Means</bold> and <bold>t-SNE</bold> for phase
+            identification and visualization</p>
+          </list-item>
+          <list-item>
+            <p><bold>Autoencoders</bold>: compressing spectra into a
+            low-dimensional latent space</p>
+          </list-item>
+          <list-item>
+            <p>Denoising and feature extraction at high throughput
+            without losing physics</p>
+          </list-item>
+        </list>
         <p><bold>Exercise:</bold>
         Apply PCA/NMF to spectral datasets; interpret components
         physically.</p>
@@ -1113,8 +1328,27 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>ML as a control component, not just a predictor.</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Implement a simple ML-assisted autofocus or defect detector.</p>
+        <p><bold>Summary:</bold></p>
+        <list list-type="bullet">
+          <list-item>
+            <p><bold>Autonomous characterization</bold>: ML moves from
+            passive analysis to active instrument control</p>
+          </list-item>
+          <list-item>
+            <p><bold>Multi-modal data fusion</bold> (SEM + EDS + process
+            logs) via Bayesian frameworks</p>
+          </list-item>
+          <list-item>
+            <p><bold>Reinforcement learning</bold> for instrument tuning
+            and process optimization</p>
+          </list-item>
+          <list-item>
+            <p>Pipelines that autonomously find → characterize → decide
+            the next experiment</p>
+          </list-item>
+        </list>
+        <p><bold>Exercise:</bold> Implement a simple ML-assisted
+        autofocus or defect detector.</p>
       </sec>
       <sec id="week-12-uncertainty-aware-regression-gaussian-processes-nb-article">
         <title>1.3.4.3 Week 12 – Uncertainty-aware regression &amp;
@@ -1254,18 +1488,6 @@ as data leakage, overfitting, and spurious correlations.</p>
         parameters.</p>
       </list-item>
     </list>
-    <p><bold>Summary:</bold> This unit explores the cutting edge of
-    <bold>Autonomous Characterization</bold>, where machine learning
-    moves from passive data analysis to active instrument control. We
-    introduce <bold>Multi-Modal Data Fusion</bold> techniques to combine
-    information from diverse sensors like SEM images, EDS spectra, and
-    process logs using Bayesian frameworks. We then discuss
-    <bold>Reinforcement Learning (RL)</bold> as a tool for automating
-    complex laboratory tasks, such as instrument tuning and process
-    optimization. Through case studies in microscopy and industrial
-    processing, students learn how to build integrated pipelines that
-    can autonomously find, characterize, and decide the next steps of an
-    experiment.</p>
   </sec>
 </sec>
 </body>
