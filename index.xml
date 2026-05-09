@@ -289,6 +289,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         learned representations</title>
         <p><italic>Lecture: Tuesday, 05.05.2026, 14:15-15:45 | Exercise:
         Thursday, 07.05.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit04_microstructure_representations/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Grain size, phase fractions, orientation maps.</p>
@@ -328,6 +330,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         <p><italic>Lecture: Tuesday, 12.05.2026, 14:15-15:45 | Exercise:
         Thursday, 14.05.2026, 16:15-17:45 (cancelled -
         Himmelfahrt)</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit05_unsupervised_learning/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>CNN intuition: filters as structure detectors.</p>
@@ -370,6 +374,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         learning</title>
         <p><italic>Lecture: Tuesday, 19.05.2026, 14:15-15:45 | Exercise:
         Thursday, 21.05.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit06_transfer_learning/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Why materials datasets are small.</p>
@@ -416,6 +422,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         monitoring</title>
         <p><italic>Lecture: Tuesday, 26.05.2026, 14:15-15:45 | Exercise:
         Thursday, 28.05.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit07_time_series/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Processing signals: temperature cycles, AM melt pool
@@ -460,6 +468,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         <p><italic>Lecture: Tuesday, 02.06.2026, 14:15-15:45 | Exercise:
         Thursday, 04.06.2026, 16:15-17:45 (cancelled -
         Fronleichnam)</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit08_generalization_robustness/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Sensitivity to noise and parameter drift.</p>
@@ -502,6 +512,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         maps</title>
         <p><italic>Lecture: Tuesday, 09.06.2026, 14:15-15:45 | Exercise:
         Thursday, 11.06.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09_inverse_problems/09_inverse_problems.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Process → structure inverse problems.</p>
@@ -545,6 +557,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         <title>1.3.4.1 Week 10 – ML for characterization signals</title>
         <p><italic>Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise:
         Thursday, 18.06.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_characterization_signals/10_characterization_signals.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Spectral data: XRD, EELS, EDS.</p>
@@ -584,6 +598,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         characterization</title>
         <p><italic>Lecture: Tuesday, 23.06.2026, 14:15-15:45 | Exercise:
         Thursday, 25.06.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_automation/11_automation.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Autofocus, drift correction, parameter selection.</p>
@@ -619,6 +635,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         Gaussian Processes</title>
         <p><italic>Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise:
         Thursday, 02.07.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_uncertainty_gp/12_uncertainty_gp.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Aleatoric vs epistemic uncertainty in experiments.</p>
@@ -646,6 +664,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         ML</title>
         <p><italic>Lecture: Tuesday, 07.07.2026, 14:15-15:45 | Exercise:
         Thursday, 09.07.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit13_pinns/13_pinns.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Embedding physical constraints into ML models.</p>
@@ -666,6 +686,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         reflection</title>
         <p><italic>Lecture: Tuesday, 14.07.2026, 14:15-15:45 | Exercise:
         Thursday, 16.07.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit14_reflection/14_reflection.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Explainability for experimental ML (CAMs, SHAP).</p>
@@ -1025,6 +1047,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         learned representations</title>
         <p><italic>Lecture: Tuesday, 05.05.2026, 14:15-15:45 | Exercise:
         Thursday, 07.05.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit04_microstructure_representations/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Grain size, phase fractions, orientation maps.</p>
@@ -1064,6 +1088,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         <p><italic>Lecture: Tuesday, 12.05.2026, 14:15-15:45 | Exercise:
         Thursday, 14.05.2026, 16:15-17:45 (cancelled -
         Himmelfahrt)</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit05_unsupervised_learning/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>CNN intuition: filters as structure detectors.</p>
@@ -1106,6 +1132,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         learning</title>
         <p><italic>Lecture: Tuesday, 19.05.2026, 14:15-15:45 | Exercise:
         Thursday, 21.05.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit06_transfer_learning/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Why materials datasets are small.</p>
@@ -1152,6 +1180,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         monitoring</title>
         <p><italic>Lecture: Tuesday, 26.05.2026, 14:15-15:45 | Exercise:
         Thursday, 28.05.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit07_time_series/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Processing signals: temperature cycles, AM melt pool
@@ -1196,6 +1226,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         <p><italic>Lecture: Tuesday, 02.06.2026, 14:15-15:45 | Exercise:
         Thursday, 04.06.2026, 16:15-17:45 (cancelled -
         Fronleichnam)</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit08_generalization_robustness/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Sensitivity to noise and parameter drift.</p>
@@ -1238,6 +1270,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         maps</title>
         <p><italic>Lecture: Tuesday, 09.06.2026, 14:15-15:45 | Exercise:
         Thursday, 11.06.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09_inverse_problems/09_inverse_problems.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Process → structure inverse problems.</p>
@@ -1281,6 +1315,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         <title>1.3.4.1 Week 10 – ML for characterization signals</title>
         <p><italic>Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise:
         Thursday, 18.06.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_characterization_signals/10_characterization_signals.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Spectral data: XRD, EELS, EDS.</p>
@@ -1320,6 +1356,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         characterization</title>
         <p><italic>Lecture: Tuesday, 23.06.2026, 14:15-15:45 | Exercise:
         Thursday, 25.06.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_automation/11_automation.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Autofocus, drift correction, parameter selection.</p>
@@ -1355,6 +1393,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         Gaussian Processes</title>
         <p><italic>Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise:
         Thursday, 02.07.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_uncertainty_gp/12_uncertainty_gp.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Aleatoric vs epistemic uncertainty in experiments.</p>
@@ -1382,6 +1422,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         ML</title>
         <p><italic>Lecture: Tuesday, 07.07.2026, 14:15-15:45 | Exercise:
         Thursday, 09.07.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit13_pinns/13_pinns.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Embedding physical constraints into ML models.</p>
@@ -1402,6 +1444,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         reflection</title>
         <p><italic>Lecture: Tuesday, 14.07.2026, 14:15-15:45 | Exercise:
         Thursday, 16.07.2026, 16:15-17:45</italic></p>
+        <p><bold>Slides:</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit14_reflection/14_reflection.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Explainability for experimental ML (CAMs, SHAP).</p>

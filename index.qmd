@@ -246,6 +246,8 @@ Construct a deliberately flawed ML pipeline and diagnose its failure.
 
 *Lecture: Tuesday, 05.05.2026, 14:15-15:45 | Exercise: Thursday, 07.05.2026, 16:15-17:45*
 
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit04_microstructure_representations/01_intro.html)
+
 - Grain size, phase fractions, orientation maps.
 - Limits of hand-crafted microstructure features.
 - Transition to learned representations.
@@ -266,6 +268,8 @@ Compare classical features vs simple NN-based features for microstructure tasks.
 #### Week 5 – Neural networks for microstructure images
 
 *Lecture: Tuesday, 12.05.2026, 14:15-15:45 | Exercise: Thursday, 14.05.2026, 16:15-17:45 (cancelled - Himmelfahrt)*
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit05_unsupervised_learning/01_intro.html)
 
 - CNN intuition: filters as structure detectors.
 - Example tasks:
@@ -289,6 +293,8 @@ Train a small CNN on microstructure images; analyze failure cases.
 #### Week 6 – Data scarcity & transfer learning
 
 *Lecture: Tuesday, 19.05.2026, 14:15-15:45 | Exercise: Thursday, 21.05.2026, 16:15-17:45*
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit06_transfer_learning/01_intro.html)
 
 - Why materials datasets are small.
 - Transfer learning from natural images vs self-supervised pretraining.
@@ -314,6 +320,8 @@ Fine-tune a pretrained model; compare against training from scratch.
 
 *Lecture: Tuesday, 26.05.2026, 14:15-15:45 | Exercise: Thursday, 28.05.2026, 16:15-17:45*
 
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit07_time_series/01_intro.html)
+
 - Processing signals:
   temperature cycles, AM melt pool signals, SPS, rolling.
 - Regression and sequence models as surrogates.
@@ -337,6 +345,8 @@ Predict a process outcome from time-series data using regression or simple RNNs.
 
 *Lecture: Tuesday, 02.06.2026, 14:15-15:45 | Exercise: Thursday, 04.06.2026, 16:15-17:45 (cancelled - Fronleichnam)*
 
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit08_generalization_robustness/01_intro.html)
+
 - Sensitivity to noise and parameter drift.
 - Overfitting in process–property models.
 - Robustness as a design criterion.
@@ -358,6 +368,8 @@ Analyze model robustness under perturbed process conditions.
 #### Week 9 – Inverse problems and process maps
 
 *Lecture: Tuesday, 09.06.2026, 14:15-15:45 | Exercise: Thursday, 11.06.2026, 16:15-17:45*
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09_inverse_problems/09_inverse_problems.html)
 
 - Process → structure inverse problems.
 - ML-guided process maps (e.g. AM laser power vs scan speed).
@@ -382,6 +394,8 @@ Construct a simple ML-based process map; compare constrained vs unconstrained mo
 
 *Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise: Thursday, 18.06.2026, 16:15-17:45*
 
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_characterization_signals/10_characterization_signals.html)
+
 - Spectral data: XRD, EELS, EDS.
 - Denoising, peak finding, dimensionality reduction.
 - Using ML without destroying physical meaning.
@@ -403,6 +417,8 @@ Apply PCA/NMF to spectral datasets; interpret components physically.
 
 *Lecture: Tuesday, 23.06.2026, 14:15-15:45 | Exercise: Thursday, 25.06.2026, 16:15-17:45*
 
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_automation/11_automation.html)
+
 - Autofocus, drift correction, parameter selection.
 - ML as a control component, not just a predictor.
 
@@ -422,6 +438,8 @@ Implement a simple ML-assisted autofocus or defect detector.
 
 *Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise: Thursday, 02.07.2026, 16:15-17:45*
 
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_uncertainty_gp/12_uncertainty_gp.html)
+
 - Aleatoric vs epistemic uncertainty in experiments.
 - Gaussian Processes as uncertainty-aware surrogates.
 - Exploration vs exploitation in experimental design.
@@ -438,6 +456,8 @@ Compare GP regression and NN ensembles for a process-parameter problem.
 
 *Lecture: Tuesday, 07.07.2026, 14:15-15:45 | Exercise: Thursday, 09.07.2026, 16:15-17:45*
 
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit13_pinns/13_pinns.html)
+
 - Embedding physical constraints into ML models.
 - Penalty terms, soft constraints, hybrid approaches.
 - Failure modes of unconstrained models.
@@ -450,6 +470,8 @@ Train a constrained model for a processing or characterization task.
 #### Week 14 – Integration, limits, and reflection
 
 *Lecture: Tuesday, 14.07.2026, 14:15-15:45 | Exercise: Thursday, 16.07.2026, 16:15-17:45*
+
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit14_reflection/14_reflection.html)
 
 - Explainability for experimental ML (CAMs, SHAP).
 - Why ML fails in real labs.
