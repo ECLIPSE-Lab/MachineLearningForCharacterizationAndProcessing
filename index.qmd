@@ -318,7 +318,7 @@ Fine-tune a pretrained model; compare against training from scratch.
 
 #### Week 7 – Time-series and process monitoring
 
-*Lecture: Tuesday, 26.05.2026, 14:15-15:45 | Exercise: Thursday, 28.05.2026, 16:15-17:45*
+*Lecture: Tuesday, 26.05.2026, 14:15-15:45 (cancelled - Pfingstdienstag) | Exercise: Thursday, 28.05.2026, 16:15-17:45*
 
 **Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit07_time_series/01_intro.html)
 
