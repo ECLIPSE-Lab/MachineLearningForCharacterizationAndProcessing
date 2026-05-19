@@ -1,47 +1,49 @@
-# Week 12 Summary: Uncertainty-aware regression & Gaussian Processes
+# Week 12 Summary: Physics-informed and constrained ML
 
 ## Cross-Book Summary
 
-### 1. Knowing what you don't know
-- **Aleatoric vs. Epistemic:** Inherent physical noise vs. model ignorance.
-- **Overconfidence Danger:** Point estimates fail safely in unknown regimes; uncertainty metrics are crucial.
+### 1. Physics-Informed Neural Networks (PINNs)
+- **Embedding Laws:** Enforce ODEs/PDEs via the loss function for physical consistency.
+- **Automatic Differentiation:** Exact derivative calculations enable NNs to evaluate physical equations.
+- **Boundary Conditions:** Methods like Lagaris substitution guarantee boundary compliance.
 
-### 2. Gaussian Processes (GPs)
-- **Distribution over Functions:** GP yields posterior mean and variance (uncertainty).
-- **Kernels as Physical Priors:** Encodes assumptions about data smoothness/scale.
-- **Non-Parametric Nature:** Scales with data size, ideal for small, high-quality materials datasets.
+### 2. Governing Equation Discovery
+- **Dictionary-Based Regression:** Build a dictionary of candidate math functions.
+- **Sparse Identification:** Use regularized regression (Lasso) to discover physical laws from noisy data.
+- **Dimensional Reasoning:** Unit analysis ensures physically plausible discoveries.
 
-### 3. GP-Based Process Maps
-- **Confidence Ribbons:** Visualize reliability to guide further experiments.
-- **Kriging:** Interpolates materials property surfaces using GP regression.
+### 3. Constraints in Materials Science
+- **Monotonicity:** Enforce required physical trends (e.g., hardness vs. alloying).
+- **Hybrid Modeling:** Combine physical "White-Box" models with data-driven "Black-Boxes" (Grey-Box).
 
 ## 90-Minute Lecture Strategy
 
-### Part 1: Uncertainty in Science
-- Risk management in materials processing.
-- Visualizing distributions and error bars.
+### Part 1: Why Physics Matters
+- Limits of unconstrained Black-Box models.
+- Accurate but Physical models.
+- PINNs need less data.
 
-### Part 2: GP Fundamentals
-- Function vs. Parameter space.
-- Kernels and "Similarity".
-- Conditional Gaussians and Variance.
+### Part 2: Automatic Differentiation
+- GradientTape mechanics.
+- Derivatives as ML architecture components.
 
-### Part 3: GP Case Studies
-- Predicting tensile strength across parameters.
-- GP for Experimental Design.
-- Multi-Task GPs.
+### Part 3: Solving Physics with NNs
+- PINN Architectures: Data Loss + Physics Loss.
+- Enforcing Boundary Conditions.
+- 3D printing heat transfer case study.
 
-### Part 4: Advanced Probabilistic ML
-- Mixture Density Networks (MDNs).
-- Dropout as Bayesian approximation.
+### Part 4: Equation Discovery
+- Sparse Regression and candidate dictionaries.
+- Damped pendulum equation case study.
+- Unit Analysis search pruning.
 
-### Part 5: Decision Making
-- Safe process windows via confidence intervals.
-- Building trustworthy models.
+### Part 5: The Grey-Box Future
+- Hybrid architectures vs. FEA.
+- Building industrial trust.
 
 ## Quarto Website Update (Summary)
-**Summary for ML-PC Week 12:**  
-- Introduces Probabilistic Machine Learning for uncertainty quantification.
-- Differentiates aleatoric (noise) from epistemic (ignorance) uncertainty.
-- Uses Gaussian Processes (GPs) for uncertainty-aware regression.
-- Applies confidence intervals to map robust process windows.
+**Summary for ML-PC Week 13:**  
+- Combines neural networks with physical laws via Physics-Informed ML.
+- Introduces PINNs and automatic differentiation.
+- Details Governing Equation Discovery using sparse regression.
+- Applies physical constraints to build data-efficient Grey-Box models.

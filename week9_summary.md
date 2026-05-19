@@ -1,50 +1,50 @@
-# Week 9 Summary: Inverse problems and process maps
+# Week 9 Summary: ML for characterization signals
 
 ## Cross-Book Summary
 
-### 1. Forward vs. Inverse Problems
-- **Causality Gap:** Forward problems are unique; inverse are ill-posed/multi-valued.
-- **Non-Gaussianity:** Inverse problems require Mixture Density Networks due to multimodality.
+### 1. Clustering Spectral Data
+- **K-Means:** Groups similar spectra (XRD/EDS) to identify distinct phases.
+- **Mini-Batch K-Means:** Speeds up high-throughput characterization.
+- **t-SNE:** Projects high-dimensional spectra to 2D to reveal outliers/relationships.
 
-### 2. Physics-Informed Enrichment
-- **Expert in the Loop:** Add physical transformations (e.g., FFT) to reduce training effort.
-- **Enrichment:** Combine raw data with physics features (PINNs).
+### 2. Autoencoders for Signal Processing
+- **Latent Representations:** Compresses spectra to essential physical information.
+- **Denoising:** Reconstructs clean signals from noisy inputs without blurring.
+- **Non-linear Compression:** Outperforms PCA for complex spectral libraries.
 
-### 3. Process Maps and Corridors
-- **Process Corridors:** Identifying stable parameter regions.
-- **ML-Guided Mapping:** Interpolating sparse experimental points via surrogates.
-- **Prescriptive ML:** Answering "What must I do?" instead of "What will happen?".
+### 3. Scientific Integrity in ML
+- **Peak Preservation:** ML must assist, not invent or smooth away real physics.
 
 ## 90-Minute Lecture Strategy
 
-### Part 1: Material Scientist's Dilemma
-- Inverse problem complexities.
-- Many-to-one mappings.
-- Uniqueness in systems.
+### Part 1: High-Dimensional Signals
+- Digital footprint: XRD, EDS, EELS, Raman.
+- Manual vs. automated peak-picking.
+- Vector spectrum representation.
 
-### Part 2: Physics-Informed ML
-- White vs. Grey vs. Black Box.
-- Feature Enrichment.
-- Loss function constraints.
+### Part 2: Clustering Structure
+- K-Means algorithm.
+- Elbow Method for phase counting.
+- Ternary alloy mapping.
 
-### Part 3: Solving the Inverse
-- Regression failure on inverse tasks.
-- Regularization and Mixture Models.
-- Heat treatment parameter case study.
+### Part 3: Visualizing the Unseen
+- t-SNE Stochastic Proximity.
+- Hidden relationships.
+- t-SNE distance pitfalls.
 
-### Part 4: Building Process Maps
-- Continuous maps from points.
-- Visualizing Safe Corridors.
-- Laser-material interactions mapping.
+### Part 4: Autoencoders & Denoising
+- Encoder-Bottleneck-Decoder.
+- Denoising characterization signals.
+- Bottlenecks as physical descriptors.
 
-### Part 5: ML for Material Design
-- Prescribing processing routes.
-- Simulation-aided training.
-- AI vs. human intuition.
+### Part 5: Data to Discovery
+- Real-time spectral analysis.
+- Physical consistency in ML.
+- Automated pipelines.
 
 ## Quarto Website Update (Summary)
-**Summary for ML-PC Week 9:**  
-- Explores Inverse Problems for materials design.
-- Contrasts multi-valued inverse tasks with causal forward problems.
-- Introduces Physics-Informed Learning and feature enrichment.
-- Demonstrates building Process Maps and Safe Corridors.
+**Summary for ML-PC Week 10:**  
+- Processes high-dimensional Characterization Signals (XRD, EDS).
+- Employs K-Means and t-SNE for automated phase identification.
+- Uses Autoencoders for latent space compression and denoising.
+- Enhances high-throughput data analysis while preserving physics.

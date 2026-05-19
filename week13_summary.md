@@ -1,49 +1,49 @@
-# Week 13 Summary: Physics-informed and constrained ML
+# Week 13 Summary: Integration, limits, and reflection
 
 ## Cross-Book Summary
 
-### 1. Physics-Informed Neural Networks (PINNs)
-- **Embedding Laws:** Enforce ODEs/PDEs via the loss function for physical consistency.
-- **Automatic Differentiation:** Exact derivative calculations enable NNs to evaluate physical equations.
-- **Boundary Conditions:** Methods like Lagaris substitution guarantee boundary compliance.
+### 1. Explainability: Opening the Black Box
+- **Beyond Prediction:** "Why" builds industrial trust over just "what".
+- **Sensitivity Analysis:** Perturb inputs to find primary process drivers.
+- **Levels of Explanation:** Tailor explanations for managers, experts, and data scientists.
 
-### 2. Governing Equation Discovery
-- **Dictionary-Based Regression:** Build a dictionary of candidate math functions.
-- **Sparse Identification:** Use regularized regression (Lasso) to discover physical laws from noisy data.
-- **Dimensional Reasoning:** Unit analysis ensures physically plausible discoveries.
+### 2. Causality and Semantics
+- **Causal Process Chains:** Shift from anomaly detection to early prediction.
+- **Ontologies:** Digitize semantic meaning (e.g., mapping variables to physical concepts) to enable algorithmic reasoning.
 
-### 3. Constraints in Materials Science
-- **Monotonicity:** Enforce required physical trends (e.g., hardness vs. alloying).
-- **Hybrid Modeling:** Combine physical "White-Box" models with data-driven "Black-Boxes" (Grey-Box).
+### 3. Limits of AI in Materials Science
+- **Data Bias:** Models trained only on "successes" cannot predict failures.
+- **AI Hallucinations:** Large models may generate physically impossible patterns.
+- **Expert's Role:** AI automates analysis, but human experts define questions and interpret final truths.
 
 ## 90-Minute Lecture Strategy
 
-### Part 1: Why Physics Matters
-- Limits of unconstrained Black-Box models.
-- Accurate but Physical models.
-- PINNs need less data.
+### Part 1: Course Synthesis
+- Recap: Signal formation to PINNs.
+- AI-driven materials lifecycle.
 
-### Part 2: Automatic Differentiation
-- GradientTape mechanics.
-- Derivatives as ML architecture components.
+### Part 2: Explainable ML
+- The Black Box problem.
+- Sensitivity analysis (Perturbation theory).
+- Feature importance (SHAP/LIME).
 
-### Part 3: Solving Physics with NNs
-- PINN Architectures: Data Loss + Physics Loss.
-- Enforcing Boundary Conditions.
-- 3D printing heat transfer case study.
+### Part 3: Causality & Semantics
+- Causal graphs (Cause → Mechanism → Effect).
+- Detection vs. Prediction.
+- Materials Ontologies.
 
-### Part 4: Equation Discovery
-- Sparse Regression and candidate dictionaries.
-- Damped pendulum equation case study.
-- Unit Analysis search pruning.
+### Part 4: Ethics and Limits
+- Representation and "Success" bias.
+- Dangers of over-extrapolation.
+- Environmental cost vs. PINN efficiency.
 
-### Part 5: The Grey-Box Future
-- Hybrid architectures vs. FEA.
-- Building industrial trust.
+### Part 5: Final Outlook
+- Self-driving labs.
+- Sustainable AI-driven discovery.
 
 ## Quarto Website Update (Summary)
-**Summary for ML-PC Week 13:**  
-- Combines neural networks with physical laws via Physics-Informed ML.
-- Introduces PINNs and automatic differentiation.
-- Details Governing Equation Discovery using sparse regression.
-- Applies physical constraints to build data-efficient Grey-Box models.
+**Summary for ML-PC Week 14:**  
+- Reflects on Explainability and Sensitivity Analysis to open black-box models.
+- Discusses Causality in process chains and Ontologies for semantic reasoning.
+- Critically assesses Data Bias and physical AI hallucinations.
+- Examines the evolving partnership between autonomous algorithms and human experts.
