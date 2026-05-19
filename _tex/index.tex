@@ -644,9 +644,9 @@ constrained vs unconstrained models.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\subsubsection{Unit IV --- Characterization, Automation, and Uncertainty
-(Weeks
-9--11)}\label{unit-iv-characterization-automation-and-uncertainty-weeks-911}
+\subsubsection{Unit IV --- Characterization, Transformers, and
+Uncertainty (Weeks
+9--11)}\label{unit-iv-characterization-transformers-and-uncertainty-weeks-911}
 
 \paragraph{Week 9 -- ML for characterization
 signals}\label{week-9-ml-for-characterization-signals}
@@ -656,9 +656,6 @@ Thursday, 11.06.2026, 16:15-17:45}
 
 \textbf{Slides:}
 \href{https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09_characterization_signals/10_characterization_signals.html}{Open}
-
-Companion deck (within Week 9): \textbf{Transformers for materials} ---
-\href{https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09b_transformers_for_materials/transformers_for_materials.html}{Open}
 
 \begin{itemize}
 \tightlist
@@ -692,21 +689,23 @@ components physically.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\paragraph{Week 10 -- Automation in microscopy and
-characterization}\label{week-10-automation-in-microscopy-and-characterization}
+\paragraph{Week 10 -- Transformers for materials
+characterization}\label{week-10-transformers-for-materials-characterization}
 
 \emph{Lecture: Tuesday, 16.06.2026, 14:15-15:45 \textbar{} Exercise:
 Thursday, 18.06.2026, 16:15-17:45}
 
 \textbf{Slides:}
-\href{https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_automation/11_automation.html}{Open}
+\href{https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_transformers_for_materials/transformers_for_materials.html}{Open}
 
 \begin{itemize}
 \tightlist
 \item
-  Autofocus, drift correction, parameter selection.
+  Why attention: long-range correlations beyond CNN receptive fields.
 \item
-  ML as a control component, not just a predictor.
+  Scaled dot-product attention and the Vision Transformer (ViT).
+\item
+  Flash Attention for tractable long sequences.
 \end{itemize}
 
 \textbf{Summary:}
@@ -714,21 +713,22 @@ Thursday, 18.06.2026, 16:15-17:45}
 \begin{itemize}
 \tightlist
 \item
-  \textbf{Autonomous characterization}: ML moves from passive analysis
-  to active instrument control
+  \textbf{Self-attention} and the \textbf{Vision Transformer (ViT)} for
+  materials imaging
 \item
-  \textbf{Multi-modal data fusion} (SEM + EDS + process logs) via
-  Bayesian frameworks
+  \textbf{Flash Attention}: long sequences without the L×L memory
+  blow-up
 \item
-  \textbf{Reinforcement learning} for instrument tuning and process
-  optimization
+  Applications: \textbf{ViT on 4D-STEM} diffraction; cross-attention
+  across LPBF layer stacks
 \item
-  Pipelines that autonomously find → characterize → decide the next
-  experiment
+  Scaling alternatives (\textbf{Mamba / state-space models}) --- and
+  when \emph{not} to reach for a transformer
 \end{itemize}
 
-\textbf{Exercise:} Implement a simple ML-assisted autofocus or defect
-detector.
+\textbf{Exercise:} Apply a small ViT / attention model to a
+characterization dataset (e.g.~4D-STEM patches); compare against a CNN
+baseline.
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 

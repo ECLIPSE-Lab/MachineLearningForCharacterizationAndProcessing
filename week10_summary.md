@@ -1,47 +1,49 @@
-# Week 10 Summary: Automation in microscopy and characterization
+# Week 10 Summary: Transformers for materials characterization
 
 ## Cross-Book Summary
 
-### 1. Multi-Modal Data Fusion
-- **Beyond Single Sensors:** Fuse images (SEM), chemistry (EDS), and orientations (EBSD) for a complete physical picture.
-- **Bayesian Sensor Fusion:** Combines uncertain measurements using precision-weighted posteriors.
-- **Latent Fusion:** Autoencoders/PCA find shared embeddings to combine diverse data types.
+### 1. Why Attention for Materials
+- **Long-range correlations:** Many characterization signals (diffraction, micrograph stacks) have dependencies that exceed practical CNN receptive fields.
+- **Self-attention:** Lets every token attend to every other token directly, capturing global structure in one layer.
 
-### 2. Reinforcement Learning for Control
-- **Autonomous Agent:** Learns to interact with environments (e.g., microscopes) to maximize rewards.
-- **RL Loop:** State (image), Action (adjust focus), Reward (sharpness/SNR).
-- **Policy Gradients:** Train NNs for optimal scientific decision-making.
+### 2. The Transformer Toolkit
+- **Scaled dot-product attention:** The core operation and its O(L²) cost.
+- **Vision Transformer (ViT):** Patchify → embed → encode → classify; transformers applied to image-like data.
+- **Flash Attention:** A fused kernel that makes long sequences tractable without materialising the L×L matrix.
 
-### 3. Computer Vision in the Lab
-- **Automated Workflows:** CNNs for real-time ROI detection, autofocus, and pattern classification.
+### 3. Materials Applications
+- **ViT on 4D-STEM:** Diffraction patches become a token sequence for a ViT encoder.
+- **Cross-attention across LPBF layers:** Long-stack micrograph context for additive-manufacturing monitoring.
+
+### 4. Scaling Alternatives (Awareness Only)
+- **Mamba / structured state-space models (SSMs):** O(L) compute, constant memory; competitive on long sequences. Cross-reference the Week 7 time-series deck.
 
 ## 90-Minute Lecture Strategy
 
-### Part 1: Toward the Self-Driving Lab
-- The automation stack.
-- Autonomous Characterization: Scan, Analyze, Decide, Repeat.
+### Part 1: Where We Are
+- Recap of Week 9 (characterization signals) and why we now need attention.
 
-### Part 2: ML-Assisted Instrument Tuning
-- Autofocus and Beam Alignment.
-- Real-time feedback loops.
+### Part 2: Why Attention
+- Long-range correlations exceed CNN receptive fields.
 
-### Part 3: Fusing Multi-Modal Data
-- Bayesian Fusion for sensor noise.
-- Multi-head NNs.
-- Combining XRD and EDS.
+### Part 3: Mechanics
+- Scaled dot-product attention: the formula and the cost.
+- ViT in five lines: patchify, embed, encode, classify.
+- Flash Attention: the kernel that makes long sequences tractable.
 
-### Part 4: RL for Lab Control
-- RL Framework overview.
-- Reward Functions for science.
-- Industrial glass processing control.
+### Part 4: Materials Applications
+- ViT on 4D-STEM diffraction.
+- Cross-attention across LPBF layer stacks.
 
-### Part 5: The Integrated Pipeline
-- "On-the-fly" discovery.
-- Automation challenges: Latency and safety.
+### Part 5: Practice and Pitfalls
+- `nn.MultiheadAttention` vs `F.scaled_dot_product_attention`.
+- Scaling alternatives (Mamba / SSMs) — mention only.
+- Anti-patterns: what *not* to do.
+- Exercise preview.
 
 ## Quarto Website Update (Summary)
-**Summary for ML-PC Week 11:**  
-- Explores Autonomous Characterization and active instrument control.
-- Introduces Multi-Modal Data Fusion (Bayesian and Latent).
-- Uses Reinforcement Learning (RL) for laboratory task automation.
-- Details building integrated pipelines for "on-the-fly" scientific discovery.
+**Summary for ML-PC Week 10:**
+- Motivates self-attention for long-range structure in characterization data.
+- Covers scaled dot-product attention, the Vision Transformer, and Flash Attention.
+- Applies transformers to 4D-STEM diffraction and LPBF layer-stack context.
+- Notes Mamba / state-space models as scaling alternatives, and when not to reach for a transformer.

@@ -516,8 +516,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         map; compare constrained vs unconstrained models.</p>
       </sec>
     </sec>
-    <sec id="unit-iv-characterization-automation-and-uncertainty-weeks-911">
-      <title>1.3.4 Unit IV — Characterization, Automation, and
+    <sec id="unit-iv-characterization-transformers-and-uncertainty-weeks-911">
+      <title>1.3.4 Unit IV — Characterization, Transformers, and
       Uncertainty (Weeks 9–11)</title>
       <sec id="week-9-ml-for-characterization-signals">
         <title>1.3.4.1 Week 9 – ML for characterization signals</title>
@@ -525,9 +525,6 @@ as data leakage, overfitting, and spurious correlations.</p>
         Thursday, 11.06.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
         <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09_characterization_signals/10_characterization_signals.html">Open</ext-link></p>
-        <p>Companion deck (within Week 9): <bold>Transformers for
-        materials</bold> —
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09b_transformers_for_materials/transformers_for_materials.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Spectral data: XRD, EELS, EDS.</p>
@@ -561,42 +558,49 @@ as data leakage, overfitting, and spurious correlations.</p>
         <p><bold>Exercise:</bold> Apply PCA/NMF to spectral datasets;
         interpret components physically.</p>
       </sec>
-      <sec id="week-10-automation-in-microscopy-and-characterization">
-        <title>1.3.4.2 Week 10 – Automation in microscopy and
+      <sec id="week-10-transformers-for-materials-characterization">
+        <title>1.3.4.2 Week 10 – Transformers for materials
         characterization</title>
         <p><italic>Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise:
         Thursday, 18.06.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_automation/11_automation.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_transformers_for_materials/transformers_for_materials.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
-            <p>Autofocus, drift correction, parameter selection.</p>
+            <p>Why attention: long-range correlations beyond CNN
+            receptive fields.</p>
           </list-item>
           <list-item>
-            <p>ML as a control component, not just a predictor.</p>
+            <p>Scaled dot-product attention and the Vision Transformer
+            (ViT).</p>
+          </list-item>
+          <list-item>
+            <p>Flash Attention for tractable long sequences.</p>
           </list-item>
         </list>
         <p><bold>Summary:</bold></p>
         <list list-type="bullet">
           <list-item>
-            <p><bold>Autonomous characterization</bold>: ML moves from
-            passive analysis to active instrument control</p>
+            <p><bold>Self-attention</bold> and the <bold>Vision
+            Transformer (ViT)</bold> for materials imaging</p>
           </list-item>
           <list-item>
-            <p><bold>Multi-modal data fusion</bold> (SEM + EDS + process
-            logs) via Bayesian frameworks</p>
+            <p><bold>Flash Attention</bold>: long sequences without the
+            L×L memory blow-up</p>
           </list-item>
           <list-item>
-            <p><bold>Reinforcement learning</bold> for instrument tuning
-            and process optimization</p>
+            <p>Applications: <bold>ViT on 4D-STEM</bold> diffraction;
+            cross-attention across LPBF layer stacks</p>
           </list-item>
           <list-item>
-            <p>Pipelines that autonomously find → characterize → decide
-            the next experiment</p>
+            <p>Scaling alternatives (<bold>Mamba / state-space
+            models</bold>) — and when <italic>not</italic> to reach for
+            a transformer</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold> Implement a simple ML-assisted
-        autofocus or defect detector.</p>
+        <p><bold>Exercise:</bold> Apply a small ViT / attention model to
+        a characterization dataset (e.g. 4D-STEM patches); compare
+        against a CNN baseline.</p>
       </sec>
       <sec id="week-11-uncertainty-aware-regression-gaussian-processes">
         <title>1.3.4.3 Week 11 – Uncertainty-aware regression &amp;
@@ -1250,8 +1254,8 @@ as data leakage, overfitting, and spurious correlations.</p>
         map; compare constrained vs unconstrained models.</p>
       </sec>
     </sec>
-    <sec id="unit-iv-characterization-automation-and-uncertainty-weeks-911-nb-article">
-      <title>1.3.4 Unit IV — Characterization, Automation, and
+    <sec id="unit-iv-characterization-transformers-and-uncertainty-weeks-911-nb-article">
+      <title>1.3.4 Unit IV — Characterization, Transformers, and
       Uncertainty (Weeks 9–11)</title>
       <sec id="week-9-ml-for-characterization-signals-nb-article">
         <title>1.3.4.1 Week 9 – ML for characterization signals</title>
@@ -1259,9 +1263,6 @@ as data leakage, overfitting, and spurious correlations.</p>
         Thursday, 11.06.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
         <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09_characterization_signals/10_characterization_signals.html">Open</ext-link></p>
-        <p>Companion deck (within Week 9): <bold>Transformers for
-        materials</bold> —
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09b_transformers_for_materials/transformers_for_materials.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Spectral data: XRD, EELS, EDS.</p>
@@ -1295,42 +1296,49 @@ as data leakage, overfitting, and spurious correlations.</p>
         <p><bold>Exercise:</bold> Apply PCA/NMF to spectral datasets;
         interpret components physically.</p>
       </sec>
-      <sec id="week-10-automation-in-microscopy-and-characterization-nb-article">
-        <title>1.3.4.2 Week 10 – Automation in microscopy and
+      <sec id="week-10-transformers-for-materials-characterization-nb-article">
+        <title>1.3.4.2 Week 10 – Transformers for materials
         characterization</title>
         <p><italic>Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise:
         Thursday, 18.06.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_automation/11_automation.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_transformers_for_materials/transformers_for_materials.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
-            <p>Autofocus, drift correction, parameter selection.</p>
+            <p>Why attention: long-range correlations beyond CNN
+            receptive fields.</p>
           </list-item>
           <list-item>
-            <p>ML as a control component, not just a predictor.</p>
+            <p>Scaled dot-product attention and the Vision Transformer
+            (ViT).</p>
+          </list-item>
+          <list-item>
+            <p>Flash Attention for tractable long sequences.</p>
           </list-item>
         </list>
         <p><bold>Summary:</bold></p>
         <list list-type="bullet">
           <list-item>
-            <p><bold>Autonomous characterization</bold>: ML moves from
-            passive analysis to active instrument control</p>
+            <p><bold>Self-attention</bold> and the <bold>Vision
+            Transformer (ViT)</bold> for materials imaging</p>
           </list-item>
           <list-item>
-            <p><bold>Multi-modal data fusion</bold> (SEM + EDS + process
-            logs) via Bayesian frameworks</p>
+            <p><bold>Flash Attention</bold>: long sequences without the
+            L×L memory blow-up</p>
           </list-item>
           <list-item>
-            <p><bold>Reinforcement learning</bold> for instrument tuning
-            and process optimization</p>
+            <p>Applications: <bold>ViT on 4D-STEM</bold> diffraction;
+            cross-attention across LPBF layer stacks</p>
           </list-item>
           <list-item>
-            <p>Pipelines that autonomously find → characterize → decide
-            the next experiment</p>
+            <p>Scaling alternatives (<bold>Mamba / state-space
+            models</bold>) — and when <italic>not</italic> to reach for
+            a transformer</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold> Implement a simple ML-assisted
-        autofocus or defect detector.</p>
+        <p><bold>Exercise:</bold> Apply a small ViT / attention model to
+        a characterization dataset (e.g. 4D-STEM patches); compare
+        against a CNN baseline.</p>
       </sec>
       <sec id="week-11-uncertainty-aware-regression-gaussian-processes-nb-article">
         <title>1.3.4.3 Week 11 – Uncertainty-aware regression &amp;
@@ -3102,129 +3110,141 @@ as data leakage, overfitting, and spurious correlations.</p>
 </front-stub>
 
 <body>
-<sec id="week-10-summary-automation-in-microscopy-and-characterization-nb-13">
-  <title>Week 10 Summary: Automation in microscopy and
+<sec id="week-10-summary-transformers-for-materials-characterization-nb-13">
+  <title>Week 10 Summary: Transformers for materials
   characterization</title>
   <sec id="cross-book-summary-nb-13">
     <title>Cross-Book Summary</title>
-    <sec id="multi-modal-data-fusion-nb-13">
-      <title>1. Multi-Modal Data Fusion</title>
+    <sec id="why-attention-for-materials-nb-13">
+      <title>1. Why Attention for Materials</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Beyond Single Sensors:</bold> Fuse images (SEM),
-          chemistry (EDS), and orientations (EBSD) for a complete
-          physical picture.</p>
+          <p><bold>Long-range correlations:</bold> Many characterization
+          signals (diffraction, micrograph stacks) have dependencies
+          that exceed practical CNN receptive fields.</p>
         </list-item>
         <list-item>
-          <p><bold>Bayesian Sensor Fusion:</bold> Combines uncertain
-          measurements using precision-weighted posteriors.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Latent Fusion:</bold> Autoencoders/PCA find shared
-          embeddings to combine diverse data types.</p>
+          <p><bold>Self-attention:</bold> Lets every token attend to
+          every other token directly, capturing global structure in one
+          layer.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="reinforcement-learning-for-control-nb-13">
-      <title>2. Reinforcement Learning for Control</title>
+    <sec id="the-transformer-toolkit-nb-13">
+      <title>2. The Transformer Toolkit</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Autonomous Agent:</bold> Learns to interact with
-          environments (e.g., microscopes) to maximize rewards.</p>
+          <p><bold>Scaled dot-product attention:</bold> The core
+          operation and its O(L²) cost.</p>
         </list-item>
         <list-item>
-          <p><bold>RL Loop:</bold> State (image), Action (adjust focus),
-          Reward (sharpness/SNR).</p>
+          <p><bold>Vision Transformer (ViT):</bold> Patchify → embed →
+          encode → classify; transformers applied to image-like
+          data.</p>
         </list-item>
         <list-item>
-          <p><bold>Policy Gradients:</bold> Train NNs for optimal
-          scientific decision-making.</p>
+          <p><bold>Flash Attention:</bold> A fused kernel that makes
+          long sequences tractable without materialising the L×L
+          matrix.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="computer-vision-in-the-lab-nb-13">
-      <title>3. Computer Vision in the Lab</title>
+    <sec id="materials-applications-nb-13">
+      <title>3. Materials Applications</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Automated Workflows:</bold> CNNs for real-time ROI
-          detection, autofocus, and pattern classification.</p>
+          <p><bold>ViT on 4D-STEM:</bold> Diffraction patches become a
+          token sequence for a ViT encoder.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Cross-attention across LPBF layers:</bold> Long-stack
+          micrograph context for additive-manufacturing monitoring.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="scaling-alternatives-awareness-only-nb-13">
+      <title>4. Scaling Alternatives (Awareness Only)</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Mamba / structured state-space models (SSMs):</bold>
+          O(L) compute, constant memory; competitive on long sequences.
+          Cross-reference the Week 7 time-series deck.</p>
         </list-item>
       </list>
     </sec>
   </sec>
   <sec id="minute-lecture-strategy-nb-13">
     <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-toward-the-self-driving-lab-nb-13">
-      <title>Part 1: Toward the Self-Driving Lab</title>
+    <sec id="part-1-where-we-are-nb-13">
+      <title>Part 1: Where We Are</title>
       <list list-type="bullet">
         <list-item>
-          <p>The automation stack.</p>
-        </list-item>
-        <list-item>
-          <p>Autonomous Characterization: Scan, Analyze, Decide,
-          Repeat.</p>
+          <p>Recap of Week 9 (characterization signals) and why we now
+          need attention.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-ml-assisted-instrument-tuning-nb-13">
-      <title>Part 2: ML-Assisted Instrument Tuning</title>
+    <sec id="part-2-why-attention-nb-13">
+      <title>Part 2: Why Attention</title>
       <list list-type="bullet">
         <list-item>
-          <p>Autofocus and Beam Alignment.</p>
-        </list-item>
-        <list-item>
-          <p>Real-time feedback loops.</p>
+          <p>Long-range correlations exceed CNN receptive fields.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-3-fusing-multi-modal-data-nb-13">
-      <title>Part 3: Fusing Multi-Modal Data</title>
+    <sec id="part-3-mechanics-nb-13">
+      <title>Part 3: Mechanics</title>
       <list list-type="bullet">
         <list-item>
-          <p>Bayesian Fusion for sensor noise.</p>
+          <p>Scaled dot-product attention: the formula and the cost.</p>
         </list-item>
         <list-item>
-          <p>Multi-head NNs.</p>
+          <p>ViT in five lines: patchify, embed, encode, classify.</p>
         </list-item>
         <list-item>
-          <p>Combining XRD and EDS.</p>
+          <p>Flash Attention: the kernel that makes long sequences
+          tractable.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-4-rl-for-lab-control-nb-13">
-      <title>Part 4: RL for Lab Control</title>
+    <sec id="part-4-materials-applications-nb-13">
+      <title>Part 4: Materials Applications</title>
       <list list-type="bullet">
         <list-item>
-          <p>RL Framework overview.</p>
+          <p>ViT on 4D-STEM diffraction.</p>
         </list-item>
         <list-item>
-          <p>Reward Functions for science.</p>
-        </list-item>
-        <list-item>
-          <p>Industrial glass processing control.</p>
+          <p>Cross-attention across LPBF layer stacks.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-5-the-integrated-pipeline-nb-13">
-      <title>Part 5: The Integrated Pipeline</title>
+    <sec id="part-5-practice-and-pitfalls-nb-13">
+      <title>Part 5: Practice and Pitfalls</title>
       <list list-type="bullet">
         <list-item>
-          <p>“On-the-fly” discovery.</p>
+          <p><monospace>nn.MultiheadAttention</monospace> vs
+          <monospace>F.scaled_dot_product_attention</monospace>.</p>
         </list-item>
         <list-item>
-          <p>Automation challenges: Latency and safety.</p>
+          <p>Scaling alternatives (Mamba / SSMs) — mention only.</p>
+        </list-item>
+        <list-item>
+          <p>Anti-patterns: what <italic>not</italic> to do.</p>
+        </list-item>
+        <list-item>
+          <p>Exercise preview.</p>
         </list-item>
       </list>
     </sec>
   </sec>
   <sec id="quarto-website-update-summary-nb-13">
     <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 11:</bold>
-    - Explores Autonomous Characterization and active instrument
-    control. - Introduces Multi-Modal Data Fusion (Bayesian and Latent).
-    - Uses Reinforcement Learning (RL) for laboratory task automation. -
-    Details building integrated pipelines for “on-the-fly” scientific
-    discovery.</p>
+    <p><bold>Summary for ML-PC Week 10:</bold> - Motivates
+    self-attention for long-range structure in characterization data. -
+    Covers scaled dot-product attention, the Vision Transformer, and
+    Flash Attention. - Applies transformers to 4D-STEM diffraction and
+    LPBF layer-stack context. - Notes Mamba / state-space models as
+    scaling alternatives, and when not to reach for a transformer.</p>
   </sec>
 </sec>
 </body>
