@@ -125,7 +125,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-fedc0afa5eed45b88079642ee2c6e752.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-58678528f02177bed1400fe3ccbb0fa7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-99531da96f133e8d6986ee8266cfdc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
      <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -139,7 +139,7 @@
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Week 10 Summary: ML for characterization signals</h6>
+      <h6><i class="bi bi-journal-code"></i> Week 10 Summary: Automation in microscopy and characterization</h6>
 
             <a href="./week10_summary.md" class="btn btn-primary quarto-download-embed" download="week10_summary.md">Download Notebook</a>
           </div>
@@ -150,21 +150,21 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#week-10-summary-ml-for-characterization-signals" id="toc-week-10-summary-ml-for-characterization-signals" class="nav-link active" data-scroll-target="#week-10-summary-ml-for-characterization-signals">Week 10 Summary: ML for characterization signals</a>
+  <li><a href="#week-10-summary-automation-in-microscopy-and-characterization" id="toc-week-10-summary-automation-in-microscopy-and-characterization" class="nav-link active" data-scroll-target="#week-10-summary-automation-in-microscopy-and-characterization">Week 10 Summary: Automation in microscopy and characterization</a>
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#clustering-spectral-data" id="toc-clustering-spectral-data" class="nav-link" data-scroll-target="#clustering-spectral-data">1. Clustering Spectral Data</a></li>
-  <li><a href="#autoencoders-for-signal-processing" id="toc-autoencoders-for-signal-processing" class="nav-link" data-scroll-target="#autoencoders-for-signal-processing">2. Autoencoders for Signal Processing</a></li>
-  <li><a href="#scientific-integrity-in-ml" id="toc-scientific-integrity-in-ml" class="nav-link" data-scroll-target="#scientific-integrity-in-ml">3. Scientific Integrity in ML</a></li>
+  <li><a href="#multi-modal-data-fusion" id="toc-multi-modal-data-fusion" class="nav-link" data-scroll-target="#multi-modal-data-fusion">1. Multi-Modal Data Fusion</a></li>
+  <li><a href="#reinforcement-learning-for-control" id="toc-reinforcement-learning-for-control" class="nav-link" data-scroll-target="#reinforcement-learning-for-control">2. Reinforcement Learning for Control</a></li>
+  <li><a href="#computer-vision-in-the-lab" id="toc-computer-vision-in-the-lab" class="nav-link" data-scroll-target="#computer-vision-in-the-lab">3. Computer Vision in the Lab</a></li>
   </ul></li>
   <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-high-dimensional-signals" id="toc-part-1-high-dimensional-signals" class="nav-link" data-scroll-target="#part-1-high-dimensional-signals">Part 1: High-Dimensional Signals</a></li>
-  <li><a href="#part-2-clustering-structure" id="toc-part-2-clustering-structure" class="nav-link" data-scroll-target="#part-2-clustering-structure">Part 2: Clustering Structure</a></li>
-  <li><a href="#part-3-visualizing-the-unseen" id="toc-part-3-visualizing-the-unseen" class="nav-link" data-scroll-target="#part-3-visualizing-the-unseen">Part 3: Visualizing the Unseen</a></li>
-  <li><a href="#part-4-autoencoders-denoising" id="toc-part-4-autoencoders-denoising" class="nav-link" data-scroll-target="#part-4-autoencoders-denoising">Part 4: Autoencoders &amp; Denoising</a></li>
-  <li><a href="#part-5-data-to-discovery" id="toc-part-5-data-to-discovery" class="nav-link" data-scroll-target="#part-5-data-to-discovery">Part 5: Data to Discovery</a></li>
+  <li><a href="#part-1-toward-the-self-driving-lab" id="toc-part-1-toward-the-self-driving-lab" class="nav-link" data-scroll-target="#part-1-toward-the-self-driving-lab">Part 1: Toward the Self-Driving Lab</a></li>
+  <li><a href="#part-2-ml-assisted-instrument-tuning" id="toc-part-2-ml-assisted-instrument-tuning" class="nav-link" data-scroll-target="#part-2-ml-assisted-instrument-tuning">Part 2: ML-Assisted Instrument Tuning</a></li>
+  <li><a href="#part-3-fusing-multi-modal-data" id="toc-part-3-fusing-multi-modal-data" class="nav-link" data-scroll-target="#part-3-fusing-multi-modal-data">Part 3: Fusing Multi-Modal Data</a></li>
+  <li><a href="#part-4-rl-for-lab-control" id="toc-part-4-rl-for-lab-control" class="nav-link" data-scroll-target="#part-4-rl-for-lab-control">Part 4: RL for Lab Control</a></li>
+  <li><a href="#part-5-the-integrated-pipeline" id="toc-part-5-the-integrated-pipeline" class="nav-link" data-scroll-target="#part-5-the-integrated-pipeline">Part 5: The Integrated Pipeline</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -173,80 +173,77 @@
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
-<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-10-summary-ml-for-characterization-signals" class="level1">
-<h1>Week 10 Summary: ML for characterization signals</h1>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-10-summary-automation-in-microscopy-and-characterization" class="level1">
+<h1>Week 10 Summary: Automation in microscopy and characterization</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="clustering-spectral-data" class="level3">
-<h3 class="anchored" data-anchor-id="clustering-spectral-data">1. Clustering Spectral Data</h3>
+<section id="multi-modal-data-fusion" class="level3">
+<h3 class="anchored" data-anchor-id="multi-modal-data-fusion">1. Multi-Modal Data Fusion</h3>
 <ul>
-<li><strong>K-Means:</strong> Groups similar spectra (XRD/EDS) to identify distinct phases.</li>
-<li><strong>Mini-Batch K-Means:</strong> Speeds up high-throughput characterization.</li>
-<li><strong>t-SNE:</strong> Projects high-dimensional spectra to 2D to reveal outliers/relationships.</li>
+<li><strong>Beyond Single Sensors:</strong> Fuse images (SEM), chemistry (EDS), and orientations (EBSD) for a complete physical picture.</li>
+<li><strong>Bayesian Sensor Fusion:</strong> Combines uncertain measurements using precision-weighted posteriors.</li>
+<li><strong>Latent Fusion:</strong> Autoencoders/PCA find shared embeddings to combine diverse data types.</li>
 </ul>
 </section>
-<section id="autoencoders-for-signal-processing" class="level3">
-<h3 class="anchored" data-anchor-id="autoencoders-for-signal-processing">2. Autoencoders for Signal Processing</h3>
+<section id="reinforcement-learning-for-control" class="level3">
+<h3 class="anchored" data-anchor-id="reinforcement-learning-for-control">2. Reinforcement Learning for Control</h3>
 <ul>
-<li><strong>Latent Representations:</strong> Compresses spectra to essential physical information.</li>
-<li><strong>Denoising:</strong> Reconstructs clean signals from noisy inputs without blurring.</li>
-<li><strong>Non-linear Compression:</strong> Outperforms PCA for complex spectral libraries.</li>
+<li><strong>Autonomous Agent:</strong> Learns to interact with environments (e.g., microscopes) to maximize rewards.</li>
+<li><strong>RL Loop:</strong> State (image), Action (adjust focus), Reward (sharpness/SNR).</li>
+<li><strong>Policy Gradients:</strong> Train NNs for optimal scientific decision-making.</li>
 </ul>
 </section>
-<section id="scientific-integrity-in-ml" class="level3">
-<h3 class="anchored" data-anchor-id="scientific-integrity-in-ml">3. Scientific Integrity in ML</h3>
+<section id="computer-vision-in-the-lab" class="level3">
+<h3 class="anchored" data-anchor-id="computer-vision-in-the-lab">3. Computer Vision in the Lab</h3>
 <ul>
-<li><strong>Peak Preservation:</strong> ML must assist, not invent or smooth away real physics.</li>
+<li><strong>Automated Workflows:</strong> CNNs for real-time ROI detection, autofocus, and pattern classification.</li>
 </ul>
 </section>
 </section>
 <section id="minute-lecture-strategy" class="level2">
 <h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
-<section id="part-1-high-dimensional-signals" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-high-dimensional-signals">Part 1: High-Dimensional Signals</h3>
+<section id="part-1-toward-the-self-driving-lab" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-toward-the-self-driving-lab">Part 1: Toward the Self-Driving Lab</h3>
 <ul>
-<li>Digital footprint: XRD, EDS, EELS, Raman.</li>
-<li>Manual vs.&nbsp;automated peak-picking.</li>
-<li>Vector spectrum representation.</li>
+<li>The automation stack.</li>
+<li>Autonomous Characterization: Scan, Analyze, Decide, Repeat.</li>
 </ul>
 </section>
-<section id="part-2-clustering-structure" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-clustering-structure">Part 2: Clustering Structure</h3>
+<section id="part-2-ml-assisted-instrument-tuning" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-ml-assisted-instrument-tuning">Part 2: ML-Assisted Instrument Tuning</h3>
 <ul>
-<li>K-Means algorithm.</li>
-<li>Elbow Method for phase counting.</li>
-<li>Ternary alloy mapping.</li>
+<li>Autofocus and Beam Alignment.</li>
+<li>Real-time feedback loops.</li>
 </ul>
 </section>
-<section id="part-3-visualizing-the-unseen" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-visualizing-the-unseen">Part 3: Visualizing the Unseen</h3>
+<section id="part-3-fusing-multi-modal-data" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-fusing-multi-modal-data">Part 3: Fusing Multi-Modal Data</h3>
 <ul>
-<li>t-SNE Stochastic Proximity.</li>
-<li>Hidden relationships.</li>
-<li>t-SNE distance pitfalls.</li>
+<li>Bayesian Fusion for sensor noise.</li>
+<li>Multi-head NNs.</li>
+<li>Combining XRD and EDS.</li>
 </ul>
 </section>
-<section id="part-4-autoencoders-denoising" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-autoencoders-denoising">Part 4: Autoencoders &amp; Denoising</h3>
+<section id="part-4-rl-for-lab-control" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-rl-for-lab-control">Part 4: RL for Lab Control</h3>
 <ul>
-<li>Encoder-Bottleneck-Decoder.</li>
-<li>Denoising characterization signals.</li>
-<li>Bottlenecks as physical descriptors.</li>
+<li>RL Framework overview.</li>
+<li>Reward Functions for science.</li>
+<li>Industrial glass processing control.</li>
 </ul>
 </section>
-<section id="part-5-data-to-discovery" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-data-to-discovery">Part 5: Data to Discovery</h3>
+<section id="part-5-the-integrated-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-the-integrated-pipeline">Part 5: The Integrated Pipeline</h3>
 <ul>
-<li>Real-time spectral analysis.</li>
-<li>Physical consistency in ML.</li>
-<li>Automated pipelines.</li>
+<li>“On-the-fly” discovery.</li>
+<li>Automation challenges: Latency and safety.</li>
 </ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
-<p><strong>Summary for ML-PC Week 10:</strong><br>
-- Processes high-dimensional Characterization Signals (XRD, EDS). - Employs K-Means and t-SNE for automated phase identification. - Uses Autoencoders for latent space compression and denoising. - Enhances high-throughput data analysis while preserving physics.</p>
+<p><strong>Summary for ML-PC Week 11:</strong><br>
+- Explores Autonomous Characterization and active instrument control. - Introduces Multi-Modal Data Fusion (Bayesian and Latent). - Uses Reinforcement Learning (RL) for laboratory task automation. - Details building integrated pipelines for “on-the-fly” scientific discovery.</p>
 </section>
 </section>
      </main>

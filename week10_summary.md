@@ -1,50 +1,47 @@
-# Week 10 Summary: ML for characterization signals
+# Week 10 Summary: Automation in microscopy and characterization
 
 ## Cross-Book Summary
 
-### 1. Clustering Spectral Data
-- **K-Means:** Groups similar spectra (XRD/EDS) to identify distinct phases.
-- **Mini-Batch K-Means:** Speeds up high-throughput characterization.
-- **t-SNE:** Projects high-dimensional spectra to 2D to reveal outliers/relationships.
+### 1. Multi-Modal Data Fusion
+- **Beyond Single Sensors:** Fuse images (SEM), chemistry (EDS), and orientations (EBSD) for a complete physical picture.
+- **Bayesian Sensor Fusion:** Combines uncertain measurements using precision-weighted posteriors.
+- **Latent Fusion:** Autoencoders/PCA find shared embeddings to combine diverse data types.
 
-### 2. Autoencoders for Signal Processing
-- **Latent Representations:** Compresses spectra to essential physical information.
-- **Denoising:** Reconstructs clean signals from noisy inputs without blurring.
-- **Non-linear Compression:** Outperforms PCA for complex spectral libraries.
+### 2. Reinforcement Learning for Control
+- **Autonomous Agent:** Learns to interact with environments (e.g., microscopes) to maximize rewards.
+- **RL Loop:** State (image), Action (adjust focus), Reward (sharpness/SNR).
+- **Policy Gradients:** Train NNs for optimal scientific decision-making.
 
-### 3. Scientific Integrity in ML
-- **Peak Preservation:** ML must assist, not invent or smooth away real physics.
+### 3. Computer Vision in the Lab
+- **Automated Workflows:** CNNs for real-time ROI detection, autofocus, and pattern classification.
 
 ## 90-Minute Lecture Strategy
 
-### Part 1: High-Dimensional Signals
-- Digital footprint: XRD, EDS, EELS, Raman.
-- Manual vs. automated peak-picking.
-- Vector spectrum representation.
+### Part 1: Toward the Self-Driving Lab
+- The automation stack.
+- Autonomous Characterization: Scan, Analyze, Decide, Repeat.
 
-### Part 2: Clustering Structure
-- K-Means algorithm.
-- Elbow Method for phase counting.
-- Ternary alloy mapping.
+### Part 2: ML-Assisted Instrument Tuning
+- Autofocus and Beam Alignment.
+- Real-time feedback loops.
 
-### Part 3: Visualizing the Unseen
-- t-SNE Stochastic Proximity.
-- Hidden relationships.
-- t-SNE distance pitfalls.
+### Part 3: Fusing Multi-Modal Data
+- Bayesian Fusion for sensor noise.
+- Multi-head NNs.
+- Combining XRD and EDS.
 
-### Part 4: Autoencoders & Denoising
-- Encoder-Bottleneck-Decoder.
-- Denoising characterization signals.
-- Bottlenecks as physical descriptors.
+### Part 4: RL for Lab Control
+- RL Framework overview.
+- Reward Functions for science.
+- Industrial glass processing control.
 
-### Part 5: Data to Discovery
-- Real-time spectral analysis.
-- Physical consistency in ML.
-- Automated pipelines.
+### Part 5: The Integrated Pipeline
+- "On-the-fly" discovery.
+- Automation challenges: Latency and safety.
 
 ## Quarto Website Update (Summary)
-**Summary for ML-PC Week 10:**  
-- Processes high-dimensional Characterization Signals (XRD, EDS).
-- Employs K-Means and t-SNE for automated phase identification.
-- Uses Autoencoders for latent space compression and denoising.
-- Enhances high-throughput data analysis while preserving physics.
+**Summary for ML-PC Week 11:**  
+- Explores Autonomous Characterization and active instrument control.
+- Introduces Multi-Modal Data Fusion (Bayesian and Latent).
+- Uses Reinforcement Learning (RL) for laboratory task automation.
+- Details building integrated pipelines for "on-the-fly" scientific discovery.

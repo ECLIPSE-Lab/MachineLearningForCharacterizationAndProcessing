@@ -125,7 +125,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-fedc0afa5eed45b88079642ee2c6e752.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-58678528f02177bed1400fe3ccbb0fa7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-99531da96f133e8d6986ee8266cfdc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
      <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -139,7 +139,7 @@
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Week 13 Summary: Physics-informed and constrained ML</h6>
+      <h6><i class="bi bi-journal-code"></i> Week 13 Summary: Integration, limits, and reflection</h6>
 
             <a href="./week13_summary.md" class="btn btn-primary quarto-download-embed" download="week13_summary.md">Download Notebook</a>
           </div>
@@ -150,21 +150,21 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#week-13-summary-physics-informed-and-constrained-ml" id="toc-week-13-summary-physics-informed-and-constrained-ml" class="nav-link active" data-scroll-target="#week-13-summary-physics-informed-and-constrained-ml">Week 13 Summary: Physics-informed and constrained ML</a>
+  <li><a href="#week-13-summary-integration-limits-and-reflection" id="toc-week-13-summary-integration-limits-and-reflection" class="nav-link active" data-scroll-target="#week-13-summary-integration-limits-and-reflection">Week 13 Summary: Integration, limits, and reflection</a>
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#physics-informed-neural-networks-pinns" id="toc-physics-informed-neural-networks-pinns" class="nav-link" data-scroll-target="#physics-informed-neural-networks-pinns">1. Physics-Informed Neural Networks (PINNs)</a></li>
-  <li><a href="#governing-equation-discovery" id="toc-governing-equation-discovery" class="nav-link" data-scroll-target="#governing-equation-discovery">2. Governing Equation Discovery</a></li>
-  <li><a href="#constraints-in-materials-science" id="toc-constraints-in-materials-science" class="nav-link" data-scroll-target="#constraints-in-materials-science">3. Constraints in Materials Science</a></li>
+  <li><a href="#explainability-opening-the-black-box" id="toc-explainability-opening-the-black-box" class="nav-link" data-scroll-target="#explainability-opening-the-black-box">1. Explainability: Opening the Black Box</a></li>
+  <li><a href="#causality-and-semantics" id="toc-causality-and-semantics" class="nav-link" data-scroll-target="#causality-and-semantics">2. Causality and Semantics</a></li>
+  <li><a href="#limits-of-ai-in-materials-science" id="toc-limits-of-ai-in-materials-science" class="nav-link" data-scroll-target="#limits-of-ai-in-materials-science">3. Limits of AI in Materials Science</a></li>
   </ul></li>
   <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-why-physics-matters" id="toc-part-1-why-physics-matters" class="nav-link" data-scroll-target="#part-1-why-physics-matters">Part 1: Why Physics Matters</a></li>
-  <li><a href="#part-2-automatic-differentiation" id="toc-part-2-automatic-differentiation" class="nav-link" data-scroll-target="#part-2-automatic-differentiation">Part 2: Automatic Differentiation</a></li>
-  <li><a href="#part-3-solving-physics-with-nns" id="toc-part-3-solving-physics-with-nns" class="nav-link" data-scroll-target="#part-3-solving-physics-with-nns">Part 3: Solving Physics with NNs</a></li>
-  <li><a href="#part-4-equation-discovery" id="toc-part-4-equation-discovery" class="nav-link" data-scroll-target="#part-4-equation-discovery">Part 4: Equation Discovery</a></li>
-  <li><a href="#part-5-the-grey-box-future" id="toc-part-5-the-grey-box-future" class="nav-link" data-scroll-target="#part-5-the-grey-box-future">Part 5: The Grey-Box Future</a></li>
+  <li><a href="#part-1-course-synthesis" id="toc-part-1-course-synthesis" class="nav-link" data-scroll-target="#part-1-course-synthesis">Part 1: Course Synthesis</a></li>
+  <li><a href="#part-2-explainable-ml" id="toc-part-2-explainable-ml" class="nav-link" data-scroll-target="#part-2-explainable-ml">Part 2: Explainable ML</a></li>
+  <li><a href="#part-3-causality-semantics" id="toc-part-3-causality-semantics" class="nav-link" data-scroll-target="#part-3-causality-semantics">Part 3: Causality &amp; Semantics</a></li>
+  <li><a href="#part-4-ethics-and-limits" id="toc-part-4-ethics-and-limits" class="nav-link" data-scroll-target="#part-4-ethics-and-limits">Part 4: Ethics and Limits</a></li>
+  <li><a href="#part-5-final-outlook" id="toc-part-5-final-outlook" class="nav-link" data-scroll-target="#part-5-final-outlook">Part 5: Final Outlook</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -173,79 +173,79 @@
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
-<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-13-summary-physics-informed-and-constrained-ml" class="level1">
-<h1>Week 13 Summary: Physics-informed and constrained ML</h1>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-13-summary-integration-limits-and-reflection" class="level1">
+<h1>Week 13 Summary: Integration, limits, and reflection</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="physics-informed-neural-networks-pinns" class="level3">
-<h3 class="anchored" data-anchor-id="physics-informed-neural-networks-pinns">1. Physics-Informed Neural Networks (PINNs)</h3>
+<section id="explainability-opening-the-black-box" class="level3">
+<h3 class="anchored" data-anchor-id="explainability-opening-the-black-box">1. Explainability: Opening the Black Box</h3>
 <ul>
-<li><strong>Embedding Laws:</strong> Enforce ODEs/PDEs via the loss function for physical consistency.</li>
-<li><strong>Automatic Differentiation:</strong> Exact derivative calculations enable NNs to evaluate physical equations.</li>
-<li><strong>Boundary Conditions:</strong> Methods like Lagaris substitution guarantee boundary compliance.</li>
+<li><strong>Beyond Prediction:</strong> “Why” builds industrial trust over just “what”.</li>
+<li><strong>Sensitivity Analysis:</strong> Perturb inputs to find primary process drivers.</li>
+<li><strong>Levels of Explanation:</strong> Tailor explanations for managers, experts, and data scientists.</li>
 </ul>
 </section>
-<section id="governing-equation-discovery" class="level3">
-<h3 class="anchored" data-anchor-id="governing-equation-discovery">2. Governing Equation Discovery</h3>
+<section id="causality-and-semantics" class="level3">
+<h3 class="anchored" data-anchor-id="causality-and-semantics">2. Causality and Semantics</h3>
 <ul>
-<li><strong>Dictionary-Based Regression:</strong> Build a dictionary of candidate math functions.</li>
-<li><strong>Sparse Identification:</strong> Use regularized regression (Lasso) to discover physical laws from noisy data.</li>
-<li><strong>Dimensional Reasoning:</strong> Unit analysis ensures physically plausible discoveries.</li>
+<li><strong>Causal Process Chains:</strong> Shift from anomaly detection to early prediction.</li>
+<li><strong>Ontologies:</strong> Digitize semantic meaning (e.g., mapping variables to physical concepts) to enable algorithmic reasoning.</li>
 </ul>
 </section>
-<section id="constraints-in-materials-science" class="level3">
-<h3 class="anchored" data-anchor-id="constraints-in-materials-science">3. Constraints in Materials Science</h3>
+<section id="limits-of-ai-in-materials-science" class="level3">
+<h3 class="anchored" data-anchor-id="limits-of-ai-in-materials-science">3. Limits of AI in Materials Science</h3>
 <ul>
-<li><strong>Monotonicity:</strong> Enforce required physical trends (e.g., hardness vs.&nbsp;alloying).</li>
-<li><strong>Hybrid Modeling:</strong> Combine physical “White-Box” models with data-driven “Black-Boxes” (Grey-Box).</li>
+<li><strong>Data Bias:</strong> Models trained only on “successes” cannot predict failures.</li>
+<li><strong>AI Hallucinations:</strong> Large models may generate physically impossible patterns.</li>
+<li><strong>Expert’s Role:</strong> AI automates analysis, but human experts define questions and interpret final truths.</li>
 </ul>
 </section>
 </section>
 <section id="minute-lecture-strategy" class="level2">
 <h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
-<section id="part-1-why-physics-matters" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-why-physics-matters">Part 1: Why Physics Matters</h3>
+<section id="part-1-course-synthesis" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-course-synthesis">Part 1: Course Synthesis</h3>
 <ul>
-<li>Limits of unconstrained Black-Box models.</li>
-<li>Accurate but Physical models.</li>
-<li>PINNs need less data.</li>
+<li>Recap: Signal formation to PINNs.</li>
+<li>AI-driven materials lifecycle.</li>
 </ul>
 </section>
-<section id="part-2-automatic-differentiation" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-automatic-differentiation">Part 2: Automatic Differentiation</h3>
+<section id="part-2-explainable-ml" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-explainable-ml">Part 2: Explainable ML</h3>
 <ul>
-<li>GradientTape mechanics.</li>
-<li>Derivatives as ML architecture components.</li>
+<li>The Black Box problem.</li>
+<li>Sensitivity analysis (Perturbation theory).</li>
+<li>Feature importance (SHAP/LIME).</li>
 </ul>
 </section>
-<section id="part-3-solving-physics-with-nns" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-solving-physics-with-nns">Part 3: Solving Physics with NNs</h3>
+<section id="part-3-causality-semantics" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-causality-semantics">Part 3: Causality &amp; Semantics</h3>
 <ul>
-<li>PINN Architectures: Data Loss + Physics Loss.</li>
-<li>Enforcing Boundary Conditions.</li>
-<li>3D printing heat transfer case study.</li>
+<li>Causal graphs (Cause → Mechanism → Effect).</li>
+<li>Detection vs.&nbsp;Prediction.</li>
+<li>Materials Ontologies.</li>
 </ul>
 </section>
-<section id="part-4-equation-discovery" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-equation-discovery">Part 4: Equation Discovery</h3>
+<section id="part-4-ethics-and-limits" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-ethics-and-limits">Part 4: Ethics and Limits</h3>
 <ul>
-<li>Sparse Regression and candidate dictionaries.</li>
-<li>Damped pendulum equation case study.</li>
-<li>Unit Analysis search pruning.</li>
+<li>Representation and “Success” bias.</li>
+<li>Dangers of over-extrapolation.</li>
+<li>Environmental cost vs.&nbsp;PINN efficiency.</li>
 </ul>
 </section>
-<section id="part-5-the-grey-box-future" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-the-grey-box-future">Part 5: The Grey-Box Future</h3>
+<section id="part-5-final-outlook" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-final-outlook">Part 5: Final Outlook</h3>
 <ul>
-<li>Hybrid architectures vs.&nbsp;FEA.</li>
-<li>Building industrial trust.</li>
+<li>Self-driving labs.</li>
+<li>Sustainable AI-driven discovery.</li>
 </ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
-<p><strong>Summary for ML-PC Week 13:</strong><br>
-- Combines neural networks with physical laws via Physics-Informed ML. - Introduces PINNs and automatic differentiation. - Details Governing Equation Discovery using sparse regression. - Applies physical constraints to build data-efficient Grey-Box models.</p>
+<p><strong>Summary for ML-PC Week 14:</strong><br>
+- Reflects on Explainability and Sensitivity Analysis to open black-box models. - Discusses Causality in process chains and Ontologies for semantic reasoning. - Critically assesses Data Bias and physical AI hallucinations. - Examines the evolving partnership between autonomous algorithms and human experts.</p>
 </section>
 </section>
      </main>

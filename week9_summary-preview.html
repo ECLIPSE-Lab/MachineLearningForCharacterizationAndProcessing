@@ -125,7 +125,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-fedc0afa5eed45b88079642ee2c6e752.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-58678528f02177bed1400fe3ccbb0fa7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-99531da96f133e8d6986ee8266cfdc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
      <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -139,7 +139,7 @@
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Week 9 Summary: Inverse problems and process maps</h6>
+      <h6><i class="bi bi-journal-code"></i> Week 9 Summary: ML for characterization signals</h6>
 
             <a href="./week9_summary.md" class="btn btn-primary quarto-download-embed" download="week9_summary.md">Download Notebook</a>
           </div>
@@ -150,21 +150,21 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#week-9-summary-inverse-problems-and-process-maps" id="toc-week-9-summary-inverse-problems-and-process-maps" class="nav-link active" data-scroll-target="#week-9-summary-inverse-problems-and-process-maps">Week 9 Summary: Inverse problems and process maps</a>
+  <li><a href="#week-9-summary-ml-for-characterization-signals" id="toc-week-9-summary-ml-for-characterization-signals" class="nav-link active" data-scroll-target="#week-9-summary-ml-for-characterization-signals">Week 9 Summary: ML for characterization signals</a>
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#forward-vs.-inverse-problems" id="toc-forward-vs.-inverse-problems" class="nav-link" data-scroll-target="#forward-vs.-inverse-problems">1. Forward vs.&nbsp;Inverse Problems</a></li>
-  <li><a href="#physics-informed-enrichment" id="toc-physics-informed-enrichment" class="nav-link" data-scroll-target="#physics-informed-enrichment">2. Physics-Informed Enrichment</a></li>
-  <li><a href="#process-maps-and-corridors" id="toc-process-maps-and-corridors" class="nav-link" data-scroll-target="#process-maps-and-corridors">3. Process Maps and Corridors</a></li>
+  <li><a href="#clustering-spectral-data" id="toc-clustering-spectral-data" class="nav-link" data-scroll-target="#clustering-spectral-data">1. Clustering Spectral Data</a></li>
+  <li><a href="#autoencoders-for-signal-processing" id="toc-autoencoders-for-signal-processing" class="nav-link" data-scroll-target="#autoencoders-for-signal-processing">2. Autoencoders for Signal Processing</a></li>
+  <li><a href="#scientific-integrity-in-ml" id="toc-scientific-integrity-in-ml" class="nav-link" data-scroll-target="#scientific-integrity-in-ml">3. Scientific Integrity in ML</a></li>
   </ul></li>
   <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-material-scientists-dilemma" id="toc-part-1-material-scientists-dilemma" class="nav-link" data-scroll-target="#part-1-material-scientists-dilemma">Part 1: Material Scientist’s Dilemma</a></li>
-  <li><a href="#part-2-physics-informed-ml" id="toc-part-2-physics-informed-ml" class="nav-link" data-scroll-target="#part-2-physics-informed-ml">Part 2: Physics-Informed ML</a></li>
-  <li><a href="#part-3-solving-the-inverse" id="toc-part-3-solving-the-inverse" class="nav-link" data-scroll-target="#part-3-solving-the-inverse">Part 3: Solving the Inverse</a></li>
-  <li><a href="#part-4-building-process-maps" id="toc-part-4-building-process-maps" class="nav-link" data-scroll-target="#part-4-building-process-maps">Part 4: Building Process Maps</a></li>
-  <li><a href="#part-5-ml-for-material-design" id="toc-part-5-ml-for-material-design" class="nav-link" data-scroll-target="#part-5-ml-for-material-design">Part 5: ML for Material Design</a></li>
+  <li><a href="#part-1-high-dimensional-signals" id="toc-part-1-high-dimensional-signals" class="nav-link" data-scroll-target="#part-1-high-dimensional-signals">Part 1: High-Dimensional Signals</a></li>
+  <li><a href="#part-2-clustering-structure" id="toc-part-2-clustering-structure" class="nav-link" data-scroll-target="#part-2-clustering-structure">Part 2: Clustering Structure</a></li>
+  <li><a href="#part-3-visualizing-the-unseen" id="toc-part-3-visualizing-the-unseen" class="nav-link" data-scroll-target="#part-3-visualizing-the-unseen">Part 3: Visualizing the Unseen</a></li>
+  <li><a href="#part-4-autoencoders-denoising" id="toc-part-4-autoencoders-denoising" class="nav-link" data-scroll-target="#part-4-autoencoders-denoising">Part 4: Autoencoders &amp; Denoising</a></li>
+  <li><a href="#part-5-data-to-discovery" id="toc-part-5-data-to-discovery" class="nav-link" data-scroll-target="#part-5-data-to-discovery">Part 5: Data to Discovery</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -173,80 +173,80 @@
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
-<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-9-summary-inverse-problems-and-process-maps" class="level1">
-<h1>Week 9 Summary: Inverse problems and process maps</h1>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-9-summary-ml-for-characterization-signals" class="level1">
+<h1>Week 9 Summary: ML for characterization signals</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="forward-vs.-inverse-problems" class="level3">
-<h3 class="anchored" data-anchor-id="forward-vs.-inverse-problems">1. Forward vs.&nbsp;Inverse Problems</h3>
+<section id="clustering-spectral-data" class="level3">
+<h3 class="anchored" data-anchor-id="clustering-spectral-data">1. Clustering Spectral Data</h3>
 <ul>
-<li><strong>Causality Gap:</strong> Forward problems are unique; inverse are ill-posed/multi-valued.</li>
-<li><strong>Non-Gaussianity:</strong> Inverse problems require Mixture Density Networks due to multimodality.</li>
+<li><strong>K-Means:</strong> Groups similar spectra (XRD/EDS) to identify distinct phases.</li>
+<li><strong>Mini-Batch K-Means:</strong> Speeds up high-throughput characterization.</li>
+<li><strong>t-SNE:</strong> Projects high-dimensional spectra to 2D to reveal outliers/relationships.</li>
 </ul>
 </section>
-<section id="physics-informed-enrichment" class="level3">
-<h3 class="anchored" data-anchor-id="physics-informed-enrichment">2. Physics-Informed Enrichment</h3>
+<section id="autoencoders-for-signal-processing" class="level3">
+<h3 class="anchored" data-anchor-id="autoencoders-for-signal-processing">2. Autoencoders for Signal Processing</h3>
 <ul>
-<li><strong>Expert in the Loop:</strong> Add physical transformations (e.g., FFT) to reduce training effort.</li>
-<li><strong>Enrichment:</strong> Combine raw data with physics features (PINNs).</li>
+<li><strong>Latent Representations:</strong> Compresses spectra to essential physical information.</li>
+<li><strong>Denoising:</strong> Reconstructs clean signals from noisy inputs without blurring.</li>
+<li><strong>Non-linear Compression:</strong> Outperforms PCA for complex spectral libraries.</li>
 </ul>
 </section>
-<section id="process-maps-and-corridors" class="level3">
-<h3 class="anchored" data-anchor-id="process-maps-and-corridors">3. Process Maps and Corridors</h3>
+<section id="scientific-integrity-in-ml" class="level3">
+<h3 class="anchored" data-anchor-id="scientific-integrity-in-ml">3. Scientific Integrity in ML</h3>
 <ul>
-<li><strong>Process Corridors:</strong> Identifying stable parameter regions.</li>
-<li><strong>ML-Guided Mapping:</strong> Interpolating sparse experimental points via surrogates.</li>
-<li><strong>Prescriptive ML:</strong> Answering “What must I do?” instead of “What will happen?”.</li>
+<li><strong>Peak Preservation:</strong> ML must assist, not invent or smooth away real physics.</li>
 </ul>
 </section>
 </section>
 <section id="minute-lecture-strategy" class="level2">
 <h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
-<section id="part-1-material-scientists-dilemma" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-material-scientists-dilemma">Part 1: Material Scientist’s Dilemma</h3>
+<section id="part-1-high-dimensional-signals" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-high-dimensional-signals">Part 1: High-Dimensional Signals</h3>
 <ul>
-<li>Inverse problem complexities.</li>
-<li>Many-to-one mappings.</li>
-<li>Uniqueness in systems.</li>
+<li>Digital footprint: XRD, EDS, EELS, Raman.</li>
+<li>Manual vs.&nbsp;automated peak-picking.</li>
+<li>Vector spectrum representation.</li>
 </ul>
 </section>
-<section id="part-2-physics-informed-ml" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-physics-informed-ml">Part 2: Physics-Informed ML</h3>
+<section id="part-2-clustering-structure" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-clustering-structure">Part 2: Clustering Structure</h3>
 <ul>
-<li>White vs.&nbsp;Grey vs.&nbsp;Black Box.</li>
-<li>Feature Enrichment.</li>
-<li>Loss function constraints.</li>
+<li>K-Means algorithm.</li>
+<li>Elbow Method for phase counting.</li>
+<li>Ternary alloy mapping.</li>
 </ul>
 </section>
-<section id="part-3-solving-the-inverse" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-solving-the-inverse">Part 3: Solving the Inverse</h3>
+<section id="part-3-visualizing-the-unseen" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-visualizing-the-unseen">Part 3: Visualizing the Unseen</h3>
 <ul>
-<li>Regression failure on inverse tasks.</li>
-<li>Regularization and Mixture Models.</li>
-<li>Heat treatment parameter case study.</li>
+<li>t-SNE Stochastic Proximity.</li>
+<li>Hidden relationships.</li>
+<li>t-SNE distance pitfalls.</li>
 </ul>
 </section>
-<section id="part-4-building-process-maps" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-building-process-maps">Part 4: Building Process Maps</h3>
+<section id="part-4-autoencoders-denoising" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-autoencoders-denoising">Part 4: Autoencoders &amp; Denoising</h3>
 <ul>
-<li>Continuous maps from points.</li>
-<li>Visualizing Safe Corridors.</li>
-<li>Laser-material interactions mapping.</li>
+<li>Encoder-Bottleneck-Decoder.</li>
+<li>Denoising characterization signals.</li>
+<li>Bottlenecks as physical descriptors.</li>
 </ul>
 </section>
-<section id="part-5-ml-for-material-design" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-ml-for-material-design">Part 5: ML for Material Design</h3>
+<section id="part-5-data-to-discovery" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-data-to-discovery">Part 5: Data to Discovery</h3>
 <ul>
-<li>Prescribing processing routes.</li>
-<li>Simulation-aided training.</li>
-<li>AI vs.&nbsp;human intuition.</li>
+<li>Real-time spectral analysis.</li>
+<li>Physical consistency in ML.</li>
+<li>Automated pipelines.</li>
 </ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
-<p><strong>Summary for ML-PC Week 9:</strong><br>
-- Explores Inverse Problems for materials design. - Contrasts multi-valued inverse tasks with causal forward problems. - Introduces Physics-Informed Learning and feature enrichment. - Demonstrates building Process Maps and Safe Corridors.</p>
+<p><strong>Summary for ML-PC Week 10:</strong><br>
+- Processes high-dimensional Characterization Signals (XRD, EDS). - Employs K-Means and t-SNE for automated phase identification. - Uses Autoencoders for latent space compression and denoising. - Enhances high-throughput data analysis while preserving physics.</p>
 </section>
 </section>
      </main>

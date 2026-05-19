@@ -125,7 +125,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-fedc0afa5eed45b88079642ee2c6e752.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-58678528f02177bed1400fe3ccbb0fa7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-99531da96f133e8d6986ee8266cfdc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
      <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -139,7 +139,7 @@
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Week 12 Summary: Uncertainty-aware regression &amp; Gaussian Processes</h6>
+      <h6><i class="bi bi-journal-code"></i> Week 12 Summary: Physics-informed and constrained ML</h6>
 
             <a href="./week12_summary.md" class="btn btn-primary quarto-download-embed" download="week12_summary.md">Download Notebook</a>
           </div>
@@ -150,21 +150,21 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#week-12-summary-uncertainty-aware-regression-gaussian-processes" id="toc-week-12-summary-uncertainty-aware-regression-gaussian-processes" class="nav-link active" data-scroll-target="#week-12-summary-uncertainty-aware-regression-gaussian-processes">Week 12 Summary: Uncertainty-aware regression &amp; Gaussian Processes</a>
+  <li><a href="#week-12-summary-physics-informed-and-constrained-ml" id="toc-week-12-summary-physics-informed-and-constrained-ml" class="nav-link active" data-scroll-target="#week-12-summary-physics-informed-and-constrained-ml">Week 12 Summary: Physics-informed and constrained ML</a>
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#knowing-what-you-dont-know" id="toc-knowing-what-you-dont-know" class="nav-link" data-scroll-target="#knowing-what-you-dont-know">1. Knowing what you don’t know</a></li>
-  <li><a href="#gaussian-processes-gps" id="toc-gaussian-processes-gps" class="nav-link" data-scroll-target="#gaussian-processes-gps">2. Gaussian Processes (GPs)</a></li>
-  <li><a href="#gp-based-process-maps" id="toc-gp-based-process-maps" class="nav-link" data-scroll-target="#gp-based-process-maps">3. GP-Based Process Maps</a></li>
+  <li><a href="#physics-informed-neural-networks-pinns" id="toc-physics-informed-neural-networks-pinns" class="nav-link" data-scroll-target="#physics-informed-neural-networks-pinns">1. Physics-Informed Neural Networks (PINNs)</a></li>
+  <li><a href="#governing-equation-discovery" id="toc-governing-equation-discovery" class="nav-link" data-scroll-target="#governing-equation-discovery">2. Governing Equation Discovery</a></li>
+  <li><a href="#constraints-in-materials-science" id="toc-constraints-in-materials-science" class="nav-link" data-scroll-target="#constraints-in-materials-science">3. Constraints in Materials Science</a></li>
   </ul></li>
   <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-uncertainty-in-science" id="toc-part-1-uncertainty-in-science" class="nav-link" data-scroll-target="#part-1-uncertainty-in-science">Part 1: Uncertainty in Science</a></li>
-  <li><a href="#part-2-gp-fundamentals" id="toc-part-2-gp-fundamentals" class="nav-link" data-scroll-target="#part-2-gp-fundamentals">Part 2: GP Fundamentals</a></li>
-  <li><a href="#part-3-gp-case-studies" id="toc-part-3-gp-case-studies" class="nav-link" data-scroll-target="#part-3-gp-case-studies">Part 3: GP Case Studies</a></li>
-  <li><a href="#part-4-advanced-probabilistic-ml" id="toc-part-4-advanced-probabilistic-ml" class="nav-link" data-scroll-target="#part-4-advanced-probabilistic-ml">Part 4: Advanced Probabilistic ML</a></li>
-  <li><a href="#part-5-decision-making" id="toc-part-5-decision-making" class="nav-link" data-scroll-target="#part-5-decision-making">Part 5: Decision Making</a></li>
+  <li><a href="#part-1-why-physics-matters" id="toc-part-1-why-physics-matters" class="nav-link" data-scroll-target="#part-1-why-physics-matters">Part 1: Why Physics Matters</a></li>
+  <li><a href="#part-2-automatic-differentiation" id="toc-part-2-automatic-differentiation" class="nav-link" data-scroll-target="#part-2-automatic-differentiation">Part 2: Automatic Differentiation</a></li>
+  <li><a href="#part-3-solving-physics-with-nns" id="toc-part-3-solving-physics-with-nns" class="nav-link" data-scroll-target="#part-3-solving-physics-with-nns">Part 3: Solving Physics with NNs</a></li>
+  <li><a href="#part-4-equation-discovery" id="toc-part-4-equation-discovery" class="nav-link" data-scroll-target="#part-4-equation-discovery">Part 4: Equation Discovery</a></li>
+  <li><a href="#part-5-the-grey-box-future" id="toc-part-5-the-grey-box-future" class="nav-link" data-scroll-target="#part-5-the-grey-box-future">Part 5: The Grey-Box Future</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -173,77 +173,79 @@
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
-<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-12-summary-uncertainty-aware-regression-gaussian-processes" class="level1">
-<h1>Week 12 Summary: Uncertainty-aware regression &amp; Gaussian Processes</h1>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-12-summary-physics-informed-and-constrained-ml" class="level1">
+<h1>Week 12 Summary: Physics-informed and constrained ML</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="knowing-what-you-dont-know" class="level3">
-<h3 class="anchored" data-anchor-id="knowing-what-you-dont-know">1. Knowing what you don’t know</h3>
+<section id="physics-informed-neural-networks-pinns" class="level3">
+<h3 class="anchored" data-anchor-id="physics-informed-neural-networks-pinns">1. Physics-Informed Neural Networks (PINNs)</h3>
 <ul>
-<li><strong>Aleatoric vs.&nbsp;Epistemic:</strong> Inherent physical noise vs.&nbsp;model ignorance.</li>
-<li><strong>Overconfidence Danger:</strong> Point estimates fail safely in unknown regimes; uncertainty metrics are crucial.</li>
+<li><strong>Embedding Laws:</strong> Enforce ODEs/PDEs via the loss function for physical consistency.</li>
+<li><strong>Automatic Differentiation:</strong> Exact derivative calculations enable NNs to evaluate physical equations.</li>
+<li><strong>Boundary Conditions:</strong> Methods like Lagaris substitution guarantee boundary compliance.</li>
 </ul>
 </section>
-<section id="gaussian-processes-gps" class="level3">
-<h3 class="anchored" data-anchor-id="gaussian-processes-gps">2. Gaussian Processes (GPs)</h3>
+<section id="governing-equation-discovery" class="level3">
+<h3 class="anchored" data-anchor-id="governing-equation-discovery">2. Governing Equation Discovery</h3>
 <ul>
-<li><strong>Distribution over Functions:</strong> GP yields posterior mean and variance (uncertainty).</li>
-<li><strong>Kernels as Physical Priors:</strong> Encodes assumptions about data smoothness/scale.</li>
-<li><strong>Non-Parametric Nature:</strong> Scales with data size, ideal for small, high-quality materials datasets.</li>
+<li><strong>Dictionary-Based Regression:</strong> Build a dictionary of candidate math functions.</li>
+<li><strong>Sparse Identification:</strong> Use regularized regression (Lasso) to discover physical laws from noisy data.</li>
+<li><strong>Dimensional Reasoning:</strong> Unit analysis ensures physically plausible discoveries.</li>
 </ul>
 </section>
-<section id="gp-based-process-maps" class="level3">
-<h3 class="anchored" data-anchor-id="gp-based-process-maps">3. GP-Based Process Maps</h3>
+<section id="constraints-in-materials-science" class="level3">
+<h3 class="anchored" data-anchor-id="constraints-in-materials-science">3. Constraints in Materials Science</h3>
 <ul>
-<li><strong>Confidence Ribbons:</strong> Visualize reliability to guide further experiments.</li>
-<li><strong>Kriging:</strong> Interpolates materials property surfaces using GP regression.</li>
+<li><strong>Monotonicity:</strong> Enforce required physical trends (e.g., hardness vs.&nbsp;alloying).</li>
+<li><strong>Hybrid Modeling:</strong> Combine physical “White-Box” models with data-driven “Black-Boxes” (Grey-Box).</li>
 </ul>
 </section>
 </section>
 <section id="minute-lecture-strategy" class="level2">
 <h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
-<section id="part-1-uncertainty-in-science" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-uncertainty-in-science">Part 1: Uncertainty in Science</h3>
+<section id="part-1-why-physics-matters" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-why-physics-matters">Part 1: Why Physics Matters</h3>
 <ul>
-<li>Risk management in materials processing.</li>
-<li>Visualizing distributions and error bars.</li>
+<li>Limits of unconstrained Black-Box models.</li>
+<li>Accurate but Physical models.</li>
+<li>PINNs need less data.</li>
 </ul>
 </section>
-<section id="part-2-gp-fundamentals" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-gp-fundamentals">Part 2: GP Fundamentals</h3>
+<section id="part-2-automatic-differentiation" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-automatic-differentiation">Part 2: Automatic Differentiation</h3>
 <ul>
-<li>Function vs.&nbsp;Parameter space.</li>
-<li>Kernels and “Similarity”.</li>
-<li>Conditional Gaussians and Variance.</li>
+<li>GradientTape mechanics.</li>
+<li>Derivatives as ML architecture components.</li>
 </ul>
 </section>
-<section id="part-3-gp-case-studies" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-gp-case-studies">Part 3: GP Case Studies</h3>
+<section id="part-3-solving-physics-with-nns" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-solving-physics-with-nns">Part 3: Solving Physics with NNs</h3>
 <ul>
-<li>Predicting tensile strength across parameters.</li>
-<li>GP for Experimental Design.</li>
-<li>Multi-Task GPs.</li>
+<li>PINN Architectures: Data Loss + Physics Loss.</li>
+<li>Enforcing Boundary Conditions.</li>
+<li>3D printing heat transfer case study.</li>
 </ul>
 </section>
-<section id="part-4-advanced-probabilistic-ml" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-advanced-probabilistic-ml">Part 4: Advanced Probabilistic ML</h3>
+<section id="part-4-equation-discovery" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-equation-discovery">Part 4: Equation Discovery</h3>
 <ul>
-<li>Mixture Density Networks (MDNs).</li>
-<li>Dropout as Bayesian approximation.</li>
+<li>Sparse Regression and candidate dictionaries.</li>
+<li>Damped pendulum equation case study.</li>
+<li>Unit Analysis search pruning.</li>
 </ul>
 </section>
-<section id="part-5-decision-making" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-decision-making">Part 5: Decision Making</h3>
+<section id="part-5-the-grey-box-future" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-the-grey-box-future">Part 5: The Grey-Box Future</h3>
 <ul>
-<li>Safe process windows via confidence intervals.</li>
-<li>Building trustworthy models.</li>
+<li>Hybrid architectures vs.&nbsp;FEA.</li>
+<li>Building industrial trust.</li>
 </ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
-<p><strong>Summary for ML-PC Week 12:</strong><br>
-- Introduces Probabilistic Machine Learning for uncertainty quantification. - Differentiates aleatoric (noise) from epistemic (ignorance) uncertainty. - Uses Gaussian Processes (GPs) for uncertainty-aware regression. - Applies confidence intervals to map robust process windows.</p>
+<p><strong>Summary for ML-PC Week 13:</strong><br>
+- Combines neural networks with physical laws via Physics-Informed ML. - Introduces PINNs and automatic differentiation. - Details Governing Equation Discovery using sparse regression. - Applies physical constraints to build data-efficient Grey-Box models.</p>
 </section>
 </section>
      </main>

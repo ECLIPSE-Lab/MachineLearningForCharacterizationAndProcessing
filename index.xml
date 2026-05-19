@@ -414,17 +414,23 @@ as data leakage, overfitting, and spurious correlations.</p>
         scratch.</p>
       </sec>
     </sec>
-    <sec id="unit-iii-learning-from-processing-data-weeks-79">
+    <sec id="unit-iii-learning-from-processing-data-weeks-78">
       <title>1.3.3 Unit III — Learning from Processing Data (Weeks
-      7–9)</title>
+      7–8)</title>
       <sec id="week-7-time-series-and-process-monitoring">
         <title>1.3.3.1 Week 7 – Time-series and process
         monitoring</title>
-        <p><italic>Lecture: Tuesday, 26.05.2026, 14:15-15:45 (cancelled
-        - Pfingstdienstag) | Exercise: Thursday, 28.05.2026,
-        16:15-17:45</italic></p>
+        <p><italic>Lecture: Tuesday, 26.05.2026, 14:15-15:45 (self-study
+        — Pfingstdienstag public holiday) | Exercise: Thursday,
+        28.05.2026, 16:15-17:45 (in class)</italic></p>
         <p><bold>Slides:</bold>
         <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit07_time_series/01_intro.html">Open</ext-link></p>
+        <disp-quote>
+          <p><bold>Self-study lecture:</bold> the Tuesday slot is
+          cancelled (Pfingstdienstag). Work through the slide deck
+          independently; the Thursday exercise runs in class and
+          consolidates the material.</p>
+        </disp-quote>
         <list list-type="bullet">
           <list-item>
             <p>Processing signals: temperature cycles, AM melt pool
@@ -459,62 +465,22 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Real-time anomaly detection from processing history</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Predict a process outcome from time-series data using regression
-        or simple RNNs.</p>
+        <p><bold>Exercise:</bold> Predict a process outcome from
+        time-series data using regression or simple RNNs.</p>
       </sec>
-      <sec id="week-8-generalization-robustness-and-process-windows">
-        <title>1.3.3.2 Week 8 – Generalization, robustness, and process
-        windows</title>
-        <p><italic>Lecture: Tuesday, 02.06.2026, 14:15-15:45 | Exercise:
-        Thursday, 04.06.2026, 16:15-17:45 (cancelled -
-        Fronleichnam)</italic></p>
-        <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit08_generalization_robustness/01_intro.html">Open</ext-link></p>
-        <list list-type="bullet">
-          <list-item>
-            <p>Sensitivity to noise and parameter drift.</p>
-          </list-item>
-          <list-item>
-            <p>Overfitting in process–property models.</p>
-          </list-item>
-          <list-item>
-            <p>Robustness as a design criterion.</p>
-          </list-item>
-        </list>
-        <p><bold>Summary:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p>Shift from raw performance to <bold>model
-            reliability</bold></p>
-          </list-item>
-          <list-item>
-            <p>Bias–variance tradeoff and generalization to
-            factory-floor data</p>
-          </list-item>
-          <list-item>
-            <p>Robust validation: K-fold and stratified cross-validation
-            on small datasets</p>
-          </list-item>
-          <list-item>
-            <p><bold>Process robustness</bold> via sensitivity
-            analysis</p>
-          </list-item>
-          <list-item>
-            <p><bold>Process windows</bold>: parameter regions
-            insensitive to industrial noise</p>
-          </list-item>
-        </list>
-        <p><bold>Exercise:</bold>
-        Analyze model robustness under perturbed process conditions.</p>
-      </sec>
-      <sec id="week-9-inverse-problems-and-process-maps">
-        <title>1.3.3.3 Week 9 – Inverse problems and process
+      <sec id="week-8-inverse-problems-and-process-maps">
+        <title>1.3.3.2 Week 8 – Inverse problems and process
         maps</title>
-        <p><italic>Lecture: Tuesday, 09.06.2026, 14:15-15:45 | Exercise:
-        Thursday, 11.06.2026, 16:15-17:45</italic></p>
+        <p><italic>Lecture: Tuesday, 02.06.2026, 14:15-15:45 (in class)
+        | Exercise: Thursday, 04.06.2026, 16:15-17:45 (self-study —
+        Fronleichnam public holiday)</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09_inverse_problems/09_inverse_problems.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit08_inverse_problems/09_inverse_problems.html">Open</ext-link></p>
+        <disp-quote>
+          <p><bold>Self-study exercise:</bold> the Thursday slot is
+          cancelled (Fronleichnam). The exercise is provided for
+          independent work; a solution is released afterwards.</p>
+        </disp-quote>
         <list list-type="bullet">
           <list-item>
             <p>Process → structure inverse problems.</p>
@@ -546,20 +512,22 @@ as data leakage, overfitting, and spurious correlations.</p>
             corridors</bold> for safe operating regions</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Construct a simple ML-based process map; compare constrained vs
-        unconstrained models.</p>
+        <p><bold>Exercise:</bold> Construct a simple ML-based process
+        map; compare constrained vs unconstrained models.</p>
       </sec>
     </sec>
-    <sec id="unit-iv-uncertainty-surrogates-and-automation-weeks-1012">
-      <title>1.3.4 Unit IV — Uncertainty, Surrogates, and Automation
-      (Weeks 10–12)</title>
-      <sec id="week-10-ml-for-characterization-signals">
-        <title>1.3.4.1 Week 10 – ML for characterization signals</title>
-        <p><italic>Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise:
-        Thursday, 18.06.2026, 16:15-17:45</italic></p>
+    <sec id="unit-iv-characterization-automation-and-uncertainty-weeks-911">
+      <title>1.3.4 Unit IV — Characterization, Automation, and
+      Uncertainty (Weeks 9–11)</title>
+      <sec id="week-9-ml-for-characterization-signals">
+        <title>1.3.4.1 Week 9 – ML for characterization signals</title>
+        <p><italic>Lecture: Tuesday, 09.06.2026, 14:15-15:45 | Exercise:
+        Thursday, 11.06.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_characterization_signals/10_characterization_signals.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09_characterization_signals/10_characterization_signals.html">Open</ext-link></p>
+        <p>Companion deck (within Week 9): <bold>Transformers for
+        materials</bold> —
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09b_transformers_for_materials/transformers_for_materials.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Spectral data: XRD, EELS, EDS.</p>
@@ -590,17 +558,16 @@ as data leakage, overfitting, and spurious correlations.</p>
             without losing physics</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Apply PCA/NMF to spectral datasets; interpret components
-        physically.</p>
+        <p><bold>Exercise:</bold> Apply PCA/NMF to spectral datasets;
+        interpret components physically.</p>
       </sec>
-      <sec id="week-11-automation-in-microscopy-and-characterization">
-        <title>1.3.4.2 Week 11 – Automation in microscopy and
+      <sec id="week-10-automation-in-microscopy-and-characterization">
+        <title>1.3.4.2 Week 10 – Automation in microscopy and
         characterization</title>
-        <p><italic>Lecture: Tuesday, 23.06.2026, 14:15-15:45 | Exercise:
-        Thursday, 25.06.2026, 16:15-17:45</italic></p>
+        <p><italic>Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise:
+        Thursday, 18.06.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_automation/11_automation.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_automation/11_automation.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Autofocus, drift correction, parameter selection.</p>
@@ -631,13 +598,13 @@ as data leakage, overfitting, and spurious correlations.</p>
         <p><bold>Exercise:</bold> Implement a simple ML-assisted
         autofocus or defect detector.</p>
       </sec>
-      <sec id="week-12-uncertainty-aware-regression-gaussian-processes">
-        <title>1.3.4.3 Week 12 – Uncertainty-aware regression &amp;
+      <sec id="week-11-uncertainty-aware-regression-gaussian-processes">
+        <title>1.3.4.3 Week 11 – Uncertainty-aware regression &amp;
         Gaussian Processes</title>
-        <p><italic>Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise:
-        Thursday, 02.07.2026, 16:15-17:45</italic></p>
+        <p><italic>Lecture: Tuesday, 23.06.2026, 14:15-15:45 | Exercise:
+        Thursday, 25.06.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_uncertainty_gp/12_uncertainty_gp.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_uncertainty_gp/12_uncertainty_gp.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Aleatoric vs epistemic uncertainty in experiments.</p>
@@ -652,21 +619,20 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Connection to materials acceleration platforms.</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Compare GP regression and NN ensembles for a process-parameter
-        problem.</p>
+        <p><bold>Exercise:</bold> Compare GP regression and NN ensembles
+        for a process-parameter problem.</p>
       </sec>
     </sec>
-    <sec id="unit-v-physics-trust-and-synthesis-weeks-1314">
+    <sec id="unit-v-physics-trust-and-synthesis-weeks-1213">
       <title>1.3.5 Unit V — Physics, Trust, and Synthesis (Weeks
-      13–14)</title>
-      <sec id="week-13-physics-informed-and-constrained-ml">
-        <title>1.3.5.1 Week 13 – Physics-informed and constrained
+      12–13)</title>
+      <sec id="week-12-physics-informed-and-constrained-ml">
+        <title>1.3.5.1 Week 12 – Physics-informed and constrained
         ML</title>
-        <p><italic>Lecture: Tuesday, 07.07.2026, 14:15-15:45 | Exercise:
-        Thursday, 09.07.2026, 16:15-17:45</italic></p>
+        <p><italic>Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise:
+        Thursday, 02.07.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit13_pinns/13_pinns.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_pinns/13_pinns.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Embedding physical constraints into ML models.</p>
@@ -678,17 +644,16 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Failure modes of unconstrained models.</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Train a constrained model for a processing or characterization
-        task.</p>
+        <p><bold>Exercise:</bold> Train a constrained model for a
+        processing or characterization task.</p>
       </sec>
-      <sec id="week-14-integration-limits-and-reflection">
-        <title>1.3.5.2 Week 14 – Integration, limits, and
+      <sec id="week-13-integration-limits-and-reflection">
+        <title>1.3.5.2 Week 13 – Integration, limits, and
         reflection</title>
-        <p><italic>Lecture: Tuesday, 14.07.2026, 14:15-15:45 | Exercise:
-        Thursday, 16.07.2026, 16:15-17:45</italic></p>
+        <p><italic>Lecture: Tuesday, 07.07.2026, 14:15-15:45 | Exercise:
+        Thursday, 09.07.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit14_reflection/14_reflection.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit13_reflection/14_reflection.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Explainability for experimental ML (CAMs, SHAP).</p>
@@ -700,8 +665,18 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Where ML genuinely changes materials processing.</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Mini-project presentations and critical discussion.</p>
+        <p><bold>Exercise:</bold> Mini-project presentations and
+        critical discussion.</p>
+      </sec>
+      <sec id="week-14-buffer-review-and-mini-project-work">
+        <title>1.3.5.3 Week 14 – Buffer, review, and mini-project
+        work</title>
+        <p><italic>Tuesday, 14.07.2026, 14:15-15:45 | Thursday,
+        16.07.2026, 16:15-17:45</italic></p>
+        <p>No new material. Reserved as a buffer to absorb schedule
+        slippage from the Week 7 / Week 8 public-holiday self-study
+        sessions, for review of difficult topics on request, and for
+        mini-project consultation and presentations.</p>
       </sec>
     </sec>
   </sec>
@@ -1173,17 +1148,23 @@ as data leakage, overfitting, and spurious correlations.</p>
         scratch.</p>
       </sec>
     </sec>
-    <sec id="unit-iii-learning-from-processing-data-weeks-79-nb-article">
+    <sec id="unit-iii-learning-from-processing-data-weeks-78-nb-article">
       <title>1.3.3 Unit III — Learning from Processing Data (Weeks
-      7–9)</title>
+      7–8)</title>
       <sec id="week-7-time-series-and-process-monitoring-nb-article">
         <title>1.3.3.1 Week 7 – Time-series and process
         monitoring</title>
-        <p><italic>Lecture: Tuesday, 26.05.2026, 14:15-15:45 (cancelled
-        - Pfingstdienstag) | Exercise: Thursday, 28.05.2026,
-        16:15-17:45</italic></p>
+        <p><italic>Lecture: Tuesday, 26.05.2026, 14:15-15:45 (self-study
+        — Pfingstdienstag public holiday) | Exercise: Thursday,
+        28.05.2026, 16:15-17:45 (in class)</italic></p>
         <p><bold>Slides:</bold>
         <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit07_time_series/01_intro.html">Open</ext-link></p>
+        <disp-quote>
+          <p><bold>Self-study lecture:</bold> the Tuesday slot is
+          cancelled (Pfingstdienstag). Work through the slide deck
+          independently; the Thursday exercise runs in class and
+          consolidates the material.</p>
+        </disp-quote>
         <list list-type="bullet">
           <list-item>
             <p>Processing signals: temperature cycles, AM melt pool
@@ -1218,62 +1199,22 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Real-time anomaly detection from processing history</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Predict a process outcome from time-series data using regression
-        or simple RNNs.</p>
+        <p><bold>Exercise:</bold> Predict a process outcome from
+        time-series data using regression or simple RNNs.</p>
       </sec>
-      <sec id="week-8-generalization-robustness-and-process-windows-nb-article">
-        <title>1.3.3.2 Week 8 – Generalization, robustness, and process
-        windows</title>
-        <p><italic>Lecture: Tuesday, 02.06.2026, 14:15-15:45 | Exercise:
-        Thursday, 04.06.2026, 16:15-17:45 (cancelled -
-        Fronleichnam)</italic></p>
-        <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit08_generalization_robustness/01_intro.html">Open</ext-link></p>
-        <list list-type="bullet">
-          <list-item>
-            <p>Sensitivity to noise and parameter drift.</p>
-          </list-item>
-          <list-item>
-            <p>Overfitting in process–property models.</p>
-          </list-item>
-          <list-item>
-            <p>Robustness as a design criterion.</p>
-          </list-item>
-        </list>
-        <p><bold>Summary:</bold></p>
-        <list list-type="bullet">
-          <list-item>
-            <p>Shift from raw performance to <bold>model
-            reliability</bold></p>
-          </list-item>
-          <list-item>
-            <p>Bias–variance tradeoff and generalization to
-            factory-floor data</p>
-          </list-item>
-          <list-item>
-            <p>Robust validation: K-fold and stratified cross-validation
-            on small datasets</p>
-          </list-item>
-          <list-item>
-            <p><bold>Process robustness</bold> via sensitivity
-            analysis</p>
-          </list-item>
-          <list-item>
-            <p><bold>Process windows</bold>: parameter regions
-            insensitive to industrial noise</p>
-          </list-item>
-        </list>
-        <p><bold>Exercise:</bold>
-        Analyze model robustness under perturbed process conditions.</p>
-      </sec>
-      <sec id="week-9-inverse-problems-and-process-maps-nb-article">
-        <title>1.3.3.3 Week 9 – Inverse problems and process
+      <sec id="week-8-inverse-problems-and-process-maps-nb-article">
+        <title>1.3.3.2 Week 8 – Inverse problems and process
         maps</title>
-        <p><italic>Lecture: Tuesday, 09.06.2026, 14:15-15:45 | Exercise:
-        Thursday, 11.06.2026, 16:15-17:45</italic></p>
+        <p><italic>Lecture: Tuesday, 02.06.2026, 14:15-15:45 (in class)
+        | Exercise: Thursday, 04.06.2026, 16:15-17:45 (self-study —
+        Fronleichnam public holiday)</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09_inverse_problems/09_inverse_problems.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit08_inverse_problems/09_inverse_problems.html">Open</ext-link></p>
+        <disp-quote>
+          <p><bold>Self-study exercise:</bold> the Thursday slot is
+          cancelled (Fronleichnam). The exercise is provided for
+          independent work; a solution is released afterwards.</p>
+        </disp-quote>
         <list list-type="bullet">
           <list-item>
             <p>Process → structure inverse problems.</p>
@@ -1305,20 +1246,22 @@ as data leakage, overfitting, and spurious correlations.</p>
             corridors</bold> for safe operating regions</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Construct a simple ML-based process map; compare constrained vs
-        unconstrained models.</p>
+        <p><bold>Exercise:</bold> Construct a simple ML-based process
+        map; compare constrained vs unconstrained models.</p>
       </sec>
     </sec>
-    <sec id="unit-iv-uncertainty-surrogates-and-automation-weeks-1012-nb-article">
-      <title>1.3.4 Unit IV — Uncertainty, Surrogates, and Automation
-      (Weeks 10–12)</title>
-      <sec id="week-10-ml-for-characterization-signals-nb-article">
-        <title>1.3.4.1 Week 10 – ML for characterization signals</title>
-        <p><italic>Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise:
-        Thursday, 18.06.2026, 16:15-17:45</italic></p>
+    <sec id="unit-iv-characterization-automation-and-uncertainty-weeks-911-nb-article">
+      <title>1.3.4 Unit IV — Characterization, Automation, and
+      Uncertainty (Weeks 9–11)</title>
+      <sec id="week-9-ml-for-characterization-signals-nb-article">
+        <title>1.3.4.1 Week 9 – ML for characterization signals</title>
+        <p><italic>Lecture: Tuesday, 09.06.2026, 14:15-15:45 | Exercise:
+        Thursday, 11.06.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_characterization_signals/10_characterization_signals.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09_characterization_signals/10_characterization_signals.html">Open</ext-link></p>
+        <p>Companion deck (within Week 9): <bold>Transformers for
+        materials</bold> —
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09b_transformers_for_materials/transformers_for_materials.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Spectral data: XRD, EELS, EDS.</p>
@@ -1349,17 +1292,16 @@ as data leakage, overfitting, and spurious correlations.</p>
             without losing physics</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Apply PCA/NMF to spectral datasets; interpret components
-        physically.</p>
+        <p><bold>Exercise:</bold> Apply PCA/NMF to spectral datasets;
+        interpret components physically.</p>
       </sec>
-      <sec id="week-11-automation-in-microscopy-and-characterization-nb-article">
-        <title>1.3.4.2 Week 11 – Automation in microscopy and
+      <sec id="week-10-automation-in-microscopy-and-characterization-nb-article">
+        <title>1.3.4.2 Week 10 – Automation in microscopy and
         characterization</title>
-        <p><italic>Lecture: Tuesday, 23.06.2026, 14:15-15:45 | Exercise:
-        Thursday, 25.06.2026, 16:15-17:45</italic></p>
+        <p><italic>Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise:
+        Thursday, 18.06.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_automation/11_automation.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_automation/11_automation.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Autofocus, drift correction, parameter selection.</p>
@@ -1390,13 +1332,13 @@ as data leakage, overfitting, and spurious correlations.</p>
         <p><bold>Exercise:</bold> Implement a simple ML-assisted
         autofocus or defect detector.</p>
       </sec>
-      <sec id="week-12-uncertainty-aware-regression-gaussian-processes-nb-article">
-        <title>1.3.4.3 Week 12 – Uncertainty-aware regression &amp;
+      <sec id="week-11-uncertainty-aware-regression-gaussian-processes-nb-article">
+        <title>1.3.4.3 Week 11 – Uncertainty-aware regression &amp;
         Gaussian Processes</title>
-        <p><italic>Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise:
-        Thursday, 02.07.2026, 16:15-17:45</italic></p>
+        <p><italic>Lecture: Tuesday, 23.06.2026, 14:15-15:45 | Exercise:
+        Thursday, 25.06.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_uncertainty_gp/12_uncertainty_gp.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_uncertainty_gp/12_uncertainty_gp.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Aleatoric vs epistemic uncertainty in experiments.</p>
@@ -1411,21 +1353,20 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Connection to materials acceleration platforms.</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Compare GP regression and NN ensembles for a process-parameter
-        problem.</p>
+        <p><bold>Exercise:</bold> Compare GP regression and NN ensembles
+        for a process-parameter problem.</p>
       </sec>
     </sec>
-    <sec id="unit-v-physics-trust-and-synthesis-weeks-1314-nb-article">
+    <sec id="unit-v-physics-trust-and-synthesis-weeks-1213-nb-article">
       <title>1.3.5 Unit V — Physics, Trust, and Synthesis (Weeks
-      13–14)</title>
-      <sec id="week-13-physics-informed-and-constrained-ml-nb-article">
-        <title>1.3.5.1 Week 13 – Physics-informed and constrained
+      12–13)</title>
+      <sec id="week-12-physics-informed-and-constrained-ml-nb-article">
+        <title>1.3.5.1 Week 12 – Physics-informed and constrained
         ML</title>
-        <p><italic>Lecture: Tuesday, 07.07.2026, 14:15-15:45 | Exercise:
-        Thursday, 09.07.2026, 16:15-17:45</italic></p>
+        <p><italic>Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise:
+        Thursday, 02.07.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit13_pinns/13_pinns.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_pinns/13_pinns.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Embedding physical constraints into ML models.</p>
@@ -1437,17 +1378,16 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Failure modes of unconstrained models.</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Train a constrained model for a processing or characterization
-        task.</p>
+        <p><bold>Exercise:</bold> Train a constrained model for a
+        processing or characterization task.</p>
       </sec>
-      <sec id="week-14-integration-limits-and-reflection-nb-article">
-        <title>1.3.5.2 Week 14 – Integration, limits, and
+      <sec id="week-13-integration-limits-and-reflection-nb-article">
+        <title>1.3.5.2 Week 13 – Integration, limits, and
         reflection</title>
-        <p><italic>Lecture: Tuesday, 14.07.2026, 14:15-15:45 | Exercise:
-        Thursday, 16.07.2026, 16:15-17:45</italic></p>
+        <p><italic>Lecture: Tuesday, 07.07.2026, 14:15-15:45 | Exercise:
+        Thursday, 09.07.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit14_reflection/14_reflection.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit13_reflection/14_reflection.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Explainability for experimental ML (CAMs, SHAP).</p>
@@ -1459,8 +1399,18 @@ as data leakage, overfitting, and spurious correlations.</p>
             <p>Where ML genuinely changes materials processing.</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Mini-project presentations and critical discussion.</p>
+        <p><bold>Exercise:</bold> Mini-project presentations and
+        critical discussion.</p>
+      </sec>
+      <sec id="week-14-buffer-review-and-mini-project-work-nb-article">
+        <title>1.3.5.3 Week 14 – Buffer, review, and mini-project
+        work</title>
+        <p><italic>Tuesday, 14.07.2026, 14:15-15:45 | Thursday,
+        16.07.2026, 16:15-17:45</italic></p>
+        <p>No new material. Reserved as a buffer to absorb schedule
+        slippage from the Week 7 / Week 8 public-holiday self-study
+        sessions, for review of difficult topics on request, and for
+        mini-project consultation and presentations.</p>
       </sec>
     </sec>
   </sec>
@@ -1563,133 +1513,93 @@ as data leakage, overfitting, and spurious correlations.</p>
 </front-stub>
 
 <body>
-<sec id="week-13-summary-physics-informed-and-constrained-ml-nb-1">
-  <title>Week 13 Summary: Physics-informed and constrained ML</title>
+<sec id="week-5-summary-unsupervised-learning-in-materials-nb-1">
+  <title>Week 5 Summary: Unsupervised Learning in Materials</title>
   <sec id="cross-book-summary-nb-1">
     <title>Cross-Book Summary</title>
-    <sec id="physics-informed-neural-networks-pinns-nb-1">
-      <title>1. Physics-Informed Neural Networks (PINNs)</title>
+    <sec id="the-need-for-convolutions-nb-1">
+      <title>1. The Need for Convolutions</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Embedding Laws:</bold> Enforce ODEs/PDEs via the loss
-          function for physical consistency.</p>
+          <p><bold>Parameter Explosion:</bold> MLPs require too many
+          weights for images.</p>
         </list-item>
         <list-item>
-          <p><bold>Automatic Differentiation:</bold> Exact derivative
-          calculations enable NNs to evaluate physical equations.</p>
+          <p><bold>Exploiting Structure:</bold> Convolutions use shared
+          filters for spatial correlation.</p>
         </list-item>
         <list-item>
-          <p><bold>Boundary Conditions:</bold> Methods like Lagaris
-          substitution guarantee boundary compliance.</p>
+          <p><bold>Shift Invariance:</bold> Detects features anywhere in
+          the micrograph.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="governing-equation-discovery-nb-1">
-      <title>2. Governing Equation Discovery</title>
+    <sec id="cnn-mechanics-nb-1">
+      <title>2. CNN Mechanics</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Dictionary-Based Regression:</bold> Build a
-          dictionary of candidate math functions.</p>
+          <p><bold>Convolutional Layers:</bold> Hierarchical feature
+          detectors.</p>
         </list-item>
         <list-item>
-          <p><bold>Sparse Identification:</bold> Use regularized
-          regression (Lasso) to discover physical laws from noisy
-          data.</p>
+          <p><bold>Activation &amp; Pooling:</bold> Non-linearity and
+          spatial downsampling.</p>
         </list-item>
         <list-item>
-          <p><bold>Dimensional Reasoning:</bold> Unit analysis ensures
-          physically plausible discoveries.</p>
+          <p><bold>Perception Analogy:</bold> Inspired by early
+          photo-cell grids.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="constraints-in-materials-science-nb-1">
-      <title>3. Constraints in Materials Science</title>
+    <sec id="application-to-microstructures-nb-1">
+      <title>3. Application to Microstructures</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Monotonicity:</bold> Enforce required physical trends
-          (e.g., hardness vs. alloying).</p>
+          <p><bold>Segmentation:</bold> Pixel-wise classification.</p>
         </list-item>
         <list-item>
-          <p><bold>Hybrid Modeling:</bold> Combine physical “White-Box”
-          models with data-driven “Black-Boxes” (Grey-Box).</p>
+          <p><bold>Object Detection:</bold> Bounding specific
+          features.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Classification:</bold> Categorizing whole
+          micrographs.</p>
         </list-item>
       </list>
     </sec>
   </sec>
   <sec id="minute-lecture-strategy-nb-1">
     <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-why-physics-matters-nb-1">
-      <title>Part 1: Why Physics Matters</title>
+    <sec id="part-1-applied-clustering-nb-1">
+      <title>Part 1: Applied Clustering</title>
       <list list-type="bullet">
         <list-item>
-          <p>Limits of unconstrained Black-Box models.</p>
+          <p>Phase segmentation with K-Means/GMMs.</p>
         </list-item>
         <list-item>
-          <p>Accurate but Physical models.</p>
-        </list-item>
-        <list-item>
-          <p>PINNs need less data.</p>
+          <p>Defect detection in sensor streams.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-automatic-differentiation-nb-1">
-      <title>Part 2: Automatic Differentiation</title>
+    <sec id="part-2-applied-autoencoders-nb-1">
+      <title>Part 2: Applied Autoencoders</title>
       <list list-type="bullet">
         <list-item>
-          <p>GradientTape mechanics.</p>
+          <p>CAE compression of 3D Tomography.</p>
         </list-item>
         <list-item>
-          <p>Derivatives as ML architecture components.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-3-solving-physics-with-nns-nb-1">
-      <title>Part 3: Solving Physics with NNs</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>PINN Architectures: Data Loss + Physics Loss.</p>
-        </list-item>
-        <list-item>
-          <p>Enforcing Boundary Conditions.</p>
-        </list-item>
-        <list-item>
-          <p>3D printing heat transfer case study.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-4-equation-discovery-nb-1">
-      <title>Part 4: Equation Discovery</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Sparse Regression and candidate dictionaries.</p>
-        </list-item>
-        <list-item>
-          <p>Damped pendulum equation case study.</p>
-        </list-item>
-        <list-item>
-          <p>Unit Analysis search pruning.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-5-the-grey-box-future-nb-1">
-      <title>Part 5: The Grey-Box Future</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Hybrid architectures vs. FEA.</p>
-        </list-item>
-        <list-item>
-          <p>Building industrial trust.</p>
+          <p>Latent space defect discovery.</p>
         </list-item>
       </list>
     </sec>
   </sec>
   <sec id="quarto-website-update-summary-nb-1">
     <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 13:</bold>
-    - Combines neural networks with physical laws via Physics-Informed
-    ML. - Introduces PINNs and automatic differentiation. - Details
-    Governing Equation Discovery using sparse regression. - Applies
-    physical constraints to build data-efficient Grey-Box models.</p>
+    <p><bold>Summary for ML-PC Week 5:</bold> - Shifts to Unsupervised
+    Learning for unlabeled materials data. - Covers clustering (K-Means,
+    GMMs) and Autoencoders. - Applies techniques to EDS segmentation and
+    sensor anomaly detection. - Explores 3D microstructure latent spaces
+    for automated motif discovery.</p>
   </sec>
 </sec>
 </body>
@@ -1706,879 +1616,11 @@ as data leakage, overfitting, and spurious correlations.</p>
 </front-stub>
 
 <body>
-<sec id="week-3-summary-data-quality-labels-and-leakage-nb-2">
-  <title>Week 3 Summary: Data quality, labels, and leakage</title>
+<sec id="week-2-summary-physics-of-data-formation-nb-2">
+  <title>Week 2 Summary: Physics of data formation</title>
   <sec id="cross-book-summary-nb-2">
     <title>Cross-Book Summary</title>
-    <sec id="systematic-data-cleaning-nb-2">
-      <title>1. Systematic Data Cleaning</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Pipeline:</bold> Handle NaNs, missing data, and
-          duplicates.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Fix at Source:</bold> Prefer physical improvements
-          over digital cleaning.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Normalization:</bold> Ensure consistent scaling
-          between training and inference.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="the-annotation-problem-nb-2">
-      <title>2. The Annotation Problem</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Label Uncertainty:</bold> Ground truth is often
-          subjective.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Inter-annotator Variance:</bold> Human disagreement
-          sets an upper performance bound.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="data-leakage-nb-2">
-      <title>3. Data Leakage</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Spatial Leakage:</bold> Split by sample, not
-          randomly, to avoid physical correlation.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Temporal Leakage:</bold> Use sliding windows for
-          time-series data.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Information Leakage:</bold> Exclude features derived
-          from targets.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="minute-lecture-strategy-nb-2">
-    <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-quality-crisis-nb-2">
-      <title>Part 1: Quality Crisis</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>“Garbage In, Garbage Out”.</p>
-        </list-item>
-        <list-item>
-          <p>Cost of acquisition vs. bad labels.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-2-preprocessing-cleaning-nb-2">
-      <title>Part 2: Preprocessing &amp; Cleaning</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Systematic cleaning.</p>
-        </list-item>
-        <list-item>
-          <p>Imputation strategies.</p>
-        </list-item>
-        <list-item>
-          <p>Scalers (Min-Max, Z-score).</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-3-labeling-nb-2">
-      <title>Part 3: Labeling</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Manual annotation pitfalls.</p>
-        </list-item>
-        <list-item>
-          <p>Quantifying label uncertainty.</p>
-        </list-item>
-        <list-item>
-          <p>Crowdsourcing vs. Experts.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-4-data-leakage-nb-2">
-      <title>Part 4: Data Leakage</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Test data influencing training.</p>
-        </list-item>
-        <list-item>
-          <p>Spatial and Feature leakage.</p>
-        </list-item>
-        <list-item>
-          <p>“Too good to be true” heuristic.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-5-robust-validation-nb-2">
-      <title>Part 5: Robust Validation</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Grouped K-Fold validation.</p>
-        </list-item>
-        <list-item>
-          <p>Nested Cross-Validation.</p>
-        </list-item>
-        <list-item>
-          <p>ML pipeline checklist.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="quarto-website-update-summary-nb-2">
-    <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 3:</bold>
-    - Emphasizes data integrity, cleaning, and normalization. -
-    Highlights materials annotation challenges like inter-annotator
-    variance. - Details Data Leakage risks from physical/spatial
-    correlations. - Introduces robust validation to ensure true
-    generalization.</p>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
-<sub-article article-type="notebook" id="nb-9-nb-3">
-<front-stub>
-</front-stub>
-
-<body>
-<sec id="week-7-summary-time-series-and-process-monitoring-nb-3">
-  <title>Week 7 Summary: Time-series and process monitoring</title>
-  <sec id="cross-book-summary-nb-3">
-    <title>Cross-Book Summary</title>
-    <sec id="sequential-data-memory-nb-3">
-      <title>1. Sequential Data &amp; Memory</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Temporal Dimension:</bold> Process logs are
-          sequential; order matters.</p>
-        </list-item>
-        <list-item>
-          <p><bold>RNNs:</bold> Possess hidden states that act as
-          memory.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Vanishing Gradients:</bold> Basic RNNs struggle with
-          long-term dependencies.</p>
-        </list-item>
-        <list-item>
-          <p><bold>LSTMs/GRUs:</bold> Use gates to selectively
-          remember/forget information.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="materials-process-monitoring-nb-3">
-      <title>2. Materials Process Monitoring</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Preprocessing:</bold> Smoothing and “Triggering” to
-          extract cycles.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Anomaly Detection:</bold> Large prediction deviations
-          signal defects.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Surrogate Models:</bold> Fast RNN/LSTM replacements
-          for slow simulations.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="minute-lecture-strategy-nb-3">
-    <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-processing-as-sequence-nb-3">
-      <title>Part 1: Processing as Sequence</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Time-dependency of microstructure.</p>
-        </list-item>
-        <list-item>
-          <p>Sensor types (1D vs. logs).</p>
-        </list-item>
-        <list-item>
-          <p>Event vs. Continuous.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-2-preprocessing-nb-3">
-      <title>Part 2: Preprocessing</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Denoising filters.</p>
-        </list-item>
-        <list-item>
-          <p>Triggering cycles.</p>
-        </list-item>
-        <list-item>
-          <p>Temporal Feature Engineering.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-3-rnns-nb-3">
-      <title>Part 3: RNNs</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Unrolled RNN structure.</p>
-        </list-item>
-        <list-item>
-          <p>Vanishing Gradient problem.</p>
-        </list-item>
-        <list-item>
-          <p>LSTM and GRU mechanics.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-4-case-studies-nb-3">
-      <title>Part 4: Case Studies</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Predictive Maintenance.</p>
-        </list-item>
-        <list-item>
-          <p>AM melt pool stability.</p>
-        </list-item>
-        <list-item>
-          <p>Dilatometry phase predictions.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-5-challenges-nb-3">
-      <title>Part 5: Challenges</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Non-stationarity and machine drift.</p>
-        </list-item>
-        <list-item>
-          <p>Transformers for 1D data.</p>
-        </list-item>
-        <list-item>
-          <p>Closed-loop control outlook.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="quarto-website-update-summary-nb-3">
-    <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 7:</bold>
-    - Applies ML to Time-Series Data for process monitoring. -
-    Introduces RNNs and LSTMs for sequential dependencies. - Details
-    essential preprocessing like smoothing and triggering. - Covers
-    anomaly detection and process outcome prediction.</p>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
-<sub-article article-type="notebook" id="nb-12-nb-4">
-<front-stub>
-</front-stub>
-
-<body>
-<sec id="week-1-summary-what-makes-materials-data-special-nb-4">
-  <title>Week 1 Summary: What makes materials data special?</title>
-  <sec id="cross-book-summary-nb-4">
-    <title>Cross-Book Summary</title>
-    <sec id="the-concept-of-data-based-modeling-nb-4">
-      <title>1. The Concept of Data-Based Modeling</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Data-based vs. First-Principle:</bold> Top-down ML
-          vs. bottom-up physics.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Traceability:</bold> White (explainable), Grey
-          (hybrid), and Black-Box (opaque) models.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Overfitting:</bold> Excess complexity fails to
-          generalize.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="foundations-of-data-nb-4">
-      <title>2. Foundations of Data</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Types:</bold> Nominal, Ordinal, Cardinal, Binary.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Scales:</bold> Nominal, Ordinal, Interval, Ratio.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Uncertainty:</bold> Units and measurement error are
-          essential.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="materials-science-specifics-nb-4">
-      <title>3. Materials Science Specifics</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>PSPP Paradigm:</bold>
-          Processing-Structure-Property-Performance dependency.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Noise:</bold> Physical noise, aliasing, and
-          instrument bias.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Scarcity:</bold> High-quality data is expensive and
-          rare.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="minute-lecture-strategy-nb-4">
-    <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-introduction-philosophy-nb-4">
-      <title>Part 1: Introduction &amp; Philosophy</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>AI 4 Materials goals.</p>
-        </list-item>
-        <list-item>
-          <p>Hype vs. Reality.</p>
-        </list-item>
-        <list-item>
-          <p>Convergence of high-throughput, simulation, and ML.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-2-models-in-engineering-nb-4">
-      <title>Part 2: Models in Engineering</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Prediction vs. Explanation.</p>
-        </list-item>
-        <list-item>
-          <p>Physics-based vs. Data-driven.</p>
-        </list-item>
-        <list-item>
-          <p>Moving toward White-Box ML.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-3-special-materials-data-nb-4">
-      <title>Part 3: Special Materials Data</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>PSPP graph.</p>
-        </list-item>
-        <list-item>
-          <p>Multi-modal data types.</p>
-        </list-item>
-        <list-item>
-          <p>Small Data challenges.</p>
-        </list-item>
-        <list-item>
-          <p>Physical Priors.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-4-data-quality-nb-4">
-      <title>Part 4: Data Quality</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Categorizing data.</p>
-        </list-item>
-        <list-item>
-          <p>Metadata and Units.</p>
-        </list-item>
-        <list-item>
-          <p>Error propagation.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-5-crisp-dm-for-labs-nb-4">
-      <title>Part 5: CRISP-DM for Labs</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Adapting industrial standards.</p>
-        </list-item>
-        <list-item>
-          <p>Deployment.</p>
-        </list-item>
-        <list-item>
-          <p>Correlation != Causality.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="quarto-website-update-summary-nb-4">
-    <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 1:</bold>
-    - Transitions from physics-based to data-driven modeling. -
-    Highlights multi-modal, scarce materials data. - Covers PSPP
-    relationships, data scales, and uncertainty. - Adapts CRISP-DM for
-    scientific workflows.</p>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
-<sub-article article-type="notebook" id="nb-15-nb-5">
-<front-stub>
-</front-stub>
-
-<body>
-<sec id="week-9-summary-inverse-problems-and-process-maps-nb-5">
-  <title>Week 9 Summary: Inverse problems and process maps</title>
-  <sec id="cross-book-summary-nb-5">
-    <title>Cross-Book Summary</title>
-    <sec id="forward-vs.-inverse-problems-nb-5">
-      <title>1. Forward vs. Inverse Problems</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Causality Gap:</bold> Forward problems are unique;
-          inverse are ill-posed/multi-valued.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Non-Gaussianity:</bold> Inverse problems require
-          Mixture Density Networks due to multimodality.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="physics-informed-enrichment-nb-5">
-      <title>2. Physics-Informed Enrichment</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Expert in the Loop:</bold> Add physical
-          transformations (e.g., FFT) to reduce training effort.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Enrichment:</bold> Combine raw data with physics
-          features (PINNs).</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="process-maps-and-corridors-nb-5">
-      <title>3. Process Maps and Corridors</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Process Corridors:</bold> Identifying stable
-          parameter regions.</p>
-        </list-item>
-        <list-item>
-          <p><bold>ML-Guided Mapping:</bold> Interpolating sparse
-          experimental points via surrogates.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Prescriptive ML:</bold> Answering “What must I do?”
-          instead of “What will happen?”.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="minute-lecture-strategy-nb-5">
-    <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-material-scientists-dilemma-nb-5">
-      <title>Part 1: Material Scientist’s Dilemma</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Inverse problem complexities.</p>
-        </list-item>
-        <list-item>
-          <p>Many-to-one mappings.</p>
-        </list-item>
-        <list-item>
-          <p>Uniqueness in systems.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-2-physics-informed-ml-nb-5">
-      <title>Part 2: Physics-Informed ML</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>White vs. Grey vs. Black Box.</p>
-        </list-item>
-        <list-item>
-          <p>Feature Enrichment.</p>
-        </list-item>
-        <list-item>
-          <p>Loss function constraints.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-3-solving-the-inverse-nb-5">
-      <title>Part 3: Solving the Inverse</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Regression failure on inverse tasks.</p>
-        </list-item>
-        <list-item>
-          <p>Regularization and Mixture Models.</p>
-        </list-item>
-        <list-item>
-          <p>Heat treatment parameter case study.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-4-building-process-maps-nb-5">
-      <title>Part 4: Building Process Maps</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Continuous maps from points.</p>
-        </list-item>
-        <list-item>
-          <p>Visualizing Safe Corridors.</p>
-        </list-item>
-        <list-item>
-          <p>Laser-material interactions mapping.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-5-ml-for-material-design-nb-5">
-      <title>Part 5: ML for Material Design</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Prescribing processing routes.</p>
-        </list-item>
-        <list-item>
-          <p>Simulation-aided training.</p>
-        </list-item>
-        <list-item>
-          <p>AI vs. human intuition.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="quarto-website-update-summary-nb-5">
-    <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 9:</bold>
-    - Explores Inverse Problems for materials design. - Contrasts
-    multi-valued inverse tasks with causal forward problems. -
-    Introduces Physics-Informed Learning and feature enrichment. -
-    Demonstrates building Process Maps and Safe Corridors.</p>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
-<sub-article article-type="notebook" id="nb-18-nb-6">
-<front-stub>
-</front-stub>
-
-<body>
-<sec id="week-8-summary-generalization-robustness-and-process-windows-nb-6">
-  <title>Week 8 Summary: Generalization, robustness, and process
-  windows</title>
-  <sec id="cross-book-summary-nb-6">
-    <title>Cross-Book Summary</title>
-    <sec id="the-generalization-problem-nb-6">
-      <title>1. The Generalization Problem</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Over/Underfitting:</bold> Balancing high variance
-          (noise fitting) vs. high bias (too simple).</p>
-        </list-item>
-        <list-item>
-          <p><bold>Tradeoff:</bold> Minimizing total error = Bias² +
-          Variance + Noise.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Regularization:</bold> L1 (Lasso) and L2 (Ridge)
-          penalize complex models.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="robust-validation-nb-6">
-      <title>2. Robust Validation</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Cross-Validation:</bold> K-Fold provides stable
-          performance estimates.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Leave-One-Out (LOO):</bold> For extremely small
-          datasets.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Stratification:</bold> Maintains representative
-          class/property distributions.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="process-robustness-windows-nb-6">
-      <title>3. Process Robustness &amp; Windows</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Sensitivity Analysis:</bold> Quantifying output
-          change vs. input perturbation.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Process Windows:</bold> Finding optimal, stable
-          regions insensitive to industrial noise.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Robust Design:</bold> Choosing stability over a sharp
-          performance peak.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="minute-lecture-strategy-nb-6">
-    <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-reliability-nb-6">
-      <title>Part 1: Reliability</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>High accuracy is insufficient for deployment.</p>
-        </list-item>
-        <list-item>
-          <p>Defining “Model Trust”.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-2-biasvariance-nb-6">
-      <title>Part 2: Bias/Variance</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>U-shaped error curve.</p>
-        </list-item>
-        <list-item>
-          <p>Visualizing overfitting.</p>
-        </list-item>
-        <list-item>
-          <p>Double Descent.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-3-robust-validation-workflows-nb-6">
-      <title>Part 3: Robust Validation Workflows</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>K-Fold, Stratified, Grouped CV.</p>
-        </list-item>
-        <list-item>
-          <p>Nested CV.</p>
-        </list-item>
-        <list-item>
-          <p>Reliability metrics.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-4-regularization-nb-6">
-      <title>Part 4: Regularization</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>L2 (Ridge) and L1 (Lasso).</p>
-        </list-item>
-        <list-item>
-          <p>Early Stopping.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-5-process-windows-nb-6">
-      <title>Part 5: Process Windows</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Mapping safe processing zones.</p>
-        </list-item>
-        <list-item>
-          <p>Sensitivity analysis applications.</p>
-        </list-item>
-        <list-item>
-          <p>Casting/3D Printing stability.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="quarto-website-update-summary-nb-6">
-    <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 8:</bold>
-    - Shifts focus from performance to Model Reliability. - Explores
-    Bias-Variance tradeoff and generalization. - Details robust
-    validation (K-Fold, Stratified CV). - Uses sensitivity analysis to
-    map stable Process Windows.</p>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
-<sub-article article-type="notebook" id="nb-21-nb-7">
-<front-stub>
-</front-stub>
-
-<body>
-<sec id="week-11-summary-automation-in-microscopy-and-characterization-nb-7">
-  <title>Week 11 Summary: Automation in microscopy and
-  characterization</title>
-  <sec id="cross-book-summary-nb-7">
-    <title>Cross-Book Summary</title>
-    <sec id="multi-modal-data-fusion-nb-7">
-      <title>1. Multi-Modal Data Fusion</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Beyond Single Sensors:</bold> Fuse images (SEM),
-          chemistry (EDS), and orientations (EBSD) for a complete
-          physical picture.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Bayesian Sensor Fusion:</bold> Combines uncertain
-          measurements using precision-weighted posteriors.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Latent Fusion:</bold> Autoencoders/PCA find shared
-          embeddings to combine diverse data types.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="reinforcement-learning-for-control-nb-7">
-      <title>2. Reinforcement Learning for Control</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Autonomous Agent:</bold> Learns to interact with
-          environments (e.g., microscopes) to maximize rewards.</p>
-        </list-item>
-        <list-item>
-          <p><bold>RL Loop:</bold> State (image), Action (adjust focus),
-          Reward (sharpness/SNR).</p>
-        </list-item>
-        <list-item>
-          <p><bold>Policy Gradients:</bold> Train NNs for optimal
-          scientific decision-making.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="computer-vision-in-the-lab-nb-7">
-      <title>3. Computer Vision in the Lab</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Automated Workflows:</bold> CNNs for real-time ROI
-          detection, autofocus, and pattern classification.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="minute-lecture-strategy-nb-7">
-    <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-toward-the-self-driving-lab-nb-7">
-      <title>Part 1: Toward the Self-Driving Lab</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>The automation stack.</p>
-        </list-item>
-        <list-item>
-          <p>Autonomous Characterization: Scan, Analyze, Decide,
-          Repeat.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-2-ml-assisted-instrument-tuning-nb-7">
-      <title>Part 2: ML-Assisted Instrument Tuning</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Autofocus and Beam Alignment.</p>
-        </list-item>
-        <list-item>
-          <p>Real-time feedback loops.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-3-fusing-multi-modal-data-nb-7">
-      <title>Part 3: Fusing Multi-Modal Data</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Bayesian Fusion for sensor noise.</p>
-        </list-item>
-        <list-item>
-          <p>Multi-head NNs.</p>
-        </list-item>
-        <list-item>
-          <p>Combining XRD and EDS.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-4-rl-for-lab-control-nb-7">
-      <title>Part 4: RL for Lab Control</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>RL Framework overview.</p>
-        </list-item>
-        <list-item>
-          <p>Reward Functions for science.</p>
-        </list-item>
-        <list-item>
-          <p>Industrial glass processing control.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-5-the-integrated-pipeline-nb-7">
-      <title>Part 5: The Integrated Pipeline</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>“On-the-fly” discovery.</p>
-        </list-item>
-        <list-item>
-          <p>Automation challenges: Latency and safety.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="quarto-website-update-summary-nb-7">
-    <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 11:</bold>
-    - Explores Autonomous Characterization and active instrument
-    control. - Introduces Multi-Modal Data Fusion (Bayesian and Latent).
-    - Uses Reinforcement Learning (RL) for laboratory task automation. -
-    Details building integrated pipelines for “on-the-fly” scientific
-    discovery.</p>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
-<sub-article article-type="notebook" id="nb-24-nb-8">
-<front-stub>
-</front-stub>
-
-<body>
-<sec id="week-2-summary-physics-of-data-formation-nb-8">
-  <title>Week 2 Summary: Physics of data formation</title>
-  <sec id="cross-book-summary-nb-8">
-    <title>Cross-Book Summary</title>
-    <sec id="signal-formation-noise-nb-8">
+    <sec id="signal-formation-noise-nb-2">
       <title>1. Signal Formation &amp; Noise</title>
       <list list-type="bullet">
         <list-item>
@@ -2594,7 +1636,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="dimension-reduction-structure-nb-8">
+    <sec id="dimension-reduction-structure-nb-2">
       <title>2. Dimension Reduction &amp; Structure</title>
       <list list-type="bullet">
         <list-item>
@@ -2616,9 +1658,9 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list>
     </sec>
   </sec>
-  <sec id="minute-lecture-strategy-nb-8">
+  <sec id="minute-lecture-strategy-nb-2">
     <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-measurement-chain-nb-8">
+    <sec id="part-1-measurement-chain-nb-2">
       <title>Part 1: Measurement Chain</title>
       <list list-type="bullet">
         <list-item>
@@ -2632,7 +1674,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-statistical-foundations-nb-8">
+    <sec id="part-2-statistical-foundations-nb-2">
       <title>Part 2: Statistical Foundations</title>
       <list list-type="bullet">
         <list-item>
@@ -2646,7 +1688,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-3-dimension-reduction-nb-8">
+    <sec id="part-3-dimension-reduction-nb-2">
       <title>Part 3: Dimension Reduction</title>
       <list list-type="bullet">
         <list-item>
@@ -2663,7 +1705,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-4-materials-case-studies-nb-8">
+    <sec id="part-4-materials-case-studies-nb-2">
       <title>Part 4: Materials Case Studies</title>
       <list list-type="bullet">
         <list-item>
@@ -2677,7 +1719,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-5-physics-ml-integration-nb-8">
+    <sec id="part-5-physics-ml-integration-nb-2">
       <title>Part 5: Physics-ML Integration</title>
       <list list-type="bullet">
         <list-item>
@@ -2692,7 +1734,7 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list>
     </sec>
   </sec>
-  <sec id="quarto-website-update-summary-nb-8">
+  <sec id="quarto-website-update-summary-nb-2">
     <title>Quarto Website Update (Summary)</title>
     <p><bold>Summary for ML-PC Week 2:</bold>
     - Connects physical data acquisition to mathematical representation.
@@ -2711,157 +1753,16 @@ as data leakage, overfitting, and spurious correlations.</p>
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-27-nb-9">
+<sub-article article-type="notebook" id="nb-9-nb-3">
 <front-stub>
 </front-stub>
 
 <body>
-<sec id="week-6-summary-data-scarcity-transfer-learning-nb-9">
-  <title>Week 6 Summary: Data scarcity &amp; transfer learning</title>
-  <sec id="cross-book-summary-nb-9">
+<sec id="week-13-summary-integration-limits-and-reflection-nb-3">
+  <title>Week 13 Summary: Integration, limits, and reflection</title>
+  <sec id="cross-book-summary-nb-3">
     <title>Cross-Book Summary</title>
-    <sec id="the-small-data-challenge-nb-9">
-      <title>1. The Small Data Challenge</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Cost:</bold> Scientific data is expensive; deep
-          networks easily overfit small datasets.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Generalization:</bold> Requires early stopping,
-          dropout, and robust splits to avoid overfitting.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="transfer-learning-nb-9">
-      <title>2. Transfer Learning</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Pretrained Models:</bold> Start with models trained
-          on massive datasets (e.g., ImageNet).</p>
-        </list-item>
-        <list-item>
-          <p><bold>Feature Reuse:</bold> Early layers learn universal
-          visual primitives useful for micrographs.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Fine-Tuning:</bold> Freeze backbone and train the
-          head, or unfreeze late layers with a low learning rate.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="data-augmentation-nb-9">
-      <title>3. Data Augmentation</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Artificial Relief:</bold> Expand data via rotation,
-          flipping, cropping, etc.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Physics-Preserving:</bold> Materials rotations/flips
-          preserve physical meaning.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="minute-lecture-strategy-nb-9">
-    <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-curse-of-small-data-nb-9">
-      <title>Part 1: Curse of Small Data</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Small, Expensive, Messy data.</p>
-        </list-item>
-        <list-item>
-          <p>Overfitting risks.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-2-augmentation-nb-9">
-      <title>Part 2: Augmentation</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Traditional: Flips, Rotations.</p>
-        </list-item>
-        <list-item>
-          <p>Advanced: Mixup, Cutmix.</p>
-        </list-item>
-        <list-item>
-          <p>Domain-specific: Simulated noise.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-3-transfer-learning-mechanics-nb-9">
-      <title>Part 3: Transfer Learning Mechanics</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Feature Hierarchies.</p>
-        </list-item>
-        <list-item>
-          <p>Available backbones.</p>
-        </list-item>
-        <list-item>
-          <p>Fine-tuning strategies.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-4-domain-shift-in-science-nb-9">
-      <title>Part 4: Domain Shift in Science</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Natural vs. scientific domains.</p>
-        </list-item>
-        <list-item>
-          <p>Cross-Material Transfer.</p>
-        </list-item>
-        <list-item>
-          <p>Synthetic-to-Real Transfer.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-5-summary-best-practices-nb-9">
-      <title>Part 5: Summary &amp; Best Practices</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Backbone selection.</p>
-        </list-item>
-        <list-item>
-          <p>Small data validation.</p>
-        </list-item>
-        <list-item>
-          <p>“Learning to Learn”.</p>
-        </list-item>
-      </list>
-    </sec>
-  </sec>
-  <sec id="quarto-website-update-summary-nb-9">
-    <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 6:</bold>
-    - Addresses Data Scarcity in materials informatics. - Explores
-    Transfer Learning to leverage pretrained models. - Discusses
-    scientific Data Augmentation strategies. - Evaluates cross-domain
-    knowledge transfer limits.</p>
-  </sec>
-</sec>
-</body>
-
-
-
-<back>
-</back>
-
-
-</sub-article>
-<sub-article article-type="notebook" id="nb-30-nb-10">
-<front-stub>
-</front-stub>
-
-<body>
-<sec id="week-14-summary-integration-limits-and-reflection-nb-10">
-  <title>Week 14 Summary: Integration, limits, and reflection</title>
-  <sec id="cross-book-summary-nb-10">
-    <title>Cross-Book Summary</title>
-    <sec id="explainability-opening-the-black-box-nb-10">
+    <sec id="explainability-opening-the-black-box-nb-3">
       <title>1. Explainability: Opening the Black Box</title>
       <list list-type="bullet">
         <list-item>
@@ -2878,7 +1779,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="causality-and-semantics-nb-10">
+    <sec id="causality-and-semantics-nb-3">
       <title>2. Causality and Semantics</title>
       <list list-type="bullet">
         <list-item>
@@ -2892,7 +1793,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="limits-of-ai-in-materials-science-nb-10">
+    <sec id="limits-of-ai-in-materials-science-nb-3">
       <title>3. Limits of AI in Materials Science</title>
       <list list-type="bullet">
         <list-item>
@@ -2910,9 +1811,9 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list>
     </sec>
   </sec>
-  <sec id="minute-lecture-strategy-nb-10">
+  <sec id="minute-lecture-strategy-nb-3">
     <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-course-synthesis-nb-10">
+    <sec id="part-1-course-synthesis-nb-3">
       <title>Part 1: Course Synthesis</title>
       <list list-type="bullet">
         <list-item>
@@ -2923,7 +1824,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-explainable-ml-nb-10">
+    <sec id="part-2-explainable-ml-nb-3">
       <title>Part 2: Explainable ML</title>
       <list list-type="bullet">
         <list-item>
@@ -2937,7 +1838,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-3-causality-semantics-nb-10">
+    <sec id="part-3-causality-semantics-nb-3">
       <title>Part 3: Causality &amp; Semantics</title>
       <list list-type="bullet">
         <list-item>
@@ -2951,7 +1852,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-4-ethics-and-limits-nb-10">
+    <sec id="part-4-ethics-and-limits-nb-3">
       <title>Part 4: Ethics and Limits</title>
       <list list-type="bullet">
         <list-item>
@@ -2965,7 +1866,7 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-5-final-outlook-nb-10">
+    <sec id="part-5-final-outlook-nb-3">
       <title>Part 5: Final Outlook</title>
       <list list-type="bullet">
         <list-item>
@@ -2977,7 +1878,7 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list>
     </sec>
   </sec>
-  <sec id="quarto-website-update-summary-nb-10">
+  <sec id="quarto-website-update-summary-nb-3">
     <title>Quarto Website Update (Summary)</title>
     <p><bold>Summary for ML-PC Week 14:</bold>
     - Reflects on Explainability and Sensitivity Analysis to open
@@ -2996,98 +1897,157 @@ as data leakage, overfitting, and spurious correlations.</p>
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-33-nb-11">
+<sub-article article-type="notebook" id="nb-12-nb-4">
 <front-stub>
 </front-stub>
 
 <body>
-<sec id="week-5-summary-unsupervised-learning-in-materials-nb-11">
-  <title>Week 5 Summary: Unsupervised Learning in Materials</title>
-  <sec id="cross-book-summary-nb-11">
+<sec id="week-14-summary-buffer-review-and-mini-project-work-nb-4">
+  <title>Week 14 Summary: Buffer, review, and mini-project work</title>
+  <p>No new material. Reserved as a buffer to absorb schedule slippage
+  from the Week 7 / Week 8 public-holiday self-study sessions, for
+  review of difficult topics on request, and for mini-project
+  consultation and presentations.</p>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-15-nb-5">
+<front-stub>
+</front-stub>
+
+<body>
+<sec id="week-4-summary-from-classical-microstructure-metrics-to-learned-representations-nb-5">
+  <title>Week 4 Summary: From classical microstructure metrics to
+  learned representations</title>
+  <sec id="cross-book-summary-nb-5">
     <title>Cross-Book Summary</title>
-    <sec id="the-need-for-convolutions-nb-11">
-      <title>1. The Need for Convolutions</title>
+    <sec id="classical-microstructure-metrics-nb-5">
+      <title>1. Classical Microstructure Metrics</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Parameter Explosion:</bold> MLPs require too many
-          weights for images.</p>
+          <p><bold>Stereology:</bold> Quantifying 3D structure from 2D
+          sections.</p>
         </list-item>
         <list-item>
-          <p><bold>Exploiting Structure:</bold> Convolutions use shared
-          filters for spatial correlation.</p>
+          <p><bold>Hand-crafted Descriptors:</bold> Intuitive but biased
+          (e.g., aspect ratio).</p>
         </list-item>
         <list-item>
-          <p><bold>Shift Invariance:</bold> Detects features anywhere in
-          the micrograph.</p>
+          <p><bold>Information Bottleneck:</bold> Scalar metrics discard
+          crucial subtle details.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="cnn-mechanics-nb-11">
-      <title>2. CNN Mechanics</title>
+    <sec id="learned-representations-nb-5">
+      <title>2. Learned Representations</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Convolutional Layers:</bold> Hierarchical feature
-          detectors.</p>
+          <p><bold>Artificial Neuron:</bold> Weighted sum plus
+          non-linear activation.</p>
         </list-item>
         <list-item>
-          <p><bold>Activation &amp; Pooling:</bold> Non-linearity and
-          spatial downsampling.</p>
+          <p><bold>Activations:</bold> ReLU enables deep learning;
+          Sigmoid/Tanh provide non-linearity.</p>
         </list-item>
         <list-item>
-          <p><bold>Perception Analogy:</bold> Inspired by early
-          photo-cell grids.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="application-to-microstructures-nb-11">
-      <title>3. Application to Microstructures</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Segmentation:</bold> Pixel-wise classification.</p>
+          <p><bold>Universal Approximation:</bold> One hidden layer can
+          approximate any continuous function.</p>
         </list-item>
         <list-item>
-          <p><bold>Object Detection:</bold> Bounding specific
-          features.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Classification:</bold> Categorizing whole
-          micrographs.</p>
+          <p><bold>MLP Topology:</bold> Stacked layers build abstract
+          representations.</p>
         </list-item>
       </list>
     </sec>
   </sec>
-  <sec id="minute-lecture-strategy-nb-11">
+  <sec id="minute-lecture-strategy-nb-5">
     <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-applied-clustering-nb-11">
-      <title>Part 1: Applied Clustering</title>
+    <sec id="part-1-classical-approach-nb-5">
+      <title>Part 1: Classical Approach</title>
       <list list-type="bullet">
         <list-item>
-          <p>Phase segmentation with K-Means/GMMs.</p>
+          <p>Standard metrics: Grain size, phase fractions.</p>
         </list-item>
         <list-item>
-          <p>Defect detection in sensor streams.</p>
+          <p>Quantitative Metallography.</p>
+        </list-item>
+        <list-item>
+          <p>Limitations of hand-crafted features.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-applied-autoencoders-nb-11">
-      <title>Part 2: Applied Autoencoders</title>
+    <sec id="part-2-feature-engineering-vs.-learning-nb-5">
+      <title>Part 2: Feature Engineering vs. Learning</title>
       <list list-type="bullet">
         <list-item>
-          <p>CAE compression of 3D Tomography.</p>
+          <p>Concept of Representation.</p>
         </list-item>
         <list-item>
-          <p>Latent space defect discovery.</p>
+          <p>Incomplete expert features.</p>
+        </list-item>
+        <list-item>
+          <p>Shift to learned embeddings.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-3-building-blocks-of-ml-nb-5">
+      <title>Part 3: Building Blocks of ML</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Mathematical Neuron.</p>
+        </list-item>
+        <list-item>
+          <p>Weights and Biases.</p>
+        </list-item>
+        <list-item>
+          <p>Non-linear activations.</p>
+        </list-item>
+        <list-item>
+          <p>Forward propagation.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-4-multi-layer-perceptrons-nb-5">
+      <title>Part 4: Multi-Layer Perceptrons</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Stacking layers for abstraction.</p>
+        </list-item>
+        <list-item>
+          <p>Hidden layers.</p>
+        </list-item>
+        <list-item>
+          <p>Universal approximators.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-5-outlook-nb-5">
+      <title>Part 5: Outlook</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Moving to images (CNNs).</p>
+        </list-item>
+        <list-item>
+          <p>Trusting learned vs. classical metrics.</p>
         </list-item>
       </list>
     </sec>
   </sec>
-  <sec id="quarto-website-update-summary-nb-11">
+  <sec id="quarto-website-update-summary-nb-5">
     <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 5:</bold> - Shifts to Unsupervised
-    Learning for unlabeled materials data. - Covers clustering (K-Means,
-    GMMs) and Autoencoders. - Applies techniques to EDS segmentation and
-    sensor anomaly detection. - Explores 3D microstructure latent spaces
-    for automated motif discovery.</p>
+    <p><bold>Summary for ML-PC Week 4:</bold>
+    - Transitions from classical stereology to learned representations.
+    - Reviews limits of hand-crafted microstructure metrics. -
+    Introduces the artificial neuron, weights, and activations. - Builds
+    the framework for Multi-Layer Perceptrons (MLPs) to automate feature
+    extraction.</p>
   </sec>
 </sec>
 </body>
@@ -3099,133 +2059,138 @@ as data leakage, overfitting, and spurious correlations.</p>
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-36-nb-12">
+<sub-article article-type="notebook" id="nb-18-nb-6">
 <front-stub>
 </front-stub>
 
 <body>
-<sec id="week-12-summary-uncertainty-aware-regression-gaussian-processes-nb-12">
-  <title>Week 12 Summary: Uncertainty-aware regression &amp; Gaussian
-  Processes</title>
-  <sec id="cross-book-summary-nb-12">
+<sec id="week-12-summary-physics-informed-and-constrained-ml-nb-6">
+  <title>Week 12 Summary: Physics-informed and constrained ML</title>
+  <sec id="cross-book-summary-nb-6">
     <title>Cross-Book Summary</title>
-    <sec id="knowing-what-you-dont-know-nb-12">
-      <title>1. Knowing what you don’t know</title>
+    <sec id="physics-informed-neural-networks-pinns-nb-6">
+      <title>1. Physics-Informed Neural Networks (PINNs)</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Aleatoric vs. Epistemic:</bold> Inherent physical
-          noise vs. model ignorance.</p>
+          <p><bold>Embedding Laws:</bold> Enforce ODEs/PDEs via the loss
+          function for physical consistency.</p>
         </list-item>
         <list-item>
-          <p><bold>Overconfidence Danger:</bold> Point estimates fail
-          safely in unknown regimes; uncertainty metrics are
-          crucial.</p>
+          <p><bold>Automatic Differentiation:</bold> Exact derivative
+          calculations enable NNs to evaluate physical equations.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Boundary Conditions:</bold> Methods like Lagaris
+          substitution guarantee boundary compliance.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="gaussian-processes-gps-nb-12">
-      <title>2. Gaussian Processes (GPs)</title>
+    <sec id="governing-equation-discovery-nb-6">
+      <title>2. Governing Equation Discovery</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Distribution over Functions:</bold> GP yields
-          posterior mean and variance (uncertainty).</p>
+          <p><bold>Dictionary-Based Regression:</bold> Build a
+          dictionary of candidate math functions.</p>
         </list-item>
         <list-item>
-          <p><bold>Kernels as Physical Priors:</bold> Encodes
-          assumptions about data smoothness/scale.</p>
+          <p><bold>Sparse Identification:</bold> Use regularized
+          regression (Lasso) to discover physical laws from noisy
+          data.</p>
         </list-item>
         <list-item>
-          <p><bold>Non-Parametric Nature:</bold> Scales with data size,
-          ideal for small, high-quality materials datasets.</p>
+          <p><bold>Dimensional Reasoning:</bold> Unit analysis ensures
+          physically plausible discoveries.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="gp-based-process-maps-nb-12">
-      <title>3. GP-Based Process Maps</title>
+    <sec id="constraints-in-materials-science-nb-6">
+      <title>3. Constraints in Materials Science</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Confidence Ribbons:</bold> Visualize reliability to
-          guide further experiments.</p>
+          <p><bold>Monotonicity:</bold> Enforce required physical trends
+          (e.g., hardness vs. alloying).</p>
         </list-item>
         <list-item>
-          <p><bold>Kriging:</bold> Interpolates materials property
-          surfaces using GP regression.</p>
+          <p><bold>Hybrid Modeling:</bold> Combine physical “White-Box”
+          models with data-driven “Black-Boxes” (Grey-Box).</p>
         </list-item>
       </list>
     </sec>
   </sec>
-  <sec id="minute-lecture-strategy-nb-12">
+  <sec id="minute-lecture-strategy-nb-6">
     <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-uncertainty-in-science-nb-12">
-      <title>Part 1: Uncertainty in Science</title>
+    <sec id="part-1-why-physics-matters-nb-6">
+      <title>Part 1: Why Physics Matters</title>
       <list list-type="bullet">
         <list-item>
-          <p>Risk management in materials processing.</p>
+          <p>Limits of unconstrained Black-Box models.</p>
         </list-item>
         <list-item>
-          <p>Visualizing distributions and error bars.</p>
+          <p>Accurate but Physical models.</p>
+        </list-item>
+        <list-item>
+          <p>PINNs need less data.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-gp-fundamentals-nb-12">
-      <title>Part 2: GP Fundamentals</title>
+    <sec id="part-2-automatic-differentiation-nb-6">
+      <title>Part 2: Automatic Differentiation</title>
       <list list-type="bullet">
         <list-item>
-          <p>Function vs. Parameter space.</p>
+          <p>GradientTape mechanics.</p>
         </list-item>
         <list-item>
-          <p>Kernels and “Similarity”.</p>
-        </list-item>
-        <list-item>
-          <p>Conditional Gaussians and Variance.</p>
+          <p>Derivatives as ML architecture components.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-3-gp-case-studies-nb-12">
-      <title>Part 3: GP Case Studies</title>
+    <sec id="part-3-solving-physics-with-nns-nb-6">
+      <title>Part 3: Solving Physics with NNs</title>
       <list list-type="bullet">
         <list-item>
-          <p>Predicting tensile strength across parameters.</p>
+          <p>PINN Architectures: Data Loss + Physics Loss.</p>
         </list-item>
         <list-item>
-          <p>GP for Experimental Design.</p>
+          <p>Enforcing Boundary Conditions.</p>
         </list-item>
         <list-item>
-          <p>Multi-Task GPs.</p>
+          <p>3D printing heat transfer case study.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-4-advanced-probabilistic-ml-nb-12">
-      <title>Part 4: Advanced Probabilistic ML</title>
+    <sec id="part-4-equation-discovery-nb-6">
+      <title>Part 4: Equation Discovery</title>
       <list list-type="bullet">
         <list-item>
-          <p>Mixture Density Networks (MDNs).</p>
+          <p>Sparse Regression and candidate dictionaries.</p>
         </list-item>
         <list-item>
-          <p>Dropout as Bayesian approximation.</p>
+          <p>Damped pendulum equation case study.</p>
+        </list-item>
+        <list-item>
+          <p>Unit Analysis search pruning.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-5-decision-making-nb-12">
-      <title>Part 5: Decision Making</title>
+    <sec id="part-5-the-grey-box-future-nb-6">
+      <title>Part 5: The Grey-Box Future</title>
       <list list-type="bullet">
         <list-item>
-          <p>Safe process windows via confidence intervals.</p>
+          <p>Hybrid architectures vs. FEA.</p>
         </list-item>
         <list-item>
-          <p>Building trustworthy models.</p>
+          <p>Building industrial trust.</p>
         </list-item>
       </list>
     </sec>
   </sec>
-  <sec id="quarto-website-update-summary-nb-12">
+  <sec id="quarto-website-update-summary-nb-6">
     <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 12:</bold>
-    - Introduces Probabilistic Machine Learning for uncertainty
-    quantification. - Differentiates aleatoric (noise) from epistemic
-    (ignorance) uncertainty. - Uses Gaussian Processes (GPs) for
-    uncertainty-aware regression. - Applies confidence intervals to map
-    robust process windows.</p>
+    <p><bold>Summary for ML-PC Week 13:</bold>
+    - Combines neural networks with physical laws via Physics-Informed
+    ML. - Introduces PINNs and automatic differentiation. - Details
+    Governing Equation Discovery using sparse regression. - Applies
+    physical constraints to build data-efficient Grey-Box models.</p>
   </sec>
 </sec>
 </body>
@@ -3237,19 +2202,165 @@ as data leakage, overfitting, and spurious correlations.</p>
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-39-nb-13">
+<sub-article article-type="notebook" id="nb-21-nb-7">
 <front-stub>
 </front-stub>
 
 <body>
-<sec id="unit-04-microstructure-representations-suggested-slide-deck-outline-nb-13">
+<sec id="week-3-summary-data-quality-labels-and-leakage-nb-7">
+  <title>Week 3 Summary: Data quality, labels, and leakage</title>
+  <sec id="cross-book-summary-nb-7">
+    <title>Cross-Book Summary</title>
+    <sec id="systematic-data-cleaning-nb-7">
+      <title>1. Systematic Data Cleaning</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Pipeline:</bold> Handle NaNs, missing data, and
+          duplicates.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Fix at Source:</bold> Prefer physical improvements
+          over digital cleaning.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Normalization:</bold> Ensure consistent scaling
+          between training and inference.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="the-annotation-problem-nb-7">
+      <title>2. The Annotation Problem</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Label Uncertainty:</bold> Ground truth is often
+          subjective.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Inter-annotator Variance:</bold> Human disagreement
+          sets an upper performance bound.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="data-leakage-nb-7">
+      <title>3. Data Leakage</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Spatial Leakage:</bold> Split by sample, not
+          randomly, to avoid physical correlation.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Temporal Leakage:</bold> Use sliding windows for
+          time-series data.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Information Leakage:</bold> Exclude features derived
+          from targets.</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="minute-lecture-strategy-nb-7">
+    <title>90-Minute Lecture Strategy</title>
+    <sec id="part-1-quality-crisis-nb-7">
+      <title>Part 1: Quality Crisis</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>“Garbage In, Garbage Out”.</p>
+        </list-item>
+        <list-item>
+          <p>Cost of acquisition vs. bad labels.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-2-preprocessing-cleaning-nb-7">
+      <title>Part 2: Preprocessing &amp; Cleaning</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Systematic cleaning.</p>
+        </list-item>
+        <list-item>
+          <p>Imputation strategies.</p>
+        </list-item>
+        <list-item>
+          <p>Scalers (Min-Max, Z-score).</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-3-labeling-nb-7">
+      <title>Part 3: Labeling</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Manual annotation pitfalls.</p>
+        </list-item>
+        <list-item>
+          <p>Quantifying label uncertainty.</p>
+        </list-item>
+        <list-item>
+          <p>Crowdsourcing vs. Experts.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-4-data-leakage-nb-7">
+      <title>Part 4: Data Leakage</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Test data influencing training.</p>
+        </list-item>
+        <list-item>
+          <p>Spatial and Feature leakage.</p>
+        </list-item>
+        <list-item>
+          <p>“Too good to be true” heuristic.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-5-robust-validation-nb-7">
+      <title>Part 5: Robust Validation</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Grouped K-Fold validation.</p>
+        </list-item>
+        <list-item>
+          <p>Nested Cross-Validation.</p>
+        </list-item>
+        <list-item>
+          <p>ML pipeline checklist.</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="quarto-website-update-summary-nb-7">
+    <title>Quarto Website Update (Summary)</title>
+    <p><bold>Summary for ML-PC Week 3:</bold>
+    - Emphasizes data integrity, cleaning, and normalization. -
+    Highlights materials annotation challenges like inter-annotator
+    variance. - Details Data Leakage risks from physical/spatial
+    correlations. - Introduces robust validation to ensure true
+    generalization.</p>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-24-nb-8">
+<front-stub>
+</front-stub>
+
+<body>
+<sec id="unit-04-microstructure-representations-suggested-slide-deck-outline-nb-8">
   <title>Unit 04: Microstructure Representations (Suggested Slide Deck
   Outline)</title>
   <p>This document contains a suggested 50-slide structure for the
   <monospace>unit04_microstructure_representations</monospace> lecture,
   focusing on state-of-the-art applications of Convolutional Neural
   Networks (CNNs) in materials science.</p>
-  <sec id="part-1-introduction-the-representation-problem-slides-112-nb-13">
+  <sec id="part-1-introduction-the-representation-problem-slides-112-nb-8">
     <title>Part 1: Introduction &amp; The Representation Problem (Slides
     1–12)</title>
     <list list-type="bullet">
@@ -3302,7 +2413,7 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list-item>
     </list>
   </sec>
-  <sec id="part-2-application-1-advanced-semantic-segmentation-slides-1322-nb-13">
+  <sec id="part-2-application-1-advanced-semantic-segmentation-slides-1322-nb-8">
     <title>Part 2: Application 1 – Advanced Semantic Segmentation
     (Slides 13–22)</title>
     <list list-type="bullet">
@@ -3346,7 +2457,7 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list-item>
     </list>
   </sec>
-  <sec id="part-3-application-2-structure-property-linkages-slides-2332-nb-13">
+  <sec id="part-3-application-2-structure-property-linkages-slides-2332-nb-8">
     <title>Part 3: Application 2 – Structure-Property Linkages (Slides
     23–32)</title>
     <list list-type="bullet">
@@ -3392,7 +2503,7 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list-item>
     </list>
   </sec>
-  <sec id="part-4-application-3-in-situ-monitoring-additive-manufacturing-slides-3340-nb-13">
+  <sec id="part-4-application-3-in-situ-monitoring-additive-manufacturing-slides-3340-nb-8">
     <title>Part 4: Application 3 – In-Situ Monitoring &amp; Additive
     Manufacturing (Slides 33–40)</title>
     <list list-type="bullet">
@@ -3427,7 +2538,7 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list-item>
     </list>
   </sec>
-  <sec id="part-5-application-4-generative-microstructures-slides-4148-nb-13">
+  <sec id="part-5-application-4-generative-microstructures-slides-4148-nb-8">
     <title>Part 5: Application 4 – Generative Microstructures (Slides
     41–48)</title>
     <list list-type="bullet">
@@ -3469,7 +2580,7 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list-item>
     </list>
   </sec>
-  <sec id="part-6-summary-outlook-slides-4950-nb-13">
+  <sec id="part-6-summary-outlook-slides-4950-nb-8">
     <title>Part 6: Summary &amp; Outlook (Slides 49–50)</title>
     <list list-type="bullet">
       <list-item>
@@ -3503,136 +2614,133 @@ as data leakage, overfitting, and spurious correlations.</p>
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-42-nb-14">
+<sub-article article-type="notebook" id="nb-27-nb-9">
 <front-stub>
 </front-stub>
 
 <body>
-<sec id="week-4-summary-from-classical-microstructure-metrics-to-learned-representations-nb-14">
-  <title>Week 4 Summary: From classical microstructure metrics to
-  learned representations</title>
-  <sec id="cross-book-summary-nb-14">
+<sec id="week-11-summary-uncertainty-aware-regression-gaussian-processes-nb-9">
+  <title>Week 11 Summary: Uncertainty-aware regression &amp; Gaussian
+  Processes</title>
+  <sec id="cross-book-summary-nb-9">
     <title>Cross-Book Summary</title>
-    <sec id="classical-microstructure-metrics-nb-14">
-      <title>1. Classical Microstructure Metrics</title>
+    <sec id="knowing-what-you-dont-know-nb-9">
+      <title>1. Knowing what you don’t know</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Stereology:</bold> Quantifying 3D structure from 2D
-          sections.</p>
+          <p><bold>Aleatoric vs. Epistemic:</bold> Inherent physical
+          noise vs. model ignorance.</p>
         </list-item>
         <list-item>
-          <p><bold>Hand-crafted Descriptors:</bold> Intuitive but biased
-          (e.g., aspect ratio).</p>
-        </list-item>
-        <list-item>
-          <p><bold>Information Bottleneck:</bold> Scalar metrics discard
-          crucial subtle details.</p>
+          <p><bold>Overconfidence Danger:</bold> Point estimates fail
+          safely in unknown regimes; uncertainty metrics are
+          crucial.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="learned-representations-nb-14">
-      <title>2. Learned Representations</title>
+    <sec id="gaussian-processes-gps-nb-9">
+      <title>2. Gaussian Processes (GPs)</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Artificial Neuron:</bold> Weighted sum plus
-          non-linear activation.</p>
+          <p><bold>Distribution over Functions:</bold> GP yields
+          posterior mean and variance (uncertainty).</p>
         </list-item>
         <list-item>
-          <p><bold>Activations:</bold> ReLU enables deep learning;
-          Sigmoid/Tanh provide non-linearity.</p>
+          <p><bold>Kernels as Physical Priors:</bold> Encodes
+          assumptions about data smoothness/scale.</p>
         </list-item>
         <list-item>
-          <p><bold>Universal Approximation:</bold> One hidden layer can
-          approximate any continuous function.</p>
+          <p><bold>Non-Parametric Nature:</bold> Scales with data size,
+          ideal for small, high-quality materials datasets.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="gp-based-process-maps-nb-9">
+      <title>3. GP-Based Process Maps</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Confidence Ribbons:</bold> Visualize reliability to
+          guide further experiments.</p>
         </list-item>
         <list-item>
-          <p><bold>MLP Topology:</bold> Stacked layers build abstract
-          representations.</p>
+          <p><bold>Kriging:</bold> Interpolates materials property
+          surfaces using GP regression.</p>
         </list-item>
       </list>
     </sec>
   </sec>
-  <sec id="minute-lecture-strategy-nb-14">
+  <sec id="minute-lecture-strategy-nb-9">
     <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-classical-approach-nb-14">
-      <title>Part 1: Classical Approach</title>
+    <sec id="part-1-uncertainty-in-science-nb-9">
+      <title>Part 1: Uncertainty in Science</title>
       <list list-type="bullet">
         <list-item>
-          <p>Standard metrics: Grain size, phase fractions.</p>
+          <p>Risk management in materials processing.</p>
         </list-item>
         <list-item>
-          <p>Quantitative Metallography.</p>
-        </list-item>
-        <list-item>
-          <p>Limitations of hand-crafted features.</p>
+          <p>Visualizing distributions and error bars.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-feature-engineering-vs.-learning-nb-14">
-      <title>Part 2: Feature Engineering vs. Learning</title>
+    <sec id="part-2-gp-fundamentals-nb-9">
+      <title>Part 2: GP Fundamentals</title>
       <list list-type="bullet">
         <list-item>
-          <p>Concept of Representation.</p>
+          <p>Function vs. Parameter space.</p>
         </list-item>
         <list-item>
-          <p>Incomplete expert features.</p>
+          <p>Kernels and “Similarity”.</p>
         </list-item>
         <list-item>
-          <p>Shift to learned embeddings.</p>
+          <p>Conditional Gaussians and Variance.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-3-building-blocks-of-ml-nb-14">
-      <title>Part 3: Building Blocks of ML</title>
+    <sec id="part-3-gp-case-studies-nb-9">
+      <title>Part 3: GP Case Studies</title>
       <list list-type="bullet">
         <list-item>
-          <p>Mathematical Neuron.</p>
+          <p>Predicting tensile strength across parameters.</p>
         </list-item>
         <list-item>
-          <p>Weights and Biases.</p>
+          <p>GP for Experimental Design.</p>
         </list-item>
         <list-item>
-          <p>Non-linear activations.</p>
-        </list-item>
-        <list-item>
-          <p>Forward propagation.</p>
+          <p>Multi-Task GPs.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-4-multi-layer-perceptrons-nb-14">
-      <title>Part 4: Multi-Layer Perceptrons</title>
+    <sec id="part-4-advanced-probabilistic-ml-nb-9">
+      <title>Part 4: Advanced Probabilistic ML</title>
       <list list-type="bullet">
         <list-item>
-          <p>Stacking layers for abstraction.</p>
+          <p>Mixture Density Networks (MDNs).</p>
         </list-item>
         <list-item>
-          <p>Hidden layers.</p>
-        </list-item>
-        <list-item>
-          <p>Universal approximators.</p>
+          <p>Dropout as Bayesian approximation.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-5-outlook-nb-14">
-      <title>Part 5: Outlook</title>
+    <sec id="part-5-decision-making-nb-9">
+      <title>Part 5: Decision Making</title>
       <list list-type="bullet">
         <list-item>
-          <p>Moving to images (CNNs).</p>
+          <p>Safe process windows via confidence intervals.</p>
         </list-item>
         <list-item>
-          <p>Trusting learned vs. classical metrics.</p>
+          <p>Building trustworthy models.</p>
         </list-item>
       </list>
     </sec>
   </sec>
-  <sec id="quarto-website-update-summary-nb-14">
+  <sec id="quarto-website-update-summary-nb-9">
     <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 4:</bold>
-    - Transitions from classical stereology to learned representations.
-    - Reviews limits of hand-crafted microstructure metrics. -
-    Introduces the artificial neuron, weights, and activations. - Builds
-    the framework for Multi-Layer Perceptrons (MLPs) to automate feature
-    extraction.</p>
+    <p><bold>Summary for ML-PC Week 12:</bold>
+    - Introduces Probabilistic Machine Learning for uncertainty
+    quantification. - Differentiates aleatoric (noise) from epistemic
+    (ignorance) uncertainty. - Uses Gaussian Processes (GPs) for
+    uncertainty-aware regression. - Applies confidence intervals to map
+    robust process windows.</p>
   </sec>
 </sec>
 </body>
@@ -3644,22 +2752,166 @@ as data leakage, overfitting, and spurious correlations.</p>
 
 
 </sub-article>
-<sub-article article-type="notebook" id="nb-45-nb-15">
+<sub-article article-type="notebook" id="nb-30-nb-10">
 <front-stub>
 </front-stub>
 
 <body>
-<sec id="lecture-plan-unsupervised-learning-in-materials-ml-pc-unit-05-nb-15">
+<sec id="week-9-summary-ml-for-characterization-signals-nb-10">
+  <title>Week 9 Summary: ML for characterization signals</title>
+  <sec id="cross-book-summary-nb-10">
+    <title>Cross-Book Summary</title>
+    <sec id="clustering-spectral-data-nb-10">
+      <title>1. Clustering Spectral Data</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>K-Means:</bold> Groups similar spectra (XRD/EDS) to
+          identify distinct phases.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Mini-Batch K-Means:</bold> Speeds up high-throughput
+          characterization.</p>
+        </list-item>
+        <list-item>
+          <p><bold>t-SNE:</bold> Projects high-dimensional spectra to 2D
+          to reveal outliers/relationships.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="autoencoders-for-signal-processing-nb-10">
+      <title>2. Autoencoders for Signal Processing</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Latent Representations:</bold> Compresses spectra to
+          essential physical information.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Denoising:</bold> Reconstructs clean signals from
+          noisy inputs without blurring.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Non-linear Compression:</bold> Outperforms PCA for
+          complex spectral libraries.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="scientific-integrity-in-ml-nb-10">
+      <title>3. Scientific Integrity in ML</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Peak Preservation:</bold> ML must assist, not invent
+          or smooth away real physics.</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="minute-lecture-strategy-nb-10">
+    <title>90-Minute Lecture Strategy</title>
+    <sec id="part-1-high-dimensional-signals-nb-10">
+      <title>Part 1: High-Dimensional Signals</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Digital footprint: XRD, EDS, EELS, Raman.</p>
+        </list-item>
+        <list-item>
+          <p>Manual vs. automated peak-picking.</p>
+        </list-item>
+        <list-item>
+          <p>Vector spectrum representation.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-2-clustering-structure-nb-10">
+      <title>Part 2: Clustering Structure</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>K-Means algorithm.</p>
+        </list-item>
+        <list-item>
+          <p>Elbow Method for phase counting.</p>
+        </list-item>
+        <list-item>
+          <p>Ternary alloy mapping.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-3-visualizing-the-unseen-nb-10">
+      <title>Part 3: Visualizing the Unseen</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>t-SNE Stochastic Proximity.</p>
+        </list-item>
+        <list-item>
+          <p>Hidden relationships.</p>
+        </list-item>
+        <list-item>
+          <p>t-SNE distance pitfalls.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-4-autoencoders-denoising-nb-10">
+      <title>Part 4: Autoencoders &amp; Denoising</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Encoder-Bottleneck-Decoder.</p>
+        </list-item>
+        <list-item>
+          <p>Denoising characterization signals.</p>
+        </list-item>
+        <list-item>
+          <p>Bottlenecks as physical descriptors.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-5-data-to-discovery-nb-10">
+      <title>Part 5: Data to Discovery</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Real-time spectral analysis.</p>
+        </list-item>
+        <list-item>
+          <p>Physical consistency in ML.</p>
+        </list-item>
+        <list-item>
+          <p>Automated pipelines.</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="quarto-website-update-summary-nb-10">
+    <title>Quarto Website Update (Summary)</title>
+    <p><bold>Summary for ML-PC Week 10:</bold>
+    - Processes high-dimensional Characterization Signals (XRD, EDS). -
+    Employs K-Means and t-SNE for automated phase identification. - Uses
+    Autoencoders for latent space compression and denoising. - Enhances
+    high-throughput data analysis while preserving physics.</p>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-33-nb-11">
+<front-stub>
+</front-stub>
+
+<body>
+<sec id="lecture-plan-unsupervised-learning-in-materials-ml-pc-unit-05-nb-11">
   <title>Lecture Plan: Unsupervised Learning in Materials (ML-PC Unit
   05)</title>
-  <sec id="overview-nb-15">
+  <sec id="overview-nb-11">
     <title>Overview</title>
     <p>This lecture applies the unsupervised methods learned in the
     mathematical foundations course directly to materials
     characterization, focusing on the “unlabeled data” problem in
     materials science.</p>
   </sec>
-  <sec id="part-1-applied-clustering-45-mins-nb-15">
+  <sec id="part-1-applied-clustering-45-mins-nb-11">
     <title>Part 1: Applied Clustering (45 mins)</title>
     <list list-type="bullet">
       <list-item>
@@ -3674,7 +2926,7 @@ as data leakage, overfitting, and spurious correlations.</p>
       </list-item>
     </list>
   </sec>
-  <sec id="part-2-applied-autoencoders-45-mins-nb-15">
+  <sec id="part-2-applied-autoencoders-45-mins-nb-11">
     <title>Part 2: Applied Autoencoders (45 mins)</title>
     <list list-type="bullet">
       <list-item>
@@ -3701,139 +2953,711 @@ as data leakage, overfitting, and spurious correlations.</p>
 
 
 </sub-article>
+<sub-article article-type="notebook" id="nb-36-nb-12">
+<front-stub>
+</front-stub>
+
+<body>
+<sec id="week-8-summary-inverse-problems-and-process-maps-nb-12">
+  <title>Week 8 Summary: Inverse problems and process maps</title>
+  <sec id="cross-book-summary-nb-12">
+    <title>Cross-Book Summary</title>
+    <sec id="forward-vs.-inverse-problems-nb-12">
+      <title>1. Forward vs. Inverse Problems</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Causality Gap:</bold> Forward problems are unique;
+          inverse are ill-posed/multi-valued.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Non-Gaussianity:</bold> Inverse problems require
+          Mixture Density Networks due to multimodality.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="physics-informed-enrichment-nb-12">
+      <title>2. Physics-Informed Enrichment</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Expert in the Loop:</bold> Add physical
+          transformations (e.g., FFT) to reduce training effort.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Enrichment:</bold> Combine raw data with physics
+          features (PINNs).</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="process-maps-and-corridors-nb-12">
+      <title>3. Process Maps and Corridors</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Process Corridors:</bold> Identifying stable
+          parameter regions.</p>
+        </list-item>
+        <list-item>
+          <p><bold>ML-Guided Mapping:</bold> Interpolating sparse
+          experimental points via surrogates.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Prescriptive ML:</bold> Answering “What must I do?”
+          instead of “What will happen?”.</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="minute-lecture-strategy-nb-12">
+    <title>90-Minute Lecture Strategy</title>
+    <sec id="part-1-material-scientists-dilemma-nb-12">
+      <title>Part 1: Material Scientist’s Dilemma</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Inverse problem complexities.</p>
+        </list-item>
+        <list-item>
+          <p>Many-to-one mappings.</p>
+        </list-item>
+        <list-item>
+          <p>Uniqueness in systems.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-2-physics-informed-ml-nb-12">
+      <title>Part 2: Physics-Informed ML</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>White vs. Grey vs. Black Box.</p>
+        </list-item>
+        <list-item>
+          <p>Feature Enrichment.</p>
+        </list-item>
+        <list-item>
+          <p>Loss function constraints.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-3-solving-the-inverse-nb-12">
+      <title>Part 3: Solving the Inverse</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Regression failure on inverse tasks.</p>
+        </list-item>
+        <list-item>
+          <p>Regularization and Mixture Models.</p>
+        </list-item>
+        <list-item>
+          <p>Heat treatment parameter case study.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-4-building-process-maps-nb-12">
+      <title>Part 4: Building Process Maps</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Continuous maps from points.</p>
+        </list-item>
+        <list-item>
+          <p>Visualizing Safe Corridors.</p>
+        </list-item>
+        <list-item>
+          <p>Laser-material interactions mapping.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-5-ml-for-material-design-nb-12">
+      <title>Part 5: ML for Material Design</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Prescribing processing routes.</p>
+        </list-item>
+        <list-item>
+          <p>Simulation-aided training.</p>
+        </list-item>
+        <list-item>
+          <p>AI vs. human intuition.</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="quarto-website-update-summary-nb-12">
+    <title>Quarto Website Update (Summary)</title>
+    <p><bold>Summary for ML-PC Week 9:</bold>
+    - Explores Inverse Problems for materials design. - Contrasts
+    multi-valued inverse tasks with causal forward problems. -
+    Introduces Physics-Informed Learning and feature enrichment. -
+    Demonstrates building Process Maps and Safe Corridors.</p>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-39-nb-13">
+<front-stub>
+</front-stub>
+
+<body>
+<sec id="week-10-summary-automation-in-microscopy-and-characterization-nb-13">
+  <title>Week 10 Summary: Automation in microscopy and
+  characterization</title>
+  <sec id="cross-book-summary-nb-13">
+    <title>Cross-Book Summary</title>
+    <sec id="multi-modal-data-fusion-nb-13">
+      <title>1. Multi-Modal Data Fusion</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Beyond Single Sensors:</bold> Fuse images (SEM),
+          chemistry (EDS), and orientations (EBSD) for a complete
+          physical picture.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Bayesian Sensor Fusion:</bold> Combines uncertain
+          measurements using precision-weighted posteriors.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Latent Fusion:</bold> Autoencoders/PCA find shared
+          embeddings to combine diverse data types.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="reinforcement-learning-for-control-nb-13">
+      <title>2. Reinforcement Learning for Control</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Autonomous Agent:</bold> Learns to interact with
+          environments (e.g., microscopes) to maximize rewards.</p>
+        </list-item>
+        <list-item>
+          <p><bold>RL Loop:</bold> State (image), Action (adjust focus),
+          Reward (sharpness/SNR).</p>
+        </list-item>
+        <list-item>
+          <p><bold>Policy Gradients:</bold> Train NNs for optimal
+          scientific decision-making.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="computer-vision-in-the-lab-nb-13">
+      <title>3. Computer Vision in the Lab</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Automated Workflows:</bold> CNNs for real-time ROI
+          detection, autofocus, and pattern classification.</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="minute-lecture-strategy-nb-13">
+    <title>90-Minute Lecture Strategy</title>
+    <sec id="part-1-toward-the-self-driving-lab-nb-13">
+      <title>Part 1: Toward the Self-Driving Lab</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>The automation stack.</p>
+        </list-item>
+        <list-item>
+          <p>Autonomous Characterization: Scan, Analyze, Decide,
+          Repeat.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-2-ml-assisted-instrument-tuning-nb-13">
+      <title>Part 2: ML-Assisted Instrument Tuning</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Autofocus and Beam Alignment.</p>
+        </list-item>
+        <list-item>
+          <p>Real-time feedback loops.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-3-fusing-multi-modal-data-nb-13">
+      <title>Part 3: Fusing Multi-Modal Data</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Bayesian Fusion for sensor noise.</p>
+        </list-item>
+        <list-item>
+          <p>Multi-head NNs.</p>
+        </list-item>
+        <list-item>
+          <p>Combining XRD and EDS.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-4-rl-for-lab-control-nb-13">
+      <title>Part 4: RL for Lab Control</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>RL Framework overview.</p>
+        </list-item>
+        <list-item>
+          <p>Reward Functions for science.</p>
+        </list-item>
+        <list-item>
+          <p>Industrial glass processing control.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-5-the-integrated-pipeline-nb-13">
+      <title>Part 5: The Integrated Pipeline</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>“On-the-fly” discovery.</p>
+        </list-item>
+        <list-item>
+          <p>Automation challenges: Latency and safety.</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="quarto-website-update-summary-nb-13">
+    <title>Quarto Website Update (Summary)</title>
+    <p><bold>Summary for ML-PC Week 11:</bold>
+    - Explores Autonomous Characterization and active instrument
+    control. - Introduces Multi-Modal Data Fusion (Bayesian and Latent).
+    - Uses Reinforcement Learning (RL) for laboratory task automation. -
+    Details building integrated pipelines for “on-the-fly” scientific
+    discovery.</p>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-42-nb-14">
+<front-stub>
+</front-stub>
+
+<body>
+<sec id="week-6-summary-data-scarcity-transfer-learning-nb-14">
+  <title>Week 6 Summary: Data scarcity &amp; transfer learning</title>
+  <sec id="cross-book-summary-nb-14">
+    <title>Cross-Book Summary</title>
+    <sec id="the-small-data-challenge-nb-14">
+      <title>1. The Small Data Challenge</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Cost:</bold> Scientific data is expensive; deep
+          networks easily overfit small datasets.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Generalization:</bold> Requires early stopping,
+          dropout, and robust splits to avoid overfitting.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="transfer-learning-nb-14">
+      <title>2. Transfer Learning</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Pretrained Models:</bold> Start with models trained
+          on massive datasets (e.g., ImageNet).</p>
+        </list-item>
+        <list-item>
+          <p><bold>Feature Reuse:</bold> Early layers learn universal
+          visual primitives useful for micrographs.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Fine-Tuning:</bold> Freeze backbone and train the
+          head, or unfreeze late layers with a low learning rate.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="data-augmentation-nb-14">
+      <title>3. Data Augmentation</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Artificial Relief:</bold> Expand data via rotation,
+          flipping, cropping, etc.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Physics-Preserving:</bold> Materials rotations/flips
+          preserve physical meaning.</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="minute-lecture-strategy-nb-14">
+    <title>90-Minute Lecture Strategy</title>
+    <sec id="part-1-curse-of-small-data-nb-14">
+      <title>Part 1: Curse of Small Data</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Small, Expensive, Messy data.</p>
+        </list-item>
+        <list-item>
+          <p>Overfitting risks.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-2-augmentation-nb-14">
+      <title>Part 2: Augmentation</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Traditional: Flips, Rotations.</p>
+        </list-item>
+        <list-item>
+          <p>Advanced: Mixup, Cutmix.</p>
+        </list-item>
+        <list-item>
+          <p>Domain-specific: Simulated noise.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-3-transfer-learning-mechanics-nb-14">
+      <title>Part 3: Transfer Learning Mechanics</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Feature Hierarchies.</p>
+        </list-item>
+        <list-item>
+          <p>Available backbones.</p>
+        </list-item>
+        <list-item>
+          <p>Fine-tuning strategies.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-4-domain-shift-in-science-nb-14">
+      <title>Part 4: Domain Shift in Science</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Natural vs. scientific domains.</p>
+        </list-item>
+        <list-item>
+          <p>Cross-Material Transfer.</p>
+        </list-item>
+        <list-item>
+          <p>Synthetic-to-Real Transfer.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-5-summary-best-practices-nb-14">
+      <title>Part 5: Summary &amp; Best Practices</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Backbone selection.</p>
+        </list-item>
+        <list-item>
+          <p>Small data validation.</p>
+        </list-item>
+        <list-item>
+          <p>“Learning to Learn”.</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="quarto-website-update-summary-nb-14">
+    <title>Quarto Website Update (Summary)</title>
+    <p><bold>Summary for ML-PC Week 6:</bold>
+    - Addresses Data Scarcity in materials informatics. - Explores
+    Transfer Learning to leverage pretrained models. - Discusses
+    scientific Data Augmentation strategies. - Evaluates cross-domain
+    knowledge transfer limits.</p>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
+<sub-article article-type="notebook" id="nb-45-nb-15">
+<front-stub>
+</front-stub>
+
+<body>
+<sec id="week-7-summary-time-series-and-process-monitoring-nb-15">
+  <title>Week 7 Summary: Time-series and process monitoring</title>
+  <sec id="cross-book-summary-nb-15">
+    <title>Cross-Book Summary</title>
+    <sec id="sequential-data-memory-nb-15">
+      <title>1. Sequential Data &amp; Memory</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Temporal Dimension:</bold> Process logs are
+          sequential; order matters.</p>
+        </list-item>
+        <list-item>
+          <p><bold>RNNs:</bold> Possess hidden states that act as
+          memory.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Vanishing Gradients:</bold> Basic RNNs struggle with
+          long-term dependencies.</p>
+        </list-item>
+        <list-item>
+          <p><bold>LSTMs/GRUs:</bold> Use gates to selectively
+          remember/forget information.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="materials-process-monitoring-nb-15">
+      <title>2. Materials Process Monitoring</title>
+      <list list-type="bullet">
+        <list-item>
+          <p><bold>Preprocessing:</bold> Smoothing and “Triggering” to
+          extract cycles.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Anomaly Detection:</bold> Large prediction deviations
+          signal defects.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Surrogate Models:</bold> Fast RNN/LSTM replacements
+          for slow simulations.</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="minute-lecture-strategy-nb-15">
+    <title>90-Minute Lecture Strategy</title>
+    <sec id="part-1-processing-as-sequence-nb-15">
+      <title>Part 1: Processing as Sequence</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Time-dependency of microstructure.</p>
+        </list-item>
+        <list-item>
+          <p>Sensor types (1D vs. logs).</p>
+        </list-item>
+        <list-item>
+          <p>Event vs. Continuous.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-2-preprocessing-nb-15">
+      <title>Part 2: Preprocessing</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Denoising filters.</p>
+        </list-item>
+        <list-item>
+          <p>Triggering cycles.</p>
+        </list-item>
+        <list-item>
+          <p>Temporal Feature Engineering.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-3-rnns-nb-15">
+      <title>Part 3: RNNs</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Unrolled RNN structure.</p>
+        </list-item>
+        <list-item>
+          <p>Vanishing Gradient problem.</p>
+        </list-item>
+        <list-item>
+          <p>LSTM and GRU mechanics.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-4-case-studies-nb-15">
+      <title>Part 4: Case Studies</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Predictive Maintenance.</p>
+        </list-item>
+        <list-item>
+          <p>AM melt pool stability.</p>
+        </list-item>
+        <list-item>
+          <p>Dilatometry phase predictions.</p>
+        </list-item>
+      </list>
+    </sec>
+    <sec id="part-5-challenges-nb-15">
+      <title>Part 5: Challenges</title>
+      <list list-type="bullet">
+        <list-item>
+          <p>Non-stationarity and machine drift.</p>
+        </list-item>
+        <list-item>
+          <p>Transformers for 1D data.</p>
+        </list-item>
+        <list-item>
+          <p>Closed-loop control outlook.</p>
+        </list-item>
+      </list>
+    </sec>
+  </sec>
+  <sec id="quarto-website-update-summary-nb-15">
+    <title>Quarto Website Update (Summary)</title>
+    <p><bold>Summary for ML-PC Week 7:</bold>
+    - Applies ML to Time-Series Data for process monitoring. -
+    Introduces RNNs and LSTMs for sequential dependencies. - Details
+    essential preprocessing like smoothing and triggering. - Covers
+    anomaly detection and process outcome prediction.</p>
+  </sec>
+</sec>
+</body>
+
+
+
+<back>
+</back>
+
+
+</sub-article>
 <sub-article article-type="notebook" id="nb-48-nb-16">
 <front-stub>
 </front-stub>
 
 <body>
-<sec id="week-10-summary-ml-for-characterization-signals-nb-16">
-  <title>Week 10 Summary: ML for characterization signals</title>
+<sec id="week-1-summary-what-makes-materials-data-special-nb-16">
+  <title>Week 1 Summary: What makes materials data special?</title>
   <sec id="cross-book-summary-nb-16">
     <title>Cross-Book Summary</title>
-    <sec id="clustering-spectral-data-nb-16">
-      <title>1. Clustering Spectral Data</title>
+    <sec id="the-concept-of-data-based-modeling-nb-16">
+      <title>1. The Concept of Data-Based Modeling</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>K-Means:</bold> Groups similar spectra (XRD/EDS) to
-          identify distinct phases.</p>
+          <p><bold>Data-based vs. First-Principle:</bold> Top-down ML
+          vs. bottom-up physics.</p>
         </list-item>
         <list-item>
-          <p><bold>Mini-Batch K-Means:</bold> Speeds up high-throughput
-          characterization.</p>
+          <p><bold>Traceability:</bold> White (explainable), Grey
+          (hybrid), and Black-Box (opaque) models.</p>
         </list-item>
         <list-item>
-          <p><bold>t-SNE:</bold> Projects high-dimensional spectra to 2D
-          to reveal outliers/relationships.</p>
+          <p><bold>Overfitting:</bold> Excess complexity fails to
+          generalize.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="autoencoders-for-signal-processing-nb-16">
-      <title>2. Autoencoders for Signal Processing</title>
+    <sec id="foundations-of-data-nb-16">
+      <title>2. Foundations of Data</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Latent Representations:</bold> Compresses spectra to
-          essential physical information.</p>
+          <p><bold>Types:</bold> Nominal, Ordinal, Cardinal, Binary.</p>
         </list-item>
         <list-item>
-          <p><bold>Denoising:</bold> Reconstructs clean signals from
-          noisy inputs without blurring.</p>
+          <p><bold>Scales:</bold> Nominal, Ordinal, Interval, Ratio.</p>
         </list-item>
         <list-item>
-          <p><bold>Non-linear Compression:</bold> Outperforms PCA for
-          complex spectral libraries.</p>
+          <p><bold>Uncertainty:</bold> Units and measurement error are
+          essential.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="scientific-integrity-in-ml-nb-16">
-      <title>3. Scientific Integrity in ML</title>
+    <sec id="materials-science-specifics-nb-16">
+      <title>3. Materials Science Specifics</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Peak Preservation:</bold> ML must assist, not invent
-          or smooth away real physics.</p>
+          <p><bold>PSPP Paradigm:</bold>
+          Processing-Structure-Property-Performance dependency.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Noise:</bold> Physical noise, aliasing, and
+          instrument bias.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Scarcity:</bold> High-quality data is expensive and
+          rare.</p>
         </list-item>
       </list>
     </sec>
   </sec>
   <sec id="minute-lecture-strategy-nb-16">
     <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-high-dimensional-signals-nb-16">
-      <title>Part 1: High-Dimensional Signals</title>
+    <sec id="part-1-introduction-philosophy-nb-16">
+      <title>Part 1: Introduction &amp; Philosophy</title>
       <list list-type="bullet">
         <list-item>
-          <p>Digital footprint: XRD, EDS, EELS, Raman.</p>
+          <p>AI 4 Materials goals.</p>
         </list-item>
         <list-item>
-          <p>Manual vs. automated peak-picking.</p>
+          <p>Hype vs. Reality.</p>
         </list-item>
         <list-item>
-          <p>Vector spectrum representation.</p>
+          <p>Convergence of high-throughput, simulation, and ML.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-clustering-structure-nb-16">
-      <title>Part 2: Clustering Structure</title>
+    <sec id="part-2-models-in-engineering-nb-16">
+      <title>Part 2: Models in Engineering</title>
       <list list-type="bullet">
         <list-item>
-          <p>K-Means algorithm.</p>
+          <p>Prediction vs. Explanation.</p>
         </list-item>
         <list-item>
-          <p>Elbow Method for phase counting.</p>
+          <p>Physics-based vs. Data-driven.</p>
         </list-item>
         <list-item>
-          <p>Ternary alloy mapping.</p>
+          <p>Moving toward White-Box ML.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-3-visualizing-the-unseen-nb-16">
-      <title>Part 3: Visualizing the Unseen</title>
+    <sec id="part-3-special-materials-data-nb-16">
+      <title>Part 3: Special Materials Data</title>
       <list list-type="bullet">
         <list-item>
-          <p>t-SNE Stochastic Proximity.</p>
+          <p>PSPP graph.</p>
         </list-item>
         <list-item>
-          <p>Hidden relationships.</p>
+          <p>Multi-modal data types.</p>
         </list-item>
         <list-item>
-          <p>t-SNE distance pitfalls.</p>
+          <p>Small Data challenges.</p>
+        </list-item>
+        <list-item>
+          <p>Physical Priors.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-4-autoencoders-denoising-nb-16">
-      <title>Part 4: Autoencoders &amp; Denoising</title>
+    <sec id="part-4-data-quality-nb-16">
+      <title>Part 4: Data Quality</title>
       <list list-type="bullet">
         <list-item>
-          <p>Encoder-Bottleneck-Decoder.</p>
+          <p>Categorizing data.</p>
         </list-item>
         <list-item>
-          <p>Denoising characterization signals.</p>
+          <p>Metadata and Units.</p>
         </list-item>
         <list-item>
-          <p>Bottlenecks as physical descriptors.</p>
+          <p>Error propagation.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-5-data-to-discovery-nb-16">
-      <title>Part 5: Data to Discovery</title>
+    <sec id="part-5-crisp-dm-for-labs-nb-16">
+      <title>Part 5: CRISP-DM for Labs</title>
       <list list-type="bullet">
         <list-item>
-          <p>Real-time spectral analysis.</p>
+          <p>Adapting industrial standards.</p>
         </list-item>
         <list-item>
-          <p>Physical consistency in ML.</p>
+          <p>Deployment.</p>
         </list-item>
         <list-item>
-          <p>Automated pipelines.</p>
+          <p>Correlation != Causality.</p>
         </list-item>
       </list>
     </sec>
   </sec>
   <sec id="quarto-website-update-summary-nb-16">
     <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 10:</bold>
-    - Processes high-dimensional Characterization Signals (XRD, EDS). -
-    Employs K-Means and t-SNE for automated phase identification. - Uses
-    Autoencoders for latent space compression and denoising. - Enhances
-    high-throughput data analysis while preserving physics.</p>
+    <p><bold>Summary for ML-PC Week 1:</bold>
+    - Transitions from physics-based to data-driven modeling. -
+    Highlights multi-modal, scarce materials data. - Covers PSPP
+    relationships, data scales, and uncertainty. - Adapts CRISP-DM for
+    scientific workflows.</p>
   </sec>
 </sec>
 </body>

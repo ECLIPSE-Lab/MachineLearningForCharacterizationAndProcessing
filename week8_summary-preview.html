@@ -125,7 +125,7 @@
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-fedc0afa5eed45b88079642ee2c6e752.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-58678528f02177bed1400fe3ccbb0fa7.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-99531da96f133e8d6986ee8266cfdc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
      <script async="" src="https://hypothes.is/embed.js"></script>
 <script>
   window.document.addEventListener("DOMContentLoaded", function (_event) {
@@ -139,7 +139,7 @@
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Week 8 Summary: Generalization, robustness, and process windows</h6>
+      <h6><i class="bi bi-journal-code"></i> Week 8 Summary: Inverse problems and process maps</h6>
 
             <a href="./week8_summary.md" class="btn btn-primary quarto-download-embed" download="week8_summary.md">Download Notebook</a>
           </div>
@@ -150,21 +150,21 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#week-8-summary-generalization-robustness-and-process-windows" id="toc-week-8-summary-generalization-robustness-and-process-windows" class="nav-link active" data-scroll-target="#week-8-summary-generalization-robustness-and-process-windows">Week 8 Summary: Generalization, robustness, and process windows</a>
+  <li><a href="#week-8-summary-inverse-problems-and-process-maps" id="toc-week-8-summary-inverse-problems-and-process-maps" class="nav-link active" data-scroll-target="#week-8-summary-inverse-problems-and-process-maps">Week 8 Summary: Inverse problems and process maps</a>
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#the-generalization-problem" id="toc-the-generalization-problem" class="nav-link" data-scroll-target="#the-generalization-problem">1. The Generalization Problem</a></li>
-  <li><a href="#robust-validation" id="toc-robust-validation" class="nav-link" data-scroll-target="#robust-validation">2. Robust Validation</a></li>
-  <li><a href="#process-robustness-windows" id="toc-process-robustness-windows" class="nav-link" data-scroll-target="#process-robustness-windows">3. Process Robustness &amp; Windows</a></li>
+  <li><a href="#forward-vs.-inverse-problems" id="toc-forward-vs.-inverse-problems" class="nav-link" data-scroll-target="#forward-vs.-inverse-problems">1. Forward vs.&nbsp;Inverse Problems</a></li>
+  <li><a href="#physics-informed-enrichment" id="toc-physics-informed-enrichment" class="nav-link" data-scroll-target="#physics-informed-enrichment">2. Physics-Informed Enrichment</a></li>
+  <li><a href="#process-maps-and-corridors" id="toc-process-maps-and-corridors" class="nav-link" data-scroll-target="#process-maps-and-corridors">3. Process Maps and Corridors</a></li>
   </ul></li>
   <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-reliability" id="toc-part-1-reliability" class="nav-link" data-scroll-target="#part-1-reliability">Part 1: Reliability</a></li>
-  <li><a href="#part-2-biasvariance" id="toc-part-2-biasvariance" class="nav-link" data-scroll-target="#part-2-biasvariance">Part 2: Bias/Variance</a></li>
-  <li><a href="#part-3-robust-validation-workflows" id="toc-part-3-robust-validation-workflows" class="nav-link" data-scroll-target="#part-3-robust-validation-workflows">Part 3: Robust Validation Workflows</a></li>
-  <li><a href="#part-4-regularization" id="toc-part-4-regularization" class="nav-link" data-scroll-target="#part-4-regularization">Part 4: Regularization</a></li>
-  <li><a href="#part-5-process-windows" id="toc-part-5-process-windows" class="nav-link" data-scroll-target="#part-5-process-windows">Part 5: Process Windows</a></li>
+  <li><a href="#part-1-material-scientists-dilemma" id="toc-part-1-material-scientists-dilemma" class="nav-link" data-scroll-target="#part-1-material-scientists-dilemma">Part 1: Material Scientist’s Dilemma</a></li>
+  <li><a href="#part-2-physics-informed-ml" id="toc-part-2-physics-informed-ml" class="nav-link" data-scroll-target="#part-2-physics-informed-ml">Part 2: Physics-Informed ML</a></li>
+  <li><a href="#part-3-solving-the-inverse" id="toc-part-3-solving-the-inverse" class="nav-link" data-scroll-target="#part-3-solving-the-inverse">Part 3: Solving the Inverse</a></li>
+  <li><a href="#part-4-building-process-maps" id="toc-part-4-building-process-maps" class="nav-link" data-scroll-target="#part-4-building-process-maps">Part 4: Building Process Maps</a></li>
+  <li><a href="#part-5-ml-for-material-design" id="toc-part-5-ml-for-material-design" class="nav-link" data-scroll-target="#part-5-ml-for-material-design">Part 5: ML for Material Design</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -173,80 +173,80 @@
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
-<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-8-summary-generalization-robustness-and-process-windows" class="level1">
-<h1>Week 8 Summary: Generalization, robustness, and process windows</h1>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-8-summary-inverse-problems-and-process-maps" class="level1">
+<h1>Week 8 Summary: Inverse problems and process maps</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="the-generalization-problem" class="level3">
-<h3 class="anchored" data-anchor-id="the-generalization-problem">1. The Generalization Problem</h3>
+<section id="forward-vs.-inverse-problems" class="level3">
+<h3 class="anchored" data-anchor-id="forward-vs.-inverse-problems">1. Forward vs.&nbsp;Inverse Problems</h3>
 <ul>
-<li><strong>Over/Underfitting:</strong> Balancing high variance (noise fitting) vs.&nbsp;high bias (too simple).</li>
-<li><strong>Tradeoff:</strong> Minimizing total error = Bias² + Variance + Noise.</li>
-<li><strong>Regularization:</strong> L1 (Lasso) and L2 (Ridge) penalize complex models.</li>
+<li><strong>Causality Gap:</strong> Forward problems are unique; inverse are ill-posed/multi-valued.</li>
+<li><strong>Non-Gaussianity:</strong> Inverse problems require Mixture Density Networks due to multimodality.</li>
 </ul>
 </section>
-<section id="robust-validation" class="level3">
-<h3 class="anchored" data-anchor-id="robust-validation">2. Robust Validation</h3>
+<section id="physics-informed-enrichment" class="level3">
+<h3 class="anchored" data-anchor-id="physics-informed-enrichment">2. Physics-Informed Enrichment</h3>
 <ul>
-<li><strong>Cross-Validation:</strong> K-Fold provides stable performance estimates.</li>
-<li><strong>Leave-One-Out (LOO):</strong> For extremely small datasets.</li>
-<li><strong>Stratification:</strong> Maintains representative class/property distributions.</li>
+<li><strong>Expert in the Loop:</strong> Add physical transformations (e.g., FFT) to reduce training effort.</li>
+<li><strong>Enrichment:</strong> Combine raw data with physics features (PINNs).</li>
 </ul>
 </section>
-<section id="process-robustness-windows" class="level3">
-<h3 class="anchored" data-anchor-id="process-robustness-windows">3. Process Robustness &amp; Windows</h3>
+<section id="process-maps-and-corridors" class="level3">
+<h3 class="anchored" data-anchor-id="process-maps-and-corridors">3. Process Maps and Corridors</h3>
 <ul>
-<li><strong>Sensitivity Analysis:</strong> Quantifying output change vs.&nbsp;input perturbation.</li>
-<li><strong>Process Windows:</strong> Finding optimal, stable regions insensitive to industrial noise.</li>
-<li><strong>Robust Design:</strong> Choosing stability over a sharp performance peak.</li>
+<li><strong>Process Corridors:</strong> Identifying stable parameter regions.</li>
+<li><strong>ML-Guided Mapping:</strong> Interpolating sparse experimental points via surrogates.</li>
+<li><strong>Prescriptive ML:</strong> Answering “What must I do?” instead of “What will happen?”.</li>
 </ul>
 </section>
 </section>
 <section id="minute-lecture-strategy" class="level2">
 <h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
-<section id="part-1-reliability" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-reliability">Part 1: Reliability</h3>
+<section id="part-1-material-scientists-dilemma" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-material-scientists-dilemma">Part 1: Material Scientist’s Dilemma</h3>
 <ul>
-<li>High accuracy is insufficient for deployment.</li>
-<li>Defining “Model Trust”.</li>
+<li>Inverse problem complexities.</li>
+<li>Many-to-one mappings.</li>
+<li>Uniqueness in systems.</li>
 </ul>
 </section>
-<section id="part-2-biasvariance" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-biasvariance">Part 2: Bias/Variance</h3>
+<section id="part-2-physics-informed-ml" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-physics-informed-ml">Part 2: Physics-Informed ML</h3>
 <ul>
-<li>U-shaped error curve.</li>
-<li>Visualizing overfitting.</li>
-<li>Double Descent.</li>
+<li>White vs.&nbsp;Grey vs.&nbsp;Black Box.</li>
+<li>Feature Enrichment.</li>
+<li>Loss function constraints.</li>
 </ul>
 </section>
-<section id="part-3-robust-validation-workflows" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-robust-validation-workflows">Part 3: Robust Validation Workflows</h3>
+<section id="part-3-solving-the-inverse" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-solving-the-inverse">Part 3: Solving the Inverse</h3>
 <ul>
-<li>K-Fold, Stratified, Grouped CV.</li>
-<li>Nested CV.</li>
-<li>Reliability metrics.</li>
+<li>Regression failure on inverse tasks.</li>
+<li>Regularization and Mixture Models.</li>
+<li>Heat treatment parameter case study.</li>
 </ul>
 </section>
-<section id="part-4-regularization" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-regularization">Part 4: Regularization</h3>
+<section id="part-4-building-process-maps" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-building-process-maps">Part 4: Building Process Maps</h3>
 <ul>
-<li>L2 (Ridge) and L1 (Lasso).</li>
-<li>Early Stopping.</li>
+<li>Continuous maps from points.</li>
+<li>Visualizing Safe Corridors.</li>
+<li>Laser-material interactions mapping.</li>
 </ul>
 </section>
-<section id="part-5-process-windows" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-process-windows">Part 5: Process Windows</h3>
+<section id="part-5-ml-for-material-design" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-ml-for-material-design">Part 5: ML for Material Design</h3>
 <ul>
-<li>Mapping safe processing zones.</li>
-<li>Sensitivity analysis applications.</li>
-<li>Casting/3D Printing stability.</li>
+<li>Prescribing processing routes.</li>
+<li>Simulation-aided training.</li>
+<li>AI vs.&nbsp;human intuition.</li>
 </ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
-<p><strong>Summary for ML-PC Week 8:</strong><br>
-- Shifts focus from performance to Model Reliability. - Explores Bias-Variance tradeoff and generalization. - Details robust validation (K-Fold, Stratified CV). - Uses sensitivity analysis to map stable Process Windows.</p>
+<p><strong>Summary for ML-PC Week 9:</strong><br>
+- Explores Inverse Problems for materials design. - Contrasts multi-valued inverse tasks with causal forward problems. - Introduces Physics-Informed Learning and feature enrichment. - Demonstrates building Process Maps and Safe Corridors.</p>
 </section>
 </section>
      </main>
