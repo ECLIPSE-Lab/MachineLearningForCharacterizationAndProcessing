@@ -366,15 +366,13 @@ Construct a simple ML-based process map; compare constrained vs unconstrained mo
 
 ---
 
-### Unit IV — Characterization, Automation, and Uncertainty (Weeks 9–11)
+### Unit IV — Characterization, Transformers, and Uncertainty (Weeks 9–11)
 
 #### Week 9 – ML for characterization signals
 
 *Lecture: Tuesday, 09.06.2026, 14:15-15:45 | Exercise: Thursday, 11.06.2026, 16:15-17:45*
 
 **Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09_characterization_signals/10_characterization_signals.html)
-
-Companion deck (within Week 9): **Transformers for materials** — [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09b_transformers_for_materials/transformers_for_materials.html)
 
 - Spectral data: XRD, EELS, EDS.
 - Denoising, peak finding, dimensionality reduction.
@@ -392,24 +390,25 @@ Apply PCA/NMF to spectral datasets; interpret components physically.
 
 ---
 
-#### Week 10 – Automation in microscopy and characterization
+#### Week 10 – Transformers for materials characterization
 
 *Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise: Thursday, 18.06.2026, 16:15-17:45*
 
-**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_automation/11_automation.html)
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_transformers_for_materials/transformers_for_materials.html)
 
-- Autofocus, drift correction, parameter selection.
-- ML as a control component, not just a predictor.
+- Why attention: long-range correlations beyond CNN receptive fields.
+- Scaled dot-product attention and the Vision Transformer (ViT).
+- Flash Attention for tractable long sequences.
 
 **Summary:**
 
-- **Autonomous characterization**: ML moves from passive analysis to active instrument control
-- **Multi-modal data fusion** (SEM + EDS + process logs) via Bayesian frameworks
-- **Reinforcement learning** for instrument tuning and process optimization
-- Pipelines that autonomously find → characterize → decide the next experiment
+- **Self-attention** and the **Vision Transformer (ViT)** for materials imaging
+- **Flash Attention**: long sequences without the L×L memory blow-up
+- Applications: **ViT on 4D-STEM** diffraction; cross-attention across LPBF layer stacks
+- Scaling alternatives (**Mamba / state-space models**) — and when *not* to reach for a transformer
 
 **Exercise:**
-Implement a simple ML-assisted autofocus or defect detector.
+Apply a small ViT / attention model to a characterization dataset (e.g. 4D-STEM patches); compare against a CNN baseline.
 
 ---
 
