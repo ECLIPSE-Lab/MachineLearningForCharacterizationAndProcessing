@@ -1,47 +1,49 @@
-# Week 11 Summary: Uncertainty-aware regression & Gaussian Processes
+# Week 11 Summary: Transformers for materials characterization
 
 ## Cross-Book Summary
 
-### 1. Knowing what you don't know
-- **Aleatoric vs. Epistemic:** Inherent physical noise vs. model ignorance.
-- **Overconfidence Danger:** Point estimates fail safely in unknown regimes; uncertainty metrics are crucial.
+### 1. Why Attention for Materials
+- **Long-range correlations:** Many characterization signals (diffraction, micrograph stacks) have dependencies that exceed practical CNN receptive fields.
+- **Self-attention:** Lets every token attend to every other token directly, capturing global structure in one layer.
 
-### 2. Gaussian Processes (GPs)
-- **Distribution over Functions:** GP yields posterior mean and variance (uncertainty).
-- **Kernels as Physical Priors:** Encodes assumptions about data smoothness/scale.
-- **Non-Parametric Nature:** Scales with data size, ideal for small, high-quality materials datasets.
+### 2. The Transformer Toolkit
+- **Scaled dot-product attention:** The core operation and its O(L²) cost.
+- **Vision Transformer (ViT):** Patchify → embed → encode → classify; transformers applied to image-like data.
+- **Flash Attention:** A fused kernel that makes long sequences tractable without materialising the L×L matrix.
 
-### 3. GP-Based Process Maps
-- **Confidence Ribbons:** Visualize reliability to guide further experiments.
-- **Kriging:** Interpolates materials property surfaces using GP regression.
+### 3. Materials Applications
+- **ViT on 4D-STEM:** Diffraction patches become a token sequence for a ViT encoder.
+- **Cross-attention across LPBF layers:** Long-stack micrograph context for additive-manufacturing monitoring.
+
+### 4. Scaling Alternatives (Awareness Only)
+- **Mamba / structured state-space models (SSMs):** O(L) compute, constant memory; competitive on long sequences. Cross-reference the Week 8 time-series deck.
 
 ## 90-Minute Lecture Strategy
 
-### Part 1: Uncertainty in Science
-- Risk management in materials processing.
-- Visualizing distributions and error bars.
+### Part 1: Where We Are
+- Recap of Week 10 (characterization signals) and why we now need attention.
 
-### Part 2: GP Fundamentals
-- Function vs. Parameter space.
-- Kernels and "Similarity".
-- Conditional Gaussians and Variance.
+### Part 2: Why Attention
+- Long-range correlations exceed CNN receptive fields.
 
-### Part 3: GP Case Studies
-- Predicting tensile strength across parameters.
-- GP for Experimental Design.
-- Multi-Task GPs.
+### Part 3: Mechanics
+- Scaled dot-product attention: the formula and the cost.
+- ViT in five lines: patchify, embed, encode, classify.
+- Flash Attention: the kernel that makes long sequences tractable.
 
-### Part 4: Advanced Probabilistic ML
-- Mixture Density Networks (MDNs).
-- Dropout as Bayesian approximation.
+### Part 4: Materials Applications
+- ViT on 4D-STEM diffraction.
+- Cross-attention across LPBF layer stacks.
 
-### Part 5: Decision Making
-- Safe process windows via confidence intervals.
-- Building trustworthy models.
+### Part 5: Practice and Pitfalls
+- `nn.MultiheadAttention` vs `F.scaled_dot_product_attention`.
+- Scaling alternatives (Mamba / SSMs) — mention only.
+- Anti-patterns: what *not* to do.
+- Exercise preview.
 
 ## Quarto Website Update (Summary)
-**Summary for ML-PC Week 12:**  
-- Introduces Probabilistic Machine Learning for uncertainty quantification.
-- Differentiates aleatoric (noise) from epistemic (ignorance) uncertainty.
-- Uses Gaussian Processes (GPs) for uncertainty-aware regression.
-- Applies confidence intervals to map robust process windows.
+**Summary for ML-PC Week 11:**
+- Motivates self-attention for long-range structure in characterization data.
+- Covers scaled dot-product attention, the Vision Transformer, and Flash Attention.
+- Applies transformers to 4D-STEM diffraction and LPBF layer-stack context.
+- Notes Mamba / state-space models as scaling alternatives, and when not to reach for a transformer.
