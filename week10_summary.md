@@ -1,49 +1,50 @@
-# Week 10 Summary: Transformers for materials characterization
+# Week 10 Summary: ML for characterization signals
 
 ## Cross-Book Summary
 
-### 1. Why Attention for Materials
-- **Long-range correlations:** Many characterization signals (diffraction, micrograph stacks) have dependencies that exceed practical CNN receptive fields.
-- **Self-attention:** Lets every token attend to every other token directly, capturing global structure in one layer.
+### 1. Clustering Spectral Data
+- **K-Means:** Groups similar spectra (XRD/EDS) to identify distinct phases.
+- **Mini-Batch K-Means:** Speeds up high-throughput characterization.
+- **t-SNE:** Projects high-dimensional spectra to 2D to reveal outliers/relationships.
 
-### 2. The Transformer Toolkit
-- **Scaled dot-product attention:** The core operation and its O(L²) cost.
-- **Vision Transformer (ViT):** Patchify → embed → encode → classify; transformers applied to image-like data.
-- **Flash Attention:** A fused kernel that makes long sequences tractable without materialising the L×L matrix.
+### 2. Autoencoders for Signal Processing
+- **Latent Representations:** Compresses spectra to essential physical information.
+- **Denoising:** Reconstructs clean signals from noisy inputs without blurring.
+- **Non-linear Compression:** Outperforms PCA for complex spectral libraries.
 
-### 3. Materials Applications
-- **ViT on 4D-STEM:** Diffraction patches become a token sequence for a ViT encoder.
-- **Cross-attention across LPBF layers:** Long-stack micrograph context for additive-manufacturing monitoring.
-
-### 4. Scaling Alternatives (Awareness Only)
-- **Mamba / structured state-space models (SSMs):** O(L) compute, constant memory; competitive on long sequences. Cross-reference the Week 7 time-series deck.
+### 3. Scientific Integrity in ML
+- **Peak Preservation:** ML must assist, not invent or smooth away real physics.
 
 ## 90-Minute Lecture Strategy
 
-### Part 1: Where We Are
-- Recap of Week 9 (characterization signals) and why we now need attention.
+### Part 1: High-Dimensional Signals
+- Digital footprint: XRD, EDS, EELS, Raman.
+- Manual vs. automated peak-picking.
+- Vector spectrum representation.
 
-### Part 2: Why Attention
-- Long-range correlations exceed CNN receptive fields.
+### Part 2: Clustering Structure
+- K-Means algorithm.
+- Elbow Method for phase counting.
+- Ternary alloy mapping.
 
-### Part 3: Mechanics
-- Scaled dot-product attention: the formula and the cost.
-- ViT in five lines: patchify, embed, encode, classify.
-- Flash Attention: the kernel that makes long sequences tractable.
+### Part 3: Visualizing the Unseen
+- t-SNE Stochastic Proximity.
+- Hidden relationships.
+- t-SNE distance pitfalls.
 
-### Part 4: Materials Applications
-- ViT on 4D-STEM diffraction.
-- Cross-attention across LPBF layer stacks.
+### Part 4: Autoencoders & Denoising
+- Encoder-Bottleneck-Decoder.
+- Denoising characterization signals.
+- Bottlenecks as physical descriptors.
 
-### Part 5: Practice and Pitfalls
-- `nn.MultiheadAttention` vs `F.scaled_dot_product_attention`.
-- Scaling alternatives (Mamba / SSMs) — mention only.
-- Anti-patterns: what *not* to do.
-- Exercise preview.
+### Part 5: Data to Discovery
+- Real-time spectral analysis.
+- Physical consistency in ML.
+- Automated pipelines.
 
 ## Quarto Website Update (Summary)
-**Summary for ML-PC Week 10:**
-- Motivates self-attention for long-range structure in characterization data.
-- Covers scaled dot-product attention, the Vision Transformer, and Flash Attention.
-- Applies transformers to 4D-STEM diffraction and LPBF layer-stack context.
-- Notes Mamba / state-space models as scaling alternatives, and when not to reach for a transformer.
+**Summary for ML-PC Week 10:**  
+- Processes high-dimensional Characterization Signals (XRD, EDS).
+- Employs K-Means and t-SNE for automated phase identification.
+- Uses Autoencoders for latent space compression and denoising.
+- Enhances high-throughput data analysis while preserving physics.

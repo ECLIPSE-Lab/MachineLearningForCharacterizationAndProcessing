@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
     <meta charset="utf-8">
-    <meta name="generator" content="quarto-1.10.3">
+    <meta name="generator" content="quarto-1.10.5">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -122,7 +122,7 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-fedc0afa5eed45b88079642ee2c6e752.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-cc03a45504bcebdf2e36fbb04c837120.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-99531da96f133e8d6986ee8266cfdc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
@@ -139,7 +139,7 @@
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Week 10 Summary: Transformers for materials characterization</h6>
+      <h6><i class="bi bi-journal-code"></i> Week 10 Summary: ML for characterization signals</h6>
 
             <a href="./week10_summary.md" class="btn btn-primary quarto-download-embed" download="week10_summary.md">Download Notebook</a>
           </div>
@@ -150,22 +150,21 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#week-10-summary-transformers-for-materials-characterization" id="toc-week-10-summary-transformers-for-materials-characterization" class="nav-link active" data-scroll-target="#week-10-summary-transformers-for-materials-characterization">Week 10 Summary: Transformers for materials characterization</a>
+  <li><a href="#week-10-summary-ml-for-characterization-signals" id="toc-week-10-summary-ml-for-characterization-signals" class="nav-link active" data-scroll-target="#week-10-summary-ml-for-characterization-signals">Week 10 Summary: ML for characterization signals</a>
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#why-attention-for-materials" id="toc-why-attention-for-materials" class="nav-link" data-scroll-target="#why-attention-for-materials">1. Why Attention for Materials</a></li>
-  <li><a href="#the-transformer-toolkit" id="toc-the-transformer-toolkit" class="nav-link" data-scroll-target="#the-transformer-toolkit">2. The Transformer Toolkit</a></li>
-  <li><a href="#materials-applications" id="toc-materials-applications" class="nav-link" data-scroll-target="#materials-applications">3. Materials Applications</a></li>
-  <li><a href="#scaling-alternatives-awareness-only" id="toc-scaling-alternatives-awareness-only" class="nav-link" data-scroll-target="#scaling-alternatives-awareness-only">4. Scaling Alternatives (Awareness Only)</a></li>
+  <li><a href="#clustering-spectral-data" id="toc-clustering-spectral-data" class="nav-link" data-scroll-target="#clustering-spectral-data">1. Clustering Spectral Data</a></li>
+  <li><a href="#autoencoders-for-signal-processing" id="toc-autoencoders-for-signal-processing" class="nav-link" data-scroll-target="#autoencoders-for-signal-processing">2. Autoencoders for Signal Processing</a></li>
+  <li><a href="#scientific-integrity-in-ml" id="toc-scientific-integrity-in-ml" class="nav-link" data-scroll-target="#scientific-integrity-in-ml">3. Scientific Integrity in ML</a></li>
   </ul></li>
   <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-where-we-are" id="toc-part-1-where-we-are" class="nav-link" data-scroll-target="#part-1-where-we-are">Part 1: Where We Are</a></li>
-  <li><a href="#part-2-why-attention" id="toc-part-2-why-attention" class="nav-link" data-scroll-target="#part-2-why-attention">Part 2: Why Attention</a></li>
-  <li><a href="#part-3-mechanics" id="toc-part-3-mechanics" class="nav-link" data-scroll-target="#part-3-mechanics">Part 3: Mechanics</a></li>
-  <li><a href="#part-4-materials-applications" id="toc-part-4-materials-applications" class="nav-link" data-scroll-target="#part-4-materials-applications">Part 4: Materials Applications</a></li>
-  <li><a href="#part-5-practice-and-pitfalls" id="toc-part-5-practice-and-pitfalls" class="nav-link" data-scroll-target="#part-5-practice-and-pitfalls">Part 5: Practice and Pitfalls</a></li>
+  <li><a href="#part-1-high-dimensional-signals" id="toc-part-1-high-dimensional-signals" class="nav-link" data-scroll-target="#part-1-high-dimensional-signals">Part 1: High-Dimensional Signals</a></li>
+  <li><a href="#part-2-clustering-structure" id="toc-part-2-clustering-structure" class="nav-link" data-scroll-target="#part-2-clustering-structure">Part 2: Clustering Structure</a></li>
+  <li><a href="#part-3-visualizing-the-unseen" id="toc-part-3-visualizing-the-unseen" class="nav-link" data-scroll-target="#part-3-visualizing-the-unseen">Part 3: Visualizing the Unseen</a></li>
+  <li><a href="#part-4-autoencoders-denoising" id="toc-part-4-autoencoders-denoising" class="nav-link" data-scroll-target="#part-4-autoencoders-denoising">Part 4: Autoencoders &amp; Denoising</a></li>
+  <li><a href="#part-5-data-to-discovery" id="toc-part-5-data-to-discovery" class="nav-link" data-scroll-target="#part-5-data-to-discovery">Part 5: Data to Discovery</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -174,81 +173,80 @@
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
-<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-10-summary-transformers-for-materials-characterization" class="level1">
-<h1>Week 10 Summary: Transformers for materials characterization</h1>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-10-summary-ml-for-characterization-signals" class="level1">
+<h1>Week 10 Summary: ML for characterization signals</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="why-attention-for-materials" class="level3">
-<h3 class="anchored" data-anchor-id="why-attention-for-materials">1. Why Attention for Materials</h3>
+<section id="clustering-spectral-data" class="level3">
+<h3 class="anchored" data-anchor-id="clustering-spectral-data">1. Clustering Spectral Data</h3>
 <ul>
-<li><strong>Long-range correlations:</strong> Many characterization signals (diffraction, micrograph stacks) have dependencies that exceed practical CNN receptive fields.</li>
-<li><strong>Self-attention:</strong> Lets every token attend to every other token directly, capturing global structure in one layer.</li>
+<li><strong>K-Means:</strong> Groups similar spectra (XRD/EDS) to identify distinct phases.</li>
+<li><strong>Mini-Batch K-Means:</strong> Speeds up high-throughput characterization.</li>
+<li><strong>t-SNE:</strong> Projects high-dimensional spectra to 2D to reveal outliers/relationships.</li>
 </ul>
 </section>
-<section id="the-transformer-toolkit" class="level3">
-<h3 class="anchored" data-anchor-id="the-transformer-toolkit">2. The Transformer Toolkit</h3>
+<section id="autoencoders-for-signal-processing" class="level3">
+<h3 class="anchored" data-anchor-id="autoencoders-for-signal-processing">2. Autoencoders for Signal Processing</h3>
 <ul>
-<li><strong>Scaled dot-product attention:</strong> The core operation and its O(L²) cost.</li>
-<li><strong>Vision Transformer (ViT):</strong> Patchify → embed → encode → classify; transformers applied to image-like data.</li>
-<li><strong>Flash Attention:</strong> A fused kernel that makes long sequences tractable without materialising the L×L matrix.</li>
+<li><strong>Latent Representations:</strong> Compresses spectra to essential physical information.</li>
+<li><strong>Denoising:</strong> Reconstructs clean signals from noisy inputs without blurring.</li>
+<li><strong>Non-linear Compression:</strong> Outperforms PCA for complex spectral libraries.</li>
 </ul>
 </section>
-<section id="materials-applications" class="level3">
-<h3 class="anchored" data-anchor-id="materials-applications">3. Materials Applications</h3>
+<section id="scientific-integrity-in-ml" class="level3">
+<h3 class="anchored" data-anchor-id="scientific-integrity-in-ml">3. Scientific Integrity in ML</h3>
 <ul>
-<li><strong>ViT on 4D-STEM:</strong> Diffraction patches become a token sequence for a ViT encoder.</li>
-<li><strong>Cross-attention across LPBF layers:</strong> Long-stack micrograph context for additive-manufacturing monitoring.</li>
-</ul>
-</section>
-<section id="scaling-alternatives-awareness-only" class="level3">
-<h3 class="anchored" data-anchor-id="scaling-alternatives-awareness-only">4. Scaling Alternatives (Awareness Only)</h3>
-<ul>
-<li><strong>Mamba / structured state-space models (SSMs):</strong> O(L) compute, constant memory; competitive on long sequences. Cross-reference the Week 7 time-series deck.</li>
+<li><strong>Peak Preservation:</strong> ML must assist, not invent or smooth away real physics.</li>
 </ul>
 </section>
 </section>
 <section id="minute-lecture-strategy" class="level2">
 <h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
-<section id="part-1-where-we-are" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-where-we-are">Part 1: Where We Are</h3>
+<section id="part-1-high-dimensional-signals" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-high-dimensional-signals">Part 1: High-Dimensional Signals</h3>
 <ul>
-<li>Recap of Week 9 (characterization signals) and why we now need attention.</li>
+<li>Digital footprint: XRD, EDS, EELS, Raman.</li>
+<li>Manual vs.&nbsp;automated peak-picking.</li>
+<li>Vector spectrum representation.</li>
 </ul>
 </section>
-<section id="part-2-why-attention" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-why-attention">Part 2: Why Attention</h3>
+<section id="part-2-clustering-structure" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-clustering-structure">Part 2: Clustering Structure</h3>
 <ul>
-<li>Long-range correlations exceed CNN receptive fields.</li>
+<li>K-Means algorithm.</li>
+<li>Elbow Method for phase counting.</li>
+<li>Ternary alloy mapping.</li>
 </ul>
 </section>
-<section id="part-3-mechanics" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-mechanics">Part 3: Mechanics</h3>
+<section id="part-3-visualizing-the-unseen" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-visualizing-the-unseen">Part 3: Visualizing the Unseen</h3>
 <ul>
-<li>Scaled dot-product attention: the formula and the cost.</li>
-<li>ViT in five lines: patchify, embed, encode, classify.</li>
-<li>Flash Attention: the kernel that makes long sequences tractable.</li>
+<li>t-SNE Stochastic Proximity.</li>
+<li>Hidden relationships.</li>
+<li>t-SNE distance pitfalls.</li>
 </ul>
 </section>
-<section id="part-4-materials-applications" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-materials-applications">Part 4: Materials Applications</h3>
+<section id="part-4-autoencoders-denoising" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-autoencoders-denoising">Part 4: Autoencoders &amp; Denoising</h3>
 <ul>
-<li>ViT on 4D-STEM diffraction.</li>
-<li>Cross-attention across LPBF layer stacks.</li>
+<li>Encoder-Bottleneck-Decoder.</li>
+<li>Denoising characterization signals.</li>
+<li>Bottlenecks as physical descriptors.</li>
 </ul>
 </section>
-<section id="part-5-practice-and-pitfalls" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-practice-and-pitfalls">Part 5: Practice and Pitfalls</h3>
+<section id="part-5-data-to-discovery" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-data-to-discovery">Part 5: Data to Discovery</h3>
 <ul>
-<li><code>nn.MultiheadAttention</code> vs <code>F.scaled_dot_product_attention</code>.</li>
-<li>Scaling alternatives (Mamba / SSMs) — mention only.</li>
-<li>Anti-patterns: what <em>not</em> to do.</li>
-<li>Exercise preview.</li>
+<li>Real-time spectral analysis.</li>
+<li>Physical consistency in ML.</li>
+<li>Automated pipelines.</li>
 </ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
-<p><strong>Summary for ML-PC Week 10:</strong> - Motivates self-attention for long-range structure in characterization data. - Covers scaled dot-product attention, the Vision Transformer, and Flash Attention. - Applies transformers to 4D-STEM diffraction and LPBF layer-stack context. - Notes Mamba / state-space models as scaling alternatives, and when not to reach for a transformer.</p>
+<p><strong>Summary for ML-PC Week 10:</strong><br>
+- Processes high-dimensional Characterization Signals (XRD, EDS). - Employs K-Means and t-SNE for automated phase identification. - Uses Autoencoders for latent space compression and denoising. - Enhances high-throughput data analysis while preserving physics.</p>
 </section>
 </section>
      </main>

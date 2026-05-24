@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
     <meta charset="utf-8">
-    <meta name="generator" content="quarto-1.10.3">
+    <meta name="generator" content="quarto-1.10.5">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -122,7 +122,7 @@
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-fedc0afa5eed45b88079642ee2c6e752.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-cc03a45504bcebdf2e36fbb04c837120.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-99531da96f133e8d6986ee8266cfdc38.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
@@ -139,7 +139,7 @@
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Week 8 Summary: Inverse problems and process maps</h6>
+      <h6><i class="bi bi-journal-code"></i> Week 8 Summary: Time-series and process monitoring</h6>
 
             <a href="./week8_summary.md" class="btn btn-primary quarto-download-embed" download="week8_summary.md">Download Notebook</a>
           </div>
@@ -150,21 +150,20 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#week-8-summary-inverse-problems-and-process-maps" id="toc-week-8-summary-inverse-problems-and-process-maps" class="nav-link active" data-scroll-target="#week-8-summary-inverse-problems-and-process-maps">Week 8 Summary: Inverse problems and process maps</a>
+  <li><a href="#week-8-summary-time-series-and-process-monitoring" id="toc-week-8-summary-time-series-and-process-monitoring" class="nav-link active" data-scroll-target="#week-8-summary-time-series-and-process-monitoring">Week 8 Summary: Time-series and process monitoring</a>
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#forward-vs.-inverse-problems" id="toc-forward-vs.-inverse-problems" class="nav-link" data-scroll-target="#forward-vs.-inverse-problems">1. Forward vs.&nbsp;Inverse Problems</a></li>
-  <li><a href="#physics-informed-enrichment" id="toc-physics-informed-enrichment" class="nav-link" data-scroll-target="#physics-informed-enrichment">2. Physics-Informed Enrichment</a></li>
-  <li><a href="#process-maps-and-corridors" id="toc-process-maps-and-corridors" class="nav-link" data-scroll-target="#process-maps-and-corridors">3. Process Maps and Corridors</a></li>
+  <li><a href="#sequential-data-memory" id="toc-sequential-data-memory" class="nav-link" data-scroll-target="#sequential-data-memory">1. Sequential Data &amp; Memory</a></li>
+  <li><a href="#materials-process-monitoring" id="toc-materials-process-monitoring" class="nav-link" data-scroll-target="#materials-process-monitoring">2. Materials Process Monitoring</a></li>
   </ul></li>
   <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-material-scientists-dilemma" id="toc-part-1-material-scientists-dilemma" class="nav-link" data-scroll-target="#part-1-material-scientists-dilemma">Part 1: Material Scientist’s Dilemma</a></li>
-  <li><a href="#part-2-physics-informed-ml" id="toc-part-2-physics-informed-ml" class="nav-link" data-scroll-target="#part-2-physics-informed-ml">Part 2: Physics-Informed ML</a></li>
-  <li><a href="#part-3-solving-the-inverse" id="toc-part-3-solving-the-inverse" class="nav-link" data-scroll-target="#part-3-solving-the-inverse">Part 3: Solving the Inverse</a></li>
-  <li><a href="#part-4-building-process-maps" id="toc-part-4-building-process-maps" class="nav-link" data-scroll-target="#part-4-building-process-maps">Part 4: Building Process Maps</a></li>
-  <li><a href="#part-5-ml-for-material-design" id="toc-part-5-ml-for-material-design" class="nav-link" data-scroll-target="#part-5-ml-for-material-design">Part 5: ML for Material Design</a></li>
+  <li><a href="#part-1-processing-as-sequence" id="toc-part-1-processing-as-sequence" class="nav-link" data-scroll-target="#part-1-processing-as-sequence">Part 1: Processing as Sequence</a></li>
+  <li><a href="#part-2-preprocessing" id="toc-part-2-preprocessing" class="nav-link" data-scroll-target="#part-2-preprocessing">Part 2: Preprocessing</a></li>
+  <li><a href="#part-3-rnns" id="toc-part-3-rnns" class="nav-link" data-scroll-target="#part-3-rnns">Part 3: RNNs</a></li>
+  <li><a href="#part-4-case-studies" id="toc-part-4-case-studies" class="nav-link" data-scroll-target="#part-4-case-studies">Part 4: Case Studies</a></li>
+  <li><a href="#part-5-challenges" id="toc-part-5-challenges" class="nav-link" data-scroll-target="#part-5-challenges">Part 5: Challenges</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -173,80 +172,75 @@
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
-<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-8-summary-inverse-problems-and-process-maps" class="level1">
-<h1>Week 8 Summary: Inverse problems and process maps</h1>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-8-summary-time-series-and-process-monitoring" class="level1">
+<h1>Week 8 Summary: Time-series and process monitoring</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="forward-vs.-inverse-problems" class="level3">
-<h3 class="anchored" data-anchor-id="forward-vs.-inverse-problems">1. Forward vs.&nbsp;Inverse Problems</h3>
+<section id="sequential-data-memory" class="level3">
+<h3 class="anchored" data-anchor-id="sequential-data-memory">1. Sequential Data &amp; Memory</h3>
 <ul>
-<li><strong>Causality Gap:</strong> Forward problems are unique; inverse are ill-posed/multi-valued.</li>
-<li><strong>Non-Gaussianity:</strong> Inverse problems require Mixture Density Networks due to multimodality.</li>
+<li><strong>Temporal Dimension:</strong> Process logs are sequential; order matters.</li>
+<li><strong>RNNs:</strong> Possess hidden states that act as memory.</li>
+<li><strong>Vanishing Gradients:</strong> Basic RNNs struggle with long-term dependencies.</li>
+<li><strong>LSTMs/GRUs:</strong> Use gates to selectively remember/forget information.</li>
 </ul>
 </section>
-<section id="physics-informed-enrichment" class="level3">
-<h3 class="anchored" data-anchor-id="physics-informed-enrichment">2. Physics-Informed Enrichment</h3>
+<section id="materials-process-monitoring" class="level3">
+<h3 class="anchored" data-anchor-id="materials-process-monitoring">2. Materials Process Monitoring</h3>
 <ul>
-<li><strong>Expert in the Loop:</strong> Add physical transformations (e.g., FFT) to reduce training effort.</li>
-<li><strong>Enrichment:</strong> Combine raw data with physics features (PINNs).</li>
-</ul>
-</section>
-<section id="process-maps-and-corridors" class="level3">
-<h3 class="anchored" data-anchor-id="process-maps-and-corridors">3. Process Maps and Corridors</h3>
-<ul>
-<li><strong>Process Corridors:</strong> Identifying stable parameter regions.</li>
-<li><strong>ML-Guided Mapping:</strong> Interpolating sparse experimental points via surrogates.</li>
-<li><strong>Prescriptive ML:</strong> Answering “What must I do?” instead of “What will happen?”.</li>
+<li><strong>Preprocessing:</strong> Smoothing and “Triggering” to extract cycles.</li>
+<li><strong>Anomaly Detection:</strong> Large prediction deviations signal defects.</li>
+<li><strong>Surrogate Models:</strong> Fast RNN/LSTM replacements for slow simulations.</li>
 </ul>
 </section>
 </section>
 <section id="minute-lecture-strategy" class="level2">
 <h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
-<section id="part-1-material-scientists-dilemma" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-material-scientists-dilemma">Part 1: Material Scientist’s Dilemma</h3>
+<section id="part-1-processing-as-sequence" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-processing-as-sequence">Part 1: Processing as Sequence</h3>
 <ul>
-<li>Inverse problem complexities.</li>
-<li>Many-to-one mappings.</li>
-<li>Uniqueness in systems.</li>
+<li>Time-dependency of microstructure.</li>
+<li>Sensor types (1D vs.&nbsp;logs).</li>
+<li>Event vs.&nbsp;Continuous.</li>
 </ul>
 </section>
-<section id="part-2-physics-informed-ml" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-physics-informed-ml">Part 2: Physics-Informed ML</h3>
+<section id="part-2-preprocessing" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-preprocessing">Part 2: Preprocessing</h3>
 <ul>
-<li>White vs.&nbsp;Grey vs.&nbsp;Black Box.</li>
-<li>Feature Enrichment.</li>
-<li>Loss function constraints.</li>
+<li>Denoising filters.</li>
+<li>Triggering cycles.</li>
+<li>Temporal Feature Engineering.</li>
 </ul>
 </section>
-<section id="part-3-solving-the-inverse" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-solving-the-inverse">Part 3: Solving the Inverse</h3>
+<section id="part-3-rnns" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-rnns">Part 3: RNNs</h3>
 <ul>
-<li>Regression failure on inverse tasks.</li>
-<li>Regularization and Mixture Models.</li>
-<li>Heat treatment parameter case study.</li>
+<li>Unrolled RNN structure.</li>
+<li>Vanishing Gradient problem.</li>
+<li>LSTM and GRU mechanics.</li>
 </ul>
 </section>
-<section id="part-4-building-process-maps" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-building-process-maps">Part 4: Building Process Maps</h3>
+<section id="part-4-case-studies" class="level3">
+<h3 class="anchored" data-anchor-id="part-4-case-studies">Part 4: Case Studies</h3>
 <ul>
-<li>Continuous maps from points.</li>
-<li>Visualizing Safe Corridors.</li>
-<li>Laser-material interactions mapping.</li>
+<li>Predictive Maintenance.</li>
+<li>AM melt pool stability.</li>
+<li>Dilatometry phase predictions.</li>
 </ul>
 </section>
-<section id="part-5-ml-for-material-design" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-ml-for-material-design">Part 5: ML for Material Design</h3>
+<section id="part-5-challenges" class="level3">
+<h3 class="anchored" data-anchor-id="part-5-challenges">Part 5: Challenges</h3>
 <ul>
-<li>Prescribing processing routes.</li>
-<li>Simulation-aided training.</li>
-<li>AI vs.&nbsp;human intuition.</li>
+<li>Non-stationarity and machine drift.</li>
+<li>Transformers for 1D data.</li>
+<li>Closed-loop control outlook.</li>
 </ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
-<p><strong>Summary for ML-PC Week 9:</strong><br>
-- Explores Inverse Problems for materials design. - Contrasts multi-valued inverse tasks with causal forward problems. - Introduces Physics-Informed Learning and feature enrichment. - Demonstrates building Process Maps and Safe Corridors.</p>
+<p><strong>Summary for ML-PC Week 8:</strong><br>
+- Applies ML to Time-Series Data for process monitoring. - Introduces RNNs and LSTMs for sequential dependencies. - Details essential preprocessing like smoothing and triggering. - Covers anomaly detection and process outcome prediction.</p>
 </section>
 </section>
      </main>
