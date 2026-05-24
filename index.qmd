@@ -314,15 +314,23 @@ Fine-tune a pretrained model; compare against training from scratch.
 
 ---
 
-### Unit III — Learning from Processing Data (Weeks 7–8)
+#### Week 7 – No lecture (26.05.2026, public holiday)
 
-#### Week 7 – Time-series and process monitoring
+::: {.callout-warning appearance="simple"}
+**Cancelled** — no ML-PC lecture or exercise takes place in Week 7 (Pfingstmontag / Pfingstdienstag public holidays, 25–26.05.2026). The *time-series & process monitoring* unit moves to Week 8 (02.06.2026); every later unit shifts one week, taking up the former Week-14 buffer slot.
+:::
 
-*Lecture: Tuesday, 26.05.2026, 14:15-15:45 (self-study — Pfingstdienstag public holiday) | Exercise: Thursday, 28.05.2026, 16:15-17:45 (in class)*
+---
+
+### Unit III — Learning from Processing Data (Weeks 8–9)
+
+#### Week 8 – Time-series and process monitoring
+
+*Lecture: Tuesday, 02.06.2026, 14:15-15:45 (in class) | Exercise: Thursday, 04.06.2026, 16:15-17:45 (self-study — Fronleichnam public holiday)*
 
 **Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit07_time_series/01_intro.html)
 
-> **Self-study lecture:** the Tuesday slot is cancelled (Pfingstdienstag). Work through the slide deck independently; the Thursday exercise runs in class and consolidates the material.
+> **Self-study exercise:** the Thursday slot is cancelled (Fronleichnam). The exercise is provided for independent work; a solution is released afterwards. The Tuesday lecture takes place in class.
 
 - Processing signals:
   temperature cycles, AM melt pool signals, SPS, rolling.
@@ -342,13 +350,11 @@ Predict a process outcome from time-series data using regression or simple RNNs.
 
 ---
 
-#### Week 8 – Inverse problems and process maps
+#### Week 9 – Inverse problems and process maps
 
-*Lecture: Tuesday, 02.06.2026, 14:15-15:45 (in class) | Exercise: Thursday, 04.06.2026, 16:15-17:45 (self-study — Fronleichnam public holiday)*
+*Lecture: Tuesday, 09.06.2026, 14:15-15:45 | Exercise: Thursday, 11.06.2026, 16:15-17:45*
 
 **Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit08_inverse_problems/09_inverse_problems.html)
-
-> **Self-study exercise:** the Thursday slot is cancelled (Fronleichnam). The exercise is provided for independent work; a solution is released afterwards.
 
 - Process → structure inverse problems.
 - ML-guided process maps (e.g. AM laser power vs scan speed).
@@ -366,11 +372,11 @@ Construct a simple ML-based process map; compare constrained vs unconstrained mo
 
 ---
 
-### Unit IV — Characterization, Transformers, and Uncertainty (Weeks 9–11)
+### Unit IV — Characterization, Transformers, and Uncertainty (Weeks 10–12)
 
-#### Week 9 – ML for characterization signals
+#### Week 10 – ML for characterization signals
 
-*Lecture: Tuesday, 09.06.2026, 14:15-15:45 | Exercise: Thursday, 11.06.2026, 16:15-17:45*
+*Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise: Thursday, 18.06.2026, 16:15-17:45*
 
 **Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit09_characterization_signals/10_characterization_signals.html)
 
@@ -390,9 +396,9 @@ Apply PCA/NMF to spectral datasets; interpret components physically.
 
 ---
 
-#### Week 10 – Transformers for materials characterization
+#### Week 11 – Transformers for materials characterization
 
-*Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise: Thursday, 18.06.2026, 16:15-17:45*
+*Lecture: Tuesday, 23.06.2026, 14:15-15:45 | Exercise: Thursday, 25.06.2026, 16:15-17:45*
 
 **Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit10_transformers_for_materials/transformers_for_materials.html)
 
@@ -412,9 +418,9 @@ Apply a small ViT / attention model to a characterization dataset (e.g. 4D-STEM 
 
 ---
 
-#### Week 11 – Uncertainty-aware regression & Gaussian Processes
+#### Week 12 – Uncertainty-aware regression & Gaussian Processes
 
-*Lecture: Tuesday, 23.06.2026, 14:15-15:45 | Exercise: Thursday, 25.06.2026, 16:15-17:45*
+*Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise: Thursday, 02.07.2026, 16:15-17:45*
 
 **Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_uncertainty_gp/12_uncertainty_gp.html)
 
@@ -428,11 +434,11 @@ Compare GP regression and NN ensembles for a process-parameter problem.
 
 ---
 
-### Unit V — Physics, Trust, and Synthesis (Weeks 12–13)
+### Unit V — Physics, Trust, and Synthesis (Weeks 13–14)
 
-#### Week 12 – Physics-informed and constrained ML
+#### Week 13 – Physics-informed and constrained ML
 
-*Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise: Thursday, 02.07.2026, 16:15-17:45*
+*Lecture: Tuesday, 07.07.2026, 14:15-15:45 | Exercise: Thursday, 09.07.2026, 16:15-17:45*
 
 **Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_pinns/13_pinns.html)
 
@@ -445,9 +451,9 @@ Train a constrained model for a processing or characterization task.
 
 ---
 
-#### Week 13 – Integration, limits, and reflection
+#### Week 14 – Integration, limits, and reflection
 
-*Lecture: Tuesday, 07.07.2026, 14:15-15:45 | Exercise: Thursday, 09.07.2026, 16:15-17:45*
+*Lecture: Tuesday, 14.07.2026, 14:15-15:45 | Exercise: Thursday, 16.07.2026, 16:15-17:45*
 
 **Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit13_reflection/14_reflection.html)
 
@@ -457,14 +463,6 @@ Train a constrained model for a processing or characterization task.
 
 **Exercise:**
 Mini-project presentations and critical discussion.
-
----
-
-#### Week 14 – Buffer, review, and mini-project work
-
-*Tuesday, 14.07.2026, 14:15-15:45 | Thursday, 16.07.2026, 16:15-17:45*
-
-No new material. Reserved as a buffer to absorb schedule slippage from the Week 7 / Week 8 public-holiday self-study sessions, for review of difficult topics on request, and for mini-project consultation and presentations.
 
 ---
 
