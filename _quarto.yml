@@ -17,7 +17,7 @@ format:
       hypothesis: true
   docx: default
   jats: default
-  agu-pdf: default
+  # agu-pdf: default   # disabled 2026-05-24 — TeX Live 2026 on the CI runner breaks the LuaLaTeX build and blocks the gh-pages deploy; re-enable once the PDF toolchain is fixed
 
 
 
