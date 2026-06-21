@@ -436,11 +436,16 @@ Compare GP regression and NN ensembles for a process-parameter problem.
 
 ### Unit V — Physics, Trust, and Synthesis (Weeks 13–14)
 
-#### Week 13 – Physics-informed and constrained ML
+#### Week 13 – Physics-informed and constrained ML — *self-study (lecture cancelled)*
 
-*Lecture: Tuesday, 07.07.2026, 14:15-15:45 | Exercise: Thursday, 09.07.2026, 16:15-17:45*
+*Lecture cancelled (Tuesday, 07.07.2026) — delivered as required self-study. Exercise: Thursday, 09.07.2026, 16:15-17:45 takes place as scheduled.*
 
-**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_pinns/13_pinns.html)
+::: {.callout-warning}
+## No lecture on 07.07.2026
+The Tuesday lecture does not take place. This unit — **physics-informed and constrained ML** — is **required self-study** from the slide deck below. It remains examinable and is the unit that delivers the "integrate physical constraints into ML workflows" learning outcome. The Thursday exercise runs as normal.
+:::
+
+**Slides (required self-study):** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_pinns/13_pinns.html)
 
 - Embedding physical constraints into ML models.
 - Penalty terms, soft constraints, hybrid approaches.
