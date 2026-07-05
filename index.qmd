@@ -34,8 +34,8 @@ key-points:
   - ML for experimental materials data
   - Vision-based ML for microstructures
   - Time-series ML for processing
-  - Uncertainty-aware regression and optimization
   - Physics-informed and constrained ML
+  - Uncertainty-aware regression and optimization
 date: last-modified
 bibliography: references.bib
 number-sections: true
@@ -372,7 +372,7 @@ Construct a simple ML-based process map; compare constrained vs unconstrained mo
 
 ---
 
-### Unit IV — Characterization, Transformers, and Uncertainty (Weeks 10–12)
+### Unit IV — Characterization, Transformers, and Physics (Weeks 10–12)
 
 #### Week 10 – ML for characterization signals
 
@@ -418,11 +418,33 @@ Apply a small ViT / attention model to a characterization dataset (e.g. 4D-STEM 
 
 ---
 
-#### Week 12 – Uncertainty-aware regression & Gaussian Processes
+#### Week 12 – Physics-informed and constrained ML
 
 *Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise: Thursday, 02.07.2026, 16:15-17:45*
 
-**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_uncertainty_gp/12_uncertainty_gp.html)
+**Slides:** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_pinns/12_pinns.html)
+
+- Embedding physical constraints into ML models.
+- Penalty terms, soft constraints, hybrid approaches.
+- Failure modes of unconstrained models.
+
+**Exercise:**
+Train a constrained model for a processing or characterization task.
+
+---
+
+### Unit V — Uncertainty, Trust, and Synthesis (Weeks 13–14)
+
+#### Week 13 – Uncertainty-aware regression & Gaussian Processes — *self-study (lecture cancelled)*
+
+*Lecture cancelled (Tuesday, 07.07.2026) — delivered as required self-study. Exercise: Thursday, 09.07.2026, 16:15-17:45 takes place as scheduled.*
+
+::: {.callout-warning}
+## No lecture on 07.07.2026
+The Tuesday lecture does not take place. This unit — **uncertainty-aware regression & Gaussian Processes** — is **required self-study** from the slide deck below. It remains examinable and is the unit that delivers the "quantify and propagate predictive uncertainty" learning outcome. The Thursday exercise runs as normal.
+:::
+
+**Slides (required self-study):** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_uncertainty_gp/13_uncertainty_gp.html)
 
 - Aleatoric vs epistemic uncertainty in experiments.
 - Gaussian Processes as uncertainty-aware surrogates.
@@ -431,28 +453,6 @@ Apply a small ViT / attention model to a characterization dataset (e.g. 4D-STEM 
 
 **Exercise:**
 Compare GP regression and NN ensembles for a process-parameter problem.
-
----
-
-### Unit V — Physics, Trust, and Synthesis (Weeks 13–14)
-
-#### Week 13 – Physics-informed and constrained ML — *self-study (lecture cancelled)*
-
-*Lecture cancelled (Tuesday, 07.07.2026) — delivered as required self-study. Exercise: Thursday, 09.07.2026, 16:15-17:45 takes place as scheduled.*
-
-::: {.callout-warning}
-## No lecture on 07.07.2026
-The Tuesday lecture does not take place. This unit — **physics-informed and constrained ML** — is **required self-study** from the slide deck below. It remains examinable and is the unit that delivers the "integrate physical constraints into ML workflows" learning outcome. The Thursday exercise runs as normal.
-:::
-
-**Slides (required self-study):** [Open](https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_pinns/13_pinns.html)
-
-- Embedding physical constraints into ML models.
-- Penalty terms, soft constraints, hybrid approaches.
-- Failure modes of unconstrained models.
-
-**Exercise:**
-Train a constrained model for a processing or characterization task.
 
 ---
 
