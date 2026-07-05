@@ -523,9 +523,9 @@ as data leakage, overfitting, and spurious correlations.</p>
         map; compare constrained vs unconstrained models.</p>
       </sec>
     </sec>
-    <sec id="unit-iv-characterization-transformers-and-uncertainty-weeks-1012">
-      <title>1.3.4 Unit IV — Characterization, Transformers, and
-      Uncertainty (Weeks 10–12)</title>
+    <sec id="unit-iv-characterization-transformers-and-physics-weeks-1012">
+      <title>1.3.4 Unit IV — Characterization, Transformers, and Physics
+      (Weeks 10–12)</title>
       <sec id="week-10-ml-for-characterization-signals">
         <title>1.3.4.1 Week 10 – ML for characterization signals</title>
         <p><italic>Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise:
@@ -609,13 +609,49 @@ as data leakage, overfitting, and spurious correlations.</p>
         a characterization dataset (e.g. 4D-STEM patches); compare
         against a CNN baseline.</p>
       </sec>
-      <sec id="week-12-uncertainty-aware-regression-gaussian-processes">
-        <title>1.3.4.3 Week 12 – Uncertainty-aware regression &amp;
-        Gaussian Processes</title>
+      <sec id="week-12-physics-informed-and-constrained-ml">
+        <title>1.3.4.3 Week 12 – Physics-informed and constrained
+        ML</title>
         <p><italic>Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise:
         Thursday, 02.07.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_uncertainty_gp/12_uncertainty_gp.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_pinns/12_pinns.html">Open</ext-link></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Embedding physical constraints into ML models.</p>
+          </list-item>
+          <list-item>
+            <p>Penalty terms, soft constraints, hybrid approaches.</p>
+          </list-item>
+          <list-item>
+            <p>Failure modes of unconstrained models.</p>
+          </list-item>
+        </list>
+        <p><bold>Exercise:</bold> Train a constrained model for a
+        processing or characterization task.</p>
+      </sec>
+    </sec>
+    <sec id="unit-v-uncertainty-trust-and-synthesis-weeks-1314">
+      <title>1.3.5 Unit V — Uncertainty, Trust, and Synthesis (Weeks
+      13–14)</title>
+      <sec id="week-13-uncertainty-aware-regression-gaussian-processes-self-study-lecture-cancelled">
+        <title>1.3.5.1 Week 13 – Uncertainty-aware regression &amp;
+        Gaussian Processes — <italic>self-study (lecture
+        cancelled)</italic></title>
+        <p><italic>Lecture cancelled (Tuesday, 07.07.2026) — delivered
+        as required self-study. Exercise: Thursday, 09.07.2026,
+        16:15-17:45 takes place as scheduled.</italic></p>
+        <boxed-text>
+        <p><bold>No lecture on 07.07.2026</bold></p>
+        <p>The Tuesday lecture does not take place. This unit —
+        <bold>uncertainty-aware regression &amp; Gaussian
+        Processes</bold> — is <bold>required self-study</bold> from the
+        slide deck below. It remains examinable and is the unit that
+        delivers the “quantify and propagate predictive uncertainty”
+        learning outcome. The Thursday exercise runs as normal.</p>
+        </boxed-text>
+        <p><bold>Slides (required self-study):</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_uncertainty_gp/13_uncertainty_gp.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Aleatoric vs epistemic uncertainty in experiments.</p>
@@ -632,41 +668,6 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list>
         <p><bold>Exercise:</bold> Compare GP regression and NN ensembles
         for a process-parameter problem.</p>
-      </sec>
-    </sec>
-    <sec id="unit-v-physics-trust-and-synthesis-weeks-1314">
-      <title>1.3.5 Unit V — Physics, Trust, and Synthesis (Weeks
-      13–14)</title>
-      <sec id="week-13-physics-informed-and-constrained-ml-self-study-lecture-cancelled">
-        <title>1.3.5.1 Week 13 – Physics-informed and constrained ML —
-        <italic>self-study (lecture cancelled)</italic></title>
-        <p><italic>Lecture cancelled (Tuesday, 07.07.2026) — delivered
-        as required self-study. Exercise: Thursday, 09.07.2026,
-        16:15-17:45 takes place as scheduled.</italic></p>
-        <boxed-text>
-        <p><bold>No lecture on 07.07.2026</bold></p>
-        <p>The Tuesday lecture does not take place. This unit —
-        <bold>physics-informed and constrained ML</bold> — is
-        <bold>required self-study</bold> from the slide deck below. It
-        remains examinable and is the unit that delivers the “integrate
-        physical constraints into ML workflows” learning outcome. The
-        Thursday exercise runs as normal.</p>
-        </boxed-text>
-        <p><bold>Slides (required self-study):</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_pinns/13_pinns.html">Open</ext-link></p>
-        <list list-type="bullet">
-          <list-item>
-            <p>Embedding physical constraints into ML models.</p>
-          </list-item>
-          <list-item>
-            <p>Penalty terms, soft constraints, hybrid approaches.</p>
-          </list-item>
-          <list-item>
-            <p>Failure modes of unconstrained models.</p>
-          </list-item>
-        </list>
-        <p><bold>Exercise:</bold> Train a constrained model for a
-        processing or characterization task.</p>
       </sec>
       <sec id="week-14-integration-limits-and-reflection">
         <title>1.3.5.2 Week 14 – Integration, limits, and
@@ -1270,9 +1271,9 @@ as data leakage, overfitting, and spurious correlations.</p>
         map; compare constrained vs unconstrained models.</p>
       </sec>
     </sec>
-    <sec id="unit-iv-characterization-transformers-and-uncertainty-weeks-1012-nb-article">
-      <title>1.3.4 Unit IV — Characterization, Transformers, and
-      Uncertainty (Weeks 10–12)</title>
+    <sec id="unit-iv-characterization-transformers-and-physics-weeks-1012-nb-article">
+      <title>1.3.4 Unit IV — Characterization, Transformers, and Physics
+      (Weeks 10–12)</title>
       <sec id="week-10-ml-for-characterization-signals-nb-article">
         <title>1.3.4.1 Week 10 – ML for characterization signals</title>
         <p><italic>Lecture: Tuesday, 16.06.2026, 14:15-15:45 | Exercise:
@@ -1356,13 +1357,52 @@ as data leakage, overfitting, and spurious correlations.</p>
         a characterization dataset (e.g. 4D-STEM patches); compare
         against a CNN baseline.</p>
       </sec>
-      <sec id="week-12-uncertainty-aware-regression-gaussian-processes-nb-article">
-        <title>1.3.4.3 Week 12 – Uncertainty-aware regression &amp;
-        Gaussian Processes</title>
+      <sec id="week-12-physics-informed-and-constrained-ml-nb-article">
+        <title>1.3.4.3 Week 12 – Physics-informed and constrained
+        ML</title>
         <p><italic>Lecture: Tuesday, 30.06.2026, 14:15-15:45 | Exercise:
         Thursday, 02.07.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_uncertainty_gp/12_uncertainty_gp.html">Open</ext-link></p>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit11_pinns/12_pinns.html">Open</ext-link></p>
+        <list list-type="bullet">
+          <list-item>
+            <p>Embedding physical constraints into ML models.</p>
+          </list-item>
+          <list-item>
+            <p>Penalty terms, soft constraints, hybrid approaches.</p>
+          </list-item>
+          <list-item>
+            <p>Failure modes of unconstrained models.</p>
+          </list-item>
+        </list>
+        <p><bold>Exercise:</bold> Train a constrained model for a
+        processing or characterization task.</p>
+      </sec>
+    </sec>
+    <sec id="unit-v-uncertainty-trust-and-synthesis-weeks-1314-nb-article">
+      <title>1.3.5 Unit V — Uncertainty, Trust, and Synthesis (Weeks
+      13–14)</title>
+      <sec id="week-13-uncertainty-aware-regression-gaussian-processes-self-study-lecture-cancelled-nb-article">
+        <title>1.3.5.1 Week 13 – Uncertainty-aware regression &amp;
+        Gaussian Processes — <italic>self-study (lecture
+        cancelled)</italic></title>
+        <p><italic>Lecture cancelled (Tuesday, 07.07.2026) — delivered
+        as required self-study. Exercise: Thursday, 09.07.2026,
+        16:15-17:45 takes place as scheduled.</italic></p>
+        <boxed-text>
+          <disp-quote>
+            <p><bold>No lecture on 07.07.2026</bold></p>
+            <p>The Tuesday lecture does not take place. This unit —
+            <bold>uncertainty-aware regression &amp; Gaussian
+            Processes</bold> — is <bold>required self-study</bold> from
+            the slide deck below. It remains examinable and is the unit
+            that delivers the “quantify and propagate predictive
+            uncertainty” learning outcome. The Thursday exercise runs as
+            normal.</p>
+          </disp-quote>
+        </boxed-text>
+        <p><bold>Slides (required self-study):</bold>
+        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_uncertainty_gp/13_uncertainty_gp.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
             <p>Aleatoric vs epistemic uncertainty in experiments.</p>
@@ -1379,43 +1419,6 @@ as data leakage, overfitting, and spurious correlations.</p>
         </list>
         <p><bold>Exercise:</bold> Compare GP regression and NN ensembles
         for a process-parameter problem.</p>
-      </sec>
-    </sec>
-    <sec id="unit-v-physics-trust-and-synthesis-weeks-1314-nb-article">
-      <title>1.3.5 Unit V — Physics, Trust, and Synthesis (Weeks
-      13–14)</title>
-      <sec id="week-13-physics-informed-and-constrained-ml-self-study-lecture-cancelled-nb-article">
-        <title>1.3.5.1 Week 13 – Physics-informed and constrained ML —
-        <italic>self-study (lecture cancelled)</italic></title>
-        <p><italic>Lecture cancelled (Tuesday, 07.07.2026) — delivered
-        as required self-study. Exercise: Thursday, 09.07.2026,
-        16:15-17:45 takes place as scheduled.</italic></p>
-        <boxed-text>
-          <disp-quote>
-            <p><bold>No lecture on 07.07.2026</bold></p>
-            <p>The Tuesday lecture does not take place. This unit —
-            <bold>physics-informed and constrained ML</bold> — is
-            <bold>required self-study</bold> from the slide deck below.
-            It remains examinable and is the unit that delivers the
-            “integrate physical constraints into ML workflows” learning
-            outcome. The Thursday exercise runs as normal.</p>
-          </disp-quote>
-        </boxed-text>
-        <p><bold>Slides (required self-study):</bold>
-        <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit12_pinns/13_pinns.html">Open</ext-link></p>
-        <list list-type="bullet">
-          <list-item>
-            <p>Embedding physical constraints into ML models.</p>
-          </list-item>
-          <list-item>
-            <p>Penalty terms, soft constraints, hybrid approaches.</p>
-          </list-item>
-          <list-item>
-            <p>Failure modes of unconstrained models.</p>
-          </list-item>
-        </list>
-        <p><bold>Exercise:</bold> Train a constrained model for a
-        processing or characterization task.</p>
       </sec>
       <sec id="week-14-integration-limits-and-reflection-nb-article">
         <title>1.3.5.2 Week 14 – Integration, limits, and
@@ -1564,122 +1567,116 @@ as data leakage, overfitting, and spurious correlations.</p>
 </front-stub>
 
 <body>
-<sec id="week-13-summary-physics-informed-and-constrained-ml-nb-2">
-  <title>Week 13 Summary: Physics-informed and constrained ML</title>
+<sec id="week-13-summary-uncertainty-aware-regression-gaussian-processes-nb-2">
+  <title>Week 13 Summary: Uncertainty-aware regression &amp; Gaussian
+  Processes</title>
   <sec id="cross-book-summary-nb-2">
     <title>Cross-Book Summary</title>
-    <sec id="physics-informed-neural-networks-pinns-nb-2">
-      <title>1. Physics-Informed Neural Networks (PINNs)</title>
+    <sec id="knowing-what-you-dont-know-nb-2">
+      <title>1. Knowing what you don’t know</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Embedding Laws:</bold> Enforce ODEs/PDEs via the loss
-          function for physical consistency.</p>
+          <p><bold>Aleatoric vs. Epistemic:</bold> Inherent physical
+          noise vs. model ignorance.</p>
         </list-item>
         <list-item>
-          <p><bold>Automatic Differentiation:</bold> Exact derivative
-          calculations enable NNs to evaluate physical equations.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Boundary Conditions:</bold> Methods like Lagaris
-          substitution guarantee boundary compliance.</p>
+          <p><bold>Overconfidence Danger:</bold> Point estimates fail
+          safely in unknown regimes; uncertainty metrics are
+          crucial.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="governing-equation-discovery-nb-2">
-      <title>2. Governing Equation Discovery</title>
+    <sec id="gaussian-processes-gps-nb-2">
+      <title>2. Gaussian Processes (GPs)</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Dictionary-Based Regression:</bold> Build a
-          dictionary of candidate math functions.</p>
+          <p><bold>Distribution over Functions:</bold> GP yields
+          posterior mean and variance (uncertainty).</p>
         </list-item>
         <list-item>
-          <p><bold>Sparse Identification:</bold> Use regularized
-          regression (Lasso) to discover physical laws from noisy
-          data.</p>
+          <p><bold>Kernels as Physical Priors:</bold> Encodes
+          assumptions about data smoothness/scale.</p>
         </list-item>
         <list-item>
-          <p><bold>Dimensional Reasoning:</bold> Unit analysis ensures
-          physically plausible discoveries.</p>
+          <p><bold>Non-Parametric Nature:</bold> Scales with data size,
+          ideal for small, high-quality materials datasets.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="constraints-in-materials-science-nb-2">
-      <title>3. Constraints in Materials Science</title>
+    <sec id="gp-based-process-maps-nb-2">
+      <title>3. GP-Based Process Maps</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Monotonicity:</bold> Enforce required physical trends
-          (e.g., hardness vs. alloying).</p>
+          <p><bold>Confidence Ribbons:</bold> Visualize reliability to
+          guide further experiments.</p>
         </list-item>
         <list-item>
-          <p><bold>Hybrid Modeling:</bold> Combine physical “White-Box”
-          models with data-driven “Black-Boxes” (Grey-Box).</p>
+          <p><bold>Kriging:</bold> Interpolates materials property
+          surfaces using GP regression.</p>
         </list-item>
       </list>
     </sec>
   </sec>
   <sec id="minute-lecture-strategy-nb-2">
     <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-why-physics-matters-nb-2">
-      <title>Part 1: Why Physics Matters</title>
+    <sec id="part-1-uncertainty-in-science-nb-2">
+      <title>Part 1: Uncertainty in Science</title>
       <list list-type="bullet">
         <list-item>
-          <p>Limits of unconstrained Black-Box models.</p>
+          <p>Risk management in materials processing.</p>
         </list-item>
         <list-item>
-          <p>Accurate but Physical models.</p>
-        </list-item>
-        <list-item>
-          <p>PINNs need less data.</p>
+          <p>Visualizing distributions and error bars.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-automatic-differentiation-nb-2">
-      <title>Part 2: Automatic Differentiation</title>
+    <sec id="part-2-gp-fundamentals-nb-2">
+      <title>Part 2: GP Fundamentals</title>
       <list list-type="bullet">
         <list-item>
-          <p>GradientTape mechanics.</p>
+          <p>Function vs. Parameter space.</p>
         </list-item>
         <list-item>
-          <p>Derivatives as ML architecture components.</p>
+          <p>Kernels and “Similarity”.</p>
+        </list-item>
+        <list-item>
+          <p>Conditional Gaussians and Variance.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-3-solving-physics-with-nns-nb-2">
-      <title>Part 3: Solving Physics with NNs</title>
+    <sec id="part-3-gp-case-studies-nb-2">
+      <title>Part 3: GP Case Studies</title>
       <list list-type="bullet">
         <list-item>
-          <p>PINN Architectures: Data Loss + Physics Loss.</p>
+          <p>Predicting tensile strength across parameters.</p>
         </list-item>
         <list-item>
-          <p>Enforcing Boundary Conditions.</p>
+          <p>GP for Experimental Design.</p>
         </list-item>
         <list-item>
-          <p>3D printing heat transfer case study.</p>
+          <p>Multi-Task GPs.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-4-equation-discovery-nb-2">
-      <title>Part 4: Equation Discovery</title>
+    <sec id="part-4-advanced-probabilistic-ml-nb-2">
+      <title>Part 4: Advanced Probabilistic ML</title>
       <list list-type="bullet">
         <list-item>
-          <p>Sparse Regression and candidate dictionaries.</p>
+          <p>Mixture Density Networks (MDNs).</p>
         </list-item>
         <list-item>
-          <p>Damped pendulum equation case study.</p>
-        </list-item>
-        <list-item>
-          <p>Unit Analysis search pruning.</p>
+          <p>Dropout as Bayesian approximation.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-5-the-grey-box-future-nb-2">
-      <title>Part 5: The Grey-Box Future</title>
+    <sec id="part-5-decision-making-nb-2">
+      <title>Part 5: Decision Making</title>
       <list list-type="bullet">
         <list-item>
-          <p>Hybrid architectures vs. FEA.</p>
+          <p>Safe process windows via confidence intervals.</p>
         </list-item>
         <list-item>
-          <p>Building industrial trust.</p>
+          <p>Building trustworthy models.</p>
         </list-item>
       </list>
     </sec>
@@ -1687,10 +1684,11 @@ as data leakage, overfitting, and spurious correlations.</p>
   <sec id="quarto-website-update-summary-nb-2">
     <title>Quarto Website Update (Summary)</title>
     <p><bold>Summary for ML-PC Week 13:</bold>
-    - Combines neural networks with physical laws via Physics-Informed
-    ML. - Introduces PINNs and automatic differentiation. - Details
-    Governing Equation Discovery using sparse regression. - Applies
-    physical constraints to build data-efficient Grey-Box models.</p>
+    - Introduces Probabilistic Machine Learning for uncertainty
+    quantification. - Differentiates aleatoric (noise) from epistemic
+    (ignorance) uncertainty. - Uses Gaussian Processes (GPs) for
+    uncertainty-aware regression. - Applies confidence intervals to map
+    robust process windows.</p>
   </sec>
 </sec>
 </body>
@@ -2267,116 +2265,122 @@ as data leakage, overfitting, and spurious correlations.</p>
 </front-stub>
 
 <body>
-<sec id="week-12-summary-uncertainty-aware-regression-gaussian-processes-nb-6">
-  <title>Week 12 Summary: Uncertainty-aware regression &amp; Gaussian
-  Processes</title>
+<sec id="week-12-summary-physics-informed-and-constrained-ml-nb-6">
+  <title>Week 12 Summary: Physics-informed and constrained ML</title>
   <sec id="cross-book-summary-nb-6">
     <title>Cross-Book Summary</title>
-    <sec id="knowing-what-you-dont-know-nb-6">
-      <title>1. Knowing what you don’t know</title>
+    <sec id="physics-informed-neural-networks-pinns-nb-6">
+      <title>1. Physics-Informed Neural Networks (PINNs)</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Aleatoric vs. Epistemic:</bold> Inherent physical
-          noise vs. model ignorance.</p>
+          <p><bold>Embedding Laws:</bold> Enforce ODEs/PDEs via the loss
+          function for physical consistency.</p>
         </list-item>
         <list-item>
-          <p><bold>Overconfidence Danger:</bold> Point estimates fail
-          safely in unknown regimes; uncertainty metrics are
-          crucial.</p>
+          <p><bold>Automatic Differentiation:</bold> Exact derivative
+          calculations enable NNs to evaluate physical equations.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Boundary Conditions:</bold> Methods like Lagaris
+          substitution guarantee boundary compliance.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="gaussian-processes-gps-nb-6">
-      <title>2. Gaussian Processes (GPs)</title>
+    <sec id="governing-equation-discovery-nb-6">
+      <title>2. Governing Equation Discovery</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Distribution over Functions:</bold> GP yields
-          posterior mean and variance (uncertainty).</p>
+          <p><bold>Dictionary-Based Regression:</bold> Build a
+          dictionary of candidate math functions.</p>
         </list-item>
         <list-item>
-          <p><bold>Kernels as Physical Priors:</bold> Encodes
-          assumptions about data smoothness/scale.</p>
+          <p><bold>Sparse Identification:</bold> Use regularized
+          regression (Lasso) to discover physical laws from noisy
+          data.</p>
         </list-item>
         <list-item>
-          <p><bold>Non-Parametric Nature:</bold> Scales with data size,
-          ideal for small, high-quality materials datasets.</p>
+          <p><bold>Dimensional Reasoning:</bold> Unit analysis ensures
+          physically plausible discoveries.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="gp-based-process-maps-nb-6">
-      <title>3. GP-Based Process Maps</title>
+    <sec id="constraints-in-materials-science-nb-6">
+      <title>3. Constraints in Materials Science</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Confidence Ribbons:</bold> Visualize reliability to
-          guide further experiments.</p>
+          <p><bold>Monotonicity:</bold> Enforce required physical trends
+          (e.g., hardness vs. alloying).</p>
         </list-item>
         <list-item>
-          <p><bold>Kriging:</bold> Interpolates materials property
-          surfaces using GP regression.</p>
+          <p><bold>Hybrid Modeling:</bold> Combine physical “White-Box”
+          models with data-driven “Black-Boxes” (Grey-Box).</p>
         </list-item>
       </list>
     </sec>
   </sec>
   <sec id="minute-lecture-strategy-nb-6">
     <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-uncertainty-in-science-nb-6">
-      <title>Part 1: Uncertainty in Science</title>
+    <sec id="part-1-why-physics-matters-nb-6">
+      <title>Part 1: Why Physics Matters</title>
       <list list-type="bullet">
         <list-item>
-          <p>Risk management in materials processing.</p>
+          <p>Limits of unconstrained Black-Box models.</p>
         </list-item>
         <list-item>
-          <p>Visualizing distributions and error bars.</p>
+          <p>Accurate but Physical models.</p>
+        </list-item>
+        <list-item>
+          <p>PINNs need less data.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-gp-fundamentals-nb-6">
-      <title>Part 2: GP Fundamentals</title>
+    <sec id="part-2-automatic-differentiation-nb-6">
+      <title>Part 2: Automatic Differentiation</title>
       <list list-type="bullet">
         <list-item>
-          <p>Function vs. Parameter space.</p>
+          <p>GradientTape mechanics.</p>
         </list-item>
         <list-item>
-          <p>Kernels and “Similarity”.</p>
-        </list-item>
-        <list-item>
-          <p>Conditional Gaussians and Variance.</p>
+          <p>Derivatives as ML architecture components.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-3-gp-case-studies-nb-6">
-      <title>Part 3: GP Case Studies</title>
+    <sec id="part-3-solving-physics-with-nns-nb-6">
+      <title>Part 3: Solving Physics with NNs</title>
       <list list-type="bullet">
         <list-item>
-          <p>Predicting tensile strength across parameters.</p>
+          <p>PINN Architectures: Data Loss + Physics Loss.</p>
         </list-item>
         <list-item>
-          <p>GP for Experimental Design.</p>
+          <p>Enforcing Boundary Conditions.</p>
         </list-item>
         <list-item>
-          <p>Multi-Task GPs.</p>
+          <p>3D printing heat transfer case study.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-4-advanced-probabilistic-ml-nb-6">
-      <title>Part 4: Advanced Probabilistic ML</title>
+    <sec id="part-4-equation-discovery-nb-6">
+      <title>Part 4: Equation Discovery</title>
       <list list-type="bullet">
         <list-item>
-          <p>Mixture Density Networks (MDNs).</p>
+          <p>Sparse Regression and candidate dictionaries.</p>
         </list-item>
         <list-item>
-          <p>Dropout as Bayesian approximation.</p>
+          <p>Damped pendulum equation case study.</p>
+        </list-item>
+        <list-item>
+          <p>Unit Analysis search pruning.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-5-decision-making-nb-6">
-      <title>Part 5: Decision Making</title>
+    <sec id="part-5-the-grey-box-future-nb-6">
+      <title>Part 5: The Grey-Box Future</title>
       <list list-type="bullet">
         <list-item>
-          <p>Safe process windows via confidence intervals.</p>
+          <p>Hybrid architectures vs. FEA.</p>
         </list-item>
         <list-item>
-          <p>Building trustworthy models.</p>
+          <p>Building industrial trust.</p>
         </list-item>
       </list>
     </sec>
@@ -2384,11 +2388,10 @@ as data leakage, overfitting, and spurious correlations.</p>
   <sec id="quarto-website-update-summary-nb-6">
     <title>Quarto Website Update (Summary)</title>
     <p><bold>Summary for ML-PC Week 12:</bold>
-    - Introduces Probabilistic Machine Learning for uncertainty
-    quantification. - Differentiates aleatoric (noise) from epistemic
-    (ignorance) uncertainty. - Uses Gaussian Processes (GPs) for
-    uncertainty-aware regression. - Applies confidence intervals to map
-    robust process windows.</p>
+    - Combines neural networks with physical laws via Physics-Informed
+    ML. - Introduces PINNs and automatic differentiation. - Details
+    Governing Equation Discovery using sparse regression. - Applies
+    physical constraints to build data-efficient Grey-Box models.</p>
   </sec>
 </sec>
 </body>
