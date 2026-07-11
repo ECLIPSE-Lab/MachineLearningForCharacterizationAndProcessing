@@ -2,20 +2,20 @@
 
 ## Cross-Book Summary
 
-### 1. The Need for Convolutions
-- **Parameter Explosion:** MLPs require too many weights for images.
-- **Exploiting Structure:** Convolutions use shared filters for spatial correlation.
-- **Shift Invariance:** Detects features anywhere in the micrograph.
+### 1. Learning Without Labels
+- **Why Unsupervised:** Most materials data arrives unlabeled; labels are expensive.
+- **Clustering:** K-Means and GMMs discover structure in descriptors and spectra.
+- **Choosing K:** Cluster counts must be defensible, not arbitrary.
 
-### 2. CNN Mechanics
-- **Convolutional Layers:** Hierarchical feature detectors.
-- **Activation & Pooling:** Non-linearity and spatial downsampling.
-- **Perception Analogy:** Inspired by early photo-cell grids.
+### 2. Embeddings and Autoencoders
+- **Frozen CNN Embeddings:** Pretrained features as unsupervised feature spaces.
+- **Autoencoders:** Bottleneck representations for compression and denoising.
+- **Anomaly Detection:** Reconstruction-error thresholding on nominal data.
 
 ### 3. Application to Microstructures
-- **Segmentation:** Pixel-wise classification.
-- **Object Detection:** Bounding specific features.
-- **Classification:** Categorizing whole micrographs.
+- **Hyperspectral Clustering:** Flatten EELS/EDS datacubes, cluster, re-image as phase maps.
+- **Phase Discovery:** Cluster CNN embeddings of micrographs without labels.
+- **Defect Screening:** Flag off-nominal regions via autoencoder reconstruction error.
 
 ## 90-Minute Lecture Strategy
 
