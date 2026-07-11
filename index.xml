@@ -324,9 +324,9 @@ as data leakage, overfitting, and spurious correlations.</p>
         Compare classical features vs simple NN-based features for
         microstructure tasks.</p>
       </sec>
-      <sec id="week-5-neural-networks-for-microstructure-images">
-        <title>1.3.2.2 Week 5 – Neural networks for microstructure
-        images</title>
+      <sec id="week-5-unsupervised-learning-clustering-autoencoders">
+        <title>1.3.2.2 Week 5 – Unsupervised learning: clustering &amp;
+        autoencoders</title>
         <p><italic>Lecture: Tuesday, 12.05.2026, 14:15-15:45 | Exercise:
         Thursday, 14.05.2026, 16:15-17:45 (cancelled -
         Himmelfahrt)</italic></p>
@@ -334,40 +334,44 @@ as data leakage, overfitting, and spurious correlations.</p>
         <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit05_unsupervised_learning/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
-            <p>CNN intuition: filters as structure detectors.</p>
+            <p>Clustering materials data without labels: k-means and
+            Gaussian mixtures.</p>
           </list-item>
           <list-item>
-            <p>Example tasks: phase segmentation, defect detection,
-            porosity identification.</p>
+            <p>CNN embeddings as unsupervised feature spaces for phase
+            discovery.</p>
           </list-item>
           <list-item>
-            <p>Overfitting risks with small datasets.</p>
+            <p>Autoencoders for compression, denoising, and anomaly
+            detection.</p>
           </list-item>
         </list>
         <p><bold>Summary:</bold></p>
         <list list-type="bullet">
           <list-item>
-            <p><bold>Convolutional Neural Networks (CNNs)</bold> for
-            materials characterization</p>
+            <p><bold>K-means and GMM</bold> for discovering structure in
+            descriptors and spectra; choosing and defending K</p>
           </list-item>
           <list-item>
-            <p>Hierarchical structure detectors: edges → textures →
-            phase morphologies</p>
+            <p><bold>Frozen CNN embeddings</bold> as feature extractors
+            — no labels needed</p>
           </list-item>
           <list-item>
-            <p>Filters and pooling; parameter efficiency vs. MLPs</p>
+            <p><bold>Hyperspectral clustering</bold>: flatten datacubes
+            (EELS/EDS), cluster, re-image as phase maps</p>
           </list-item>
           <list-item>
-            <p>Case studies: phase segmentation, defect detection</p>
+            <p><bold>Autoencoders</bold>: low-dimensional bottleneck
+            representations for materials images</p>
           </list-item>
           <list-item>
-            <p>Practical challenges: high-resolution, noisy
-            micrographs</p>
+            <p><bold>Anomaly detection</bold> via reconstruction-error
+            thresholding on nominal data</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Train a small CNN on microstructure images; analyze failure
-        cases.</p>
+        <p><bold>Exercise:</bold> Cluster materials data with k-means
+        and train a convolutional autoencoder; evaluate clustering
+        quality and anomaly detection.</p>
       </sec>
       <sec id="week-6-data-scarcity-transfer-learning">
         <title>1.3.2.3 Week 6 – Data scarcity &amp; transfer
@@ -669,22 +673,35 @@ as data leakage, overfitting, and spurious correlations.</p>
         <p><bold>Exercise:</bold> Compare GP regression and NN ensembles
         for a process-parameter problem.</p>
       </sec>
-      <sec id="week-14-integration-limits-and-reflection">
-        <title>1.3.5.2 Week 14 – Integration, limits, and
-        reflection</title>
+      <sec id="week-14-course-recap-from-materials-data-to-trustworthy-models">
+        <title>1.3.5.2 Week 14 – Course recap: from materials data to
+        trustworthy models</title>
         <p><italic>Lecture: Tuesday, 14.07.2026, 14:15-15:45 | Exercise:
         Thursday, 16.07.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
         <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit13_reflection/14_reflection.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
-            <p>Explainability for experimental ML (CAMs, SHAP).</p>
+            <p>The course in one map: raw materials data →
+            representations → models → uncertainty and trust.</p>
           </list-item>
           <list-item>
-            <p>Why ML fails in real labs.</p>
+            <p>Unit-by-unit recap (Units 1–12), each with four
+            checkpoints: what question, what method &amp; equation, when
+            to reach for it and where it breaks, what you must be able
+            to do in the exam.</p>
           </list-item>
           <list-item>
-            <p>Where ML genuinely changes materials processing.</p>
+            <p>Decision guide: twelve real lab scenarios mapped to the
+            right method and unit.</p>
+          </list-item>
+          <list-item>
+            <p>Two questions before any deployment: “Where did this data
+            come from?” (Units 1–3) and “How wrong can I afford to be?”
+            (Unit 12).</p>
+          </list-item>
+          <list-item>
+            <p>Exam scope and mini-project rubric.</p>
           </list-item>
         </list>
         <p><bold>Exercise:</bold> Mini-project presentations and
@@ -1070,9 +1087,9 @@ as data leakage, overfitting, and spurious correlations.</p>
         Compare classical features vs simple NN-based features for
         microstructure tasks.</p>
       </sec>
-      <sec id="week-5-neural-networks-for-microstructure-images-nb-article">
-        <title>1.3.2.2 Week 5 – Neural networks for microstructure
-        images</title>
+      <sec id="week-5-unsupervised-learning-clustering-autoencoders-nb-article">
+        <title>1.3.2.2 Week 5 – Unsupervised learning: clustering &amp;
+        autoencoders</title>
         <p><italic>Lecture: Tuesday, 12.05.2026, 14:15-15:45 | Exercise:
         Thursday, 14.05.2026, 16:15-17:45 (cancelled -
         Himmelfahrt)</italic></p>
@@ -1080,40 +1097,44 @@ as data leakage, overfitting, and spurious correlations.</p>
         <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit05_unsupervised_learning/01_intro.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
-            <p>CNN intuition: filters as structure detectors.</p>
+            <p>Clustering materials data without labels: k-means and
+            Gaussian mixtures.</p>
           </list-item>
           <list-item>
-            <p>Example tasks: phase segmentation, defect detection,
-            porosity identification.</p>
+            <p>CNN embeddings as unsupervised feature spaces for phase
+            discovery.</p>
           </list-item>
           <list-item>
-            <p>Overfitting risks with small datasets.</p>
+            <p>Autoencoders for compression, denoising, and anomaly
+            detection.</p>
           </list-item>
         </list>
         <p><bold>Summary:</bold></p>
         <list list-type="bullet">
           <list-item>
-            <p><bold>Convolutional Neural Networks (CNNs)</bold> for
-            materials characterization</p>
+            <p><bold>K-means and GMM</bold> for discovering structure in
+            descriptors and spectra; choosing and defending K</p>
           </list-item>
           <list-item>
-            <p>Hierarchical structure detectors: edges → textures →
-            phase morphologies</p>
+            <p><bold>Frozen CNN embeddings</bold> as feature extractors
+            — no labels needed</p>
           </list-item>
           <list-item>
-            <p>Filters and pooling; parameter efficiency vs. MLPs</p>
+            <p><bold>Hyperspectral clustering</bold>: flatten datacubes
+            (EELS/EDS), cluster, re-image as phase maps</p>
           </list-item>
           <list-item>
-            <p>Case studies: phase segmentation, defect detection</p>
+            <p><bold>Autoencoders</bold>: low-dimensional bottleneck
+            representations for materials images</p>
           </list-item>
           <list-item>
-            <p>Practical challenges: high-resolution, noisy
-            micrographs</p>
+            <p><bold>Anomaly detection</bold> via reconstruction-error
+            thresholding on nominal data</p>
           </list-item>
         </list>
-        <p><bold>Exercise:</bold>
-        Train a small CNN on microstructure images; analyze failure
-        cases.</p>
+        <p><bold>Exercise:</bold> Cluster materials data with k-means
+        and train a convolutional autoencoder; evaluate clustering
+        quality and anomaly detection.</p>
       </sec>
       <sec id="week-6-data-scarcity-transfer-learning-nb-article">
         <title>1.3.2.3 Week 6 – Data scarcity &amp; transfer
@@ -1420,22 +1441,35 @@ as data leakage, overfitting, and spurious correlations.</p>
         <p><bold>Exercise:</bold> Compare GP regression and NN ensembles
         for a process-parameter problem.</p>
       </sec>
-      <sec id="week-14-integration-limits-and-reflection-nb-article">
-        <title>1.3.5.2 Week 14 – Integration, limits, and
-        reflection</title>
+      <sec id="week-14-course-recap-from-materials-data-to-trustworthy-models-nb-article">
+        <title>1.3.5.2 Week 14 – Course recap: from materials data to
+        trustworthy models</title>
         <p><italic>Lecture: Tuesday, 14.07.2026, 14:15-15:45 | Exercise:
         Thursday, 16.07.2026, 16:15-17:45</italic></p>
         <p><bold>Slides:</bold>
         <ext-link ext-link-type="uri" xlink:href="https://pelzlab.science/public_presentations/ml_for_characterization_and_processing/unit13_reflection/14_reflection.html">Open</ext-link></p>
         <list list-type="bullet">
           <list-item>
-            <p>Explainability for experimental ML (CAMs, SHAP).</p>
+            <p>The course in one map: raw materials data →
+            representations → models → uncertainty and trust.</p>
           </list-item>
           <list-item>
-            <p>Why ML fails in real labs.</p>
+            <p>Unit-by-unit recap (Units 1–12), each with four
+            checkpoints: what question, what method &amp; equation, when
+            to reach for it and where it breaks, what you must be able
+            to do in the exam.</p>
           </list-item>
           <list-item>
-            <p>Where ML genuinely changes materials processing.</p>
+            <p>Decision guide: twelve real lab scenarios mapped to the
+            right method and unit.</p>
+          </list-item>
+          <list-item>
+            <p>Two questions before any deployment: “Where did this data
+            come from?” (Units 1–3) and “How wrong can I afford to be?”
+            (Unit 12).</p>
+          </list-item>
+          <list-item>
+            <p>Exam scope and mini-project rubric.</p>
           </list-item>
         </list>
         <p><bold>Exercise:</bold> Mini-project presentations and
@@ -2465,134 +2499,122 @@ as data leakage, overfitting, and spurious correlations.</p>
 </front-stub>
 
 <body>
-<sec id="week-14-summary-integration-limits-and-reflection-nb-8">
-  <title>Week 14 Summary: Integration, limits, and reflection</title>
+<sec id="week-14-summary-course-recap-from-materials-data-to-trustworthy-models-nb-8">
+  <title>Week 14 Summary: Course Recap — From Materials Data to
+  Trustworthy Models</title>
   <sec id="cross-book-summary-nb-8">
     <title>Cross-Book Summary</title>
-    <sec id="explainability-opening-the-black-box-nb-8">
-      <title>1. Explainability: Opening the Black Box</title>
+    <sec id="the-course-in-one-map-nb-8">
+      <title>1. The Course in One Map</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Beyond Prediction:</bold> “Why” builds industrial
-          trust over just “what”.</p>
+          <p><bold>One Arc:</bold> raw materials data → representations
+          → models → uncertainty and trust.</p>
         </list-item>
         <list-item>
-          <p><bold>Sensitivity Analysis:</bold> Perturb inputs to find
-          primary process drivers.</p>
+          <p><bold>Units 1–3 (Data foundation):</bold> small data,
+          measurement chains, leakage-safe validation.</p>
         </list-item>
         <list-item>
-          <p><bold>Levels of Explanation:</bold> Tailor explanations for
-          managers, experts, and data scientists.</p>
+          <p><bold>Units 4–5 (Representation):</bold> stereology to
+          learned embeddings; unsupervised clustering.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Units 6–9 (Learning under constraints):</bold>
+          transfer learning, time series, inverse problems, spectral
+          signals.</p>
+        </list-item>
+        <list-item>
+          <p><bold>Units 10–12 (Modern architectures &amp;
+          trust):</bold> transformers, physics-informed constraints,
+          uncertainty quantification.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="causality-and-semantics-nb-8">
-      <title>2. Causality and Semantics</title>
-      <list list-type="bullet">
-        <list-item>
-          <p><bold>Causal Process Chains:</bold> Shift from anomaly
-          detection to early prediction.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Ontologies:</bold> Digitize semantic meaning (e.g.,
-          mapping variables to physical concepts) to enable algorithmic
-          reasoning.</p>
-        </list-item>
-      </list>
+    <sec id="the-four-question-framework-nb-8">
+      <title>2. The Four-Question Framework</title>
+      <p>Every unit is recapped through four checkpoints: 1. <bold>What
+      question</bold> did it solve? 2. <bold>What method &amp; central
+      equation</bold> answers it? 3. <bold>When do you reach for
+      it</bold> — and where does it break? 4. <bold>What must you be
+      able to do</bold> in the exam?</p>
     </sec>
-    <sec id="limits-of-ai-in-materials-science-nb-8">
-      <title>3. Limits of AI in Materials Science</title>
+    <sec id="the-decision-guide-nb-8">
+      <title>3. The Decision Guide</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Data Bias:</bold> Models trained only on “successes”
-          cannot predict failures.</p>
+          <p>Twelve real lab scenarios mapped to method and unit,
+          e.g.:</p>
+          <list list-type="bullet">
+            <list-item>
+              <p>Small tabular data with error bars → Gaussian Process
+              (U12).</p>
+            </list-item>
+            <list-item>
+              <p>Streaming sensor data, decisions on forecasts →
+              probabilistic LSTM (U7).</p>
+            </list-item>
+            <list-item>
+              <p>Long-range image correlations, pretraining available →
+              ViT (U10).</p>
+            </list-item>
+            <list-item>
+              <p>Known PDE, sparse sensors → PINN (U11).</p>
+            </list-item>
+            <list-item>
+              <p>No labels at all → clustering / autoencoders (U5).</p>
+            </list-item>
+          </list>
         </list-item>
         <list-item>
-          <p><bold>AI Hallucinations:</bold> Large models may generate
-          physically impossible patterns.</p>
-        </list-item>
-        <list-item>
-          <p><bold>Expert’s Role:</bold> AI automates analysis, but
-          human experts define questions and interpret final truths.</p>
+          <p><bold>Two precursor questions:</bold> “Where did this data
+          come from?” (U1–3) and “How wrong can I afford to be?”
+          (U12).</p>
         </list-item>
       </list>
     </sec>
   </sec>
   <sec id="minute-lecture-strategy-nb-8">
     <title>90-Minute Lecture Strategy</title>
-    <sec id="part-1-course-synthesis-nb-8">
-      <title>Part 1: Course Synthesis</title>
+    <sec id="part-1-the-map-nb-8">
+      <title>Part 1: The Map</title>
       <list list-type="bullet">
         <list-item>
-          <p>Recap: Signal formation to PINNs.</p>
-        </list-item>
-        <list-item>
-          <p>AI-driven materials lifecycle.</p>
+          <p>The 14-week / 12-unit arc as one data-to-trust
+          pipeline.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-2-explainable-ml-nb-8">
-      <title>Part 2: Explainable ML</title>
+    <sec id="part-2-unit-by-unit-recap-nb-8">
+      <title>Part 2: Unit-by-Unit Recap</title>
       <list list-type="bullet">
         <list-item>
-          <p>The Black Box problem.</p>
-        </list-item>
-        <list-item>
-          <p>Sensitivity analysis (Perturbation theory).</p>
-        </list-item>
-        <list-item>
-          <p>Feature importance (SHAP/LIME).</p>
+          <p>Each unit’s question, method, equation, and failure
+          modes.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="part-3-causality-semantics-nb-8">
-      <title>Part 3: Causality &amp; Semantics</title>
+    <sec id="part-3-synthesis-nb-8">
+      <title>Part 3: Synthesis</title>
       <list list-type="bullet">
         <list-item>
-          <p>Causal graphs (Cause → Mechanism → Effect).</p>
+          <p>The decision-guide table: task → tool → unit.</p>
         </list-item>
         <list-item>
-          <p>Detection vs. Prediction.</p>
-        </list-item>
-        <list-item>
-          <p>Materials Ontologies.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-4-ethics-and-limits-nb-8">
-      <title>Part 4: Ethics and Limits</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Representation and “Success” bias.</p>
-        </list-item>
-        <list-item>
-          <p>Dangers of over-extrapolation.</p>
-        </list-item>
-        <list-item>
-          <p>Environmental cost vs. PINN efficiency.</p>
-        </list-item>
-      </list>
-    </sec>
-    <sec id="part-5-final-outlook-nb-8">
-      <title>Part 5: Final Outlook</title>
-      <list list-type="bullet">
-        <list-item>
-          <p>Self-driving labs.</p>
-        </list-item>
-        <list-item>
-          <p>Sustainable AI-driven discovery.</p>
+          <p>Exam scope and mini-project rubric.</p>
         </list-item>
       </list>
     </sec>
   </sec>
   <sec id="quarto-website-update-summary-nb-8">
     <title>Quarto Website Update (Summary)</title>
-    <p><bold>Summary for ML-PC Week 14:</bold>
-    - Reflects on Explainability and Sensitivity Analysis to open
-    black-box models. - Discusses Causality in process chains and
-    Ontologies for semantic reasoning. - Critically assesses Data Bias
-    and physical AI hallucinations. - Examines the evolving partnership
-    between autonomous algorithms and human experts.</p>
+    <p><bold>Summary for ML-PC Week 14:</bold> - Recaps Units 1–12 with
+    a four-question framework (question, method &amp; equation, when to
+    use, exam competence). - Provides a decision guide mapping twelve
+    lab scenarios to the right method and unit. - Anchors deployment on
+    two questions: data provenance and acceptable error budget. - Closes
+    with exam scope and the mini-project rubric: ML amplified the
+    materials scientist, it did not replace them.</p>
   </sec>
 </sec>
 </body>
@@ -3042,37 +3064,37 @@ as data leakage, overfitting, and spurious correlations.</p>
   <title>Week 5 Summary: Unsupervised Learning in Materials</title>
   <sec id="cross-book-summary-nb-12">
     <title>Cross-Book Summary</title>
-    <sec id="the-need-for-convolutions-nb-12">
-      <title>1. The Need for Convolutions</title>
+    <sec id="learning-without-labels-nb-12">
+      <title>1. Learning Without Labels</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Parameter Explosion:</bold> MLPs require too many
-          weights for images.</p>
+          <p><bold>Why Unsupervised:</bold> Most materials data arrives
+          unlabeled; labels are expensive.</p>
         </list-item>
         <list-item>
-          <p><bold>Exploiting Structure:</bold> Convolutions use shared
-          filters for spatial correlation.</p>
+          <p><bold>Clustering:</bold> K-Means and GMMs discover
+          structure in descriptors and spectra.</p>
         </list-item>
         <list-item>
-          <p><bold>Shift Invariance:</bold> Detects features anywhere in
-          the micrograph.</p>
+          <p><bold>Choosing K:</bold> Cluster counts must be defensible,
+          not arbitrary.</p>
         </list-item>
       </list>
     </sec>
-    <sec id="cnn-mechanics-nb-12">
-      <title>2. CNN Mechanics</title>
+    <sec id="embeddings-and-autoencoders-nb-12">
+      <title>2. Embeddings and Autoencoders</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Convolutional Layers:</bold> Hierarchical feature
-          detectors.</p>
+          <p><bold>Frozen CNN Embeddings:</bold> Pretrained features as
+          unsupervised feature spaces.</p>
         </list-item>
         <list-item>
-          <p><bold>Activation &amp; Pooling:</bold> Non-linearity and
-          spatial downsampling.</p>
+          <p><bold>Autoencoders:</bold> Bottleneck representations for
+          compression and denoising.</p>
         </list-item>
         <list-item>
-          <p><bold>Perception Analogy:</bold> Inspired by early
-          photo-cell grids.</p>
+          <p><bold>Anomaly Detection:</bold> Reconstruction-error
+          thresholding on nominal data.</p>
         </list-item>
       </list>
     </sec>
@@ -3080,15 +3102,16 @@ as data leakage, overfitting, and spurious correlations.</p>
       <title>3. Application to Microstructures</title>
       <list list-type="bullet">
         <list-item>
-          <p><bold>Segmentation:</bold> Pixel-wise classification.</p>
+          <p><bold>Hyperspectral Clustering:</bold> Flatten EELS/EDS
+          datacubes, cluster, re-image as phase maps.</p>
         </list-item>
         <list-item>
-          <p><bold>Object Detection:</bold> Bounding specific
-          features.</p>
+          <p><bold>Phase Discovery:</bold> Cluster CNN embeddings of
+          micrographs without labels.</p>
         </list-item>
         <list-item>
-          <p><bold>Classification:</bold> Categorizing whole
-          micrographs.</p>
+          <p><bold>Defect Screening:</bold> Flag off-nominal regions via
+          autoencoder reconstruction error.</p>
         </list-item>
       </list>
     </sec>

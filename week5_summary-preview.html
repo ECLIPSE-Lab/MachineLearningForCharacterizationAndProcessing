@@ -154,8 +154,8 @@
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#the-need-for-convolutions" id="toc-the-need-for-convolutions" class="nav-link" data-scroll-target="#the-need-for-convolutions">1. The Need for Convolutions</a></li>
-  <li><a href="#cnn-mechanics" id="toc-cnn-mechanics" class="nav-link" data-scroll-target="#cnn-mechanics">2. CNN Mechanics</a></li>
+  <li><a href="#learning-without-labels" id="toc-learning-without-labels" class="nav-link" data-scroll-target="#learning-without-labels">1. Learning Without Labels</a></li>
+  <li><a href="#embeddings-and-autoencoders" id="toc-embeddings-and-autoencoders" class="nav-link" data-scroll-target="#embeddings-and-autoencoders">2. Embeddings and Autoencoders</a></li>
   <li><a href="#application-to-microstructures" id="toc-application-to-microstructures" class="nav-link" data-scroll-target="#application-to-microstructures">3. Application to Microstructures</a></li>
   </ul></li>
   <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
@@ -174,28 +174,28 @@
 <h1>Week 5 Summary: Unsupervised Learning in Materials</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="the-need-for-convolutions" class="level3">
-<h3 class="anchored" data-anchor-id="the-need-for-convolutions">1. The Need for Convolutions</h3>
+<section id="learning-without-labels" class="level3">
+<h3 class="anchored" data-anchor-id="learning-without-labels">1. Learning Without Labels</h3>
 <ul>
-<li><strong>Parameter Explosion:</strong> MLPs require too many weights for images.</li>
-<li><strong>Exploiting Structure:</strong> Convolutions use shared filters for spatial correlation.</li>
-<li><strong>Shift Invariance:</strong> Detects features anywhere in the micrograph.</li>
+<li><strong>Why Unsupervised:</strong> Most materials data arrives unlabeled; labels are expensive.</li>
+<li><strong>Clustering:</strong> K-Means and GMMs discover structure in descriptors and spectra.</li>
+<li><strong>Choosing K:</strong> Cluster counts must be defensible, not arbitrary.</li>
 </ul>
 </section>
-<section id="cnn-mechanics" class="level3">
-<h3 class="anchored" data-anchor-id="cnn-mechanics">2. CNN Mechanics</h3>
+<section id="embeddings-and-autoencoders" class="level3">
+<h3 class="anchored" data-anchor-id="embeddings-and-autoencoders">2. Embeddings and Autoencoders</h3>
 <ul>
-<li><strong>Convolutional Layers:</strong> Hierarchical feature detectors.</li>
-<li><strong>Activation &amp; Pooling:</strong> Non-linearity and spatial downsampling.</li>
-<li><strong>Perception Analogy:</strong> Inspired by early photo-cell grids.</li>
+<li><strong>Frozen CNN Embeddings:</strong> Pretrained features as unsupervised feature spaces.</li>
+<li><strong>Autoencoders:</strong> Bottleneck representations for compression and denoising.</li>
+<li><strong>Anomaly Detection:</strong> Reconstruction-error thresholding on nominal data.</li>
 </ul>
 </section>
 <section id="application-to-microstructures" class="level3">
 <h3 class="anchored" data-anchor-id="application-to-microstructures">3. Application to Microstructures</h3>
 <ul>
-<li><strong>Segmentation:</strong> Pixel-wise classification.</li>
-<li><strong>Object Detection:</strong> Bounding specific features.</li>
-<li><strong>Classification:</strong> Categorizing whole micrographs.</li>
+<li><strong>Hyperspectral Clustering:</strong> Flatten EELS/EDS datacubes, cluster, re-image as phase maps.</li>
+<li><strong>Phase Discovery:</strong> Cluster CNN embeddings of micrographs without labels.</li>
+<li><strong>Defect Screening:</strong> Flag off-nominal regions via autoencoder reconstruction error.</li>
 </ul>
 </section>
 </section>

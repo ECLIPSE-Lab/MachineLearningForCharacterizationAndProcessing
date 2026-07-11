@@ -139,7 +139,7 @@
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
       <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Week 14 Summary: Integration, limits, and reflection</h6>
+      <h6><i class="bi bi-journal-code"></i> Week 14 Summary: Course Recap — From Materials Data to Trustworthy Models</h6>
 
             <a href="./week14_summary.md" class="btn btn-primary quarto-download-embed" download="week14_summary.md">Download Notebook</a>
           </div>
@@ -150,21 +150,19 @@
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#week-14-summary-integration-limits-and-reflection" id="toc-week-14-summary-integration-limits-and-reflection" class="nav-link active" data-scroll-target="#week-14-summary-integration-limits-and-reflection">Week 14 Summary: Integration, limits, and reflection</a>
+  <li><a href="#week-14-summary-course-recap-from-materials-data-to-trustworthy-models" id="toc-week-14-summary-course-recap-from-materials-data-to-trustworthy-models" class="nav-link active" data-scroll-target="#week-14-summary-course-recap-from-materials-data-to-trustworthy-models">Week 14 Summary: Course Recap — From Materials Data to Trustworthy Models</a>
   <ul class="collapse">
   <li><a href="#cross-book-summary" id="toc-cross-book-summary" class="nav-link" data-scroll-target="#cross-book-summary">Cross-Book Summary</a>
   <ul class="collapse">
-  <li><a href="#explainability-opening-the-black-box" id="toc-explainability-opening-the-black-box" class="nav-link" data-scroll-target="#explainability-opening-the-black-box">1. Explainability: Opening the Black Box</a></li>
-  <li><a href="#causality-and-semantics" id="toc-causality-and-semantics" class="nav-link" data-scroll-target="#causality-and-semantics">2. Causality and Semantics</a></li>
-  <li><a href="#limits-of-ai-in-materials-science" id="toc-limits-of-ai-in-materials-science" class="nav-link" data-scroll-target="#limits-of-ai-in-materials-science">3. Limits of AI in Materials Science</a></li>
+  <li><a href="#the-course-in-one-map" id="toc-the-course-in-one-map" class="nav-link" data-scroll-target="#the-course-in-one-map">1. The Course in One Map</a></li>
+  <li><a href="#the-four-question-framework" id="toc-the-four-question-framework" class="nav-link" data-scroll-target="#the-four-question-framework">2. The Four-Question Framework</a></li>
+  <li><a href="#the-decision-guide" id="toc-the-decision-guide" class="nav-link" data-scroll-target="#the-decision-guide">3. The Decision Guide</a></li>
   </ul></li>
   <li><a href="#minute-lecture-strategy" id="toc-minute-lecture-strategy" class="nav-link" data-scroll-target="#minute-lecture-strategy">90-Minute Lecture Strategy</a>
   <ul class="collapse">
-  <li><a href="#part-1-course-synthesis" id="toc-part-1-course-synthesis" class="nav-link" data-scroll-target="#part-1-course-synthesis">Part 1: Course Synthesis</a></li>
-  <li><a href="#part-2-explainable-ml" id="toc-part-2-explainable-ml" class="nav-link" data-scroll-target="#part-2-explainable-ml">Part 2: Explainable ML</a></li>
-  <li><a href="#part-3-causality-semantics" id="toc-part-3-causality-semantics" class="nav-link" data-scroll-target="#part-3-causality-semantics">Part 3: Causality &amp; Semantics</a></li>
-  <li><a href="#part-4-ethics-and-limits" id="toc-part-4-ethics-and-limits" class="nav-link" data-scroll-target="#part-4-ethics-and-limits">Part 4: Ethics and Limits</a></li>
-  <li><a href="#part-5-final-outlook" id="toc-part-5-final-outlook" class="nav-link" data-scroll-target="#part-5-final-outlook">Part 5: Final Outlook</a></li>
+  <li><a href="#part-1-the-map" id="toc-part-1-the-map" class="nav-link" data-scroll-target="#part-1-the-map">Part 1: The Map</a></li>
+  <li><a href="#part-2-unit-by-unit-recap" id="toc-part-2-unit-by-unit-recap" class="nav-link" data-scroll-target="#part-2-unit-by-unit-recap">Part 2: Unit-by-Unit Recap</a></li>
+  <li><a href="#part-3-synthesis" id="toc-part-3-synthesis" class="nav-link" data-scroll-target="#part-3-synthesis">Part 3: Synthesis</a></li>
   </ul></li>
   <li><a href="#quarto-website-update-summary" id="toc-quarto-website-update-summary" class="nav-link" data-scroll-target="#quarto-website-update-summary">Quarto Website Update (Summary)</a></li>
   </ul></li>
@@ -173,79 +171,64 @@
 </div>
 <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
 </div>
-<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-14-summary-integration-limits-and-reflection" class="level1">
-<h1>Week 14 Summary: Integration, limits, and reflection</h1>
+<main class="content quarto-banner-title-block" id="quarto-document-content">      <section id="week-14-summary-course-recap-from-materials-data-to-trustworthy-models" class="level1">
+<h1>Week 14 Summary: Course Recap — From Materials Data to Trustworthy Models</h1>
 <section id="cross-book-summary" class="level2">
 <h2 class="anchored" data-anchor-id="cross-book-summary">Cross-Book Summary</h2>
-<section id="explainability-opening-the-black-box" class="level3">
-<h3 class="anchored" data-anchor-id="explainability-opening-the-black-box">1. Explainability: Opening the Black Box</h3>
+<section id="the-course-in-one-map" class="level3">
+<h3 class="anchored" data-anchor-id="the-course-in-one-map">1. The Course in One Map</h3>
 <ul>
-<li><strong>Beyond Prediction:</strong> “Why” builds industrial trust over just “what”.</li>
-<li><strong>Sensitivity Analysis:</strong> Perturb inputs to find primary process drivers.</li>
-<li><strong>Levels of Explanation:</strong> Tailor explanations for managers, experts, and data scientists.</li>
+<li><strong>One Arc:</strong> raw materials data → representations → models → uncertainty and trust.</li>
+<li><strong>Units 1–3 (Data foundation):</strong> small data, measurement chains, leakage-safe validation.</li>
+<li><strong>Units 4–5 (Representation):</strong> stereology to learned embeddings; unsupervised clustering.</li>
+<li><strong>Units 6–9 (Learning under constraints):</strong> transfer learning, time series, inverse problems, spectral signals.</li>
+<li><strong>Units 10–12 (Modern architectures &amp; trust):</strong> transformers, physics-informed constraints, uncertainty quantification.</li>
 </ul>
 </section>
-<section id="causality-and-semantics" class="level3">
-<h3 class="anchored" data-anchor-id="causality-and-semantics">2. Causality and Semantics</h3>
-<ul>
-<li><strong>Causal Process Chains:</strong> Shift from anomaly detection to early prediction.</li>
-<li><strong>Ontologies:</strong> Digitize semantic meaning (e.g., mapping variables to physical concepts) to enable algorithmic reasoning.</li>
-</ul>
+<section id="the-four-question-framework" class="level3">
+<h3 class="anchored" data-anchor-id="the-four-question-framework">2. The Four-Question Framework</h3>
+<p>Every unit is recapped through four checkpoints: 1. <strong>What question</strong> did it solve? 2. <strong>What method &amp; central equation</strong> answers it? 3. <strong>When do you reach for it</strong> — and where does it break? 4. <strong>What must you be able to do</strong> in the exam?</p>
 </section>
-<section id="limits-of-ai-in-materials-science" class="level3">
-<h3 class="anchored" data-anchor-id="limits-of-ai-in-materials-science">3. Limits of AI in Materials Science</h3>
+<section id="the-decision-guide" class="level3">
+<h3 class="anchored" data-anchor-id="the-decision-guide">3. The Decision Guide</h3>
 <ul>
-<li><strong>Data Bias:</strong> Models trained only on “successes” cannot predict failures.</li>
-<li><strong>AI Hallucinations:</strong> Large models may generate physically impossible patterns.</li>
-<li><strong>Expert’s Role:</strong> AI automates analysis, but human experts define questions and interpret final truths.</li>
+<li>Twelve real lab scenarios mapped to method and unit, e.g.:
+<ul>
+<li>Small tabular data with error bars → Gaussian Process (U12).</li>
+<li>Streaming sensor data, decisions on forecasts → probabilistic LSTM (U7).</li>
+<li>Long-range image correlations, pretraining available → ViT (U10).</li>
+<li>Known PDE, sparse sensors → PINN (U11).</li>
+<li>No labels at all → clustering / autoencoders (U5).</li>
+</ul></li>
+<li><strong>Two precursor questions:</strong> “Where did this data come from?” (U1–3) and “How wrong can I afford to be?” (U12).</li>
 </ul>
 </section>
 </section>
 <section id="minute-lecture-strategy" class="level2">
 <h2 class="anchored" data-anchor-id="minute-lecture-strategy">90-Minute Lecture Strategy</h2>
-<section id="part-1-course-synthesis" class="level3">
-<h3 class="anchored" data-anchor-id="part-1-course-synthesis">Part 1: Course Synthesis</h3>
+<section id="part-1-the-map" class="level3">
+<h3 class="anchored" data-anchor-id="part-1-the-map">Part 1: The Map</h3>
 <ul>
-<li>Recap: Signal formation to PINNs.</li>
-<li>AI-driven materials lifecycle.</li>
+<li>The 14-week / 12-unit arc as one data-to-trust pipeline.</li>
 </ul>
 </section>
-<section id="part-2-explainable-ml" class="level3">
-<h3 class="anchored" data-anchor-id="part-2-explainable-ml">Part 2: Explainable ML</h3>
+<section id="part-2-unit-by-unit-recap" class="level3">
+<h3 class="anchored" data-anchor-id="part-2-unit-by-unit-recap">Part 2: Unit-by-Unit Recap</h3>
 <ul>
-<li>The Black Box problem.</li>
-<li>Sensitivity analysis (Perturbation theory).</li>
-<li>Feature importance (SHAP/LIME).</li>
+<li>Each unit’s question, method, equation, and failure modes.</li>
 </ul>
 </section>
-<section id="part-3-causality-semantics" class="level3">
-<h3 class="anchored" data-anchor-id="part-3-causality-semantics">Part 3: Causality &amp; Semantics</h3>
+<section id="part-3-synthesis" class="level3">
+<h3 class="anchored" data-anchor-id="part-3-synthesis">Part 3: Synthesis</h3>
 <ul>
-<li>Causal graphs (Cause → Mechanism → Effect).</li>
-<li>Detection vs.&nbsp;Prediction.</li>
-<li>Materials Ontologies.</li>
-</ul>
-</section>
-<section id="part-4-ethics-and-limits" class="level3">
-<h3 class="anchored" data-anchor-id="part-4-ethics-and-limits">Part 4: Ethics and Limits</h3>
-<ul>
-<li>Representation and “Success” bias.</li>
-<li>Dangers of over-extrapolation.</li>
-<li>Environmental cost vs.&nbsp;PINN efficiency.</li>
-</ul>
-</section>
-<section id="part-5-final-outlook" class="level3">
-<h3 class="anchored" data-anchor-id="part-5-final-outlook">Part 5: Final Outlook</h3>
-<ul>
-<li>Self-driving labs.</li>
-<li>Sustainable AI-driven discovery.</li>
+<li>The decision-guide table: task → tool → unit.</li>
+<li>Exam scope and mini-project rubric.</li>
 </ul>
 </section>
 </section>
 <section id="quarto-website-update-summary" class="level2">
 <h2 class="anchored" data-anchor-id="quarto-website-update-summary">Quarto Website Update (Summary)</h2>
-<p><strong>Summary for ML-PC Week 14:</strong><br>
-- Reflects on Explainability and Sensitivity Analysis to open black-box models. - Discusses Causality in process chains and Ontologies for semantic reasoning. - Critically assesses Data Bias and physical AI hallucinations. - Examines the evolving partnership between autonomous algorithms and human experts.</p>
+<p><strong>Summary for ML-PC Week 14:</strong> - Recaps Units 1–12 with a four-question framework (question, method &amp; equation, when to use, exam competence). - Provides a decision guide mapping twelve lab scenarios to the right method and unit. - Anchors deployment on two questions: data provenance and acceptable error budget. - Closes with exam scope and the mini-project rubric: ML amplified the materials scientist, it did not replace them.</p>
 </section>
 </section>
      </main>
